@@ -1,0 +1,4 @@
+case,tangent_x,tangent_y,tangent_z,force_x,force_y,force_z,Ft,expected_sign,passed
+A_positive_global,1.0,0.0,0.0,1.0,0.0,0.0,1.0,positive,True
+B_negative_global,1.0,0.0,0.0,-1.0,0.0,0.0,-1.0,negative,True
+real_G6L45_first_telemetry,-0.9847651925990478,-0.1738893770342518,0.0,-1.661222662737462e-13,-1.817348511960773e-13,9.312693730171229e-14,1.9519318560195434e-13,runtime_observed,True

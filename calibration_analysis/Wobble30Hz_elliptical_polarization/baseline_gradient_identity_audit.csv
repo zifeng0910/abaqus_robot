@@ -1,0 +1,2 @@
+job,claimed_label,runtime_gradient_amplitude_mT,runtime_gradient_amplitude_T,gradient_length_mm,source,confidence
+WobbleCal_F30_Cone30_B10_Grad6Forward_WallOn_Free_003,G6/L45,6.0,0.006,45.0,runner + socket stdout + telemetry,HIGH
