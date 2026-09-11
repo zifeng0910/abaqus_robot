@@ -1,0 +1,23 @@
+{
+  "job": "WobbleCal_COMFixed_F40_Cone30_B10",
+  "requested_duration_s": 0.075,
+  "odb_end_s": 0.0736000314354896,
+  "telemetry_end_s": 0.0736137128120987,
+  "actual_end_s": 0.0736137128120987,
+  "completion_status": "PARTIAL_STOP_OR_STALE_LOCK",
+  "completion_fraction": 0.9815161708279828,
+  "odb_frames": 737,
+  "telemetry_rows_merged": 737,
+  "phase_fit_frequency_hz": 39.99999999999999,
+  "phase_fit_expected_hz": 40.0,
+  "ur1_min_rad": -2.546386241912842,
+  "ur1_max_rad": 1.304560899734497,
+  "ur2_min_rad": -2.473710060119629,
+  "ur2_max_rad": 4.814990043640137,
+  "ur3_min_rad": -3.2638208866119385,
+  "ur3_max_rad": 2.661426544189453,
+  "ur_vector_peak_rad": 4.954171645991299,
+  "torque_peak_Nmm": 0.011175326875012251,
+  "torque_median_Nmm": 0.0020504011356444096,
+  "B_median_T": 0.01
+}
