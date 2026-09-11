@@ -1,0 +1,2 @@
+t_clear_ms,switch_start_ms,switch_end_ms,max_abs_dFt_uN,max_abs_dFt_per_s,mean_Ft_gated_uN,min_Ft_gated_uN,positive_fraction
+1.6000049654394,1.8000049654394001,2.3000049654394,132.00684632743028,1.2382426587932773,146.1323279464475,3.0920077421977884e-07,1.0
