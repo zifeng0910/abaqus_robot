@@ -1,0 +1,2 @@
+phase_center_deg,halfwidth_deg,ft_target_N,fn_target_N,normal_mag_x,normal_mag_y,normal_mag_z,coordinate_frame,source_frame,frame_transform
+259.0484370588633,7.0,0.00039999999999999996,0.003,0.18252058611877434,-0.4050128487077358,0.895907823397309,MAGPYLIB_DXF,ABAQUS,R_aba_to_mag

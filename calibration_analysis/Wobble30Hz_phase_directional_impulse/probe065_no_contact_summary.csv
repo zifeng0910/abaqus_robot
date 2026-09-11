@@ -1,0 +1,2 @@
+probe,status,duration_s,forward_displacement_mm,forward_mean_speed_mm_s,velocity_magnitude_peak_mm_s,UR1_delta_rad,diagnostic_note
+Probe065_NoContactDiagnostic,COMPLETED,0.0008,0.003171923,3.9649,19.1353,-0.0044341,"No General Contact; analytic field bridge retained; diagnostic only"

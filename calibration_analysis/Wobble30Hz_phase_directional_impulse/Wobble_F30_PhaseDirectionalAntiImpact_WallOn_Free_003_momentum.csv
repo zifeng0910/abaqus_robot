@@ -1,0 +1,2 @@
+window_s,mass_kg,delta_Vt_mm_s,m_delta_Vt_Ns,Jmag_total_Ns,Jtensor_t_Ns,Jnonmag_resolved_Ns,momentum_residual_Ns,phase_pulse_positive_tangent,source_force_units,time_units
+0.0029982479776740198,1e-05,-225.64173473985122,-2.2564173473985125e-06,9.206119789486138e-07,2.5926099859041084e-07,-3.177029326347126e-06,0.0,True,N,s

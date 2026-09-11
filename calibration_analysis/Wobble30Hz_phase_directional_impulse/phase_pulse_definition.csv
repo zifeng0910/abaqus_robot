@@ -1,0 +1,2 @@
+profile,phase_center_deg,half_width_deg,phase_start_deg,phase_end_deg,target_ft_uN,target_fn_uN,law,open_loop
+raised_cosine,259.0484370588633,7.0,252.04843705886333,266.0484370588633,400.0,3000.0,"w=max(0,0.5*(1+cos(pi*dphi/halfwidth)))",True

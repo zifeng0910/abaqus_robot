@@ -1,0 +1,2 @@
+phase_center_deg,halfwidth_deg,window_start_s,window_end_s,positive_tangential_impulse_Ns,away_normal_impulse_Ns,estimated_delta_v_away_m_s,impact_closing_speed_m_s,predicted_closing_reduction_pct,gate_positive_tangent,gate_closing_reduction_30pct
+259.0484370588633,7.0,0.0008,0.0016710000000000002,2.1063950063517116e-07,1.5797962547637839e-06,0.15797962547637837,0.5020124909553512,31.46926188544361,True,True
