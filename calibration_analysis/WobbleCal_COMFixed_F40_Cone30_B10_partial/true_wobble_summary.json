@@ -1,0 +1,16 @@
+{
+  "job": "WobbleCal_COMFixed_F40_Cone30_B10",
+  "verdict": "40HZ_WOBBLE_NOT_LOCKED",
+  "cycle2_f_robot_hz": 39.20578269420873,
+  "cycle2_R_lock": 0.9801445673552183,
+  "partial_cycle3_f_robot_hz": 40.265304826293196,
+  "partial_cycle3_R_lock": 1.00663262065733,
+  "cycle2_delta_phi_drift_rad": 1.076092859295601,
+  "partial_cycle3_delta_phi_drift_rad": -0.4520352617971968,
+  "theta_cone_mean_deg": 35.87134854257447,
+  "theta_cone_pp_deg": 102.81892963783295,
+  "head_tail_flip": true,
+  "orbit_repeat_error_ratio": 0.41883284347701916,
+  "socket_gap_s": 7.426157210000013e-05,
+  "socket_phase_gap_residual_rad": 9.669348655094723e-15
+}
