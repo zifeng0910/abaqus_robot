@@ -1,0 +1,7 @@
+target_total_time_ms,available_postimpact_time_ms,Vt_reference_mm_s,target_Vt_mm_s,J_required_Ns,mean_force_required_uN,estimated_gradient_amplitude_mT,within_existing_20mT_guard,interpretation
+8.333,6.8329590087683,-250.93869388542558,0.0,2.509386938854256e-06,367.24747443005583,384.43028826622907,False,minimum impulse scale estimate; excludes CEL drag and repeated wall impulses
+8.333,6.8329590087683,-250.93869388542558,5.0,2.559386938854256e-06,374.56494844619414,392.0902726200659,False,minimum impulse scale estimate; excludes CEL drag and repeated wall impulses
+16.667,15.1669590087683,-250.93869388542558,0.0,2.509386938854256e-06,165.45089476430527,173.18817937887886,False,minimum impulse scale estimate; excludes CEL drag and repeated wall impulses
+16.667,15.1669590087683,-250.93869388542558,5.0,2.559386938854256e-06,168.7475345172771,176.6391255485965,False,minimum impulse scale estimate; excludes CEL drag and repeated wall impulses
+33.333,31.8329590087683,-250.93869388542558,0.0,2.509386938854256e-06,78.82983602507868,82.51263298241608,False,minimum impulse scale estimate; excludes CEL drag and repeated wall impulses
+33.333,31.8329590087683,-250.93869388542558,5.0,2.559386938854256e-06,80.4005351230239,84.15685207882983,False,minimum impulse scale estimate; excludes CEL drag and repeated wall impulses
