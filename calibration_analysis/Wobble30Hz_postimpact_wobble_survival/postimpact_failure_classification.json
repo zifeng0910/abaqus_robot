@@ -1,0 +1,9 @@
+{
+  "classification": "D_POST_IMPACT_NONMAGNETIC_ROTATIONAL_LOADING_DOMINATES",
+  "walloff_R_lock_cycle12": 1.028983289310418,
+  "walloff_R_lock_startup": -2.6969922351135334,
+  "wallon_post_R_phase": 0.13397829892680618,
+  "wallon_post_Tmag_ratio": 1.30078594731809,
+  "selected_B_mT": null,
+  "notes": "Wall-off run logs G3; paired Wall-on reference logs G6/L45."
+}

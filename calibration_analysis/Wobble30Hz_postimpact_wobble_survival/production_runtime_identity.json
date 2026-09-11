@@ -1,0 +1,19 @@
+{
+  "server_path": "J:/magpy/magpylib_socket_server.py",
+  "server_sha256": "d6e8cd46521a6921e58d2cd7628cef42ae999dedf414ebb6a71165b307de2b43",
+  "runner_path": "J:/abaqusfangzhen/run_wobble_cal_f30_wallon_free_003.ps1",
+  "runner_sha256": "d08e64b1904421105ff9c1d477d60581d3c58d405832cc18e02fae0e68cdd4e7",
+  "paired_wallon_gradient_mT": 6.0,
+  "paired_wallon_gradient_T": 0.006,
+  "paired_wallon_gradient_length_mm": 45.0,
+  "walloff_gradient_mT": 3.0,
+  "frequency_Hz": 30.0,
+  "B0_mT": 10.0,
+  "cone_deg": 30.0,
+  "bias_deg": 40.0,
+  "phase_deg": 248.0,
+  "sense": 1,
+  "chi_deg": 0,
+  "trajectory": "FORWARD",
+  "runtime_note": "paired wall-on stdout says basis ROBOT_ARC; archived telemetry numerical field follows driver_arc"
+}
