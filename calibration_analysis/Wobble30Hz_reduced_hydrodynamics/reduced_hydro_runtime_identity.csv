@@ -1,0 +1,2 @@
+job,B0_mT,frequency_Hz,gradient_mT,gradient_T,gradient_length_mm,cone_deg,bias_deg,phase_deg,sense,trajectory,cel_fluid,socket_update,direct_dt_s,output_interval_s,frames,max_gap_um,max_cpress_MPa,max_direct_vs_relative_omega_rad_s,hydro_force_power_max_W,hydro_torque_power_max_W
+Wobble_F30_G6L45_ReducedHydro_WallOn_Free_0083,10,30,6,0.006,45,30,40,248,1,FORWARD,removed,every Explicit increment,1e-07,5e-05,168,-1.1517989251543002,65.21446990966797,528.9272713186083,0.0,0.0
