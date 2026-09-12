@@ -1,0 +1,5 @@
+from pathlib import Path
+import numpy as np,pandas as pd
+H=Path(__file__).resolve().parent; root=H.parents[2]; job='Wobble_F30_G6L45_WallOn_Free_0083_WobbleSurvival'
+d=pd.read_csv(H/'wallon_8p333_angular_velocity.csv'); vr=pd.read_csv(root/(job+'_vr.csv')); t=d.time_s.to_numpy(); v=np.column_stack([np.interp(t,vr.time_s,vr['VR'+str(i+1)]) for i in range(3)]); rel=d[['omega_x_rad_s','omega_y_rad_s','omega_z_rad_s']].to_numpy(); diff=np.linalg.norm(v-rel,axis=1); d['omega_direct_VR_norm_rad_s']=np.linalg.norm(v,axis=1); d['omega_relative_norm_rad_s']=np.linalg.norm(rel,axis=1); d['omega_direct_relative_abs_diff_rad_s']=diff; d['omega_direct_relative_rel_diff']=diff/np.maximum(np.linalg.norm(rel,axis=1),1e-9); d.to_csv(H/'wallon_8p333_angular_velocity.csv',index=False)
+(H/'Wobble30Hz_wallon_8p333_rotational_load_report.md').open('a',encoding='utf-8').write('\n## Direct VR cross-check\nODB contains VR1-VR3. Relative-rotation-log omega was cross-checked against direct VR in wallon_8p333_angular_velocity.csv: RMS absolute difference %.6g rad/s, peak relative difference %.3f.\n'%(np.sqrt(np.mean(diff**2)),np.max(d.omega_direct_relative_rel_diff)))
