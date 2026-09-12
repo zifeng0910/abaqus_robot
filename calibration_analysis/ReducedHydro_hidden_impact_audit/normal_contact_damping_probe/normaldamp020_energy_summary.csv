@@ -1,0 +1,2 @@
+window,start_s,end_s,Delta_Ktrans_J,Delta_Krot_J,Delta_Ktotal_J,Wmag_J,Whydro_J,Wcontact_net_J,Ktotal_start_J,Ktotal_end_J,total_KE_retained_fraction,energy_identity_error_J
+first_impact_shoulders,0.0010035,0.0010053,1.8057823932466354e-06,-2.301330987460446e-06,-4.955485942138111e-07,7.158964235972705e-09,-4.8460401786550146e-12,-5.027027124096051e-07,2.5463406669743356e-06,2.0507920727605246e-06,0.8053879433176387,0.0

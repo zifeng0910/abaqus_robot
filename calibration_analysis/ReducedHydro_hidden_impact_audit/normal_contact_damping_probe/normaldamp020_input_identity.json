@@ -1,0 +1,28 @@
+{
+  "label": "PROVISIONAL_CONTACT_DISSIPATION_PROBE",
+  "source_job": "Wobble_F30_G6L45_ReducedHydroFixed_ContactAudit_0012",
+  "candidate_job": "Wobble_F30_G6L45_ReducedHydroFixed_NormalDamp020_ContactAudit_0013",
+  "source_sha256": "85f3785a62615288bba00f7d164a951219237f77f174ad29dfe2c37baae7566c",
+  "candidate_sha256": "2baa117bc94c1a13a67950046f2aa0964652da939d20e1fd1569bfb0da3592cb",
+  "only_physics_change": {
+    "critical_damping_fraction": [
+      0.055,
+      0.2
+    ],
+    "tangent_fraction": [
+      "Abaqus Explicit default 1.0",
+      0.0
+    ]
+  },
+  "frozen": [
+    "HARD pressure-overclosure",
+    "General Contact",
+    "SmoothWall114",
+    "friction 0.03",
+    "surfaces and penalty formulation",
+    "dt 1e-7 s",
+    "magnetic architecture",
+    "robot geometry/mass/inertia/pose",
+    "Reduced-Hydro"
+  ]
+}

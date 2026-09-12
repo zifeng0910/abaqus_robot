@@ -1,0 +1,2 @@
+case,event_number,start_s,end_s,duration_us,peak_force_N,impulse_x_Ns,impulse_y_Ns,impulse_z_Ns,impulse_norm_Ns
+baseline_zeta0p055_default_tangent1,1,0.0010035999999999999,0.0010052,1.7000000000000002,5.891618026351697,1.8063541959970848e-06,4.126928773685272e-06,-4.550356816622573e-06,6.403140147072468e-06

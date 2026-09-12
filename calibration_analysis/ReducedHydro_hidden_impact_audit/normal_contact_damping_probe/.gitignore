@@ -1,0 +1,14 @@
+__pycache__/
+*_private.npz
+*.odb
+*.sim
+*.lck
+*.dll
+*.lib
+*_socket_stdout.log
+*_socket_stderr.log
+*_telemetry.csv
+*_hydro_increment.csv
+_datacheck_local/
+*.tiff
+*.svg
