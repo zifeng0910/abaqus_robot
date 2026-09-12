@@ -22,7 +22,7 @@ W2_immediate_postimpact       0.1329   3           -4.181936       0.139398     
      W4_late_postimpact      -3.3671   0                 NaN            NaN                     NaN                      NaN           NaN               NaN             NaN         NaN           NaN            NaN
 
 ## Contact and translation
-Exact gap is computed against authoritative Pipe_WALL_HELPER R3D4 triangles. Minimum signed gap is -1.152 um; aggregate contact CPRESS peak is 65.214 MPa. Canonical Vt and displacement are in `reduced_hydro_translation.csv`.
+Exact gap is computed against authoritative Pipe_WALL_HELPER R3D4 triangles. Minimum signed gap is -1.152 um; aggregate General Contact CPRESS peak is 65.214 MPa. Because the CEL fluid was removed, this reduced run has no fluid-contact contribution; the value is from the remaining wall contact domain. Canonical Vt and displacement are in `reduced_hydro_translation.csv`.
 
 ## Interpretation
 This job is a diagnostic reduced-hydrodynamics replacement for coarse CEL, not a calibrated final fluid model. Any difference from prior CEL is classified only after checking geometry/contact, field identity, direct-VR/finite-rotation consistency, and non-positive hydro power.
