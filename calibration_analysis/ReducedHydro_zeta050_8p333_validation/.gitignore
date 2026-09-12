@@ -1,0 +1,16 @@
+candidate_private/
+*_private.npz
+*.odb
+*.sim
+*.lck
+*.dll
+*.lib
+*_socket_stdout.log
+*_socket_stderr.log
+*_telemetry.csv
+*_hydro_increment.csv
+_datacheck_local/
+__pycache__/
+*.tiff
+*.svg
+gif_frames/

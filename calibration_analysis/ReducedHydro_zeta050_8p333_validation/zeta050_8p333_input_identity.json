@@ -1,0 +1,32 @@
+{
+  "job": "Wobble_F30_G6L45_ReducedHydro_Zeta050_WallOn_Free_0083",
+  "source_job": "Wobble_F30_G6L45_ReducedHydroFixed_NormalDamp050_ContactAudit_0013",
+  "source_sha256": "0a4338fb29b9f85a2c991f576edb92e0b6243a3de1374f894720825cff302d82",
+  "candidate_sha256": "ac84bb2f03ce0f0fe609305998a3ff2647231586ade43e58d86d2ddec13b0fa0",
+  "duration_s": 0.008333,
+  "direct_dt_s": 1e-07,
+  "field_interval_s": 2.5e-05,
+  "history_interval": "every explicit increment",
+  "allowed_nonphysics_changes": [
+    "duration 0.001300 -> 0.008333 s",
+    "field interval 5e-7 -> 2.5e-5 s",
+    "output comment only"
+  ],
+  "frozen": {
+    "critical_damping_fraction": 0.5,
+    "tangent_fraction": 0.0,
+    "friction": 0.03,
+    "B0_T": 0.01,
+    "frequency_Hz": 30.0,
+    "cone_deg": 30.0,
+    "bias_deg": 40.0,
+    "phase_deg": 248.0,
+    "sense": 1,
+    "gradient_T": 0.006,
+    "gradient_length_mm": 45.0,
+    "Cparallel_Ns_per_mm": 4e-09,
+    "Cperp_Ns_per_mm": 1.2e-08,
+    "Kspin_Nmm_s": 1e-09,
+    "Kwobble_Nmm_s": 3e-09
+  }
+}
