@@ -1,0 +1,2 @@
+window,start_s,end_s,Delta_Ktrans_J,Delta_Krot_J,Delta_Ktotal_J,Wmag_J,Whydro_J,Wnormal_J,Wtangential_J,Wcontact_total_J,Wcontact_from_energy_balance_J,contact_work_balance_difference_J,Ktotal_start_J,Ktotal_end_J,total_KE_retained_fraction
+first_impact_shoulders,0.0010035,0.0010053,1.4232041664902701e-06,-2.352690298243534e-06,-9.294861317532638e-07,7.261573471798373e-09,-4.536010372090424e-12,-8.989478843580994e-07,-3.779485075240395e-08,-9.367427351105034e-07,-9.367431692146901e-07,4.3410418673272367e-13,2.5463406669743356e-06,1.6168545352210719e-06,0.6349718072650049

@@ -1,0 +1,32 @@
+{
+  "label": "PROVISIONAL_NORMAL_DAMPING_PROBE",
+  "reference_job": "Wobble_F30_G6L45_ReducedHydroFixed_NormalDamp020_ContactAudit_0013",
+  "candidate_job": "Wobble_F30_G6L45_ReducedHydroFixed_NormalDamp050_ContactAudit_0013",
+  "reference_sha256": "2baa117bc94c1a13a67950046f2aa0964652da939d20e1fd1569bfb0da3592cb",
+  "candidate_sha256": "0a4338fb29b9f85a2c991f576edb92e0b6243a3de1374f894720825cff302d82",
+  "only_physics_change": {
+    "critical_damping_fraction": [
+      0.2,
+      0.5
+    ]
+  },
+  "unchanged_contact_parameter": {
+    "tangent_fraction": 0.0
+  },
+  "selection_basis": {
+    "empirical_de_dzeta_055_to_020": -0.81535,
+    "rough_extrapolated_e_at_050": 0.5813,
+    "qualification": "candidate selection only; not theory, experiment, or Abaqus mapping"
+  },
+  "frozen": [
+    "HARD pressure-overclosure",
+    "General Contact",
+    "SmoothWall114",
+    "friction 0.03",
+    "surfaces and penalty formulation",
+    "dt 1e-7 s",
+    "magnetic architecture",
+    "robot geometry/mass/inertia/pose",
+    "Reduced-Hydro"
+  ]
+}
