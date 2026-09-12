@@ -1,0 +1,2 @@
+job,duration_s,increments,wallclock_solver_s,datacheck_errors,datacheck_warnings,B_mT,B_T,G_mT,G_T,frequency_Hz,cone_deg,Bias_deg,phase_deg,sense,D,mu,cpar_N_s_mm,cperp_N_s_mm,kspin_Nmm_s,kwob_Nmm_s,physics_changes,port
+Wobble_F30_G6L45_ReducedHydroFixed_ContactAudit_0012,0.0013,13000,95,0,13,10,0.01,6,0.006,30,30,40,248,1,0.055,0.03,4e-09,1.2e-08,1e-09,3e-09,none; duration and output only,65505

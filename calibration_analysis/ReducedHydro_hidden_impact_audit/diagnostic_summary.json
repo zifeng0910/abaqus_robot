@@ -1,0 +1,61 @@
+{
+  "events": [
+    {
+      "start_s": 0.0010035999999999999,
+      "end_s": 0.0010052,
+      "active_duration_us": 1.7000000000000002,
+      "samples": 17,
+      "peak_force_N": 5.891618026351697
+    },
+    {
+      "start_s": 0.0012710999999999998,
+      "end_s": 0.0012729,
+      "active_duration_us": 1.9000000000000001,
+      "samples": 19,
+      "peak_force_N": 5.9193551776420446
+    }
+  ],
+  "mass_mg": 9.999972583923745,
+  "RP_COM_offset_um": 5.204416713978492e-10,
+  "dt_quantization_max_s": 5.8190524664450405e-11,
+  "physics_regression_max_V_mm_s": 0.0,
+  "action_reaction_max_N": 0.0,
+  "CFT_vs_CFN_plus_CFS_max_N": 4.3813396263907735e-07,
+  "field_sum_vs_history_max_N": 4.440892098500626e-16,
+  "applied_CF_vs_logged_force_max_N": 3.8489108020629826e-13,
+  "clean_contact_max_N": 0.0,
+  "clean_residual": 2.2724775446386338e-08,
+  "first_impact_residual": 2.1177277240141157e-08,
+  "whole_residual": 3.005754713547973e-08,
+  "first_impact_Jwall_Ns": [
+    1.8063541959970848e-06,
+    4.126928773685272e-06,
+    -4.550356816622573e-06
+  ],
+  "first_impact_Jwall_norm_Ns": 6.403140147072468e-06,
+  "first_impact_Jnormal_Ns": [
+    1.6640849638729956e-06,
+    4.202076924592172e-06,
+    -4.5329220980404905e-06
+  ],
+  "first_impact_Jshear_Ns": [
+    1.4226923212408957e-07,
+    -7.514815090690065e-08,
+    -1.7434718582083274e-08
+  ],
+  "deltaV_1_to_1p0501_xyz_mm_s": [
+    180.60902544858726,
+    412.6592486499549,
+    -455.0075536444135
+  ],
+  "deltaV_1_to_1p0501_norm_mm_s": 640.2649056783509,
+  "peak_force_N": 5.9193551776420446,
+  "peak_force_time_ms": 1.2718999999999998,
+  "min_event_gap_um": -0.5822705332849928,
+  "min_event_gap_time_ms": 1.0044,
+  "min_event_gap_node": 130,
+  "min_event_gap_wall_element": 441,
+  "peak_CPRESS_MPa": 178.7941131591797,
+  "peak_CPRESS_time_ms": 1.2720000231638,
+  "decision": "FORCE_TRANSFER_VALID_HIDDEN_WALL_IMPACT_CONFIRMED"
+}

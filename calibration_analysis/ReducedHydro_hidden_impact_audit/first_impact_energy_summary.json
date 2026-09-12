@@ -1,0 +1,56 @@
+{
+  "decision": "ROTATION_TO_TRANSLATION_WITH_NET_CONTACT_DISSIPATION",
+  "first_force_nonzero_ms": 1.0035999999999998,
+  "last_force_nonzero_ms": 1.0051999999999999,
+  "energy_window_start_ms": 1.0035,
+  "energy_window_end_ms": 1.0053,
+  "Delta_Ktrans_uJ": 2.048226469829948,
+  "Delta_Krot_uJ": -2.2362211830773115,
+  "Delta_Ktotal_uJ": -0.1879947132473636,
+  "Wmag_uJ": 0.007127119660226836,
+  "Whydro_uJ": -5.020138443023087e-06,
+  "Wcontact_net_uJ": -0.19511681276914747,
+  "rotation_to_translation_lower_bound_uJ": 2.041104370308164,
+  "translation_gain_from_preimpact_rotation_lower_bound_fraction": 0.9965227968553814,
+  "total_KE_retained_fraction": 0.9261706354983732,
+  "ALLKE_lumped_max_abs_error_uJ": 1.7488231199247158e-06,
+  "ALLKE_lumped_max_relative_error": 7.66263373943764e-07,
+  "ALLKE_continuum_max_relative_error": 0.025198610556154907,
+  "inertia_lumped_tonne_mm2": [
+    [
+      1.2443595446409238e-09,
+      6.450284009277061e-10,
+      -1.3093821571440088e-09
+    ],
+    [
+      6.450284009277061e-10,
+      6.376367785399532e-09,
+      1.6053830651794313e-10
+    ],
+    [
+      -1.3093821571440088e-09,
+      1.6053830651794313e-10,
+      6.1262424778024884e-09
+    ]
+  ],
+  "inertia_continuum_tonne_mm2": [
+    [
+      1.1497992247193687e-09,
+      6.426229273896591e-10,
+      -1.3089333511627047e-09
+    ],
+    [
+      6.426229273896591e-10,
+      6.27159787821788e-09,
+      1.61731132581887e-10
+    ],
+    [
+      -1.3089333511627047e-09,
+      1.61731132581887e-10,
+      6.022662249291132e-09
+    ]
+  ],
+  "Abaqus_1p0000_to_1p0501ms_contact_dissipation_uJ": 0.1951220381215535,
+  "dense_1p0000_to_1p0501ms_contact_dissipation_uJ": 0.19511656795546387,
+  "Abaqus_energy_identity_error_uJ": 1.103550514853982e-07
+}

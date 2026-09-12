@@ -1,0 +1,11 @@
+{
+  "unit_tests": "PASS interior, edges, vertices and both sides",
+  "surface_nodes": 217,
+  "surface_faces": 430,
+  "wall_quads": 764,
+  "reconstruction_max_error_um": 0.001704721235804233,
+  "sparse_min_gap_um": -0.6312031075940256,
+  "event_min_gap_um": -0.5701224978183115,
+  "projection_fix": "q=P-n*h/n2, legacy used A-n*h/n2",
+  "sign": "positive lumen side; closest actual wall triangle"
+}

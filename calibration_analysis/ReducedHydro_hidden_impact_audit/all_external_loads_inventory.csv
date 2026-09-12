@@ -1,0 +1,29 @@
+line,keyword,data,meaning
+10338,"*Contact Damping, definition=CRITICAL DAMPING FRACTION",0.055,inspect without counting internal forces twice
+10344,*Boundary,"RP_PIPE, ENCASTRE",inspect without counting internal forces twice
+10365,"*Dynamic, Explicit, DIRECT","1.0e-7, 0.008333",inspect without counting internal forces twice
+10367,*Bulk Viscosity,"0.06, 1.2",inspect without counting internal forces twice
+10377,"*Amplitude, name=SOCKET_FX, definition=USER",,inspect without counting internal forces twice
+10378,"*Amplitude, name=SOCKET_FY, definition=USER",,inspect without counting internal forces twice
+10379,"*Amplitude, name=SOCKET_FZ, definition=USER",,inspect without counting internal forces twice
+10380,"*Amplitude, name=SOCKET_MX, definition=USER",,inspect without counting internal forces twice
+10381,"*Amplitude, name=SOCKET_MY, definition=USER",,inspect without counting internal forces twice
+10382,"*Amplitude, name=SOCKET_MZ, definition=USER",,inspect without counting internal forces twice
+10383,"*Cload, amplitude=SOCKET_FX","RP_ROBOT, 1, 1.",reference=1 multiplies VUAMP return
+10385,"*Cload, amplitude=SOCKET_FY","RP_ROBOT, 2, 1.",reference=1 multiplies VUAMP return
+10387,"*Cload, amplitude=SOCKET_FZ","RP_ROBOT, 3, 1.",reference=1 multiplies VUAMP return
+10389,"*Cload, amplitude=SOCKET_MX","RP_ROBOT, 4, 1.",reference=1 multiplies VUAMP return
+10391,"*Cload, amplitude=SOCKET_MY","RP_ROBOT, 5, 1.",reference=1 multiplies VUAMP return
+10393,"*Cload, amplitude=SOCKET_MZ","RP_ROBOT, 6, 1.",reference=1 multiplies VUAMP return
+10395,"*Amplitude, name=HYDRO_FX, definition=USER",,inspect without counting internal forces twice
+10396,"*Amplitude, name=HYDRO_FY, definition=USER",,inspect without counting internal forces twice
+10397,"*Amplitude, name=HYDRO_FZ, definition=USER",,inspect without counting internal forces twice
+10398,"*Amplitude, name=HYDRO_MX, definition=USER",,inspect without counting internal forces twice
+10399,"*Amplitude, name=HYDRO_MY, definition=USER",,inspect without counting internal forces twice
+10400,"*Amplitude, name=HYDRO_MZ, definition=USER",,inspect without counting internal forces twice
+10401,"*Cload, amplitude=HYDRO_FX","RP_ROBOT, 1, 1.",reference=1 multiplies VUAMP return
+10403,"*Cload, amplitude=HYDRO_FY","RP_ROBOT, 2, 1.",reference=1 multiplies VUAMP return
+10405,"*Cload, amplitude=HYDRO_FZ","RP_ROBOT, 3, 1.",reference=1 multiplies VUAMP return
+10407,"*Cload, amplitude=HYDRO_MX","RP_ROBOT, 4, 1.",reference=1 multiplies VUAMP return
+10409,"*Cload, amplitude=HYDRO_MY","RP_ROBOT, 5, 1.",reference=1 multiplies VUAMP return
+10411,"*Cload, amplitude=HYDRO_MZ","RP_ROBOT, 6, 1.",reference=1 multiplies VUAMP return

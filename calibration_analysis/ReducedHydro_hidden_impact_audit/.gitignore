@@ -1,0 +1,7 @@
+__pycache__/
+*_private.npz
+*.odb
+*.sim
+*.lck
+*.dll
+*.lib

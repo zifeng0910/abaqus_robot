@@ -1,0 +1,12 @@
+{
+  "mass_mg": 9.999972583923745,
+  "offset_um": 5.204416713978492e-10,
+  "total_model_mass_tonne": 1.1152691165183108e-07,
+  "clean_residual": 0.000770084241593878,
+  "clean_V_vs_dU_median_mm_s": 1.3183162272298947e-06,
+  "clean_V_vs_dU_max_mm_s": 9.222812568727255e-05,
+  "CF_vs_load_clean_max_N": 1.7079963108228356e-09,
+  "first_large_deltaV_time_s": 0.0010035999584943056,
+  "max_increment_deltaV_mm_s": 59.4706136708025,
+  "sensor_samples": 83331
+}

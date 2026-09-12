@@ -1,4 +1,5 @@
 from pathlib import Path
+raise SystemExit('Retired: sparse contact frames cannot define a contact-free window. Use ../ReducedHydro_hidden_impact_audit/ReducedHydro_force_transfer_and_hidden_impact_audit.md; historical RH-D inference is withdrawn.')
 import pandas as pd
 HERE=Path(__file__).resolve().parent; ROOT=HERE.parents[2]
 job='Wobble_F30_G6L45_ReducedHydroFixed_WallOn_Free_0083'; d=pd.read_csv(HERE/'reduced_hydro_fixed_true_axis_phase.csv'); ws=pd.read_csv(HERE/'reduced_hydro_fixed_window_summary.csv'); lm=pd.read_csv(HERE/'reduced_hydro_fixed_linear_momentum.csv'); si=pd.read_csv(HERE/'reduced_hydro_fixed_sensor_identity.csv'); gap=pd.read_csv(ROOT/(job+'_exact_wall_penetration.csv')); cp=pd.read_csv(ROOT/(job+'_contact.csv'))

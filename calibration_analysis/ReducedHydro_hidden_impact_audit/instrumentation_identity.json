@@ -1,0 +1,18 @@
+{
+  "gates": {
+    "clean_momentum_closes": true,
+    "nearwall_at_1ms": true,
+    "large_missing_impulse": true,
+    "no_contact_history": true
+  },
+  "source_job": "Wobble_F30_G6L45_ReducedHydroFixed_WallOn_Free_0083",
+  "diagnostic_job": "Wobble_F30_G6L45_ReducedHydroFixed_ContactAudit_0012",
+  "physics_unchanged": true,
+  "duration_s": 0.0013,
+  "increment_s": 1e-07,
+  "field_interval_s": 5e-07,
+  "history_interval_s": 1e-07,
+  "source_sha256": "c75be633f093bff6ed48962187891423ef19efab8138f37679e619339eba4f92",
+  "new_sha256": "85f3785a62615288bba00f7d164a951219237f77f174ad29dfe2c37baae7566c",
+  "bridge_sha256": "69f3f98e42c77aeb0f9a7abf313fbae62301a1d59b6b1cfd164823db64574ccf"
+}

@@ -1,5 +1,7 @@
 # Wobble30Hz reduced hydrodynamics — fixed report
 
+> **SUPERSEDED — do not use the RH-D / force-transfer diagnosis below.** The old momentum integration had an extra factor of 0.5, and the interval before the first 50-us-field-captured contact was incorrectly called contact-free. A nearest-wall projection bug also affected the archived gap values. The fresh clean-window balance closes within 0.077%. See [the hidden-impact audit](../ReducedHydro_hidden_impact_audit/ReducedHydro_force_transfer_and_hidden_impact_audit.md) for the actual mass, corrected distances and independently measured wall impulse. The original text below is retained solely as the historical audit trail, not as current findings.
+
 ## 1. Why ef4fc8b physical classification is invalid
 The earlier result used a fixed Socket Z pose, global-XY robot phase, and `len(Series)` as a sample-count gate. It is retained only as a historical buggy run.
 
