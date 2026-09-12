@@ -1,7 +1,7 @@
 from pathlib import Path
 import re
 ROOT=Path(r'J:\\abaqusfangzhen'); OUT=Path(__file__).resolve().parent
-src=ROOT/'Wobble_F30_G6L45_WallOn_Free_0083_WobbleSurvival.inp'; job='Wobble_F30_G6L45_ReducedHydro_WallOn_Free_0083'
+src=ROOT/'Wobble_F30_G6L45_WallOn_Free_0083_WobbleSurvival.inp'; job='Wobble_F30_G6L45_ReducedHydroFixed_WallOn_Free_0083'
 txt=src.read_text(encoding='utf-8',errors='ignore')
 # Remove the complete Eulerian fluid part.
 txt=re.sub(r'\*Part, name=FLUID_EULERIAN.*?\*End Part\s*', '', txt, flags=re.I|re.S, count=1)

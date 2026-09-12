@@ -1,0 +1,1 @@
+Centerline source: transformed authoritative EXT_SURF ODB curve; no flattened MagPy CSV. Robot/wall rendered in Abaqus global frame. Reconstruction error: zero by direct file reuse.

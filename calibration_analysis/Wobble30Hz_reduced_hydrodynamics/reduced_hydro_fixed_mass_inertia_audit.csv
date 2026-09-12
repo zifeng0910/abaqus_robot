@@ -1,0 +1,2 @@
+mass_target_mg,mass_target_kg,robot_density_tonne_mm3,inertia_source,Ibody_xx_kgm2,Ibody_yy_kgm2,Ibody_zz_kgm2
+10.0,1e-05,7.80906654321e-09,cylindrical envelope reconstruction; deck has no independent RP MASS card,2.2519209598439526e-12,7.430495062370414e-12,7.198750644452306e-12

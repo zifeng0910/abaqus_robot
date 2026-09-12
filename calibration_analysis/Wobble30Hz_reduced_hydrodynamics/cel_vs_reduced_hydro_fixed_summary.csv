@@ -1,0 +1,2 @@
+case,job,architecture,CPRESS_provenance,min_exact_gap_um,CPRESS_max_MPa,first_exact_contact_ms,first_solver_contact_ms
+corrected Reduced-Hydro,Wobble_F30_G6L45_ReducedHydroFixed_WallOn_Free_0083,Abaqus rigid robot + SmoothWall114 single-wall contact + local reduced hydro; CEL fluid removed,aggregate wall contact output (not CEL),-1.0402333782635,78.98506164550781,6.1499997973442,6.1499997973442

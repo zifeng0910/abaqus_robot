@@ -1,7 +1,7 @@
 [CmdletBinding()]
-param([string]$WorkDir='J:\abaqusfangzhen',[int]$Port=65503)
+param([string]$WorkDir='J:\abaqusfangzhen',[int]$Port=65504)
 $ErrorActionPreference='Stop'; Set-Location -LiteralPath $WorkDir
-$Job='Wobble_F30_G6L45_ReducedHydro_WallOn_Free_0083'
+$Job='Wobble_F30_G6L45_ReducedHydroFixed_WallOn_Free_0083'
 $server='J:\magpy\magpylib_socket_server.py'
 $bridge='J:\abaqusfangzhen\abaqus_robot\calibration_analysis\Wobble30Hz_reduced_hydrodynamics\vuforc_socket_bridge_reduced_hydro.f'
 $transform='J:\abaqusfangzhen\abaqus_magpylib_frame_transform.json'

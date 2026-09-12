@@ -60,28 +60,20 @@ C     Directed HEAD->TAIL axis from the actual robot exterior geometry.
       tSend=DBLE(time(iTotalTime))
       IF (isMaster.EQ.1 .AND.
      *    ABS(tSend-lastTime).GT.1.0D-15) THEN
-C        Sensor order is U1..U3, UR1..UR3, V1..V3, VR1..VR3.
-         IF (nSensor.GE.12) THEN
-            u1=DBLE(sensorValues(1)); u2=DBLE(sensorValues(2))
-            u3=DBLE(sensorValues(3)); r1=DBLE(sensorValues(4))
-            r2=DBLE(sensorValues(5)); r3=DBLE(sensorValues(6))
-            v1=DBLE(sensorValues(7)); v2=DBLE(sensorValues(8))
-            v3=DBLE(sensorValues(9)); w1=DBLE(sensorValues(10))
-            w2=DBLE(sensorValues(11)); w3=DBLE(sensorValues(12))
-         ELSE
-            u1=VGETSENSORVALUE('RP_U1',jSensorLookUpTable,sensorValues)
-            u2=VGETSENSORVALUE('RP_U2',jSensorLookUpTable,sensorValues)
-            u3=VGETSENSORVALUE('RP_U3',jSensorLookUpTable,sensorValues)
-            r1=VGETSENSORVALUE('RP_UR1',jSensorLookUpTable,sensorValues)
-            r2=VGETSENSORVALUE('RP_UR2',jSensorLookUpTable,sensorValues)
-            r3=VGETSENSORVALUE('RP_UR3',jSensorLookUpTable,sensorValues)
-            v1=VGETSENSORVALUE('RP_V1',jSensorLookUpTable,sensorValues)
-            v2=VGETSENSORVALUE('RP_V2',jSensorLookUpTable,sensorValues)
-            v3=VGETSENSORVALUE('RP_V3',jSensorLookUpTable,sensorValues)
-            w1=VGETSENSORVALUE('RP_VR1',jSensorLookUpTable,sensorValues)
-            w2=VGETSENSORVALUE('RP_VR2',jSensorLookUpTable,sensorValues)
-            w3=VGETSENSORVALUE('RP_VR3',jSensorLookUpTable,sensorValues)
-         ENDIF
+C        Always fetch by the named sensor table.  This avoids relying on
+C        implementation-dependent ordering of sensorValues(1:12).
+         u1=VGETSENSORVALUE('RP_U1',jSensorLookUpTable,sensorValues)
+         u2=VGETSENSORVALUE('RP_U2',jSensorLookUpTable,sensorValues)
+         u3=VGETSENSORVALUE('RP_U3',jSensorLookUpTable,sensorValues)
+         r1=VGETSENSORVALUE('RP_UR1',jSensorLookUpTable,sensorValues)
+         r2=VGETSENSORVALUE('RP_UR2',jSensorLookUpTable,sensorValues)
+         r3=VGETSENSORVALUE('RP_UR3',jSensorLookUpTable,sensorValues)
+         v1=VGETSENSORVALUE('RP_V1',jSensorLookUpTable,sensorValues)
+         v2=VGETSENSORVALUE('RP_V2',jSensorLookUpTable,sensorValues)
+         v3=VGETSENSORVALUE('RP_V3',jSensorLookUpTable,sensorValues)
+         w1=VGETSENSORVALUE('RP_VR1',jSensorLookUpTable,sensorValues)
+         w2=VGETSENSORVALUE('RP_VR2',jSensorLookUpTable,sensorValues)
+         w3=VGETSENSORVALUE('RP_VR3',jSensorLookUpTable,sensorValues)
 C        Magnetic query remains one production Socket request/increment.
          IF (connected.EQ.0) THEN
             rc=SOCKET_OPEN()
@@ -89,7 +81,7 @@ C        Magnetic query remains one production Socket request/increment.
          ENDIF
          IF (connected.EQ.1) THEN
             rc=SOCKET_POSE(tSend,-7.468174204284D0+u1,
-     *       -3.676918015967D0+u2,-9.550745259298D0,r1,r2,r3,loads)
+     *       -3.676918015967D0+u2,-9.550745259298D0+u3,r1,r2,r3,loads)
             IF (rc.NE.0) THEN
                connected=0; failCount=failCount+1
                DO 20 idx=1,6
