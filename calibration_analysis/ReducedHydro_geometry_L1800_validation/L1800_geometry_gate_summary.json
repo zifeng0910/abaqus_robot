@@ -1,0 +1,14 @@
+{
+  "sampled_old_pose_count": 338,
+  "sampling_interval_us": 25.0,
+  "includes_prior_bridge_boundaries": true,
+  "minimum_replayed_gap_um": 135.8852121964736,
+  "opposing_bridge_samples_20um": 0,
+  "opposing_bridge_samples_5um": 0,
+  "opposing_bridge_samples_0um": 0,
+  "conservative_wall_span_mm": 2.044327,
+  "envelope_at_prior_max_tilt_mm": 1.6876868908225653,
+  "analytic_clearance_at_prior_max_tilt_um": 356.64010917743474,
+  "eligible_for_one_dynamic_run": true,
+  "scope": "kinematic old-pose geometry replay only; not a prediction of the new dynamic trajectory"
+}

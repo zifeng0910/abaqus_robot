@@ -228,26 +228,57 @@ def analyze_new_case():
     nodes = np.array([mesh['nodes'][int(i)] for i in node_ids]) + mesh['shift']
     wall = Wall()
 
+    def query_indices(indices, collect_clusters=False):
+        cluster_rows = []
+        indices = np.asarray(indices, dtype=int)
+        base = nodes - rp
+        for offset in range(0, len(indices), 24):
+            block = indices[offset:offset + 24]
+            matrices = rotation[block].as_matrix()
+            positions = (rp + data['U'][block, None, :]
+                         + np.einsum('bij,nj->bni', matrices, base))
+            gaps, triangles, closest = wall.query(positions.reshape(-1, 3))
+            gaps = gaps.reshape(len(block), len(nodes))
+            triangles = triangles.reshape(len(block), len(nodes))
+            closest = closest.reshape(len(block), len(nodes), 3)
+            for row, i in enumerate(block):
+                k = int(np.argmin(gaps[row]))
+                exact[int(i)] = (float(gaps[row, k]), int(node_ids[k]), int(triangles[row, k]))
+                if not collect_clusters or gaps[row, k] > .02:
+                    continue
+                for threshold_um in (20., 5., 0.):
+                    selected = np.where(gaps[row] * 1e3 <= threshold_um)[0]
+                    normals = wall.normals[triangles[row, selected]] if len(selected) else np.empty((0, 3))
+                    angles = np.arctan2(normals @ e2[i], normals @ e1[i]) if len(selected) else np.array([])
+                    centers = angular_clusters(angles)
+                    separation = max((np.degrees(np.arccos(np.clip(np.cos(a - b), -1, 1)))
+                                      for q, a in enumerate(centers) for b in centers[q + 1:]), default=0.)
+                    opposing = bool(len(centers) >= 2 and separation >= 120.)
+                    ids = node_ids[selected]
+                    cluster_rows.append({
+                        'time_s': t[i], 'increment': int(i), 'threshold_um': threshold_um,
+                        'node_count': len(ids), 'cluster_count': len(centers),
+                        'sector_centers_deg': ';'.join(f'{np.degrees(a):.3f}' for a in centers),
+                        'max_sector_separation_deg': separation,
+                        'head_involved': bool(np.intersect1d(ids, head_ids).size),
+                        'tail_involved': bool(np.intersect1d(ids, tail_ids).size),
+                        'participating_nodes': ';'.join(str(int(x)) for x in ids),
+                        'opposing_bridge': opposing,
+                    })
+        return cluster_rows
+
     coarse = np.arange(0, len(t), 10, dtype=int)
     if coarse[-1] != len(t) - 1:
         coarse = np.r_[coarse, len(t) - 1]
-    exact = {}; detail = {}
-    for i in coarse:
-        state = exact_state(i, data, mesh, rp, rotation, nodes, node_ids, wall)
-        positions, gaps, triangles, closest, k = state
-        exact[int(i)] = (float(gaps[k]), int(node_ids[k]), int(triangles[k]))
+    exact = {}
+    query_indices(coarse)
     dense = set()
     for i in coarse:
         if exact[int(i)][0] <= .05:
             dense.update(range(max(0, int(i) - 20), min(len(t), int(i) + 21)))
     for start, end in events:
         dense.update(range(max(0, start - 50), min(len(t), end + 51)))
-    for i in sorted(dense):
-        state = exact_state(i, data, mesh, rp, rotation, nodes, node_ids, wall)
-        positions, gaps, triangles, closest, k = state
-        exact[int(i)] = (float(gaps[k]), int(node_ids[k]), int(triangles[k]))
-        if gaps[k] <= .02:
-            detail[int(i)] = state
+    cluster_rows = query_indices(sorted(dense), collect_clusters=True)
     gap_rows = [{'time_s': t[i], 'increment': i, 'gap_um': value[0] * 1e3,
                  'contact_node': value[1], 'wall_triangle': value[2],
                  'sampling': 'dense_0p1us' if i in dense else 'coarse_1us'}
@@ -255,38 +286,11 @@ def analyze_new_case():
     gap_df = pd.DataFrame(gap_rows)
     gap_df.to_csv(HERE / 'zeta050_8p333_exact_gap.csv', index=False)
 
-    cluster_rows = []
-    bridge_by_index = {}
-    for i, state in sorted(detail.items()):
-        positions, gaps, triangles, closest, k = state
-        for threshold_um in (20., 5., 0.):
-            selected = np.where(gaps * 1e3 <= threshold_um)[0]
-            normals = wall.normals[triangles[selected]] if len(selected) else np.empty((0, 3))
-            angles = np.arctan2(normals @ e2[i], normals @ e1[i]) if len(selected) else np.array([])
-            centers = angular_clusters(angles)
-            separation = 0.
-            if len(centers) >= 2:
-                separation = max(np.degrees(np.arccos(np.clip(np.cos(a - b), -1, 1)))
-                                 for q, a in enumerate(centers) for b in centers[q + 1:])
-            opposing = bool(len(centers) >= 2 and separation >= 120.)
-            ids = node_ids[selected]
-            cluster_rows.append({
-                'time_s': t[i], 'increment': i, 'threshold_um': threshold_um,
-                'node_count': len(ids), 'cluster_count': len(centers),
-                'sector_centers_deg': ';'.join(f'{np.degrees(a):.3f}' for a in centers),
-                'max_sector_separation_deg': separation,
-                'head_involved': bool(np.intersect1d(ids, head_ids).size),
-                'tail_involved': bool(np.intersect1d(ids, tail_ids).size),
-                'participating_nodes': ';'.join(str(int(x)) for x in ids),
-                'opposing_bridge': opposing,
-            })
-            if threshold_um == 20.:
-                bridge_by_index[i] = opposing
     clusters = pd.DataFrame(cluster_rows)
     clusters.to_csv(HERE / 'zeta050_8p333_contact_clusters.csv', index=False)
     bridge_flag = np.zeros(len(t), bool)
-    for i, value in bridge_by_index.items():
-        bridge_flag[i] = value
+    at20 = clusters[clusters.threshold_um == 20.]
+    bridge_flag[at20.increment.to_numpy(int)] = at20.opposing_bridge.to_numpy(bool)
     bridge_events, longest_bridge = longest_true_interval(t, bridge_flag)
     pd.DataFrame({'time_s': t, 'opposing_bridge': bridge_flag.astype(int),
                   'phase_plateau': plateau.astype(int), 'tilt_deg': tilt,

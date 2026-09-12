@@ -49,15 +49,18 @@ class Wall:
         normal=np.cross(self.tri[:,1]-self.tri[:,0],self.tri[:,2]-self.tri[:,0]);normal/=np.linalg.norm(normal,axis=1)[:,None]
         normal*=np.where(np.sum(normal*(nearest-mid),axis=1)>0,1,-1)[:,None];self.normals=normal
     def query(self,p,all_faces=False):
-        k=len(self.tri) if all_faces else 64
-        while True:
-            dc,ix=self.tree.query(p,k=k)
-            tr=self.tri[ix];q,dist=closest(p[:,None,:],tr[:,:,0,:],tr[:,:,1,:],tr[:,:,2,:]);idx=np.argmin(dist,axis=1)
-            dd=dist[np.arange(len(p)),idx]
-            if k==len(self.tri) or np.all(dc[:,-1]-self.radius>dd+1e-10):break
-            k=min(k*2,len(self.tri))
-        j=ix[np.arange(len(p)),idx];qq=q[np.arange(len(p)),idx]
-        signed=dd*np.sign(np.sum((p-qq)*self.normals[j],axis=1))
+        p=np.asarray(p,float); total=len(self.tri)
+        signed=np.empty(len(p));j=np.empty(len(p),dtype=int);qq=np.empty((len(p),3))
+        remaining=np.arange(len(p));k=total if all_faces else min(64,total)
+        while len(remaining):
+            dc,ix=self.tree.query(p[remaining],k=k)
+            tr=self.tri[ix];q,dist=closest(p[remaining,None,:],tr[:,:,0,:],tr[:,:,1,:],tr[:,:,2,:]);idx=np.argmin(dist,axis=1)
+            row=np.arange(len(remaining));dd=dist[row,idx];jj=ix[row,idx];qbest=q[row,idx]
+            resolved=np.ones(len(remaining),dtype=bool) if k==total else dc[:,-1]-self.radius>dd+1e-10
+            out=remaining[resolved];j[out]=jj[resolved];qq[out]=qbest[resolved]
+            signed[out]=dd[resolved]*np.sign(np.sum((p[out]-qbest[resolved])*self.normals[jj[resolved]],axis=1))
+            remaining=remaining[~resolved]
+            k=min(k*2,total)
         return signed,j,qq
 
 def main():

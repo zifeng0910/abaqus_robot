@@ -22,6 +22,9 @@ from exact_gap_audit import Wall
 
 JOB = "Wobble_F30_G6L45_ReducedHydro_Zeta050_WallOn_Free_0083"
 OLD_JOB = "Wobble_F30_G6L45_WallOn_Free_0083_WobbleSurvival"
+PREFIX = "zeta050_8p333"
+MAIN_GIF = "Wobble_F30_ReducedHydro_Zeta050_WallOn_8p333.gif"
+MAKE_COMPARISON = True
 
 mpl.rcParams.update({
     "font.family": "sans-serif",
@@ -55,13 +58,13 @@ def configure(ax, center, half, title):
 
 def main():
     field = pd.read_csv(HERE / "candidate_private" / "rp_fields.csv")
-    axis = pd.read_csv(HERE / "zeta050_8p333_true_axis.csv")
-    phase = pd.read_csv(HERE / "zeta050_8p333_local_phase.csv")
-    windows = pd.read_csv(HERE / "zeta050_8p333_phase_windows.csv")
-    gap = pd.read_csv(HERE / "zeta050_8p333_exact_gap.csv")
-    bridge = pd.read_csv(HERE / "zeta050_8p333_bridge_timeline.csv")
-    translation = pd.read_csv(HERE / "zeta050_8p333_canonical_translation.csv")
-    events = pd.read_csv(HERE / "zeta050_8p333_contact_events.csv")
+    axis = pd.read_csv(HERE / f"{PREFIX}_true_axis.csv")
+    phase = pd.read_csv(HERE / f"{PREFIX}_local_phase.csv")
+    windows = pd.read_csv(HERE / f"{PREFIX}_phase_windows.csv")
+    gap = pd.read_csv(HERE / f"{PREFIX}_exact_gap.csv")
+    bridge = pd.read_csv(HERE / f"{PREFIX}_bridge_timeline.csv")
+    translation = pd.read_csv(HERE / f"{PREFIX}_canonical_translation.csv")
+    events = pd.read_csv(HERE / f"{PREFIX}_contact_events.csv")
     centerline = pd.read_csv(ROOT / "CEL_HighEnd83Geom_Z90_XYp2m6_Bias40_Lead5_PolMinus_D055_Forward_Probe006_R014_TRUE_centerline_odb.csv")
     face_table = pd.read_csv(ROOT / "Wobble_F30_G6L45_ReducedHydroFixed_WallOn_Free_0083_robot_surface_triangles_exact.csv")
     face_ids = face_table[["n1", "n2", "n3"]].to_numpy(int)
@@ -128,8 +131,11 @@ def main():
 
     draw_main(0)
     animation = FuncAnimation(fig, draw_main, frames=len(frame_rows), interval=80, repeat=True)
-    animation.save(HERE / "Wobble_F30_ReducedHydro_Zeta050_WallOn_8p333.gif", writer=PillowWriter(fps=12))
+    animation.save(HERE / MAIN_GIF, writer=PillowWriter(fps=12))
     plt.close(fig)
+
+    if not MAKE_COMPARISON:
+        return
 
     old_raw = json.loads((ROOT / f"{OLD_JOB}_rp_fields.json").read_text())["rows"]
     old_t = np.asarray([row["time"] for row in old_raw], float)

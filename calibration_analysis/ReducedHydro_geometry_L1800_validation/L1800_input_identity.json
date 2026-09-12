@@ -1,0 +1,87 @@
+{
+  "job": "Wobble_F30_G6L45_ReducedHydro_Zeta050_L1800_D0815_WallOn_Free_0083",
+  "source_job": "Wobble_F30_G6L45_ReducedHydro_Zeta050_WallOn_Free_0083",
+  "source_sha256": "ac84bb2f03ce0f0fe609305998a3ff2647231586ade43e58d86d2ddec13b0fa0",
+  "candidate_sha256": "062e8a6a0affcc4bcc6f953f7750dfcb63fc1d1f4e0d270fbd487edf89ef1bf0",
+  "geometry_change_only": "PCA long-axis coordinates scaled about the volume COM",
+  "dimension_definition": "all Robot_SOLID nodes projected onto the frozen PCA axis about the volume COM",
+  "base_pca_axial_span_mm": 2.921463527385372,
+  "candidate_pca_axial_span_mm": 1.8000000000080707,
+  "axial_scale": 0.6161295471009867,
+  "base_pca_transverse_diameter_mm": 0.8145388363492085,
+  "candidate_pca_transverse_diameter_mm": 0.8145388363510249,
+  "legacy_unshrunk_reported_length_mm": 2.9314146861447767,
+  "legacy_unshrunk_reported_diameter_mm": 0.9030748963882974,
+  "baseline_mesh_identity_correction": "the validated zeta050 INP already carries a 0.90 transverse PCA shrink; legacy 2.931 x 0.903 dimensions describe the pre-shrink CEL geometry",
+  "density_tonne_per_mm3": 7.80906654321e-09,
+  "base_mass_mg": 9.999972583923745,
+  "candidate_mass_mg": 6.161278579149812,
+  "mass_volume_ratio": 0.6161295471004459,
+  "base_magnetic_moment_Am2": 0.001168,
+  "candidate_magnetic_moment_Am2": 0.0007196393110133208,
+  "magnetization_rule": "constant Br; explicit moment scaled by mesh volume ratio",
+  "base_inertia_tonne_mm2": [
+    [
+      1.2443595446409238e-09,
+      6.450284009277061e-10,
+      -1.3093821571440088e-09
+    ],
+    [
+      6.450284009277061e-10,
+      6.376367785399532e-09,
+      1.6053830651794313e-10
+    ],
+    [
+      -1.3093821571440088e-09,
+      1.6053830651794313e-10,
+      6.1262424778024884e-09
+    ]
+  ],
+  "candidate_inertia_tonne_mm2": [
+    [
+      6.022915352445091e-10,
+      1.327244007654718e-10,
+      -2.7534255154030557e-10
+    ],
+    [
+      1.327244007654718e-10,
+      1.6535679236883691e-09,
+      3.328944492024806e-11
+    ],
+    [
+      -2.7534255154030557e-10,
+      3.328944492024806e-11,
+      1.598476812687019e-09
+    ]
+  ],
+  "COM_abaqus_mm": [
+    -7.468174204283708,
+    -3.6769180159665362,
+    -9.550745259297791
+  ],
+  "RP_abaqus_mm": [
+    -7.468174204284,
+    -3.676918015967,
+    -9.550745259298
+  ],
+  "frozen": {
+    "duration_s": 0.008333,
+    "direct_dt_s": 1e-07,
+    "field_interval_s": 2.5e-05,
+    "critical_damping_fraction": 0.5,
+    "tangent_fraction": 0.0,
+    "friction": 0.03,
+    "B0_T": 0.01,
+    "frequency_Hz": 30.0,
+    "cone_deg": 30.0,
+    "bias_deg": 40.0,
+    "phase_deg": 248.0,
+    "sense": 1,
+    "gradient_T": 0.006,
+    "gradient_length_mm": 45.0,
+    "Cparallel_Ns_per_mm": 4e-09,
+    "Cperp_Ns_per_mm": 1.2e-08,
+    "Kspin_Nmm_s": 1e-09,
+    "Kwobble_Nmm_s": 3e-09
+  }
+}
