@@ -1,0 +1,11 @@
+{
+  "status": "PROVISIONAL_ANALYTICAL_NOT_CEL_FIT",
+  "c_parallel_N_s_per_mm": 4.0e-9,
+  "c_perpendicular_N_s_per_mm": 1.2e-8,
+  "k_spin_N_mm_s": 1.0e-9,
+  "k_wobble_N_mm_s": 3.0e-9,
+  "mass_mg": 10.0,
+  "fluid_density_tonne_per_mm3": 1.0007e-9,
+  "fluid_viscosity_Pa_s": 0.00071,
+  "note": "Coefficients are non-negative and strictly dissipative; calibrate against a validated CEL or experimental drag dataset before production use."
+}

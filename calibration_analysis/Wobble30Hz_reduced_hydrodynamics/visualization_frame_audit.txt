@@ -1,0 +1,1 @@
+production frame: transformed curvenew_CEL_xyrot56_exact.csv; no flattened Magpylib CSV used
