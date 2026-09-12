@@ -1,0 +1,3 @@
+production frame: curvenew_CEL_xyrot56_exact.csv + abaqus_magpylib_frame_transform.json
+max true-axis reconstruction RMS (mm): 6.92439208434e-07
+no flattened Magpylib CSV used

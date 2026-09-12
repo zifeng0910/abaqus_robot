@@ -1,0 +1,2 @@
+job,G_mT,G_T,L_mm,B0_mT,frequency_Hz,cone_deg,bias_deg,phase_deg,sense,chi_deg,trajectory,socket_update,telemetry_interval_us,odb_interval_us,max_reg_dB_mT,max_reg_dF_uN,max_reg_dT_uNmm,max_reg_drp_um,omega_source
+Wobble_F30_G6L45_WallOn_Free_0083_Cone25_WobbleSurvival,6.0,0.006,45.0,10.0,30.0,30.0,40.0,248.0,1,0,FORWARD,every Explicit increment,50.0,50.0,0.8723884651850923,0.8795444447829992,0.7928353294049655,63.651299437165896,relative rotation log; direct VR absent
