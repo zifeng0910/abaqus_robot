@@ -1,0 +1,4 @@
+*.FCStd binary
+*.brep binary
+*.step binary
+*.svg binary

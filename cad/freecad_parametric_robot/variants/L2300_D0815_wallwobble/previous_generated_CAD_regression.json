@@ -1,0 +1,23 @@
+{
+  "COM_difference_mm": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "bbox_difference_mm": {
+    "x": 0.0,
+    "y": 1.1102230246251565e-16,
+    "z": 1.1102230246251565e-16
+  },
+  "comparison_role": "previous generated reference only; never a construction input",
+  "geometrically_equivalent_within_roundoff": true,
+  "head_profile_definition": "identical frozen degree-5 Bezier poles",
+  "old_step": "calibration_analysis/ReducedHydro_L2300_wall_supported/Robot_parametric_L2p300_D0p815_WallWobble.step",
+  "principal_inertia_difference_tonne_mm2": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "surface_area_difference_mm2": -2.354747508093169e-10,
+  "volume_difference_mm3": 1.5543122344752192e-15
+}

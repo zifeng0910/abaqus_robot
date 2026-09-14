@@ -1,0 +1,9 @@
+{
+  "authoritative_CAD_volume_mm3": 1.1402680223988795,
+  "moment_density_Am2_per_mm3": 0.0009121014728712814,
+  "physical_magnetic_moment_target_Am2": 0.0010400401426980412,
+  "reference_magnetic_moment_Am2": 0.0007196393110133208,
+  "reference_volume_mm3": 0.7889904055827334,
+  "rule": "constant magnetization; magnetic moment is proportional to authoritative CAD volume",
+  "server_started": false
+}
