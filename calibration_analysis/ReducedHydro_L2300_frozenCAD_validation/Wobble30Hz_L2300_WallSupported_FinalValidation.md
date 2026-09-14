@@ -77,3 +77,10 @@ This is a solver-surface preprocessing failure, not evidence that frozen L2.3 is
 ## 19. Exactly one next step
 
 Authorize a solver-surface strategy that can conform the BODY/TAIL grazing poses, then rerun the same preflight before any Datacheck or dynamic solve. Extending duration, optimizing propulsion, or changing frozen geometry is not justified yet.
+
+
+## 20. Threshold-aware solver-surface acceptance
+
+The prior `L2300_IMPLEMENTATION_INVALID` decision above is retained as an audit-history result of the former exact Boolean gate. The subsequently authorized engineering rule uses `EPS_GAP = 5 um`, consistent with the measured maximum CAD-to-solver gap error of 4.025 um. The two sub-micron contact sign changes are `CONTACT_THRESHOLD_AMBIGUOUS`; the two 20 um wall-support crossings are `WALL_SUPPORT_THRESHOLD_AMBIGUOUS`. There are zero non-ambiguous contact failures, zero non-ambiguous wall-support failures, and zero opposing-bridge mismatches across all 360 poses.
+
+Current pre-datacheck classification: **L2300_SOLVER_SURFACE_ACCEPTED_WITH_5UM_UNCERTAINTY**. The 29,141-C3D4 mesh is frozen; no refinement is performed.

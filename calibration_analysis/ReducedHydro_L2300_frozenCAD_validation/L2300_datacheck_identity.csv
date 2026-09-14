@@ -1,0 +1,13 @@
+metric,value,detail
+errors,0,No Abaqus datacheck errors
+dat_warnings,13,12 standard VUAMP interface warnings plus one distorted-element warning
+VUAMP_interface_warnings,12,Six SOCKET and six HYDRO USER amplitudes; bridge compiled and linked
+distorted_C3D4,6,4 Pipe and 2 Robot elements; all adjusted-nodes flags are NO
+surface_output_scope_warnings,2,Robot contact output requests include faces outside the selected robot-wall contact domain
+direct_time_stability_warning,1,Requires post-run energy audit
+initial_overclosure,0,None found
+node_adjustment,0,None made
+rigid_body_valid,1,Robot rigid-body definition accepted
+duplicate_mass,0,Deck contains no *MASS keyword; mass comes from MAT_ROBOT_RIGID density
+general_contact_valid,1,Single SmoothWall114 robot-wall General Contact accepted
+socket_bridge_compiled,1,Double-precision VUAMP bridge compiled and linked

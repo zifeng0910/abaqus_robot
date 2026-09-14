@@ -1,0 +1,5 @@
+category,count,blocking,detail
+VUAMP interface,12,False,Abaqus version-signature reminder for SOCKET_FX/FY/FZ/MX/MY/MZ and HYDRO_FX/FY/FZ/MX/MY/MZ.
+Distorted tetrahedra,1,False,6 elements listed: 4 Pipe and 2 Robot; no adjusted nodes.
+Contact output surface scope,2,False,Only the robot-wall inclusion is active; output request names the complete robot surface.
+Direct time control,1,False,Fixed 1e-7 s step accepted; energy stability must be checked after the run.

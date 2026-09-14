@@ -1,0 +1,24 @@
+{
+  "classification": "L2300_SOLVER_SURFACE_ACCEPTED_WITH_5UM_UNCERTAINTY",
+  "EPS_GAP_um": 5.0,
+  "pose_count": 360,
+  "maximum_CAD_solver_gap_error_um": 4.02532125551739,
+  "contact_threshold_ambiguous_count": 2,
+  "true_contact_failure_count": 0,
+  "wall_support_threshold_ambiguous_count": 2,
+  "true_wall_support_failure_count": 0,
+  "opposing_mismatch_count": 0,
+  "gates": {
+    "preferred_max_gap_error_le_5um": true,
+    "hard_max_gap_error_le_10um": true,
+    "no_non_ambiguous_contact_mismatch": true,
+    "no_non_ambiguous_wall_support_mismatch": true,
+    "opposing_classification_all_match": true,
+    "mass_error_lt_0p5pct": true,
+    "COM_error_lt_5um": true,
+    "principal_inertia_error_lt_1p5pct": true,
+    "mesh_frozen_29141_C3D4": true
+  },
+  "accepted": true,
+  "mesh_refinement_performed": false
+}

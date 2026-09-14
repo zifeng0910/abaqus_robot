@@ -1,0 +1,39 @@
+{
+  "job": "Wobble_F30_G6L45_ReducedHydro_Zeta050_CAD_L2300_D0815_WallSupported_0083",
+  "source_STEP": "cad/freecad_parametric_robot/variants/L2300_D0815_wallwobble/Robot_L2300_D0815_WallWobble.step",
+  "source_STEP_SHA256": "461a36dabd0cc1f94390b3e3dc24b2e059b8a74a98d3080ca67694c3a5c0d0e2",
+  "scaleFromFile": false,
+  "mesh_refinement_performed": false,
+  "nodes": 5828,
+  "elements": 29141,
+  "element_type": "C3D4",
+  "exterior_triangles": 3846,
+  "RP_mm": [
+    -7.468174204284,
+    -3.676918015967,
+    -9.550745259298
+  ],
+  "mesh_COM_mm": [
+    -7.467641185591015,
+    -3.67698281341024,
+    -9.550619152592086
+  ],
+  "RP_mesh_COM_error_um": 0.5515528415283469,
+  "head_tail_dot_a0": 1.0,
+  "mesh_volume_mm3": 1.135618229197147,
+  "mesh_mass_mg": 8.868118319482827,
+  "mesh_principal_inertia_tonne_mm2": [
+    7.20129848104697e-10,
+    3.908707794232432e-09,
+    3.908709980550826e-09
+  ],
+  "magnetic_moment_Am2": 0.0010400401426980412,
+  "duplicate_mass_keyword_count": 0,
+  "general_contact_count": 1,
+  "step_time_s": 0.008333,
+  "direct_dt_s": 1e-07,
+  "field_interval_s": 2.5e-05,
+  "history_frequency": 1,
+  "threshold_aware_acceptance": "L2300_SOLVER_SURFACE_ACCEPTED_WITH_5UM_UNCERTAINTY",
+  "ready_for_datacheck": true
+}
