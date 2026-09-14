@@ -1,0 +1,97 @@
+[
+  {
+    "designation": "SCREENING ONLY - NOT AN AUTHORITATIVE DESIGN",
+    "length_mm": 2.0,
+    "diameter_mm": 0.815,
+    "head_definition": "frozen degree-5 Bezier HEAD from L2300 authoritative CAD",
+    "volume_mm3": 0.9837636938740786,
+    "mass_mg": 7.682276148256752,
+    "center_of_mass_mm": [
+      1.0558432385733454,
+      -8.111427611308774e-17,
+      6.501623390117961e-18
+    ],
+    "principal_inertia_tonne_mm2": [
+      2.607165104673921e-09,
+      2.6071651046739178e-09,
+      6.243080208999169e-10
+    ],
+    "step_sha256": "cf270113b05c75ecc70eb1a4fb3db4a84110587c2439ec8195fc54a4a53f8174"
+  },
+  {
+    "designation": "SCREENING ONLY - NOT AN AUTHORITATIVE DESIGN",
+    "length_mm": 2.1,
+    "diameter_mm": 0.815,
+    "head_definition": "frozen degree-5 Bezier HEAD from L2300 authoritative CAD",
+    "volume_mm3": 1.0359318033823455,
+    "mass_mg": 8.089660386840274,
+    "center_of_mass_mm": [
+      1.1059076140748554,
+      -9.377500945286332e-17,
+      6.318213955318118e-18
+    ],
+    "principal_inertia_tonne_mm2": [
+      3.00677776568221e-09,
+      3.0067777656822066e-09,
+      6.581323703840594e-10
+    ],
+    "step_sha256": "14465ba9bca7d61ab84c695e1a41d24ba4376d31057ca36ddf22a21527cf83bc"
+  },
+  {
+    "designation": "SCREENING ONLY - NOT AN AUTHORITATIVE DESIGN",
+    "length_mm": 2.2,
+    "diameter_mm": 0.815,
+    "head_definition": "frozen degree-5 Bezier HEAD from L2300 authoritative CAD",
+    "volume_mm3": 1.0880999128906126,
+    "mass_mg": 8.497044625423797,
+    "center_of_mass_mm": [
+      1.1559658167090159,
+      -6.377074220577389e-17,
+      9.169427163803264e-18
+    ],
+    "principal_inertia_tonne_mm2": [
+      3.4468386680036345e-09,
+      3.446838668003629e-09,
+      6.919567198682023e-10
+    ],
+    "step_sha256": "c15fc4e6a1157e9eef3fd73181a77c4f725e64395662d983b097fe8b8a257285"
+  },
+  {
+    "designation": "SCREENING ONLY - NOT AN AUTHORITATIVE DESIGN",
+    "length_mm": 2.3,
+    "diameter_mm": 0.815,
+    "head_definition": "frozen degree-5 Bezier HEAD from L2300 authoritative CAD",
+    "volume_mm3": 1.1402680223988795,
+    "mass_mg": 8.904428864007322,
+    "center_of_mass_mm": [
+      1.2060186937156343,
+      -1.369196625451785e-16,
+      5.543367561281285e-18
+    ],
+    "principal_inertia_tonne_mm2": [
+      3.929384741151496e-09,
+      3.9293847411514895e-09,
+      7.257810693523445e-10
+    ],
+    "step_sha256": "4a9e22cc71387d6fcb5f0eabf79c2638ce025d3a0436f24a311f5126d0c6a5d0"
+  },
+  {
+    "designation": "SCREENING ONLY - NOT AN AUTHORITATIVE DESIGN",
+    "length_mm": 2.4,
+    "diameter_mm": 0.815,
+    "head_definition": "frozen degree-5 Bezier HEAD from L2300 authoritative CAD",
+    "volume_mm3": 1.1924361319071464,
+    "mass_mg": 9.311813102590843,
+    "center_of_mass_mm": [
+      1.2560669440703127,
+      -1.542059012917097e-16,
+      3.6044721164285235e-18
+    ],
+    "principal_inertia_tonne_mm2": [
+      4.456452913183047e-09,
+      4.456452913183043e-09,
+      7.596054188364871e-10
+    ],
+    "step_sha256": "ae9ee2cf310b27e9d7905cf4ad5121384e53b02599974555370e3a333f1dc9ee"
+  }
+]

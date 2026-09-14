@@ -1,0 +1,4 @@
+quantity,fine_0p060,coarse_0p100,same_sign_or_envelope
+max_directed_tilt_deg,41.100389760343454,41.24243916647808,True
+robot_phase_advance_deg,-60.049710891796366,-54.82022707976321,True
+delta_s_mm,1.9530838924146088,1.9197754347758185,True

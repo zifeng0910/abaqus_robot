@@ -1,0 +1,19 @@
+{
+  "designation": "SCREENING ONLY - NOT AN AUTHORITATIVE DESIGN",
+  "length_mm": 2.0,
+  "diameter_mm": 0.815,
+  "head_definition": "frozen degree-5 Bezier HEAD from L2300 authoritative CAD",
+  "volume_mm3": 0.9837636938740786,
+  "mass_mg": 7.682276148256752,
+  "center_of_mass_mm": [
+    1.0558432385733454,
+    -8.111427611308774e-17,
+    6.501623390117961e-18
+  ],
+  "principal_inertia_tonne_mm2": [
+    2.607165104673921e-09,
+    2.6071651046739178e-09,
+    6.243080208999169e-10
+  ],
+  "step_sha256": "cf270113b05c75ecc70eb1a4fb3db4a84110587c2439ec8195fc54a4a53f8174"
+}
