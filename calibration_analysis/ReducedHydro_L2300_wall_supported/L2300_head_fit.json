@@ -1,0 +1,85 @@
+{
+  "source": "actual exterior nodes of the successful old scaled L1800 C3D4 mesh",
+  "envelope_method": "continuous piecewise-linear upper boundary of the axial-radial convex hull",
+  "fit_family": "degree-5 Bezier (single smooth BSpline span, G2 shoulder)",
+  "degree": 5,
+  "poles_mm": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.09664525
+    ],
+    [
+      0.005,
+      0.18497527
+    ],
+    [
+      0.17271875,
+      0.4075
+    ],
+    [
+      0.25,
+      0.4075
+    ],
+    [
+      0.26149477,
+      0.4075
+    ]
+  ],
+  "head_axial_extent_mm": 0.26149477,
+  "comparison_interval_mm": [
+    0.0,
+    0.26149477
+  ],
+  "comparison_samples": 2001,
+  "old_exterior_node_count": 217,
+  "old_head_hull_points": [
+    [
+      0.0,
+      0.06419838401835641
+    ],
+    [
+      0.03585725483761548,
+      0.1672581696985794
+    ],
+    [
+      0.048213987148784776,
+      0.19230443796875316
+    ],
+    [
+      0.08696150976165462,
+      0.2548941247461629
+    ],
+    [
+      0.12347878248946809,
+      0.30790025115577235
+    ],
+    [
+      0.13944484664199286,
+      0.32637553391637436
+    ],
+    [
+      0.1881697785179004,
+      0.366977418913476
+    ],
+    [
+      0.26149477212234806,
+      0.40726941817551243
+    ]
+  ],
+  "max_outward_excess_um": 7.5606686254239275,
+  "minimum_difference_um": -64.1983840183564,
+  "profile_rmse_um": 5.142122812988769,
+  "monotone_axial": true,
+  "monotone_radial": true,
+  "convex_profile": true,
+  "nose_tangent": "radial (smooth axisymmetric tip)",
+  "shoulder_tangent": "axial with zero endpoint curvature (G2 with cylinder)",
+  "preferred_max_outward_le_5um": false,
+  "hard_max_outward_le_10um": true,
+  "preferred_RMS_le_5um": false,
+  "fit_gate_pass": true
+}

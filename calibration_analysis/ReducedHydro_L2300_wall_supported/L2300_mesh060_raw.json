@@ -1,0 +1,25 @@
+{
+  "source_step": "J:\\abaqusfangzhen\\abaqus_robot\\calibration_analysis\\ReducedHydro_L2300_wall_supported\\Robot_parametric_L2p300_D0p815_WallWobble.step",
+  "mesh_size_mm": 0.06,
+  "bbox_low_mm": [
+    0.0,
+    -0.4075,
+    -0.4075
+  ],
+  "bbox_high_mm": [
+    2.3,
+    0.4075,
+    0.4075
+  ],
+  "bbox_extents_mm": [
+    2.3,
+    0.815,
+    0.815
+  ],
+  "node_count": 29302,
+  "element_count": 145677,
+  "preprocessing_wall_clock_s": 20.075833320617676,
+  "deviation_factor": 0.005,
+  "min_size_factor": 0.05,
+  "abaqus_import": "openStep + PartFromGeometryFile + C3D4 FREE TET"
+}

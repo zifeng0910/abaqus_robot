@@ -1,0 +1,62 @@
+{
+  "job": "Wobble_F30_G6L45_ReducedHydro_Zeta050_CAD_L2300_D0815_WallSupported_0083",
+  "mesh_size_mm": 0.06,
+  "node_count": 29302,
+  "element_count": 145677,
+  "exterior_node_count": 10674,
+  "exterior_triangle_count": 21344,
+  "length_mm": 2.29999995231628,
+  "diameter_mm": 0.8150000335641404,
+  "volume_mm3": 1.139896561824035,
+  "mass_mg": 8.901528103660182,
+  "mass_relative_error": 0.0003257660195215129,
+  "mesh_COM_mm": [
+    -7.468115160723101,
+    -3.67692522252807,
+    -9.550730899632946
+  ],
+  "COM_error_um": 0.06119049424997278,
+  "principal_inertia_tonne_mm2": [
+    7.253337895044098e-10,
+    3.927638117640382e-09,
+    3.9276384981180965e-09
+  ],
+  "inertia_relative_error": [
+    0.0006162737867135108,
+    0.0004445030523012139,
+    0.00044440622347607304
+  ],
+  "surface_normal_P95_deg": 0.644954509299097,
+  "surface_normal_by_region": {
+    "body": {
+      "triangle_count": 10676,
+      "median_deg": 0.3822109319174772,
+      "P95_deg": 0.38228671763859084,
+      "max_deg": 0.38230811404878623
+    },
+    "head": {
+      "triangle_count": 6517,
+      "median_deg": 0.24237690485857197,
+      "P95_deg": 2.3947610312493546,
+      "max_deg": 5.948646627375581
+    },
+    "tail": {
+      "triangle_count": 4151,
+      "median_deg": 0.0,
+      "P95_deg": 0.0,
+      "max_deg": 0.0
+    }
+  },
+  "gates": {
+    "element_count_expected": false,
+    "overall_normal_P95_lt_2deg": true,
+    "head_normal_P95_lt_2deg": false,
+    "mass_error_lt_0p5pct": true,
+    "COM_error_lt_5um": true,
+    "inertia_error_lt_1p5pct": true,
+    "L_error_lt_0p005mm": true,
+    "D_error_lt_0p005mm": true
+  },
+  "element_count_expected_is_preferred_not_hard": true,
+  "all_mesh_gates_pass": false
+}

@@ -1,0 +1,2 @@
+model,L_total_mm,D_body_mm,head_axial_extent_mm,added_straight_cylinder_mm,head_fit_max_outward_um,head_fit_RMS_um,fit_hard_gate_pass,CAD_volume_mm3,CAD_mass_mg
+Robot_parametric_L2p300_D0p815_WallWobble,2.3,0.815,0.26149477,0.5,7.5606686254239275,5.142122812988769,True,1.1402680223988795,8.904428864007322

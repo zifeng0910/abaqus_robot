@@ -1,0 +1,10 @@
+{
+  "classification": "L2300_MESH_GATE_FAILED_STOP",
+  "dynamic_job_run": false,
+  "static_pose_scan_run": false,
+  "reason": "HEAD surface-normal P95 is not below 2.0 deg",
+  "failed_value_deg": 2.3947610312493546,
+  "hard_limit_deg": 2.0,
+  "unique_dynamic_budget_consumed": false,
+  "required_next_action": "user geometry/meshing decision; no automatic length or physics change"
+}
