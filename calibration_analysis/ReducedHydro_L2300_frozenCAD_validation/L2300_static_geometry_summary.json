@@ -1,0 +1,107 @@
+{
+  "classification": "L2300_STATIC_WALL_SUPPORT_WINDOW_PRESENT",
+  "source_STEP": "cad/freecad_parametric_robot/variants/L2300_D0815_wallwobble/Robot_L2300_D0815_WallWobble.step",
+  "source_STEP_SHA256": "461a36dabd0cc1f94390b3e3dc24b2e059b8a74a98d3080ca67694c3a5c0d0e2",
+  "surface_representation": "frozen degree-5 Bezier/BRep profile surface; 3-degree azimuth sampling",
+  "surface_point_count": 27722,
+  "surface_point_count_by_region": {
+    "HEAD": 12001,
+    "BODY": 12000,
+    "TAIL": 3721
+  },
+  "wall": "SmoothWall114 actual triangles",
+  "wall_triangle_count": 1528,
+  "RP_mm": [
+    -7.468174204284,
+    -3.676918015967,
+    -9.550745259298
+  ],
+  "local_frame": {
+    "station": 58,
+    "centerline_point_mm": [
+      -7.503637597261565,
+      -3.522140556662843,
+      -9.61695124203758
+    ],
+    "tangent_station": [
+      -0.9895669598812211,
+      -0.04977161067500688,
+      -0.13520361933858602
+    ],
+    "forward_tangent": [
+      0.9895669598812211,
+      0.04977161067500688,
+      0.13520361933858602
+    ],
+    "e1": [
+      -0.13503292924759724,
+      -0.0067916640867070445,
+      0.9908178345779545
+    ],
+    "e2": [
+      0.05023285707832201,
+      -0.9987375331235675,
+      -8.673617379884035e-19
+    ],
+    "a0_dot_forward": 0.9805075266493654
+  },
+  "tilts_deg": [
+    15,
+    20,
+    25,
+    28,
+    30,
+    31,
+    32,
+    33,
+    35,
+    38
+  ],
+  "azimuths_deg": [
+    0,
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100,
+    110,
+    120,
+    130,
+    140,
+    150,
+    160,
+    170,
+    180,
+    190,
+    200,
+    210,
+    220,
+    230,
+    240,
+    250,
+    260,
+    270,
+    280,
+    290,
+    300,
+    310,
+    320,
+    330,
+    340,
+    350
+  ],
+  "counts_are_sampled_surface_point_counts": true,
+  "near_wall_does_not_mean_solver_contact": true,
+  "gates": {
+    "frozen_STEP_SHA256_matches": true,
+    "low_tilt_not_widely_hard_clamped": true,
+    "20deg_primarily_clear": true,
+    "28_33deg_wall_support_present": true,
+    "35_38deg_wall_limiting_present": true
+  }
+}

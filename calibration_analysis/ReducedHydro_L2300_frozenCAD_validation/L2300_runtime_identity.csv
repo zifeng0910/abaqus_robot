@@ -1,0 +1,2 @@
+job,datacheck_run,dynamic_run,duration_ms,dt_s,reason
+Wobble_F30_G6L45_ReducedHydro_Zeta050_CAD_L2300_D0815_WallSupported_0083,False,False,8.333,1e-07,solver-surface classification hard gate failed

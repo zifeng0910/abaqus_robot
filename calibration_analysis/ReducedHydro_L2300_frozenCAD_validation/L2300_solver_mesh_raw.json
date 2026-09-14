@@ -1,0 +1,30 @@
+{
+  "source_STEP": "J:\\abaqusfangzhen\\abaqus_robot\\cad\\freecad_parametric_robot\\variants\\L2300_D0815_wallwobble\\Robot_L2300_D0815_WallWobble.step",
+  "source_STEP_SHA256": "461a36dabd0cc1f94390b3e3dc24b2e059b8a74a98d3080ca67694c3a5c0d0e2",
+  "scaleFromFile": false,
+  "coordinate_scaling": false,
+  "bbox_low_mm": [
+    0.0,
+    -0.4075,
+    -0.4075
+  ],
+  "bbox_high_mm": [
+    2.3,
+    0.4075,
+    0.4075
+  ],
+  "bbox_extents_mm": [
+    2.3,
+    0.815,
+    0.815
+  ],
+  "global_nominal_size_mm": 0.06,
+  "HEAD_local_refinement": false,
+  "deviation_factor": 0.05,
+  "min_size_factor": 0.5,
+  "node_count": 5828,
+  "element_count": 29141,
+  "preprocessing_wall_clock_s": 2.887495756149292,
+  "element_type": "C3D4",
+  "mesh_technique": "FREE TET"
+}

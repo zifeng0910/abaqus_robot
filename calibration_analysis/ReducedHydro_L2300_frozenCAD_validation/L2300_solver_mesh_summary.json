@@ -1,0 +1,57 @@
+{
+  "source_STEP_SHA256": "461a36dabd0cc1f94390b3e3dc24b2e059b8a74a98d3080ca67694c3a5c0d0e2",
+  "mesh_strategy": "global 0.060 mm; no local refinement",
+  "node_count": 5828,
+  "element_count": 29141,
+  "exterior_triangle_count": 3846,
+  "surface_sample_count": 57690,
+  "mesh_volume_mm3": 1.135618229197147,
+  "mesh_mass_mg": 8.868118319482827,
+  "mass_relative_error": 0.0040778072439059745,
+  "mesh_COM_mm": [
+    -7.467641185591011,
+    -3.676982813410238,
+    -9.550619152592086
+  ],
+  "COM_error_um": 0.5515528415315716,
+  "mesh_principal_inertia_tonne_mm2": [
+    7.201298481049829e-10,
+    3.908707794232904e-09,
+    3.908709980551284e-09
+  ],
+  "inertia_relative_error": [
+    0.007786399350984067,
+    0.00526213345871702,
+    0.005261577056502159
+  ],
+  "initial_exact_gap_um": 260.861004571551,
+  "surface_normal_diagnostic": {
+    "overall_P95_deg": 1.397578796222714,
+    "HEAD_P95_deg": 5.043021970396326,
+    "hard_gate": false
+  },
+  "CAD_vs_solver": {
+    "maximum_overall_gap_error_um": 4.02532125551739,
+    "maximum_regional_gap_error_um": 4.02532125551739,
+    "P95_overall_gap_error_um": 2.891191431378865,
+    "contact_mismatch_count": 2,
+    "wall_support_mismatch_count": 2,
+    "opposing_mismatch_count": 0
+  },
+  "gates": {
+    "element_count_20000_to_50000_preferred": true,
+    "element_count_le_80000_hard": true,
+    "mass_error_lt_0p5pct": true,
+    "COM_error_lt_5um": true,
+    "principal_inertia_error_lt_1p5pct": true,
+    "initial_gap_no_penetration": true,
+    "head_tail_polarity": true,
+    "overall_gap_error_le_10um": true,
+    "regional_gap_error_le_10um": true,
+    "contact_classification_all_match": false,
+    "wall_support_classification_all_match": false,
+    "opposing_classification_all_match": true
+  },
+  "all_hard_gates_pass": false,
+  "HEAD_refinement_required": true
+}

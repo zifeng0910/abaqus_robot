@@ -1,0 +1,2 @@
+rule,reference_volume_mm3,reference_magnetic_moment_Am2,L2300_CAD_volume_mm3,calculated_magnetic_moment_Am2,target_magnetic_moment_Am2,match
+constant magnetization; magnetic moment is proportional to authoritative CAD volume,0.7889904055827334,0.0007196393110133208,1.1402680223988795,0.0010400401426980412,0.001040040143,True

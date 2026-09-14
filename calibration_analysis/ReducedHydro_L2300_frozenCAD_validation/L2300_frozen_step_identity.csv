@@ -1,0 +1,2 @@
+source_STEP,SHA256,SHA256_matches_manifest,L_total_mm,D_body_mm,volume_mm3,classification
+cad/freecad_parametric_robot/variants/L2300_D0815_wallwobble/Robot_L2300_D0815_WallWobble.step,461a36dabd0cc1f94390b3e3dc24b2e059b8a74a98d3080ca67694c3a5c0d0e2,True,2.3,0.815,1.1402680223988795,L2300_STATIC_WALL_SUPPORT_WINDOW_PRESENT

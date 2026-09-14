@@ -1,0 +1,31 @@
+{
+  "classification": "L2300_IMPLEMENTATION_INVALID",
+  "static_classification": "L2300_STATIC_WALL_SUPPORT_WINDOW_PRESENT",
+  "reason": "global 0.060 mm solver surface fails exact contact and wall-support classification gates",
+  "datacheck_run": false,
+  "dynamic_run_count": 0,
+  "dynamic_budget_unconsumed": true,
+  "head_refinement_used": false,
+  "head_refinement_reason": "not used because remaining contact mismatches are at BODY/TAIL and cannot be corrected by the only permitted HEAD refinement",
+  "contact_mismatch_poses": [
+    {
+      "tilt_deg": 32,
+      "azimuth_deg": 350
+    },
+    {
+      "tilt_deg": 35,
+      "azimuth_deg": 340
+    }
+  ],
+  "wall_support_mismatch_poses": [
+    {
+      "tilt_deg": 30,
+      "azimuth_deg": 230
+    },
+    {
+      "tilt_deg": 30,
+      "azimuth_deg": 290
+    }
+  ],
+  "exactly_one_next_step": "Authorize a solver-surface strategy that can conform the BODY/TAIL grazing poses, then rerun preflight before any dynamic solve."
+}
