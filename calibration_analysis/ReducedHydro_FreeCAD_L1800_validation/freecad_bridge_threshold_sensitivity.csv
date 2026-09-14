@@ -1,0 +1,5 @@
+threshold_um,bridge_event_count,first_bridge_s,longest_bridge_start_s,longest_bridge_end_s,longest_bridge_ms,persistent_over_0p5ms,sampling_identity
+20.0,5,0.002291,0.006246,0.0067919999999999,0.5469999999998999,True,saved 1 us cluster poses; 10 um restricted to saved 20 um candidate nodes
+10.0,3,0.0062039999999999,0.0064269999999999,0.006464,0.038000000000100315,False,saved 1 us cluster poses; 10 um restricted to saved 20 um candidate nodes
+5.0,0,,,,0.0,False,saved 1 us cluster poses; 10 um restricted to saved 20 um candidate nodes
+0.0,0,,,,0.0,False,saved 1 us cluster poses; 10 um restricted to saved 20 um candidate nodes

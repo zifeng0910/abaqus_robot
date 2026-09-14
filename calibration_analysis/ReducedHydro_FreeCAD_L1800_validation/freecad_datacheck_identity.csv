@@ -1,0 +1,8 @@
+metric,value,detail
+errors,0,Abaqus datacheck completed
+warnings,13,12 standard VUAMP warnings plus distorted-element warning
+distorted_C3D4,45,45 of 78024 rigid-body tetrahedra
+initial_overclosure,0,No overclosure
+node_adjustment,0,No initial node adjustment
+rigid_body_valid,1,Robot rigid-body definition accepted
+duplicate_mass,0,No duplicate mass assignment

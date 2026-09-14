@@ -1,0 +1,110 @@
+{
+  "job": "Wobble_F30_G6L45_ReducedHydro_Zeta050_CAD_L1800_D0815_WallOn_Free_0083",
+  "source_step": "J:\\abaqusfangzhen\\abaqus_robot\\cad\\freecad_parametric_robot\\Robot_parametric_L1p800_D0p815.step",
+  "source_step_sha256": "ec61028a3c379a31b0cb8934124c03e1b03010a27d378f64608aab72decdab52",
+  "abaqus_import": {
+    "source_step": "J:\\abaqusfangzhen\\abaqus_robot\\cad\\freecad_parametric_robot\\Robot_parametric_L1p800_D0p815.step",
+    "mesh_size_mm": 0.035,
+    "bbox_low_mm": [
+      -3.7259084706420253e-13,
+      -0.4075,
+      -0.4075
+    ],
+    "bbox_high_mm": [
+      1.8,
+      0.40750000000033304,
+      0.4075
+    ],
+    "bbox_extents_mm": [
+      1.8000000000003726,
+      0.815000000000333,
+      0.815
+    ],
+    "node_count": 15215,
+    "element_count": 78024,
+    "abaqus_import": "mdb.openStep(scaleFromFile=OFF) + PartFromGeometryFile"
+  },
+  "rotation_matrix": [
+    [
+      0.9647382600215761,
+      0.11887423721399708,
+      -0.2348382536498942
+    ],
+    [
+      -0.11887423721399708,
+      0.9928076504841645,
+      0.014208619458040058
+    ],
+    [
+      0.2348382536498942,
+      0.014208619458040058,
+      0.9719306095374116
+    ]
+  ],
+  "head_to_tail_dot_a0": 1.0,
+  "RP_mm": [
+    -7.468174204284,
+    -3.676918015967,
+    -9.550745259298
+  ],
+  "mesh_COM_mm": [
+    -7.467957038385542,
+    -3.676945580678438,
+    -9.550692389054378
+  ],
+  "RP_mesh_COM_error_um": 0.225202361067164,
+  "mesh_length_mm": 1.7999999523162806,
+  "mesh_diameter_mm": 0.8150000268267409,
+  "mesh_volume_mm3": 0.8648490574051034,
+  "mesh_mass_mg": 6.7536638391088974,
+  "mass_relative_error": 0.001516606154936155,
+  "mesh_inertia_principal_tonne_mm2": [
+    5.414260775250533e-10,
+    1.8526891738245454e-09,
+    1.8526928811252336e-09
+  ],
+  "CAD_inertia_principal_tonne_mm2": [
+    5.429470082050118e-10,
+    1.8566445332010866e-09,
+    1.8566445332010883e-09
+  ],
+  "inertia_relative_error": [
+    0.0028012506874043144,
+    0.002130380536397931,
+    0.0021283837617756375
+  ],
+  "surface_triangle_count": 8934,
+  "surface_normal_median_deg": 0.8223545274307338,
+  "surface_normal_P95_deg": 0.8224016464248144,
+  "surface_normal_max_deg": 2.4314386719629915,
+  "initial_exact_gap_um": 268.0103670513184,
+  "nearest_robot_node": 36,
+  "nearest_wall_triangle": 875,
+  "nearest_wall_point_mm": [
+    -6.776929727716152,
+    -4.414009547558544,
+    -9.164548591864273
+  ],
+  "old_volume_mm3": 0.788990405563549,
+  "old_moment_Am2": 0.000719639311013,
+  "moment_density_Am2_per_mm3": 0.0009121014728930525,
+  "new_CAD_volume_mm3": 0.866162685064448,
+  "new_moment_Am2": 0.0007900282608122842,
+  "moment_ratio": 1.0978114295899168,
+  "old_mass_mg": 6.161278579,
+  "old_transverse_inertia_tonne_mm2": 1.6707115690764575e-09,
+  "new_old_transverse_inertia_ratio": 1.1112896849259335,
+  "new_old_moment_per_Iperp_ratio": 0.9878715194437218,
+  "gates": {
+    "step_identity": true,
+    "head_tail_polarity": true,
+    "com_placement": true,
+    "surface_faceting": true,
+    "mesh_dimensions": true,
+    "mesh_mass": true,
+    "mesh_inertia": true,
+    "magnetic_moment": true,
+    "initial_exact_gap": true
+  },
+  "all_pre_datacheck_gates_pass": true
+}

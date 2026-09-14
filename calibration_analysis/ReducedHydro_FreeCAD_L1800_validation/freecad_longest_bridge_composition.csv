@@ -1,0 +1,2 @@
+onset_s,end_s,duration_ms,minimum_gap_um,unique_head_near_wall_nodes,unique_tail_near_wall_nodes,unique_body_near_wall_nodes,head_involved_fraction,tail_involved_fraction,head_tail_simultaneous_fraction,wall_sector_A_deg,wall_sector_B_deg,maximum_sector_separation_deg,interpretation
+0.006246,0.0067919999999999,0.5469999999998999,-0.3492259837530357,56,28,0,1.0,1.0,1.0,17.434,167.640,150.2057775072799,HEAD_and_TAIL_opposing_near_wall_bridge
