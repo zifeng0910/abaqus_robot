@@ -1,0 +1,9 @@
+{
+  "comparison": "dense 0.035 versus simplified 0.060 on current exact-CAD trajectory",
+  "gates": {
+    "min_gap_difference_le_2um": true,
+    "longest20_difference_le_0p05ms": true,
+    "bridge_classification_consistent": true
+  },
+  "all_gates_pass": true
+}

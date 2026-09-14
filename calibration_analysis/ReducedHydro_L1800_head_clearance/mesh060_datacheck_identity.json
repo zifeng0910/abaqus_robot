@@ -1,0 +1,13 @@
+{
+  "job": "Wobble_F30_G6L45_ReducedHydro_Zeta050_CAD_L1800_D0815_Mesh060_Datacheck",
+  "errors": 0,
+  "warnings": 13,
+  "standard_amplitude_warnings": 12,
+  "distorted_C3D4": 4,
+  "abaqus_kernel_wall_clock_s": 1,
+  "end_to_end_wall_clock_s": 16.1268828,
+  "dense_reference_distorted_C3D4": 45,
+  "dense_reference_abaqus_kernel_wall_clock_s": 2,
+  "dynamic_job": false,
+  "passed": true
+}

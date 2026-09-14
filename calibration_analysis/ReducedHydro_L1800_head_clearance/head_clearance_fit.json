@@ -1,0 +1,21 @@
+{
+  "method": "deterministic 1D grid fit of one G1 circular arc to old L1800 exterior-node envelope",
+  "comparison_interval_mm": [
+    0.0,
+    0.42
+  ],
+  "bin_width_mm": 0.005,
+  "L_total_mm": 1.8,
+  "D_body_mm": 0.815,
+  "R_body_mm": 0.4075,
+  "current_R_head_mm": 0.4142916666666666,
+  "fitted_R_head_design_mm": 0.48129821,
+  "R_head_over_R_body": 1.1810999018404909,
+  "head_axial_extent_mm": 0.47560676104319627,
+  "straight_body_length_mm": 1.3243932389568038,
+  "max_outward_excess_um": 9.99894977080315,
+  "minimum_difference_um": -57.636468446852554,
+  "profile_rmse_um": 35.8025832068088,
+  "acceptance_max_outward_um": 10.0,
+  "fit_gate_pass": true
+}

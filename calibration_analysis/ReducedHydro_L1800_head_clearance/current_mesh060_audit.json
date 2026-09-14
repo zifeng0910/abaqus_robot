@@ -1,0 +1,68 @@
+{
+  "prefix": "current_mesh060",
+  "job": "Wobble_F30_G6L45_ReducedHydro_Zeta050_CAD_L1800_D0815_Mesh060",
+  "source_step": "J:\\abaqusfangzhen\\abaqus_robot\\cad\\freecad_parametric_robot\\Robot_parametric_L1p800_D0p815.step",
+  "mesh_size_mm": 0.06,
+  "preprocessing_wall_clock_s": 2.629950523376465,
+  "node_count": 4490,
+  "element_count": 22282,
+  "exterior_node_count": 1526,
+  "exterior_triangle_count": 3048,
+  "length_mm": 1.79999995231628,
+  "diameter_mm": 0.8150000359746943,
+  "volume_mm3": 0.8624247648185275,
+  "mass_mg": 6.734732376980116,
+  "mass_relative_error": 0.004315494433522545,
+  "mesh_COM_mm": [
+    -7.467593037600761,
+    -3.676996670135546,
+    -9.550602015605456
+  ],
+  "COM_error_um": 0.6037051825106889,
+  "principal_inertia_tonne_mm2": [
+    5.385909690918212e-10,
+    1.845541748758743e-09,
+    1.8455629510008343e-09
+  ],
+  "inertia_relative_error": [
+    0.008022954445575903,
+    0.0059800270023691515,
+    0.0059686073462581445
+  ],
+  "surface_normal_median_deg": 1.3975528479578385,
+  "surface_normal_P95_deg": 1.3975781219657906,
+  "surface_normal_max_deg": 3.8226639080754197,
+  "surface_normal_by_region": {
+    "body": {
+      "triangle_count": 1978,
+      "median_deg": 1.3975595996258554,
+      "P95_deg": 1.3975769685756094,
+      "max_deg": 1.3975787962229749
+    },
+    "head": {
+      "triangle_count": 745,
+      "median_deg": 0.7180079986936061,
+      "P95_deg": 1.6883185886632248,
+      "max_deg": 3.8226639080754197
+    },
+    "tail": {
+      "triangle_count": 325,
+      "median_deg": 0.0,
+      "P95_deg": 0.0,
+      "max_deg": 0.0
+    }
+  },
+  "input_size_bytes": 1238956,
+  "gates": {
+    "element_count_preferred": false,
+    "surface_normal_hard": true,
+    "surface_normal_acceptable": true,
+    "head_surface_normal_hard": true,
+    "dimensions": true,
+    "mass": true,
+    "COM": true,
+    "inertia": true,
+    "head_tail_polarity": true
+  },
+  "all_required_geometry_gates_pass": true
+}

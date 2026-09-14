@@ -1,0 +1,90 @@
+{
+  "model": "Robot_parametric_L1p800_D0p815_HeadClearance",
+  "geometry_family": "one convex circular-arc head, G1 tangent cylinder, flat tail",
+  "axis": "+X from HEAD nose to flat TAIL",
+  "L_total_mm": 1.8,
+  "D_body_mm": 0.815,
+  "R_body_mm": 0.4075,
+  "R_head_design_mm": 0.48129821,
+  "R_head_over_R_body": 1.1810999018404909,
+  "head_axial_extent_mm": 0.47560676104319627,
+  "straight_body_length_mm": 1.3243932389568038,
+  "volume_mm3": 0.8482759169999391,
+  "volume_ratio_vs_current_exact_CAD": 0.9793494127916881,
+  "shape_gate": {
+    "valid": true,
+    "closed": true,
+    "solid_count": 1,
+    "shell_count": 1,
+    "bbox_mm": {
+      "x": 1.8,
+      "y": 0.8150000000000001,
+      "z": 0.8150000000000001
+    },
+    "volume_mm3": 0.8482759169999391,
+    "surface_area_mm2": 5.034727491352863
+  },
+  "export_reimport_gate": {
+    "step": {
+      "valid": true,
+      "closed": true,
+      "solid_count": 1,
+      "shell_count": 1,
+      "bbox_mm": {
+        "x": 1.8000000000002108,
+        "y": 0.815,
+        "z": 0.815
+      },
+      "volume_mm3": 0.8482759170000416,
+      "surface_area_mm2": 5.034727491353365
+    },
+    "brep": {
+      "valid": true,
+      "closed": true,
+      "solid_count": 1,
+      "shell_count": 1,
+      "bbox_mm": {
+        "x": 1.8,
+        "y": 0.8150000000000001,
+        "z": 0.8150000000000001
+      },
+      "volume_mm3": 0.8482759169999384,
+      "surface_area_mm2": 5.0347274913528555
+    },
+    "fcstd": {
+      "valid": true,
+      "closed": true,
+      "solid_count": 1,
+      "shell_count": 1,
+      "bbox_mm": {
+        "x": 1.8000000000000003,
+        "y": 0.8150000000000001,
+        "z": 0.8150000000000001
+      },
+      "volume_mm3": 0.8482759169999391,
+      "surface_area_mm2": 5.034727491352863
+    }
+  },
+  "fit_source": {
+    "method": "deterministic 1D grid fit of one G1 circular arc to old L1800 exterior-node envelope",
+    "comparison_interval_mm": [
+      0.0,
+      0.42
+    ],
+    "bin_width_mm": 0.005,
+    "L_total_mm": 1.8,
+    "D_body_mm": 0.815,
+    "R_body_mm": 0.4075,
+    "current_R_head_mm": 0.4142916666666666,
+    "fitted_R_head_design_mm": 0.48129821,
+    "R_head_over_R_body": 1.1810999018404909,
+    "head_axial_extent_mm": 0.47560676104319627,
+    "straight_body_length_mm": 1.3243932389568038,
+    "max_outward_excess_um": 9.99894977080315,
+    "minimum_difference_um": -57.636468446852554,
+    "profile_rmse_um": 35.8025832068088,
+    "acceptance_max_outward_um": 10.0,
+    "fit_gate_pass": true
+  },
+  "freecad_version": "1.1.3.20260725 (Git shallow).Unknown.2026/07/25 04:52:02.grafted,grafted.145529fe741292ff0b3977a01195bf0247425794"
+}

@@ -1,0 +1,5 @@
+__pycache__/
+candidate_private/
+*.tiff
+*_private.csv
+*_QA_contact_sheet.png

@@ -1,0 +1,21 @@
+{
+  "geometry": "exact analytic HeadClearance circular surface",
+  "sampling": {
+    "axial_max_spacing_um": 15.0,
+    "circumferential_step_deg": 10.0,
+    "maximum_chord_sag_um": 1.551,
+    "point_count": 4393
+  },
+  "wall": "SmoothWall114 exact triangles",
+  "gates": {
+    "old_longest20_lt_0p5ms": false,
+    "old_longest5_no_persistent": true,
+    "old_longest0_no_persistent": true,
+    "old_min_gap_gt_minus2um": false,
+    "new_longest20_lt_0p5ms": true,
+    "new_longest5_no_persistent": true,
+    "new_longest0_no_persistent": true,
+    "new_min_gap_gt_minus2um": false
+  },
+  "all_zero_abaqus_gates_pass": false
+}
