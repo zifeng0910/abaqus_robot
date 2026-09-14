@@ -1,0 +1,22 @@
+{
+  "wall": "SmoothWall114 exact triangles",
+  "pose_map": "COM(t)+R(t)*(x_ref-COM_ref)",
+  "sample_interval_s": 1e-06,
+  "thresholds_um": [
+    20.0,
+    10.0,
+    5.0,
+    0.0
+  ],
+  "centroid_bound": "d_centroid <= triangle_radius + 20.001 um",
+  "centerline_prefilter": "nearest TRUE-centerline sample distance >= 0.70 mm; sample spacing <= 0.270 mm",
+  "geometry_nodes": {
+    "OLD": 217,
+    "NEW": 1419
+  },
+  "geometry_representation": "actual exterior mesh nodes; convex-hull extremal subset for convex NEW body",
+  "old_old_regression_target_ms": 0.2588,
+  "new_new_regression_target_ms": 0.547,
+  "causal_classification": "EXACT_HEAD_GEOMETRY_DOMINATES_BRIDGE_REINTRODUCTION",
+  "first_new_trajectory_flip_ms": 2.830262
+}
