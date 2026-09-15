@@ -1,0 +1,35 @@
+{
+  "legacy": {
+    "B_T": 0.0,
+    "F_N": 0.0,
+    "T_Nmm": 0.0
+  },
+  "fixed_com": {
+    "component_reference_max_abs_T": 3.469446951953614e-18,
+    "magnitude_max_abs_T": 3.469446951953614e-18,
+    "theta_max_abs_deg": 2.1316282072803006e-14,
+    "winding_turn": 1.0,
+    "projected_robot_arc_mm": 13.821574006285505
+  },
+  "projection": {
+    "interior_error_mm": 2.220446049250313e-16,
+    "before_s_mm": -0.2500000000000005,
+    "after_excess_mm": 0.25,
+    "tangent_continuity_dot": 1.0
+  },
+  "moving_FRAME_LOCAL30": {
+    "B_component_T": 0.0003677775328157556,
+    "B_angle_deg": 2.824735779059273,
+    "B_magnitude_T": 5.204170427930421e-18,
+    "F_component_N": 0.0,
+    "T_component_Nmm": 0.0004189503695529895,
+    "samples": 361,
+    "nearest_vertex_compatibility": {
+      "B_component_T": 0.0,
+      "B_angle_deg": 0.0,
+      "F_component_N": 0.0,
+      "T_component_Nmm": 0.0
+    },
+    "pass": false
+  }
+}
