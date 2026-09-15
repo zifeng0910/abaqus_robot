@@ -1,0 +1,6 @@
+case/*/*
+!case/*/*.inp
+!case/*/*.f
+!case/*/*.json
+!case/*/*.csv
+__pycache__/

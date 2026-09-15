@@ -1,0 +1,29 @@
+{
+  "case_id": "STRAIGHT_PRESCRIBED_WOBBLE_CONTACT_AUDIT",
+  "status": "SOLVED",
+  "primary_classification": "PRESCRIBED_MOTION_MASKED_GEOMETRIC_BRIDGE",
+  "secondary_classification": "GEOMETRIC_INCOMPATIBILITY_DRIVES_PENALTY_REACTION",
+  "analysis_window_ms": [
+    2.3,
+    16.667
+  ],
+  "prescribed_tilt_mean_deg": 26.551898102831593,
+  "prescribed_tilt_min_deg": 24.44108997927295,
+  "prescribed_tilt_max_deg": 29.85781152430196,
+  "both_end_support_fraction": 1.0,
+  "contact_active_fraction": 1.0,
+  "minimum_gap_um": -246.51107043219446,
+  "required_transverse_RM_peak_Nmm": 17145.21348880099,
+  "required_transverse_RM_RMS_Nmm": 11506.843477830396,
+  "available_magnetic_transverse_RMS_Nmm": 0.0029538788835154627,
+  "peak_required_to_available_ratio": 5920097.186241404,
+  "RMS_required_to_available_ratio": 3895502.805496176,
+  "bridge_time_required_exceeds_available_fraction": 1.0,
+  "deep_penetration_warning": true,
+  "reaction_ratio_interpretation": "diagnostic_only_not_a_physical_torque_requirement_because_deep_penetration_activates_penalty_stiffness",
+  "case_A_supported": false,
+  "case_A_reason": "prescribed replay did not produce clean hit-separate wobble",
+  "startup_transient_excluded": true,
+  "zeta020_magnetic_run_authorized": false,
+  "decision": "DO_NOT_CHANGE_ZETA_OR_RUN_GEOMETRY_SWEEP; REDUCE_COMMAND_TRAJECTORY_TO_GEOMETRICALLY_FEASIBLE_TILT_NEXT"
+}

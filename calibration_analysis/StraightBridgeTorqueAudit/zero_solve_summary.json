@@ -1,0 +1,17 @@
+{
+  "classification": "PRESCRIBED_REPLAY_REQUIRED_FOR_DECISIVE_TORQUE_COMPARISON",
+  "contact_torque_method": "rigid_body_angular_momentum_balance_inversion_10p1us_SG",
+  "direct_contact_torque_available": false,
+  "reason": "ODB has only whole-surface contact resultants; opposing contact couples are not recoverable from them",
+  "analysis_start_ms": 2.3,
+  "bridge_fraction": 1.0,
+  "Tmag_bridge_rms_Nmm": 0.0028949316059491133,
+  "Tcontact_inferred_bridge_rms_Nmm": 0.0028949171238379875,
+  "inferred_transverse_contact_to_magnetic_ratio_median": 0.9999992464217534,
+  "inferred_transverse_contact_to_magnetic_ratio_p95": 1.0000412662729703,
+  "event_count": 353,
+  "event_restitution_limit": "not identifiable for opposing simultaneous contacts without node-level force/contact-point output",
+  "zeta020_authorized": false,
+  "zeta_reason": "existing zeta0.50 first-impact e_n=0.621897 and gap reopening do not support damping capture",
+  "historical_prescribed_case": "not found in current repository or reachable git history"
+}

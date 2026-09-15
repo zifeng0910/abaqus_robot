@@ -1,0 +1,21 @@
+{
+    "case_id":  "STRAIGHT_PRESCRIBED_WOBBLE_CONTACT_AUDIT",
+    "status":  "SOLVED",
+    "source_job":  "PROD_LOCAL30_G0_STRAIGHT_CTRL",
+    "source_commit":  "5f0de0ee8c29ee9045f13eddee086e7c61bc19c9",
+    "duration_s":  0.016667,
+    "direct_dt_s":  1E-07,
+    "translation":  "FREE",
+    "rotation":  "PRESCRIBED_30HZ_30DEG_CONE_WITH_1MS_QUINTIC_RAMP",
+    "phase_deg":  248.0,
+    "frequency_Hz":  30.0,
+    "cone_deg":  30.0,
+    "magpylib_loads":  false,
+    "reduced_hydro":  true,
+    "mu":  0.03,
+    "zeta":  0.5,
+    "tangent_fraction":  0.0,
+    "input_sha256":  "9d022504b41227a778e4989db7827985a67f282e60edbd680822a210510c72f2",
+    "fortran_sha256":  "5ac40b9baae96235330d7fe2df4d6b0f9b1256005cbd084799a4062b076b8013",
+    "wallclock_s":  409.262133
+}
