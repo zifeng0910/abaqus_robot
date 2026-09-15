@@ -1,0 +1,12 @@
+{
+  "samples": 3335,
+  "sample_interval_us": 10.0000761449337,
+  "new_B_step_max_deg": 2.0064112120291413,
+  "old_B_step_max_deg": 6.058228054161434,
+  "new_t_step_max_deg": 2.238031255367305,
+  "old_t_step_max_deg": 6.6491891745459455,
+  "new_s_step_max_mm": 0.07007444037711075,
+  "old_s_step_max_mm": 0.10000000000000142,
+  "new_s_reversals": 1153,
+  "initial_phase_component_error_T": 0.0
+}

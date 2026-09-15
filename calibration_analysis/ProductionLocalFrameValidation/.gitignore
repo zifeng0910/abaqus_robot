@@ -9,8 +9,10 @@
 *.prt
 *.com
 *.msg
+*.dat
 *.sta
 *.lck
+*.rec
 *.dll
 *.tiff
 *.tif
@@ -20,3 +22,4 @@ private/
 *_telemetry.csv
 *_socket_stdout.log
 *_socket_stderr.log
+*_hydro_increment.csv

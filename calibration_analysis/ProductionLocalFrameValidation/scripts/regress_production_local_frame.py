@@ -6,6 +6,8 @@ from pathlib import Path
 
 import numpy as np
 
+from continuous_segment_reference import ContinuousSegmentReference
+
 
 HERE = Path(__file__).resolve().parent
 VALIDATION = HERE.parent
@@ -122,30 +124,33 @@ def projection_gate(model):
 
 def fixed_com_gate(corrected):
     model, wrapped, transform = build(corrected, field_mode="ROBOT_LOCAL_TANGENT")
-    position_mag = transform.position_to_mag(RP0)
+    oracle = ContinuousSegmentReference(DXF, TRANSFORM, model.robot_axis_global,
+                                        polarity=model.robot_polarity, moment_Am2=MOMENT)
     times = np.linspace(0.0, 1.0 / 30.0, 721)
     fields, phases, theta = [], [], []
     reference_max = 0.0
+    angular_max = 0.0
     for time_s in times:
         result = wrapped.evaluate(time_s, RP0, np.zeros(3))
         b = vector(result, "B_aba_vec_T")
-        c, e1, e2 = model._robot_local_frame(result["robot_arc_mm"])
-        c = transform.vector_to_aba(c); e1 = transform.vector_to_aba(e1); e2 = transform.vector_to_aba(e2)
+        reference = oracle.evaluate(time_s, RP0, np.zeros(3))
+        c = oracle.vector_to_aba(reference["tangent_mag"])
+        e1 = oracle.vector_to_aba(reference["e1_mag"])
+        e2 = oracle.vector_to_aba(reference["e2_mag"])
         fields.append(b)
         theta.append(angle_deg(b, c))
         phases.append(math.atan2(np.dot(b, e2), np.dot(b, e1)))
-        phi = PHASE0 + 2.0 * math.pi * 30.0 * time_s
-        reference = 0.010 * (math.cos(math.radians(30.0)) * unit(c) +
-                            math.sin(math.radians(30.0)) * (math.cos(phi) * unit(e1) + math.sin(phi) * unit(e2)))
-        reference_max = max(reference_max, float(np.max(np.abs(b - reference))))
+        reference_max = max(reference_max, float(np.max(np.abs(b - reference["B_aba_T"]))))
+        angular_max = max(angular_max, angle_deg(b, reference["B_aba_T"]))
     fields = np.asarray(fields)
     winding = float((np.unwrap(phases)[-1] - np.unwrap(phases)[0]) / (2.0 * math.pi))
     metrics = {
         "component_reference_max_abs_T": reference_max,
+        "angular_reference_max_deg": angular_max,
         "magnitude_max_abs_T": float(np.max(np.abs(np.linalg.norm(fields, axis=1) - 0.010))),
         "theta_max_abs_deg": float(np.max(np.abs(np.asarray(theta) - 30.0))),
         "winding_turn": winding,
-        "projected_robot_arc_mm": float(model._project_robot_arc_mm(position_mag)),
+        "projected_robot_arc_mm": float(result["robot_arc_mm"]),
     }
     assert metrics["magnitude_max_abs_T"] < 1.0e-14, metrics
     assert metrics["theta_max_abs_deg"] < 1.0e-8, metrics
@@ -153,48 +158,60 @@ def fixed_com_gate(corrected):
     return metrics, projection_gate(model)
 
 
-def screening_gate(corrected):
+def moving_gate(corrected):
     screening = load_module("screening_local_server", SCREENING)
     production_model, production_wrapped, _ = build(corrected, field_mode="ROBOT_LOCAL_TANGENT")
-    compatibility_model, compatibility_wrapped, _ = build(corrected, field_mode="ROBOT_LOCAL_TANGENT")
-    compatibility_model._project_robot_arc_mm = compatibility_model._project_arc_mm
+    oracle = ContinuousSegmentReference(DXF, TRANSFORM, production_model.robot_axis_global,
+                                        polarity=production_model.robot_polarity, moment_Am2=MOMENT)
     screening_model = screening.LocalTangentConeModel(str(DXF), **model_kwargs())
     screening_wrapped, _ = finish_model(screening.production, screening_model)
     history = np.load(TRAJECTORY)
     count = len(history["U1"])
     indices = np.unique(np.linspace(0, count - 1, 361).astype(int))
-    maxima = {"B_component_T": 0.0, "B_angle_deg": 0.0, "B_magnitude_T": 0.0,
+    maxima = {"s_mm": 0.0, "center_mm": 0.0, "tangent": 0.0, "e1": 0.0, "e2": 0.0,
+              "B_component_T": 0.0, "B_angle_deg": 0.0, "B_magnitude_T": 0.0,
               "F_component_N": 0.0, "T_component_Nmm": 0.0}
-    compatibility = {"B_component_T": 0.0, "B_angle_deg": 0.0,
-                     "F_component_N": 0.0, "T_component_Nmm": 0.0}
+    historical = {"B_component_T": 0.0, "B_angle_deg": 0.0,
+                  "T_component_Nmm": 0.0}
     production_model.reset_robot_arc_continuity()
+    oracle.reset()
     for index in indices:
         time_s = float(history["U1"][index, 0])
         position = RP0 + np.array([history[key][index, 1] for key in ("U1", "U2", "U3")])
         rotation = np.array([history[key][index, 1] for key in ("UR1", "UR2", "UR3")])
-        reference = screening_wrapped.evaluate(time_s, position, rotation)
+        reference = oracle.evaluate(time_s, position, rotation)
         result = production_wrapped.evaluate(time_s, position, rotation)
-        compat = compatibility_wrapped.evaluate(time_s, position, rotation)
-        br, bp = vector(reference, "B_aba_vec_T"), vector(result, "B_aba_vec_T")
+        old = screening_wrapped.evaluate(time_s, position, rotation)
+        br, bp = reference["B_aba_T"], vector(result, "B_aba_vec_T")
+        s = float(result["robot_arc_mm"])
+        pc = np.array([np.interp(np.clip(s, 0.0, production_model.arc_mm[-1]),
+                                 production_model.arc_mm, production_model.curve_mm[:, axis])
+                       for axis in range(3)])
+        pt, pe1, pe2 = production_model._robot_local_frame(s)
+        maxima["s_mm"] = max(maxima["s_mm"], abs(s - reference["s_mm"]))
+        maxima["center_mm"] = max(maxima["center_mm"], float(np.linalg.norm(pc - reference["center_mag_mm"])))
+        maxima["tangent"] = max(maxima["tangent"], float(np.max(np.abs(pt - reference["tangent_mag"]))))
+        maxima["e1"] = max(maxima["e1"], float(np.max(np.abs(pe1 - reference["e1_mag"]))))
+        maxima["e2"] = max(maxima["e2"], float(np.max(np.abs(pe2 - reference["e2_mag"]))))
         maxima["B_component_T"] = max(maxima["B_component_T"], float(np.max(np.abs(br - bp))))
         maxima["B_angle_deg"] = max(maxima["B_angle_deg"], angle_deg(br, bp))
         maxima["B_magnitude_T"] = max(maxima["B_magnitude_T"], abs(float(np.linalg.norm(br) - np.linalg.norm(bp))))
-        maxima["F_component_N"] = max(maxima["F_component_N"], float(np.max(np.abs(vector(reference, "force_N") - vector(result, "force_N")))))
-        maxima["T_component_Nmm"] = max(maxima["T_component_Nmm"], float(np.max(np.abs(vector(reference, "torque_Nmm") - vector(result, "torque_Nmm")))))
-        bc = vector(compat, "B_aba_vec_T")
-        compatibility["B_component_T"] = max(compatibility["B_component_T"], float(np.max(np.abs(br - bc))))
-        compatibility["B_angle_deg"] = max(compatibility["B_angle_deg"], angle_deg(br, bc))
-        compatibility["F_component_N"] = max(compatibility["F_component_N"], float(np.max(np.abs(vector(reference, "force_N") - vector(compat, "force_N")))))
-        compatibility["T_component_Nmm"] = max(compatibility["T_component_Nmm"], float(np.max(np.abs(vector(reference, "torque_Nmm") - vector(compat, "torque_Nmm")))))
+        maxima["F_component_N"] = max(maxima["F_component_N"], float(np.max(np.abs(reference["F_aba_N"] - vector(result, "force_N")))))
+        maxima["T_component_Nmm"] = max(maxima["T_component_Nmm"], float(np.max(np.abs(reference["T_aba_Nmm"] - vector(result, "torque_Nmm")))))
+        bo = vector(old, "B_aba_vec_T")
+        historical["B_component_T"] = max(historical["B_component_T"], float(np.max(np.abs(bo - bp))))
+        historical["B_angle_deg"] = max(historical["B_angle_deg"], angle_deg(bo, bp))
+        historical["T_component_Nmm"] = max(historical["T_component_Nmm"], float(np.max(np.abs(vector(old, "torque_Nmm") - vector(result, "torque_Nmm")))))
     maxima["samples"] = int(len(indices))
-    maxima["nearest_vertex_compatibility"] = compatibility
+    maxima["old_nearest_vertex_descriptive"] = historical
     maxima["pass"] = bool(
+        maxima["s_mm"] < 1.0e-10 and maxima["center_mm"] < 1.0e-10 and
+        maxima["tangent"] < 1.0e-10 and maxima["e1"] < 1.0e-10 and maxima["e2"] < 1.0e-10 and
         maxima["B_component_T"] < 1.0e-10 and
         maxima["B_angle_deg"] < 1.0e-6 and
         maxima["B_magnitude_T"] < 1.0e-14 and
         maxima["F_component_N"] < 1.0e-14 and
         maxima["T_component_Nmm"] < 1.0e-10)
-    assert max(compatibility.values()) < 1.0e-10, compatibility
     return maxima
 
 
@@ -216,8 +233,8 @@ def main():
     print("RUN fixed-COM and projection gates", flush=True)
     results["fixed_com"], results["projection"] = fixed_com_gate(corrected)
     rejection_gate(corrected)
-    print("RUN moving FRAME_LOCAL30 B/F/T gate", flush=True)
-    results["moving_FRAME_LOCAL30"] = screening_gate(corrected)
+    print("RUN moving FRAME_LOCAL30 continuous-oracle gate", flush=True)
+    results["moving_FRAME_LOCAL30"] = moving_gate(corrected)
     output = VALIDATION / "field_regression_metrics.json"
     output.write_text(json.dumps(results, indent=2) + "\n", encoding="ascii")
     print(json.dumps(results, indent=2))
