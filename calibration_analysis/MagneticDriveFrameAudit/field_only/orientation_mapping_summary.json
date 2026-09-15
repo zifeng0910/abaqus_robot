@@ -1,0 +1,18 @@
+{
+  "abaqus_UR_interpretation": "total axis-angle rotation vector in radians for the rigid-body RP",
+  "server_conversion": "Rodrigues exponential map, not XYZ Euler angles",
+  "actual_odb_frame_count": 68,
+  "actual_odb_max_rotation_deg": 121.56162639645488,
+  "actual_odb_max_server_vs_rigid_nodes_error_deg": 4.182619578303747e-06,
+  "actual_odb_max_kabsch_rms_mm": 4.768945079358103e-07,
+  "synthetic_pose_angles_deg": [
+    0,
+    15,
+    30,
+    45,
+    60,
+    90
+  ],
+  "synthetic_max_server_vs_quaternion_error_deg": 0.0,
+  "classification": "POSE_MAPPING_VALID"
+}

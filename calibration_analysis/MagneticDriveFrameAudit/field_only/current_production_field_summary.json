@@ -1,0 +1,98 @@
+{
+  "production_parameters": {
+    "frequency_Hz": 30.0,
+    "B0_T": 0.01,
+    "cone_half_angle_deg": 30.0,
+    "cone_axis_bias_deg": 40.0,
+    "phase0_deg": 248.0,
+    "sense": 1,
+    "gradient_mT": 6.0,
+    "gradient_length_mm": 45.0,
+    "ramp_time_ms": 1.0,
+    "analytic_follow_robot": true,
+    "adaptive_lead_mm": 0.0
+  },
+  "initial_local_frame": {
+    "c_hat_aba": [
+      0.9901291831965912,
+      0.07930162550662628,
+      0.11556579413675062
+    ],
+    "e1_aba": [
+      -0.11868691683407041,
+      0.03582723930461472,
+      0.9922851529153465
+    ],
+    "e2_aba": [
+      0.074549422230313,
+      -0.9962066357517484,
+      0.044885660620178534
+    ],
+    "c_dot_a0": 0.9729278544284713
+  },
+  "initial_driver_arc_mm": 18.899960626,
+  "initial_robot_arc_reported_by_production_model": null,
+  "production_basis_selection": "DRIVER_ARC because robot_arc_mm is only populated when adaptive_lead_mm > 0",
+  "fitted_cone_axis_aba": [
+    -0.5732203623778117,
+    -0.17568241214928582,
+    0.8003462414585693
+  ],
+  "fitted_cone_axis_local_c_e1_e2": [
+    -0.48900146107063697,
+    0.8559112342463858,
+    0.16820680771482038
+  ],
+  "fitted_half_angle_deg": 30.000040004311096,
+  "fitted_angular_residual_rms_deg": 0.019466395681326857,
+  "implemented_initial_biased_axis_aba": [
+    -0.5735079062620151,
+    -0.17531698085427228,
+    0.8002203681980998
+  ],
+  "implemented_axis_vs_fitted_deg": 0.027601203284766916,
+  "fitted_axis_vs_robot_local_tangent_deg": 119.27497161745276,
+  "theta_B_t_min_mean_max_deg": [
+    89.29272722801124,
+    116.99373916483857,
+    149.29272359081682
+  ],
+  "local_B_azimuth_winding": 4.9995141908905715e-06,
+  "local_B_azimuth_frequency_Hz": 0.00014998542572671714,
+  "B_magnitude_T_min_mean_max": [
+    0.009999999999999997,
+    0.01,
+    0.010000000000000005
+  ],
+  "B_parallel_T_min_max": [
+    -0.008597874270919924,
+    0.00012343925080321883
+  ],
+  "B_perp_T_min_max": [
+    0.005106521127093595,
+    0.009999999777831187
+  ],
+  "m_body_aba_normalized": [
+    0.9650325561928363,
+    -0.11015443376691728,
+    0.23786165350768546
+  ],
+  "m_body_dot_robot_HEAD_to_TAIL_a0": 0.9999573687354542,
+  "initial_angle_m_B_deg": 86.41624723306266,
+  "initial_raw_full_amplitude_torque_Nmm": [
+    0.00038935240515855046,
+    -0.009154983658342797,
+    -0.005819348211145737
+  ],
+  "initial_raw_full_amplitude_torque_local_t_e1_e2_Nmm": [
+    -0.0010130135040772564,
+    -0.006148661656451879,
+    0.008888076178652332
+  ],
+  "initial_applied_torque_Nmm": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "initial_drive_scale": 0.0
+}
