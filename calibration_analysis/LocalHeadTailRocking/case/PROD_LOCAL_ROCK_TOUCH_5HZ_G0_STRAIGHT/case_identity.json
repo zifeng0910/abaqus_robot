@@ -1,0 +1,74 @@
+{
+  "case_id": "PROD_LOCAL_ROCK_TOUCH_5HZ_G0_STRAIGHT",
+  "status": "SOLVED",
+  "source_job": "PROD_LOCAL_ROCK10_5HZ_G0_STRAIGHT",
+  "field_frame_mode": "ROBOT_LOCAL_ROCKING",
+  "duration_s": 0.2,
+  "direct_dt_s": 1E-07,
+  "B0_mT": 10.0,
+  "frequency_Hz": 5.0,
+  "rocking_field_amplitude_deg": 14.343111711438091,
+  "phase_deg": 0.0,
+  "gradient_mT": 0.0,
+  "cone_parameter_used": false,
+  "mu": 0.03,
+  "zeta": 0.5,
+  "robot_length_mm": 2.4,
+  "robot_diameter_mm": 0.815,
+  "robot_moment_Am2": 0.0010876227522174417,
+  "robot_mass_mg": 9.207793514166587,
+  "initial_pose": "HEAD_TO_TAIL_AXIS_ALIGNED_WITH_LOCAL_TANGENT",
+  "initial_magnetic_moment_axis_aba": [
+    0.9762799602464296,
+    -0.0618320247446977,
+    0.2074951564186524
+  ],
+  "initial_center_aba_mm": [
+    -7.468174204284,
+    -3.676918015967,
+    -9.550745259298
+  ],
+  "initial_axis_aba": [
+    0.9762799602464296,
+    -0.0618320247446977,
+    0.2074951564186524
+  ],
+  "routeA_gauge_from_production_e1_deg": -61.37284757596327,
+  "n_rock_aba": [
+    0.07770950949965555,
+    0.9945677258930866,
+    -0.06925511349479567
+  ],
+  "b_rock_aba": [
+    -0.20208580196182235,
+    0.08373672627840886,
+    0.9757814762115655
+  ],
+  "initial_mesh_rotation_matrix": [
+    [
+      0.9979841819383806,
+      -0.05655052852233921,
+      0.02880295687295835
+    ],
+    [
+      0.056255102709250736,
+      0.9983561984572213,
+      0.010966513630918757
+    ],
+    [
+      -0.02937577266988988,
+      -0.009324093837450165,
+      0.999524949790728
+    ]
+  ],
+  "robot_node_count": 1588,
+  "field_output_interval_s": 0.0005,
+  "dense_RP_and_contact_history": true,
+  "source_input_sha256": "8d8b06a97a23afea69f74703e58f6f552393f38d27f027063f30d9a638a0515c",
+  "input_sha256": "dab701871202b17e9939832876c66c0e818348db07e20033322aba18bd9e1ffb",
+  "fortran_sha256": "ac7ecdfee80017a14be6ade27c8545a26c57223de549a7e0d4af65b4da8e7b7e",
+  "centerline_sha256": "53e5271cc4c0cd318a6d8cdcd6ba2c4e968420fbec7d9591a0b4f5657227d2f5",
+  "production_server_sha256": "6e3e3258671f23de9503ea18f3c731106d2ce0dc4cb0f1241e20bfbc3aba4516",
+  "light_contact_design_manifest_sha256": "b13521af37bd146a811c7addb69c5df1ee58f69567fedb61f91114dd851c530b",
+  "wallclock_s": 5645.4251211
+}
