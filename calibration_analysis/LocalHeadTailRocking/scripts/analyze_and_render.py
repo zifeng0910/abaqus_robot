@@ -176,11 +176,14 @@ def main():
                          "s_mm":s,"COM_radial_mm":radial,"contact_force_N":force_mag[sample]})
     pose.to_csv(OUT / "rocking_pose.csv", index=False)
 
-    fig, axes = plt.subplots(4,1,figsize=(9,9),sharex=True)
+    fig, axes = plt.subplots(5,1,figsize=(9,10.5),sharex=True)
     axes[0].plot(ts*1e3,theta,label="robot theta_rock",color="#c43c35"); axes[0].plot(ts*1e3,alpha,label="field alpha_B",color="#237a57",ls="--"); axes[0].set_ylabel("deg"); axes[0].legend(ncol=2,frameon=False)
     axes[1].plot(ts*1e3,theta_cross,color="#315a8a"); axes[1].set_ylabel("theta_cross (deg)")
     axes[2].plot(ts*1e3,gaps[:,1],label="HEAD",color="#c43c35"); axes[2].plot(ts*1e3,gaps[:,2],label="TAIL",color="#315a8a"); axes[2].axhline(0,color="#222",lw=.7); axes[2].set_ylabel("exact gap (um)"); axes[2].legend(frameon=False)
-    axes[3].plot(ts*1e3,trock*1e3,color="#237a57"); axes[3].set_ylabel("T_rock (uN mm)"); axes[3].set_xlabel("Time (ms)")
+    state_code = pd.Categorical(state, categories=["FREE", "BODY", "HEAD", "TAIL", "BOTH"]).codes
+    axes[3].step(ts*1e3,state_code,where="post",color="#555555"); axes[3].set_ylabel("contact")
+    axes[3].set_yticks(range(5),["FREE", "BODY", "HEAD", "TAIL", "BOTH"])
+    axes[4].plot(ts*1e3,trock*1e3,color="#237a57"); axes[4].set_ylabel("T_rock (uN mm)"); axes[4].set_xlabel("Time (ms)")
     for x,label in [(50,"HEAD peak"),(100,"zero crossing"),(150,"TAIL peak")]:
         for ax in axes: ax.axvline(x,color="#777",lw=.65,alpha=.6)
         axes[0].text(x,axes[0].get_ylim()[1],label,ha="center",va="bottom",fontsize=8)
@@ -223,6 +226,10 @@ def render_gifs(pose, nodes, region, c, n, b, radius):
 
 
 def write_report(m):
+    identity = json.loads((CASE / "case_identity.json").read_text())
+    geometry = pd.read_csv(OUT / "RouteA10_geometry_feasibility.csv")
+    static_gap = float(geometry["minimum_exact_surface_gap_um"].min())
+    gauge = float(identity["routeA_gauge_from_production_e1_deg"])
     success = m["classification"] in ("LOCAL_ROCKING_MODE_RECOVERED", "HEADTAIL_WALL_ROCKING_RECOVERED")
     if success:
         next_step = "Transfer this identical ROBOT_LOCAL_ROCKING input, contact model, and Reduced-Hydro model to the curved tube for one turn-section validation."
@@ -239,18 +246,18 @@ def write_report(m):
 **{m['classification']}**
 
 1. RouteA is `theta_rock(t)=10 deg*r(t)*sin(2*pi*f*t)`, initially at 0 deg, about the transported binormal. Its legacy 0.03 s display uses 666.667 Hz and a 2 ms smooth ramp; the physical reference is 5 Hz.
-2. The source establishes `(c_hat,n_rock,b_rock)=(T,N,T x N)`. In the current production PT frame that is `(tangent,e1,e2)`.
-3. The unchanged straight geometry is exactly feasible: solver ID `1.334690480 mm`, analytic 10 deg margin `0.115316535 mm`, and static exact minimum gap `70.164 um`.
+2. The source establishes `(c_hat,n_rock,b_rock)=(T,N,T x N)`. In the current production PT gauge, `n_rock=cos(chi)e1+sin(chi)e2` and `b_rock=c_hat x n_rock`, with `chi={gauge:.12f} deg`; it is not the unrotated `(e1,e2)` pair.
+3. The unchanged straight geometry is exactly feasible: solver ID `1.334690480 mm`, analytic 10 deg margin `0.115316535 mm`, and static exact minimum gap `{static_gap:.3f} um`.
 4. The primary target changed because RouteA is alternating planar HEAD-TAIL rocking, while the former 30 deg cone has a 360 deg cross-section orbit and is a different motion family.
 5. `ROBOT_LOCAL_ROCKING` uses `B=B0[cos(alpha_B)c_hat+sin(alpha_B)n_rock]`, `alpha_B=10 deg*sin(2*pi*5t)`, with continuous COM projection and the existing PT frame.
 6. Dynamic `|B|` remains 10 mT; maximum sampled magnitude error is `{m['field_magnitude_max_abs_error_T']:.3e} T`.
 7. The field remains in one local plane and has zero commanded 360 deg winding, as established by the offline one-cycle regression.
 8. No robot UR is prescribed. The response comes from the validated finite moment, `m x B`, rigid-body dynamics, Reduced-Hydro loads, and one-wall General Contact.
 9. `theta_rock` spans `{m['theta_rock_min_deg']:.3f}..{m['theta_rock_max_deg']:.3f} deg` (5 Hz fitted amplitude `{m['theta_rock_fundamental_amplitude_deg']:.3f} deg`).
-10. `theta_cross` RMS/max is `{m['theta_cross_rms_deg']:.3f}/{m['theta_cross_max_abs_deg']:.3f} deg`; PCA line-likeness is `{m['pca_rocking_linearity']:.6f}` (descriptive, not a hard gate).
+10. `theta_cross` RMS/max is `{m['theta_cross_rms_deg']:.3e}/{m['theta_cross_max_abs_deg']:.3e} deg`; PCA line-likeness is `{m['pca_rocking_linearity']:.9f}` (descriptive, not a hard gate).
 11. HEAD-only/TAIL-only support fractions are `{m['HEAD_only_support_fraction']:.4f}/{m['TAIL_only_support_fraction']:.4f}`; support-indicator sign changes: `{m['support_indicator_sign_changes']}`.
 12. Both-end support fraction is `{m['both_end_support_fraction']:.4f}`, longest bridge `{m['longest_both_end_bridge_ms']:.3f} ms`; it is {'not ' if m['both_end_support_fraction'] < .5 else ''}the majority state.
-13. Minimum exact surface gap is `{m['minimum_exact_surface_gap_um']:.3f} um`; deep penetration is `{m['deep_penetration']}`.
+13. Minimum exact surface gap is `{m['minimum_exact_surface_gap_um']:.3f} um`; deep penetration is `{m['deep_penetration']}`. Peak kinetic energy is `{m['ALLKE_max']:.3e} N mm`, and maximum absolute `ETOTAL` residual is `{max(abs(m['ETOTAL_min']), abs(m['ETOTAL_max'])):.3e} N mm`.
 14. `RouteA_vs_MagneticRocking.gif` provides the normalized-phase visual gate. The scalar classification does not override direct visual review.
 15. Exactly one next step: **{next_step}**
 

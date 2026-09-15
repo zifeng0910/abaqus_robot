@@ -1,10 +1,10 @@
 {
   "case_id": "PROD_LOCAL_ROCK10_5HZ_G0_STRAIGHT",
-  "status": "PREPARED",
+  "status": "SOLVED",
   "source_job": "PROD_LOCAL30_G0_STRAIGHT_CTRL",
   "field_frame_mode": "ROBOT_LOCAL_ROCKING",
   "duration_s": 0.2,
-  "direct_dt_s": 1e-07,
+  "direct_dt_s": 1E-07,
   "B0_mT": 10.0,
   "frequency_Hz": 5.0,
   "rocking_field_amplitude_deg": 10.0,
@@ -68,5 +68,6 @@
   "input_sha256": "8d8b06a97a23afea69f74703e58f6f552393f38d27f027063f30d9a638a0515c",
   "fortran_sha256": "ac7ecdfee80017a14be6ade27c8545a26c57223de549a7e0d4af65b4da8e7b7e",
   "centerline_sha256": "53e5271cc4c0cd318a6d8cdcd6ba2c4e968420fbec7d9591a0b4f5657227d2f5",
-  "production_server_sha256": "6e3e3258671f23de9503ea18f3c731106d2ce0dc4cb0f1241e20bfbc3aba4516"
+  "production_server_sha256": "6e3e3258671f23de9503ea18f3c731106d2ce0dc4cb0f1241e20bfbc3aba4516",
+  "wallclock_s": 15031.6807279
 }
