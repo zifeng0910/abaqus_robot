@@ -1,0 +1,80 @@
+{
+  "case_id": "PROD_LOCAL30_G0_STRAIGHT_CTRL",
+  "status": "SOLVED",
+  "control_type": "STRAIGHT_PIPE_ONLY",
+  "source_job": "PROD_LOCAL30_G0_3CYCLE",
+  "source_commit": "ba8b5071ce1707912b8682097f687e1ef33b83f3",
+  "field_frame_mode": "ROBOT_LOCAL_TANGENT",
+  "duration_s": 0.033333333,
+  "direct_dt_s": 1E-07,
+  "B0_mT": 10.0,
+  "frequency_Hz": 30.0,
+  "cone_deg": 30.0,
+  "phase_deg": 248.0,
+  "bias_deg": 0.0,
+  "gradient_mT": 0.0,
+  "ramp_time_s": 0.001,
+  "mu": 0.03,
+  "zeta": 0.5,
+  "robot_node_count": 1588,
+  "robot_element_count": 7302,
+  "wall_radius_mm": 0.66734524,
+  "wall_half_length_mm": 12.0,
+  "wall_node_count": 2904,
+  "wall_element_count": 2880,
+  "initial_center_aba_mm": [
+    -7.468174204284,
+    -3.676918015967,
+    -9.550745259298
+  ],
+  "straight_tangent_aba": [
+    0.9762799602464296,
+    -0.0618320247446977,
+    0.2074951564186524
+  ],
+  "rejected_curved_projection_center_aba_mm": [
+    -7.389567925444389,
+    -3.2363531447616065,
+    -9.789308499120152
+  ],
+  "initial_e1_aba": [
+    -0.140150791949882,
+    0.5500056502909205,
+    0.8233173994055285
+  ],
+  "initial_e2_aba": [
+    -0.16503089025103998,
+    -0.832868888459662,
+    0.5282936871654974
+  ],
+  "source_input_sha256": "b012bbdbaf02e55ac84f9195b6e6a1ff777681195b3b4f88e072ab2913a3c762",
+  "input_sha256": "4133af73a4b911f7c931f230e50c01f3fb74782fbef15d60e75198ad7143c16d",
+  "fortran_sha256": "940cd6817b091239db97e6ef40adf54f77fb107b3a7645898ff324d3db0e8f1d",
+  "production_server_sha256": "776736f93268deeef7194a9ee7ffd81ad59e8b27ac51c46f344bba60ce9b0e6d",
+  "straight_centerline": {
+    "source_projection_s_mm": 13.799960625932426,
+    "gauge_prefix_length_mm": 13.799960625932405,
+    "gauge_end_mag_mm": [
+      -40.40907861424767,
+      -4.937454774083838,
+      -0.03488317004692253
+    ],
+    "straight_wall_start_mag_mm": [
+      -13.165404599294638,
+      1.5264624722129572,
+      -0.0348831700469216
+    ],
+    "straight_center_mag_mm": [
+      -1.4895443071719092,
+      4.2967127206258695,
+      -0.034883170046921194
+    ],
+    "straight_tangent_mag": [
+      0.972988357676894,
+      0.23085418736774269,
+      3.351221678143668E-17
+    ],
+    "dxf_sha256": "53e5271cc4c0cd318a6d8cdcd6ba2c4e968420fbec7d9591a0b4f5657227d2f5"
+  },
+  "wallclock_s": 3133.7845677
+}
