@@ -33,7 +33,7 @@ import numpy as np
 HOST = '127.0.0.1'
 PORT = 65432
 MU0 = 4.0 * math.pi * 1e-7
-FIELD_FRAME_MODES = ('LEGACY_DRIVER_FRAME', 'ROBOT_LOCAL_TANGENT')
+FIELD_FRAME_MODES = ('LEGACY_DRIVER_FRAME', 'ROBOT_LOCAL_TANGENT', 'ROBOT_LOCAL_ROCKING')
 
 
 class RigidFrameTransform(object):
@@ -115,7 +115,8 @@ class MagneticCouplingModel(object):
                  ramp_time_s=0.001, endpoint_taper_mm=1.0,
                  adaptive_lead_mm=0.0, reverse_trajectory=False,
                  analytic_b_t=0.010, analytic_follow_robot=False,
-                 field_frame_mode='LEGACY_DRIVER_FRAME',
+                 field_frame_mode='LEGACY_DRIVER_FRAME', rocking_amplitude_deg=10.0,
+                 rocking_frame_azimuth_deg=-61.37284757596327,
                  analytic_gradient_b_t=0.0, analytic_gradient_length_mm=25.0,
                  analytic_gradient_profile='legacy', analytic_gradient_switch_start_s=0.0,
                  analytic_gradient_transition_s=0.0005, analytic_gradient_local_b_t=None,
@@ -148,6 +149,10 @@ class MagneticCouplingModel(object):
         self.field_frame_mode = str(field_frame_mode).upper()
         if self.field_frame_mode not in FIELD_FRAME_MODES:
             raise ValueError('field_frame_mode must be one of {}'.format(', '.join(FIELD_FRAME_MODES)))
+        self.rocking_amplitude_deg = float(rocking_amplitude_deg)
+        if not (0.0 <= self.rocking_amplitude_deg < 90.0):
+            raise ValueError('rocking_amplitude_deg must satisfy 0 <= amplitude < 90 deg')
+        self.rocking_frame_azimuth_deg = float(rocking_frame_azimuth_deg)
         self.analytic_gradient_b_t = float(analytic_gradient_b_t)
         self.analytic_gradient_length_mm = float(analytic_gradient_length_mm)
         self.analytic_gradient_profile = str(analytic_gradient_profile)
@@ -268,11 +273,11 @@ class MagneticCouplingModel(object):
         self._local_segment_tangent = np.diff(self.curve_mm, axis=0)
         self._local_segment_tangent /= np.linalg.norm(self._local_segment_tangent, axis=1)[:, None]
         self._local_e1 = self._parallel_transport_normals(self._local_segment_tangent)
-        if self.field_frame_mode == 'ROBOT_LOCAL_TANGENT':
+        if self.field_frame_mode in ('ROBOT_LOCAL_TANGENT', 'ROBOT_LOCAL_ROCKING'):
             if self.drive_type != 'analytic':
-                raise ValueError('ROBOT_LOCAL_TANGENT is defined only for analytic drive_type')
+                raise ValueError('{} is defined only for analytic drive_type'.format(self.field_frame_mode))
             if abs(self.cone_axis_bias_deg) > 1.0e-15:
-                raise ValueError('ROBOT_LOCAL_TANGENT requires cone_axis_bias_deg=0; legacy global-Z bias is not reused')
+                raise ValueError('{} requires cone_axis_bias_deg=0; legacy global-Z bias is not reused'.format(self.field_frame_mode))
 
     @staticmethod
     def _align_curve(points, origin, tangent):
@@ -445,6 +450,16 @@ class MagneticCouplingModel(object):
         e2 /= max(np.linalg.norm(e2), 1.0e-15)
         return tangent, e1, e2
 
+    def _robot_rocking_frame(self, robot_arc_mm):
+        """Return RouteA-gauged (c,n_rock,b_rock) in the production PT frame."""
+        tangent, e1, e2 = self._robot_local_frame(robot_arc_mm)
+        chi = math.radians(self.rocking_frame_azimuth_deg)
+        n_rock = math.cos(chi) * e1 + math.sin(chi) * e2
+        n_rock /= max(np.linalg.norm(n_rock), 1.0e-15)
+        b_rock = np.cross(tangent, n_rock)
+        b_rock /= max(np.linalg.norm(b_rock), 1.0e-15)
+        return tangent, n_rock, b_rock
+
     def _command_frequency_hz(self, t_s):
         """Continuous linear chirp frequency; legacy runs remain constant spin_hz."""
         if self.chirp_start_hz is None:
@@ -464,10 +479,22 @@ class MagneticCouplingModel(object):
             integral += self.chirp_end_hz * (t - self.chirp_duration_s)
         return self.phase_offset_rad + self.analytic_rotation_sense * 2.0 * math.pi * integral
 
+    def _rocking_phase_rad(self, t_s):
+        """Unsigned oscillator phase; cone winding sense is not a rocking control."""
+        t = max(0.0, float(t_s))
+        if self.chirp_start_hz is None:
+            return self.phase_offset_rad + 2.0 * math.pi * self.spin_hz * t
+        tc = min(t, self.chirp_duration_s)
+        slope = (self.chirp_end_hz - self.chirp_start_hz) / self.chirp_duration_s
+        integral = self.chirp_start_hz * tc + 0.5 * slope * tc * tc
+        if t > self.chirp_duration_s:
+            integral += self.chirp_end_hz * (t - self.chirp_duration_s)
+        return self.phase_offset_rad + 2.0 * math.pi * integral
+
     def _driver_pose(self, t_s, robot_position_mm=None):
         distance = self._distance_at_time(t_s)
         robot_arc_mm = None
-        if robot_position_mm is not None and self.field_frame_mode == 'ROBOT_LOCAL_TANGENT':
+        if robot_position_mm is not None and self.field_frame_mode in ('ROBOT_LOCAL_TANGENT', 'ROBOT_LOCAL_ROCKING'):
             robot_arc_mm = self._project_robot_arc_mm(robot_position_mm)
         elif self.adaptive_lead_mm > 0.0 and robot_position_mm is not None:
             robot_arc_mm = self._project_arc_mm(robot_position_mm)
@@ -612,7 +639,7 @@ class MagneticCouplingModel(object):
             ramp = q * q * (3.0 - 2.0 * q)
         else:
             ramp = 1.0
-        if self.field_frame_mode == 'ROBOT_LOCAL_TANGENT':
+        if self.field_frame_mode in ('ROBOT_LOCAL_TANGENT', 'ROBOT_LOCAL_ROCKING'):
             return ramp
         if self.endpoint_taper_mm <= 0.0:
             end_scale = 0.0 if distance_mm >= self.arc_mm[-1] else 1.0
@@ -727,12 +754,16 @@ class MagneticCouplingModel(object):
             field_arc_mm = robot_arc_mm if (self.analytic_follow_robot and
                                             robot_arc_mm is not None and
                                             np.isfinite(robot_arc_mm)) else driver_arc_mm
-            phase = self._command_phase_rad(t_s)
+            phase = (self._rocking_phase_rad(t_s) if self.field_frame_mode == 'ROBOT_LOCAL_ROCKING'
+                     else self._command_phase_rad(t_s))
             ca = math.radians(self.cone_half_angle_deg)
-            if self.field_frame_mode == 'ROBOT_LOCAL_TANGENT':
+            if self.field_frame_mode in ('ROBOT_LOCAL_TANGENT', 'ROBOT_LOCAL_ROCKING'):
                 if robot_arc_mm is None or not np.isfinite(robot_arc_mm):
-                    raise ValueError('ROBOT_LOCAL_TANGENT requires a finite current robot COM position')
-                tangent, e1, e2 = self._robot_local_frame(robot_arc_mm)
+                    raise ValueError('{} requires a finite current robot COM position'.format(self.field_frame_mode))
+                if self.field_frame_mode == 'ROBOT_LOCAL_ROCKING':
+                    tangent, e1, e2 = self._robot_rocking_frame(robot_arc_mm)
+                else:
+                    tangent, e1, e2 = self._robot_local_frame(robot_arc_mm)
                 axis = tangent
                 normal, binormal = e1, e2
             else:
@@ -758,15 +789,23 @@ class MagneticCouplingModel(object):
                         axis = _rot_about(axis, tangent, chi); axis /= max(np.linalg.norm(axis), 1.0e-15)
                         e1 = _rot_about(e1, tangent, chi); e1 /= max(np.linalg.norm(e1), 1.0e-15)
                         e2 = _rot_about(e2, tangent, chi); e2 /= max(np.linalg.norm(e2), 1.0e-15)
-            if self.field_frame_mode == 'ROBOT_LOCAL_TANGENT':
+            if self.field_frame_mode == 'ROBOT_LOCAL_ROCKING':
+                # RouteA-gauged (tangent,e1,e2) is right-handed. The field
+                # rocks in the (c,n_rock) plane about b_rock without winding.
+                alpha = math.radians(self.rocking_amplitude_deg) * math.sin(phase)
+                magnetic_field_t = self.analytic_b_t * (
+                    math.cos(alpha) * tangent + math.sin(alpha) * e1)
+            elif self.field_frame_mode == 'ROBOT_LOCAL_TANGENT':
                 transverse = (math.cos(phase) * e1 +
                               self.analytic_rotation_sense * math.sin(phase) * e2)
+                magnetic_field_t = self.analytic_b_t * (
+                    math.cos(ca) * axis + math.sin(ca) * transverse)
             else:
                 # Preserve the historical production equation exactly.  The
                 # command phase already contains analytic_rotation_sense.
                 transverse = math.cos(phase) * e1 + math.sin(phase) * e2
-            magnetic_field_t = self.analytic_b_t * (
-                math.cos(ca) * axis + math.sin(ca) * transverse)
+                magnetic_field_t = self.analytic_b_t * (
+                    math.cos(ca) * axis + math.sin(ca) * transverse)
             # Add a weak, localized axial-gradient component without creating
             # an Abaqus magnet body.  The Gaussian envelope is centered on
             # the prescribed driver arc.  Behind the driver (delta_s<0) the
@@ -878,8 +917,10 @@ class MagneticCouplingModel(object):
             'drive_scale': float(drive_scale),
             'endpoint_reached': bool(raw_distance >= self.arc_mm[-1]),
             'commanded_frequency_Hz': self._command_frequency_hz(t_s),
-            'instantaneous_phase_rad': self._command_phase_rad(t_s),
-            'cone_angle_deg': float(self.cone_half_angle_deg),
+            'instantaneous_phase_rad': (self._rocking_phase_rad(t_s) if self.field_frame_mode == 'ROBOT_LOCAL_ROCKING'
+                                        else self._command_phase_rad(t_s)),
+            'cone_angle_deg': (None if self.field_frame_mode == 'ROBOT_LOCAL_ROCKING'
+                               else float(self.cone_half_angle_deg)),
             'B_mag_T': float(np.linalg.norm(magnetic_field_t)),
             'B_mag_vec_T': [float(value) for value in magnetic_field_t],
         }
@@ -1227,6 +1268,10 @@ def main():
                         help='evaluate analytic field Frenet basis at robot arc position (no sphere/Z offset)')
     parser.add_argument('--field-frame-mode', choices=FIELD_FRAME_MODES, default='LEGACY_DRIVER_FRAME',
                         help='explicit analytic cone frame; legacy driver frame remains the default')
+    parser.add_argument('--rocking-amplitude-deg', type=float, default=10.0,
+                        help='peak signed field angle for ROBOT_LOCAL_ROCKING')
+    parser.add_argument('--rocking-frame-azimuth-deg', type=float, default=-61.37284757596327,
+                        help='RouteA n_rock gauge angle from production e1 toward e2')
     parser.add_argument('--analytic-gradient-b-t', type=float, default=0.0,
                         help='weak localized axial-gradient field amplitude in tesla (0 disables)')
     parser.add_argument('--analytic-gradient-length-mm', type=float, default=25.0,
@@ -1289,6 +1334,8 @@ def main():
     parser.add_argument('--cone-axis', choices=('global_x','tangent'), default='global_x')
     parser.add_argument('--robot-axis-tangent', action='store_true',
                         help='initialize the axial robot magnet along the aligned inlet tangent')
+    parser.add_argument('--robot-moment-axis-aba', type=float, nargs=3, default=None,
+                        help='explicit UR=0 physical magnetic-moment axis in the Abaqus frame')
     parser.add_argument('--phase-deg', type=float, default=0.0)
     parser.add_argument('--analytic-rotation-sense', type=float, choices=(-1.0, 1.0), default=1.0,
                         help='analytic rotating-field sense: +1 baseline, -1 reverse; phase at t=0 is unchanged')
@@ -1370,6 +1417,8 @@ def main():
         analytic_b_t=args.analytic_b_t,
         analytic_follow_robot=args.analytic_follow_robot,
         field_frame_mode=args.field_frame_mode,
+        rocking_amplitude_deg=args.rocking_amplitude_deg,
+        rocking_frame_azimuth_deg=args.rocking_frame_azimuth_deg,
         analytic_gradient_b_t=args.analytic_gradient_b_t,
         analytic_gradient_length_mm=args.analytic_gradient_length_mm,
         analytic_gradient_profile=args.analytic_gradient_profile,
@@ -1393,7 +1442,14 @@ def main():
     model.set_driver_normal_offset(args.driver_normal_offset_mm)
     model.robot_polarity = args.robot_polarity
     model.cone_axis_tangent = (args.cone_axis == 'tangent')
-    if args.robot_axis_tangent:
+    frame_transform = RigidFrameTransform(args.frame_transform_json)
+    if args.robot_moment_axis_aba is not None and args.robot_axis_tangent:
+        parser.error('--robot-moment-axis-aba and --robot-axis-tangent are mutually exclusive')
+    if args.robot_moment_axis_aba is not None:
+        moment_axis = frame_transform.vector_to_mag(args.robot_moment_axis_aba)
+        moment_axis /= max(np.linalg.norm(moment_axis), 1.0e-15)
+        model.robot_axis_global = moment_axis / model.robot_polarity
+    elif args.robot_axis_tangent:
         axis = model.curve_mm[1] - model.curve_mm[0]
         model.robot_axis_global = axis / max(np.linalg.norm(axis), 1.0e-15)
     model.phase_offset_rad = math.radians(args.phase_deg)
@@ -1405,7 +1461,7 @@ def main():
                model.analytic_gradient_b_t, model.analytic_gradient_length_mm,
                model.analytic_gradient_tilt_deg, model.analytic_gradient_azimuth_deg,
                model.analytic_rotation_sense, model.field_frame_mode,
-               ('ROBOT_ARC' if model.field_frame_mode == 'ROBOT_LOCAL_TANGENT'
+               ('ROBOT_ARC' if model.field_frame_mode in ('ROBOT_LOCAL_TANGENT', 'ROBOT_LOCAL_ROCKING')
                 else ('ROBOT_ARC' if model.analytic_follow_robot else 'DRIVER_ARC'))))
         print('ANALYTIC_GRADIENT_PROFILE: %s; switch_start=%.9g s; transition=%.9g s; local_B=%.9g T; local_L=%.9g mm' %
               (model.analytic_gradient_profile, model.analytic_gradient_switch_start_s,
@@ -1421,7 +1477,6 @@ def main():
               (model.chirp_start_hz, model.chirp_end_hz, model.chirp_duration_s))
     print('DRIVER_START_ARC_MM={:.9g}; DRIVER_SPEED_MM_S={:.9g}'.format(
         model.driver_start_offset_mm, model.driver_speed_mm_s))
-    frame_transform = RigidFrameTransform(args.frame_transform_json)
     lubrication = None
     if args.lubrication_scale > 0.0:
         if args.lubrication_wall_triangles is None:

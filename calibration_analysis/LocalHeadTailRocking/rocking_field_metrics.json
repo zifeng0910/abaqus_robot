@@ -1,0 +1,28 @@
+{
+  "B_target_T": 0.01,
+  "B_magnitude_max_abs_error_T": 3.469446951953614e-18,
+  "alpha_B_min_deg": -9.999999999999996,
+  "alpha_B_max_deg": 9.999999999999998,
+  "B_cross_plane_max_abs_T": 1.734723475976807e-18,
+  "start_end_B_max_abs_error_T": 6.505213034913027e-19,
+  "azimuthal_winding_turn": -1.0353368103722383e-17,
+  "Trock_alpha_sign_agreement": 1.0,
+  "c_hat_aba": [
+    0.9762799602464314,
+    -0.06183202474468876,
+    0.20749515641864677
+  ],
+  "n_rock_aba": [
+    0.07770950949964629,
+    0.9945677258930873,
+    -0.06925511349479763
+  ],
+  "b_rock_aba": [
+    -0.20208580196181739,
+    0.08373672627840868,
+    0.9757814762115665
+  ],
+  "right_handed_error": 2.633125101432526e-16,
+  "sense_and_cone_parameter_invariance_T": 0.0,
+  "pass": true
+}

@@ -1,0 +1,36 @@
+{
+  "J:\\abaqusfangzhen\\CEL_REFERENCE_BASELINE.md": {
+    "sha256": "74f2857a2ffddc466bcc7e1354bb9921808180f71abbcbad71d37eaf95316430",
+    "bytes": 1414
+  },
+  "J:\\abaqusfangzhen\\make_centerline_headtail_rock.py": {
+    "sha256": "2cc7e4f880b0a58b78e170ab90ca015d652585e68fcfb2dd00fcf2e932190690",
+    "bytes": 2810
+  },
+  "J:\\abaqusfangzhen\\Job_RouteA_CEL_SOLID_headtail_rock_probe.inp": {
+    "sha256": "863b9d589e884fbceac7256d29f00e57ba2d1f08f9ee0634a9738d5fe5f629a0",
+    "bytes": 484967
+  },
+  "J:\\abaqusfangzhen\\Job_RouteA_CEL_SOLID_headtail_rock_probe_report.md": {
+    "sha256": "f1e0e19176c688c6e071c9cc3753d8b9e4a32095d78be5735201f60482e92b52",
+    "bytes": 1263
+  },
+  "J:\\abaqusfangzhen\\abaqus_robot\\calibration_analysis\\Legacy_Wobble_GIFs\\Job_RouteA_CEL_SOLID_headtail_rock_probe.gif": {
+    "sha256": "665b47d6a334855f965b4c65bd6b7fc57552d15993a9885756244b3a2edc24a8",
+    "bytes": 8770716
+  },
+  "J:\\abaqusfangzhen\\abaqus_robot\\calibration_analysis\\Legacy_Wobble_GIFs\\CEL_CurrentCenterline_Cone15_Z110_PolarityMinus_Damp055_AfterBendReverse_HighEndStop_060_FilletR010_CEL_FSI_bend_validation.gif": {
+    "sha256": "07f1d619bd774c0c12ce47485f4959f3be8c60df4d86c0939f3a1edee352576f",
+    "bytes": 12520807
+  },
+  "routeA_frame_count": 121,
+  "highendstop_frame_count": 84,
+  "highendstop_last_complete_frame": 83,
+  "highendstop_last_complete_time_s": 0.0498000942170619,
+  "highendstop_trusted_early_frames": [
+    0,
+    27
+  ],
+  "highendstop_first_suspicious_frame": 28,
+  "highendstop_first_obviously_invalid_frame": 32
+}
