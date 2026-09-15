@@ -1,0 +1,23 @@
+{
+  "case_id": "PROD_LOCAL30_G0_3CYCLE",
+  "field_frame_mode": "ROBOT_LOCAL_TANGENT",
+  "length_mm": 2.4,
+  "diameter_mm": 0.815,
+  "node_count": 1588,
+  "element_count": 7302,
+  "mesh_size_mm": 0.1,
+  "B0_mT": 10.0,
+  "frequency_Hz": 30.0,
+  "cone_deg": 30.0,
+  "phase_deg": 248.0,
+  "rotation_sense": 1,
+  "bias_deg": 0.0,
+  "gradient_mT": 0.0,
+  "ramp_time_s": 0.001,
+  "mu": 0.03,
+  "zeta": 0.5,
+  "direct_dt_s": 1e-7,
+  "duration_s": 0.1,
+  "magnetic_moment_Am2": 0.0010876227522174417,
+  "robot_mass_mg": 9.207793514166587
+}
