@@ -1,0 +1,457 @@
+Abaqus/Explicit 2025                             DATE 16-Sep-2026  TIME 21:33:04
+-------------------------------------------------------------------------------
+ PREPROCESSOR WARNING MESSAGES
+-------------------------------------------------------------------------------
+
+
+***WARNING: There are 7 warning messages in the data (.dat) file.  Please
+            check the data file for possible errors in the input file.
+
+
+-------------------------------------------------------------------------------
+ NUMERICAL PRECISION USED FOR THIS Abaqus/Explicit ANALYSIS
+-------------------------------------------------------------------------------
+
+Double precision package and explicit executables will be used in this analysis.
+
+-------------------------------------------------------------------------------
+
+***WARNING: Surface (general) contact history output has been requested for
+            surface ASSEMBLY_ROBOT_SOLID-1_ROBOT_SOLID_SURF in step 1, but
+            only a portion of this surface intersects with the general contact
+            domain.
+
+
+***WARNING: A surface (general) contact field output has been requested for
+            surface ASSEMBLY_ROBOT_SOLID-1_ROBOT_SOLID_SURF in step 1, but
+            only a portion of this surface intersects with the general contact
+            domain.
+
+-------------------------------------------------------------------------------
+ MODEL INFORMATION (IN GLOBAL X-Y COORDINATES)
+-------------------------------------------------------------------------------
+
+   Total mass in model = 1.15922E-07
+   Center of mass of model = (-7.791760E+00,-6.814115E+00,-7.474321E+00)
+
+    Moments of Inertia :
+                 About Center of Mass              About Origin
+      I(XX)          2.419226E-06                  1.427781E-05
+      I(YY)          5.839427E-06                  1.935331E-05
+      I(ZZ)          7.228187E-06                  1.964854E-05
+      I(XY)         -2.221979E-06                 -8.376754E-06
+      I(YZ)          8.753637E-07                 -5.028664E-06
+      I(ZX)          5.818381E-07                 -6.169261E-06
+
+-------------------------------------------------------------------------------
+ STABLE TIME INCREMENT INFORMATION
+-------------------------------------------------------------------------------
+
+
+  The stable time increment estimate for each element is based on
+  linearization about the initial state.
+
+
+   Initial time increment = 5.51093E-08
+
+   Statistics over 1536 deformable elements:
+      Mean = 5.51093E-08
+      Standard deviation = 2.44220E-15
+
+   Most critical elements:
+    Element number   Rank    Time increment   Increment ratio
+    (Instance name)
+   ----------------------------------------------------------
+        1549          1       5.510933E-08      1.000000E+00
+    FLUID_EULERIAN-1
+        1332          2       5.510933E-08      1.000000E+00
+    FLUID_EULERIAN-1
+        2314          3       5.510933E-08      1.000000E+00
+    FLUID_EULERIAN-1
+         567          4       5.510933E-08      1.000000E+00
+    FLUID_EULERIAN-1
+         577          5       5.510933E-08      1.000000E+00
+    FLUID_EULERIAN-1
+        2304          6       5.510933E-08      1.000000E+00
+    FLUID_EULERIAN-1
+         621          7       5.510933E-08      1.000000E+00
+    FLUID_EULERIAN-1
+        1436          8       5.510933E-08      1.000000E+00
+    FLUID_EULERIAN-1
+        1445          9       5.510933E-08      1.000000E+00
+    FLUID_EULERIAN-1
+        2260         10       5.510933E-08      1.000000E+00
+    FLUID_EULERIAN-1
+
+
+  Instance name for the most critical element will be printed if the critical
+  element changes or at the beginning of a new page.
+
+
+-------------------------------------------------------------------------------
+
+  INFORMATION REGARDING INITIAL CONTACT OVERCLOSURES FOR NEWLY DEFINED GENERAL
+  CONTACT INTERACTIONS IN STEP 1
+
+-------------------------------------------------------------------------------
+
+  No initial node-face or edge-edge overclosures found.
+
+
+  No nodal position adjustments have been made.
+
+
+  No node-face overclosures left unresolved.
+
+
+  No edge-edge overclosures left unresolved.
+
+
+  Initial CEL contact overclosures were found and will be stored as offsets.
+  To help identify the (Lagrangian) contact faces involved in the overclosures
+  element set InfoElemInitPenetCEL has been created.
+
+
+***NOTE: You can view the deformed configuration due to the resolution of
+         initial overclosures.  In increment 0, draw the deformed shape or
+         draw a symbol plot of vector displacements.
+
+------------------------------------------------------------------------------
+
+Abaqus/Explicit 2025                             DATE 16-Sep-2026  TIME 21:33:06
+The entire model is considered 1 domain.
+Only 1 MPI rank is used.
+
+-------------------------------------------------------------------------------
+ SOLUTION PROGRESS
+-------------------------------------------------------------------------------
+
+ STEP 1  ORIGIN 0.0000
+
+  Total memory used for step 1 is approximately 108.6 megabytes.
+  Element by element stable time estimation algorithm will be used.
+  Scaling factor:  1.0000
+              STEP     TOTAL      WALL        STABLE    CRITICAL    KINETIC      TOTAL
+INCREMENT     TIME      TIME      TIME     INCREMENT     ELEMENT     ENERGY     ENERGY
+        0  0.000E+00 0.000E+00  00:00:00 4.73541E-08        1549  2.594E-07  2.594E-07
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number     0, with time interval 2.500E-04, at step time 0.000E+00 of 3.333E-02
+     5267  2.500E-04 2.500E-04  00:00:33 4.72889E-08        1170  2.626E-07  2.594E-07
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number     1, with time interval 2.500E-04, at step time 2.500E-04 of 3.333E-02
+    10543  5.000E-04 5.000E-04  00:01:07 4.74076E-08        1649  6.050E-07  2.593E-07
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number     2, with time interval 2.500E-04, at step time 5.000E-04 of 3.333E-02
+    15832  7.500E-04 7.500E-04  00:01:40 4.67886E-08        1169  3.929E-06  2.587E-07
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number     3, with time interval 2.500E-04, at step time 7.500E-04 of 3.333E-02
+    21115  1.000E-03 1.000E-03  00:02:14 4.70546E-08        1651  1.604E-05  2.528E-07
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number     4, with time interval 2.500E-04, at step time 1.000E-03 of 3.333E-02
+    26406  1.250E-03 1.250E-03  00:02:49 4.72780E-08        1650  3.758E-05  2.245E-07
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number     5, with time interval 2.500E-04, at step time 1.250E-03 of 3.333E-02
+    31675  1.500E-03 1.500E-03  00:03:24 4.68215E-08        1652  6.259E-05  1.577E-07
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number     6, with time interval 2.500E-04, at step time 1.500E-03 of 3.333E-02
+    37006  1.750E-03 1.750E-03  00:03:58 4.68443E-08        2130  8.245E-05  5.860E-08
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number     7, with time interval 2.500E-04, at step time 1.750E-03 of 3.333E-02
+    42298  2.000E-03 2.000E-03  00:04:33 4.75186E-08        1650  8.917E-05 -1.278E-07
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number     8, with time interval 2.500E-04, at step time 2.000E-03 of 3.333E-02
+    47616  2.250E-03 2.250E-03  00:05:08 4.71671E-08        2192  8.056E-05 -3.511E-07
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number     9, with time interval 2.500E-04, at step time 2.250E-03 of 3.333E-02
+    52895  2.500E-03 2.500E-03  00:05:43 4.69533E-08        1073  4.896E-05 -5.855E-07
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    10, with time interval 2.500E-04, at step time 2.500E-03 of 3.333E-02
+    58222  2.750E-03 2.750E-03  00:06:18 4.68101E-08        1073  5.487E-05 -7.986E-07
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    11, with time interval 2.500E-04, at step time 2.750E-03 of 3.333E-02
+    63560  3.000E-03 3.000E-03  00:06:53 4.65612E-08         369  5.119E-05 -1.001E-06
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    12, with time interval 2.500E-04, at step time 3.000E-03 of 3.333E-02
+    68906  3.250E-03 3.250E-03  00:07:29 4.66558E-08        1170  4.208E-05 -1.164E-06
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    13, with time interval 2.500E-04, at step time 3.250E-03 of 3.333E-02
+    74247  3.500E-03 3.500E-03  00:08:04 4.68031E-08         672  2.764E-05 -1.268E-06
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    14, with time interval 2.500E-04, at step time 3.500E-03 of 3.333E-02
+    79587  3.750E-03 3.750E-03  00:08:39 4.67717E-08        1152  1.730E-05 -1.336E-06
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    15, with time interval 2.500E-04, at step time 3.750E-03 of 3.333E-02
+    84927  4.000E-03 4.000E-03  00:09:15 4.68315E-08        2112  7.929E-06 -1.431E-06
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    16, with time interval 2.500E-04, at step time 4.000E-03 of 3.333E-02
+    90267  4.250E-03 4.250E-03  00:09:51 4.69309E-08         369  9.191E-06 -1.550E-06
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    17, with time interval 2.500E-04, at step time 4.250E-03 of 3.333E-02
+    95605  4.500E-03 4.500E-03  00:10:27 4.68739E-08        1312  1.284E-05 -1.677E-06
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    18, with time interval 2.500E-04, at step time 4.500E-03 of 3.333E-02
+   100946  4.750E-03 4.750E-03  00:11:04 4.66972E-08        1650  1.889E-05 -1.781E-06
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    19, with time interval 2.500E-04, at step time 4.750E-03 of 3.333E-02
+   106291  5.000E-03 5.000E-03  00:11:40 4.67199E-08         513  2.277E-05 -1.870E-06
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    20, with time interval 2.500E-04, at step time 5.000E-03 of 3.333E-02
+   111635  5.250E-03 5.250E-03  00:12:17 4.68326E-08        1791  2.509E-05 -1.975E-06
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    21, with time interval 2.500E-04, at step time 5.250E-03 of 3.333E-02
+   116981  5.500E-03 5.500E-03  00:12:54 4.67889E-08        1250  2.562E-05 -2.062E-06
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    22, with time interval 2.500E-04, at step time 5.500E-03 of 3.333E-02
+   122328  5.750E-03 5.750E-03  00:13:30 4.65969E-08         369  2.436E-05 -2.142E-06
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    23, with time interval 2.500E-04, at step time 5.750E-03 of 3.333E-02
+   127674  6.000E-03 6.000E-03  00:14:07 4.67671E-08        1219  2.246E-05 -2.209E-06
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    24, with time interval 2.500E-04, at step time 6.000E-03 of 3.333E-02
+   133021  6.250E-03 6.250E-03  00:14:44 4.67626E-08         369  1.795E-05 -2.303E-06
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    25, with time interval 2.500E-04, at step time 6.250E-03 of 3.333E-02
+   138365  6.500E-03 6.500E-03  00:15:21 4.68903E-08         369  3.109E-05 -2.476E-06
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    26, with time interval 2.500E-04, at step time 6.500E-03 of 3.333E-02
+   143707  6.750E-03 6.750E-03  00:15:59 4.68632E-08        1632  4.636E-05 -2.692E-06
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    27, with time interval 2.500E-04, at step time 6.750E-03 of 3.333E-02
+   149053  7.000E-03 7.000E-03  00:16:37 4.68107E-08        1552  5.902E-05 -2.957E-06
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    28, with time interval 2.500E-04, at step time 7.000E-03 of 3.333E-02
+   154401  7.250E-03 7.250E-03  00:17:15 4.69043E-08         289  6.505E-05 -3.203E-06
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    29, with time interval 2.500E-04, at step time 7.250E-03 of 3.333E-02
+   159743  7.500E-03 7.500E-03  00:17:54 4.68185E-08        1330  6.220E-05 -3.437E-06
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    30, with time interval 2.500E-04, at step time 7.500E-03 of 3.333E-02
+   165088  7.750E-03 7.750E-03  00:18:33 4.66560E-08        2689  5.692E-05 -2.626E-05
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    31, with time interval 2.500E-04, at step time 7.750E-03 of 3.333E-02
+   170433  8.000E-03 8.000E-03  00:19:11 4.69587E-08        1632  3.973E-05 -2.893E-05
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    32, with time interval 2.500E-04, at step time 8.000E-03 of 3.333E-02
+   175775  8.250E-03 8.250E-03  00:19:50 4.68241E-08        1232  2.688E-05 -3.019E-05
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    33, with time interval 2.500E-04, at step time 8.250E-03 of 3.333E-02
+   181116  8.500E-03 8.500E-03  00:20:29 4.67625E-08        2209  1.740E-05 -3.585E-05
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    34, with time interval 2.500E-04, at step time 8.500E-03 of 3.333E-02
+   186455  8.750E-03 8.750E-03  00:21:08 4.68741E-08        2209  1.355E-05 -3.600E-05
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    35, with time interval 2.500E-04, at step time 8.750E-03 of 3.333E-02
+   191796  9.000E-03 9.000E-03  00:21:48 4.68808E-08        2689  1.394E-05 -3.593E-05
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    36, with time interval 2.500E-04, at step time 9.000E-03 of 3.333E-02
+   197136  9.250E-03 9.250E-03  00:22:28 4.68624E-08        1312  2.819E-05 -4.921E-05
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    37, with time interval 2.500E-04, at step time 9.250E-03 of 3.333E-02
+   202474  9.500E-03 9.500E-03  00:23:09 4.68130E-08        2209  2.402E-05 -6.243E-05
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    38, with time interval 2.500E-04, at step time 9.500E-03 of 3.333E-02
+   207815  9.750E-03 9.750E-03  00:23:49 4.67461E-08        1223  2.313E-05 -6.329E-05
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    39, with time interval 2.500E-04, at step time 9.750E-03 of 3.333E-02
+
+ STEP 1  ORIGIN 0.0000
+
+              STEP     TOTAL      WALL        STABLE    CRITICAL    KINETIC      TOTAL
+INCREMENT     TIME      TIME      TIME     INCREMENT     ELEMENT     ENERGY     ENERGY
+   213162  1.000E-02 1.000E-02  00:24:31 4.68100E-08         525  3.079E-05 -8.270E-05
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    40, with time interval 2.500E-04, at step time 1.000E-02 of 3.333E-02
+   218505  1.025E-02 1.025E-02  00:25:12 4.67087E-08        1790  1.469E-03 -2.008E-03
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    41, with time interval 2.500E-04, at step time 1.025E-02 of 3.333E-02
+   223857  1.050E-02 1.050E-02  00:25:56 4.67349E-08        2111  3.612E-03 -3.523E-02
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    42, with time interval 2.500E-04, at step time 1.050E-02 of 3.333E-02
+   229223  1.075E-02 1.075E-02  00:26:43 4.67060E-08        2840  2.213E-03 -7.600E-02
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    43, with time interval 2.500E-04, at step time 1.075E-02 of 3.333E-02
+   234583  1.100E-02 1.100E-02  00:27:29 4.64328E-08         289  4.478E-04 -7.816E-02
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    44, with time interval 2.500E-04, at step time 1.100E-02 of 3.333E-02
+   239945  1.125E-02 1.125E-02  00:28:17 4.67477E-08        2132  1.867E-03 -8.332E-02
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    45, with time interval 2.500E-04, at step time 1.125E-02 of 3.333E-02
+   245316  1.150E-02 1.150E-02  00:29:04 4.67619E-08        1710  1.782E-03 -9.839E-02
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    46, with time interval 2.500E-04, at step time 1.150E-02 of 3.333E-02
+   250689  1.175E-02 1.175E-02  00:29:53 4.65611E-08        1091  1.525E-03 -1.106E-01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    47, with time interval 2.500E-04, at step time 1.175E-02 of 3.333E-02
+   256058  1.200E-02 1.200E-02  00:30:42 4.64660E-08        1172  1.243E-03 -1.278E-01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    48, with time interval 2.500E-04, at step time 1.200E-02 of 3.333E-02
+   261454  1.225E-02 1.225E-02  00:31:33 4.56396E-08        1962  5.322E-03 -1.921E-01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    49, with time interval 2.500E-04, at step time 1.225E-02 of 3.333E-02
+   266844  1.250E-02 1.250E-02  00:32:25 4.65306E-08        1166  8.722E-03 -2.438E-01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    50, with time interval 2.500E-04, at step time 1.250E-02 of 3.333E-02
+   272247  1.275E-02 1.275E-02  00:33:16 4.62713E-08        1552  2.438E-03 -3.191E-01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    51, with time interval 2.500E-04, at step time 1.275E-02 of 3.333E-02
+   277634  1.300E-02 1.300E-02  00:34:04 4.57300E-08        2206  4.711E-03 -3.444E-01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    52, with time interval 2.500E-04, at step time 1.300E-02 of 3.333E-02
+   283017  1.325E-02 1.325E-02  00:34:55 4.62343E-08         579  5.627E-03 -3.817E-01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    53, with time interval 2.500E-04, at step time 1.325E-02 of 3.333E-02
+   288483  1.350E-02 1.350E-02  00:35:50 4.26531E-08        1168  9.699E-03 -8.622E-01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    54, with time interval 2.500E-04, at step time 1.350E-02 of 3.333E-02
+   293918  1.375E-02 1.375E-02  00:36:44 4.62421E-08        1717  5.159E-02 -1.010E+00
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    55, with time interval 2.500E-04, at step time 1.375E-02 of 3.333E-02
+   299391  1.400E-02 1.400E-02  00:37:42 4.64729E-08        1249  3.842E-02 -1.690E+00
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    56, with time interval 2.500E-04, at step time 1.400E-02 of 3.333E-02
+   304814  1.425E-02 1.425E-02  00:38:41 4.65407E-08        1570  3.416E-02 -2.262E+00
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    57, with time interval 2.500E-04, at step time 1.425E-02 of 3.333E-02
+   310235  1.450E-02 1.450E-02  00:39:41 4.67655E-08         656  1.367E-02 -2.953E+00
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    58, with time interval 2.500E-04, at step time 1.450E-02 of 3.333E-02
+   315626  1.475E-02 1.475E-02  00:40:43 4.66445E-08         207  2.802E-02 -3.242E+00
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    59, with time interval 2.500E-04, at step time 1.475E-02 of 3.333E-02
+   321139  1.500E-02 1.500E-02  00:41:47 4.67584E-08        1476  3.227E-02 -6.307E+00
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    60, with time interval 2.500E-04, at step time 1.500E-02 of 3.333E-02
+   326652  1.525E-02 1.525E-02  00:42:49 4.60783E-08         276  2.214E-02 -6.727E+00
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    61, with time interval 2.500E-04, at step time 1.525E-02 of 3.333E-02
+   332070  1.550E-02 1.550E-02  00:43:52 4.66738E-08         681  4.963E-02 -8.069E+00
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    62, with time interval 2.500E-04, at step time 1.550E-02 of 3.333E-02
+   337484  1.575E-02 1.575E-02  00:44:52 4.64149E-08         273  1.497E-02 -8.353E+00
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    63, with time interval 2.500E-04, at step time 1.575E-02 of 3.333E-02
+   342853  1.600E-02 1.600E-02  00:45:49 4.63239E-08         752  1.050E-02 -8.407E+00
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    64, with time interval 2.500E-04, at step time 1.600E-02 of 3.333E-02
+   348291  1.625E-02 1.625E-02  00:46:47 4.62029E-08        1800  3.516E-02 -9.267E+00
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    65, with time interval 2.500E-04, at step time 1.625E-02 of 3.333E-02
+   353714  1.650E-02 1.650E-02  00:47:50 4.64095E-08        2798  1.897E-02 -1.013E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    66, with time interval 2.500E-04, at step time 1.650E-02 of 3.333E-02
+   359111  1.675E-02 1.675E-02  00:48:52 4.67779E-08        2317  1.185E-02 -1.035E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    67, with time interval 2.500E-04, at step time 1.675E-02 of 3.333E-02
+   364488  1.700E-02 1.700E-02  00:49:53 4.67552E-08         482  1.652E-02 -1.042E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    68, with time interval 2.500E-04, at step time 1.700E-02 of 3.333E-02
+   369904  1.725E-02 1.725E-02  00:50:53 4.62235E-08        1797  5.289E-02 -1.124E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    69, with time interval 2.500E-04, at step time 1.725E-02 of 3.333E-02
+   375354  1.750E-02 1.750E-02  00:51:55 4.65950E-08        2347  4.575E-02 -1.224E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    70, with time interval 2.500E-04, at step time 1.750E-02 of 3.333E-02
+   380820  1.775E-02 1.775E-02  00:52:58 4.58066E-08        2180  7.172E-02 -1.523E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    71, with time interval 2.500E-04, at step time 1.775E-02 of 3.333E-02
+   386280  1.800E-02 1.800E-02  00:54:06 4.57766E-08        2508  1.040E-01 -1.720E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    72, with time interval 2.500E-04, at step time 1.800E-02 of 3.333E-02
+   391819  1.825E-02 1.825E-02  00:55:22 4.58279E-08        2429  1.402E-01 -1.983E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    73, with time interval 2.500E-04, at step time 1.825E-02 of 3.333E-02
+   397309  1.850E-02 1.850E-02  00:56:37 4.55402E-08        1712  1.666E-01 -2.285E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    74, with time interval 2.500E-04, at step time 1.850E-02 of 3.333E-02
+   402787  1.875E-02 1.875E-02  00:57:50 4.63320E-08        1635  1.936E-01 -2.441E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    75, with time interval 2.500E-04, at step time 1.875E-02 of 3.333E-02
+   408245  1.900E-02 1.900E-02  00:59:04 4.37033E-08        1375  2.733E-01 -2.482E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    76, with time interval 2.500E-04, at step time 1.900E-02 of 3.333E-02
+   413854  1.925E-02 1.925E-02  01:00:29 4.58538E-08        2338  1.644E+00 -6.236E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    77, with time interval 2.500E-04, at step time 1.925E-02 of 3.333E-02
+   419264  1.950E-02 1.950E-02  01:01:55 4.66509E-08        1150  1.614E+00 -8.285E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    78, with time interval 2.500E-04, at step time 1.950E-02 of 3.333E-02
+   424610  1.975E-02 1.975E-02  01:03:19 4.68222E-08        2500  3.519E+00 -9.327E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    79, with time interval 2.500E-04, at step time 1.975E-02 of 3.333E-02
+
+ STEP 1  ORIGIN 0.0000
+
+              STEP     TOTAL      WALL        STABLE    CRITICAL    KINETIC      TOTAL
+INCREMENT     TIME      TIME      TIME     INCREMENT     ELEMENT     ENERGY     ENERGY
+   429971  2.000E-02 2.000E-02  01:04:43 4.68105E-08         182  3.790E+00 -8.501E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    80, with time interval 2.500E-04, at step time 2.000E-02 of 3.333E-02
+   435303  2.025E-02 2.025E-02  01:05:58 4.64287E-08         269  2.673E+00 -7.696E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    81, with time interval 2.500E-04, at step time 2.025E-02 of 3.333E-02
+   440661  2.050E-02 2.050E-02  01:07:12 4.69922E-08        2670  1.175E+00 -6.906E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    82, with time interval 2.500E-04, at step time 2.050E-02 of 3.333E-02
+   446030  2.075E-02 2.075E-02  01:08:22 4.68900E-08        2830  2.651E-01 -6.136E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    83, with time interval 2.500E-04, at step time 2.075E-02 of 3.333E-02
+   451379  2.100E-02 2.100E-02  01:09:27 4.29470E-08        2023  8.990E-02 -5.494E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    84, with time interval 2.500E-04, at step time 2.100E-02 of 3.333E-02
+   456769  2.125E-02 2.125E-02  01:10:30 4.67778E-08         831  8.901E-02 -5.526E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    85, with time interval 2.500E-04, at step time 2.125E-02 of 3.333E-02
+   462100  2.150E-02 2.150E-02  01:11:30 4.70022E-08        1471  9.123E-02 -5.566E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    86, with time interval 2.500E-04, at step time 2.150E-02 of 3.333E-02
+   467448  2.175E-02 2.175E-02  01:12:32 4.64703E-08        2191  9.523E-02 -5.489E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    87, with time interval 2.500E-04, at step time 2.175E-02 of 3.333E-02
+   472795  2.200E-02 2.200E-02  01:13:34 4.70318E-08         985  9.590E-02 -5.532E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    88, with time interval 2.500E-04, at step time 2.200E-02 of 3.333E-02
+   478154  2.225E-02 2.225E-02  01:14:36 4.65486E-08        1231  9.841E-02 -5.504E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    89, with time interval 2.500E-04, at step time 2.225E-02 of 3.333E-02
+   483531  2.250E-02 2.250E-02  01:15:39 4.67810E-08        1955  1.039E-01 -5.505E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    90, with time interval 2.500E-04, at step time 2.250E-02 of 3.333E-02
+   488908  2.275E-02 2.275E-02  01:16:43 4.68344E-08        2750  1.045E-01 -5.627E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    91, with time interval 2.500E-04, at step time 2.275E-02 of 3.333E-02
+   494274  2.300E-02 2.300E-02  01:17:49 4.68199E-08         426  1.116E-01 -5.787E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    92, with time interval 2.500E-04, at step time 2.300E-02 of 3.333E-02
+   499650  2.325E-02 2.325E-02  01:18:56 4.65183E-08        2511  1.176E-01 -5.891E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    93, with time interval 2.500E-04, at step time 2.325E-02 of 3.333E-02
+   505029  2.350E-02 2.350E-02  01:20:06 4.63024E-08        1627  1.198E-01 -5.916E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    94, with time interval 2.500E-04, at step time 2.350E-02 of 3.333E-02
+   510427  2.375E-02 2.375E-02  01:21:16 4.69550E-08        2438  1.150E-01 -5.870E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    95, with time interval 2.500E-04, at step time 2.375E-02 of 3.333E-02
+   515778  2.400E-02 2.400E-02  01:22:25 4.67477E-08         183  1.123E-01 -5.865E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    96, with time interval 2.500E-04, at step time 2.400E-02 of 3.333E-02
+   521129  2.425E-02 2.425E-02  01:23:32 4.69442E-08        2587  1.193E-01 -5.796E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    97, with time interval 2.500E-04, at step time 2.425E-02 of 3.333E-02
+   526490  2.450E-02 2.450E-02  01:24:36 4.65407E-08         425  1.074E-01 -5.656E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    98, with time interval 2.500E-04, at step time 2.450E-02 of 3.333E-02
+   531934  2.475E-02 2.475E-02  01:25:40 4.66244E-08        2587  1.398E-01 -5.723E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number    99, with time interval 2.500E-04, at step time 2.475E-02 of 3.333E-02
+   537396  2.500E-02 2.500E-02  01:26:50 4.70907E-08        2666  1.562E-01 -5.971E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number   100, with time interval 2.500E-04, at step time 2.500E-02 of 3.333E-02
+   542808  2.525E-02 2.525E-02  01:28:02 4.43334E-08        1159  1.632E-01 -6.181E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number   101, with time interval 2.500E-04, at step time 2.525E-02 of 3.333E-02
+   548165  2.550E-02 2.550E-02  01:29:24 4.64990E-08        1232  2.547E-01 -6.207E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number   102, with time interval 2.500E-04, at step time 2.550E-02 of 3.333E-02
+   553614  2.575E-02 2.575E-02  01:31:22 4.66933E-08         277  4.032E-01 -6.199E+01
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number   103, with time interval 2.500E-04, at step time 2.575E-02 of 3.333E-02

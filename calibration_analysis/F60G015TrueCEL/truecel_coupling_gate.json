@@ -1,0 +1,8 @@
+{
+  "classification": "TRUE_CEL_COUPLING_ACTIVE",
+  "passed": true,
+  "initial_EVF_cells_gt_0p5": 1536,
+  "early_near_robot_velocity_disturbance_max_mm_s": 357.2825689282272,
+  "max_robot_contact_resultant_N": 36.01078940818391,
+  "evidence": "actual ODB EVF and V fields plus nonzero general-contact resultant on robot"
+}

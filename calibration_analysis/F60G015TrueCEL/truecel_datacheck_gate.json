@@ -1,0 +1,10 @@
+{
+  "job": "S4_HEADFORWARD_F60_G0P15_TRUECEL_DATACHECK_GATE",
+  "passed": true,
+  "exit_code": 0,
+  "fluid_filled_volume_mm3": 5.183999999999999,
+  "initial_total_fluid_mass_mg": 5.1876288,
+  "fluid_containing_element_count": 1536,
+  "initial_stable_dt_s": 5.51093E-08,
+  "classification": "STRICT_CEL_FLUID_PRESENT"
+}

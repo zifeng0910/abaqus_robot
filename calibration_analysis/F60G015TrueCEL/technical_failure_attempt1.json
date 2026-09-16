@@ -1,0 +1,17 @@
+{
+  "case": "S4_HEADFORWARD_F60_G0P15_TRUECEL",
+  "classification": "TECHNICAL_INITIALIZATION_FAILURE",
+  "attempt": 1,
+  "terminated_at_ms": 8.25,
+  "reason": "The centroid-only initial fluid mask allowed filled EC3D8R cell interiors to overlap the free rigid robot. CEL initial-contact offsets released a nonphysical impulse.",
+  "evidence": {
+    "initial_total_energy_N_mm": 2.688e-7,
+    "total_energy_at_8p25ms_N_mm": -17.59,
+    "kinetic_energy_at_8p25ms_N_mm": 0.2953,
+    "robot_rotation_vector_norm_exceeded_rad": 3.9,
+    "solver_fatal_error": false,
+    "manual_technical_termination": true
+  },
+  "correction": "Keep the same case and physics, but initialize fluid only in cells whose local AABB interior does not intersect the robot capsule. Face-only contact is retained.",
+  "not_a_second_candidate": true
+}

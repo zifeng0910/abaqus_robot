@@ -1,0 +1,68 @@
+{
+  "classification": "AUTHORITATIVE_LEGACY_ROUTEA_CEL_REUSE",
+  "legacy_input": "J:\\abaqusfangzhen\\abaqus_robot\\calibration_analysis\\WobbleCal_COMFixed_F30_Cone30_B10\\WobbleCal_COMFixed_F30_Cone30_B10.inp",
+  "legacy_run_status_file": "J:\\abaqusfangzhen\\WobbleCal_COMFixed_F30_Cone30_B10.sta",
+  "legacy_run_evidence": "real FLUID_EULERIAN critical element; stable dt about 1.06e-7 s through at least 55.5 ms",
+  "parameters": [
+    {
+      "parameter": "fluid_density",
+      "value": 1.0007e-09,
+      "units": "tonne/mm^3",
+      "source": "J:\\abaqusfangzhen\\abaqus_robot\\calibration_analysis\\WobbleCal_COMFixed_F30_Cone30_B10\\WobbleCal_COMFixed_F30_Cone30_B10.inp",
+      "action": "reused"
+    },
+    {
+      "parameter": "dynamic_viscosity",
+      "value": 7.1e-10,
+      "units": "N*s/mm^2",
+      "source": "J:\\abaqusfangzhen\\abaqus_robot\\calibration_analysis\\WobbleCal_COMFixed_F30_Cone30_B10\\WobbleCal_COMFixed_F30_Cone30_B10.inp",
+      "action": "reused"
+    },
+    {
+      "parameter": "EOS",
+      "value": {
+        "type": "USUP",
+        "c0_mm_s": 1480000.0,
+        "s": 0.0,
+        "Gamma0": 0.0
+      },
+      "source": "J:\\abaqusfangzhen\\abaqus_robot\\calibration_analysis\\WobbleCal_COMFixed_F30_Cone30_B10\\WobbleCal_COMFixed_F30_Cone30_B10.inp",
+      "action": "reused"
+    },
+    {
+      "parameter": "Eulerian_element",
+      "value": "EC3D8R",
+      "source": "J:\\abaqusfangzhen\\abaqus_robot\\calibration_analysis\\WobbleCal_COMFixed_F30_Cone30_B10\\WobbleCal_COMFixed_F30_Cone30_B10.inp",
+      "action": "reused"
+    },
+    {
+      "parameter": "Eulerian_section",
+      "value": "MAT_FLUID_CEL, WATER",
+      "source": "J:\\abaqusfangzhen\\abaqus_robot\\calibration_analysis\\WobbleCal_COMFixed_F30_Cone30_B10\\WobbleCal_COMFixed_F30_Cone30_B10.inp",
+      "action": "reused"
+    },
+    {
+      "parameter": "initial_volume_fraction",
+      "value": 1.0,
+      "source": "J:\\abaqusfangzhen\\abaqus_robot\\calibration_analysis\\WobbleCal_COMFixed_F30_Cone30_B10\\WobbleCal_COMFixed_F30_Cone30_B10.inp",
+      "action": "reused on new straight-lumen mask"
+    },
+    {
+      "parameter": "CEL_contact",
+      "value": "Eulerian material surface with general contact",
+      "source": "J:\\abaqusfangzhen\\abaqus_robot\\calibration_analysis\\WobbleCal_COMFixed_F30_Cone30_B10\\WobbleCal_COMFixed_F30_Cone30_B10.inp",
+      "action": "reused; parent zeta=0.50 retained"
+    },
+    {
+      "parameter": "initial_fluid_velocity",
+      "value": [
+        9.762799602464296,
+        -0.618320247446977,
+        2.074951564186524
+      ],
+      "units": "mm/s",
+      "source": "task requirement",
+      "action": "new actual Eulerian nodal initial velocity"
+    }
+  ]
+}

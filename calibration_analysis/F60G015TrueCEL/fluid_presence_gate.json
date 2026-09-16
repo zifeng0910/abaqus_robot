@@ -1,0 +1,23 @@
+{
+  "classification": "STRICT_CEL_FLUID_PRESENT",
+  "passed": true,
+  "Eulerian_geometric_volume_mm3": 9.72,
+  "fluid_filled_volume_mm3": 5.183999999999999,
+  "initial_material_volume_fraction": 1.0,
+  "initial_total_fluid_mass_tonne": 5.1876288e-09,
+  "initial_total_fluid_mass_mg": 5.1876288,
+  "Eulerian_element_count": 2880,
+  "fluid_containing_element_count": 1536,
+  "Eulerian_node_count": 3969,
+  "cell_size_mm": 0.15,
+  "initial_velocity_mm_s": [
+    9.762799602464296,
+    -0.618320247446977,
+    2.074951564186524
+  ],
+  "checks": {
+    "fluid_filled_volume_gt_0": true,
+    "fluid_mass_gt_0": true,
+    "fluid_containing_elements_gt_0": true
+  }
+}

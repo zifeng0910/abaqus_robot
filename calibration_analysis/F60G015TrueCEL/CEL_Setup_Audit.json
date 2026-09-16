@@ -1,0 +1,22 @@
+{
+  "MAGPYLIB_SOCKET_LOADS": "ON",
+  "REDUCEDHYDRO_EXTERNAL_LOADS": "OFF",
+  "CEL_FLUID_PRESENT": true,
+  "CEL_SOLID_COUPLING": "ON",
+  "flow_classification": "INITIALIZED_UNIFORM_FLOW_TRUE_CEL",
+  "structural_contact": {
+    "general_contact": true,
+    "mu": 0.03,
+    "zeta": 0.5
+  },
+  "domain": {
+    "axial_length_mm": 12.0,
+    "cross_section_mm": [
+      0.9,
+      0.9
+    ],
+    "cell_size_mm": 0.15,
+    "open_axial_ends": true
+  },
+  "parent_commit": "a6dbd1422e898e708833bd427e4faa8860ee700e"
+}

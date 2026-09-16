@@ -1,0 +1,81 @@
+{
+  "parent_case": "S4_HEADFORWARD_F60_G0P10_FLOW",
+  "candidate_case": "S4_HEADFORWARD_F60_G0P15_TRUECEL",
+  "same_routeA_basis": true,
+  "same_field_frame_mode": true,
+  "same_frequency_Hz": 60.0,
+  "same_A_main_deg": 14.343111711438091,
+  "same_A_cross_deg": 2.5,
+  "same_B0_mT": 10.0,
+  "same_phase_deg": 0.0,
+  "only_magnetic_change": "gradient_mT: 0.10 -> 0.15",
+  "samples": [
+    {
+      "t_s": 0.0,
+      "parent_unit_B": [
+        0.9841656169270095,
+        -0.06542571905823868,
+        0.16473467681211243
+      ],
+      "candidate_unit_B": [
+        0.9841656169270095,
+        -0.06542571905823868,
+        0.16473467681211243
+      ],
+      "difference_norm": 0.0,
+      "alpha_main_deg": 0.0,
+      "alpha_cross_deg": 2.5
+    },
+    {
+      "t_s": 0.0041667,
+      "parent_unit_B": [
+        0.926597993938778,
+        -0.3062869950173681,
+        0.21818440437360093
+      ],
+      "candidate_unit_B": [
+        0.926597993938778,
+        -0.3062869950173681,
+        0.21818440437360093
+      ],
+      "difference_norm": 0.0,
+      "alpha_main_deg": 14.343111710305603,
+      "alpha_cross_deg": -3.1415926534236605e-05
+    },
+    {
+      "t_s": 0.0083333,
+      "parent_unit_B": [
+        0.9665356549438379,
+        -0.0581237553875089,
+        0.24986087485226507
+      ],
+      "candidate_unit_B": [
+        0.9665356549438379,
+        -0.0581237553875089,
+        0.24986087485226507
+      ],
+      "difference_norm": 0.0,
+      "alpha_main_deg": 0.00018024085753174429,
+      "alpha_cross_deg": -2.499999999802608
+    },
+    {
+      "t_s": 0.0125,
+      "parent_unit_B": [
+        0.965099754933726,
+        0.18647764731775052,
+        0.18387101478400206
+      ],
+      "candidate_unit_B": [
+        0.965099754933726,
+        0.18647764731775052,
+        0.18387101478400206
+      ],
+      "difference_norm": 0.0,
+      "alpha_main_deg": -14.34311171143809,
+      "alpha_cross_deg": -4.592425496802574e-16
+    }
+  ],
+  "F_gradient_dot_canonical_s_N": 2.0814138279668737e-06,
+  "F_gradient_dot_canonical_s_positive": true,
+  "passed": true
+}

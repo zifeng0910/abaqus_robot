@@ -1,0 +1,33 @@
+{
+  "job": "S4_HEADFORWARD_F60_G0P15_TRUECEL",
+  "step": "Step_Drive",
+  "frame_count": 104,
+  "fluid_node_count": 3969,
+  "fluid_element_count": 2880,
+  "field_keys": [
+    "A",
+    "AR",
+    "CF",
+    "CM",
+    "CNORMF   General_Contact_Domain",
+    "COPEN   ASSEMBLY_ROBOT_SOLID-1_ROBOT_SOLID_SURF",
+    "CPRESS     General_Contact_Domain",
+    "CSHEARF  General_Contact_Domain",
+    "CSHEARMAG  General_Contact_Domain",
+    "CSLIP1  ASSEMBLY_ROBOT_SOLID-1_ROBOT_SOLID_SURF",
+    "CSLIP2  ASSEMBLY_ROBOT_SOLID-1_ROBOT_SOLID_SURF",
+    "CSLIPEQ ASSEMBLY_ROBOT_SOLID-1_ROBOT_SOLID_SURF",
+    "EVF_ASSEMBLY_FLUID_EULERIAN-1_WATER",
+    "EVF_VOID",
+    "RF",
+    "RM",
+    "STATUS",
+    "U",
+    "UR",
+    "V",
+    "VR"
+  ],
+  "evf_field": "EVF_ASSEMBLY_FLUID_EULERIAN-1_WATER",
+  "has_V": true,
+  "has_EVF": true
+}

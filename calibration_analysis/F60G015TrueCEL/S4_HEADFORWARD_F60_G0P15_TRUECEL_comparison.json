@@ -1,0 +1,26 @@
+{
+  "parent": {
+    "rocking_frequency_actual_Hz": 60.01453807318804,
+    "rocking_fit_amplitude_deg": 13.275124698315917,
+    "field_to_robot_phase_lag_deg": -3.3580331441117086,
+    "delta_s_mm": 0.12639196692859364,
+    "v_robot_s_final_mm_s": 5.9940949918861985,
+    "max_radial_COM_displacement_mm": 0.2511953112810556,
+    "HEAD_contact_episode_count": 21,
+    "TAIL_contact_episode_count": 34,
+    "BODY_contact_episode_count": 41,
+    "both_end_bridge_ms": 0.0
+  },
+  "truecel": {
+    "rocking_frequency_actual_Hz": 60.62144992988753,
+    "rocking_fit_amplitude_deg": 6.373434385670109,
+    "field_to_robot_phase_lag_deg": 0.3428237034599206,
+    "delta_s_mm": -0.8931007603528963,
+    "final_axial_velocity_mm_s": 782.2844014031709,
+    "max_radial_COM_displacement_mm": 0.26061076647104203,
+    "HEAD_contact_episode_count": 8,
+    "TAIL_contact_episode_count": 10,
+    "BODY_contact_episode_count": 11,
+    "both_end_bridge_ms": 0.0
+  }
+}
