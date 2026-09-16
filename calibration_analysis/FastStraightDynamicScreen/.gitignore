@@ -1,0 +1,17 @@
+# Abaqus solver databases and extracted dense histories are local artifacts.
+cases/*/*.odb
+cases/*/*.abq
+cases/*/*.mdl
+cases/*/*.pac
+cases/*/*.prt
+cases/*/*.res
+cases/*/*.sel
+cases/*/*.stt
+cases/*/*.lck
+cases/*/*.cid
+cases/*/*.simlog
+cases/*/private/
+production/__pycache__/
+scripts/__pycache__/
+scripts/*_runner*.log
+scripts/*_runner*.err

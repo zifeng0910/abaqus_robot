@@ -1,0 +1,400 @@
+1
+
+   Abaqus 2025                                  Date 16-Sep-2026   Time 11:18:57
+   For use by Supplied by Team-SolidSQUAD under license from Dassault Systemes or its subsidiary.
+
+
+
+                         The Abaqus Software is a product of:
+
+                           Dassault Systemes Americas Corp.
+                           1301 Atwood Avenue, Suite 101W
+                              Johnston, RI 02919, USA
+ 
+
+
+                   The Abaqus Software is available only under license
+                   from Dassault Systemes or its subsidiary and may be
+                   used or reproduced only in accordance with the terms
+                   of such license.
+ 
+                          On machine Zifeng 
+                          you are authorized to run
+                          Abaqus/Explicit until 31-Dec-2055
+
+                          Your site id is:  
+
+
+ 
+                    For assistance or any other information you may
+                    obtain contact information for your local office
+                    from the world wide web at:
+
+                      https://www.3ds.com/products-services/simulia/services-support/
+
+ 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *                       Abaqus 2025                       * 
+                *                                                         * 
+                *       BUILD ID: 2024_09_20-21.00.46 RELr427 198590      * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using                         * 
+                *  release Abaqus 2025 manuals                            * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+
+ ***WARNING: in keyword *AMPLITUDE, file 
+             "FAST_PLANAR_20HZ_A14P343_FORWARD.inp", line 21772: THE AMPLITUDE 
+             CURVE SOCKET_FX. NOTE THAT THE NUMBER OF ARGUMENTS FOR USER 
+             SUBROUTINES UAMP AND VUAMP HAVE BEEN CHANGED FOR V6.12. 'THE 
+             ARGUMENTS NPROPS AND PROPS HAVE BEEN ADDED. IF THE NUMBER OF 
+             ARGUMENTS ARE INCORRECT, THEN THE ANALYSIS WILL NOT RUN PROPERLY. 
+             PLEASE READ THE ABAQUS USER SUBROUTINES REFERENCE MANUAL FOR MORE 
+             DETAILS.
+
+ ***WARNING: in keyword *AMPLITUDE, file 
+             "FAST_PLANAR_20HZ_A14P343_FORWARD.inp", line 21773: THE AMPLITUDE 
+             CURVE SOCKET_FY. NOTE THAT THE NUMBER OF ARGUMENTS FOR USER 
+             SUBROUTINES UAMP AND VUAMP HAVE BEEN CHANGED FOR V6.12. 'THE 
+             ARGUMENTS NPROPS AND PROPS HAVE BEEN ADDED. IF THE NUMBER OF 
+             ARGUMENTS ARE INCORRECT, THEN THE ANALYSIS WILL NOT RUN PROPERLY. 
+             PLEASE READ THE ABAQUS USER SUBROUTINES REFERENCE MANUAL FOR MORE 
+             DETAILS.
+
+ ***WARNING: in keyword *AMPLITUDE, file 
+             "FAST_PLANAR_20HZ_A14P343_FORWARD.inp", line 21774: THE AMPLITUDE 
+             CURVE SOCKET_FZ. NOTE THAT THE NUMBER OF ARGUMENTS FOR USER 
+             SUBROUTINES UAMP AND VUAMP HAVE BEEN CHANGED FOR V6.12. 'THE 
+             ARGUMENTS NPROPS AND PROPS HAVE BEEN ADDED. IF THE NUMBER OF 
+             ARGUMENTS ARE INCORRECT, THEN THE ANALYSIS WILL NOT RUN PROPERLY. 
+             PLEASE READ THE ABAQUS USER SUBROUTINES REFERENCE MANUAL FOR MORE 
+             DETAILS.
+
+ ***WARNING: in keyword *AMPLITUDE, file 
+             "FAST_PLANAR_20HZ_A14P343_FORWARD.inp", line 21775: THE AMPLITUDE 
+             CURVE SOCKET_MX. NOTE THAT THE NUMBER OF ARGUMENTS FOR USER 
+             SUBROUTINES UAMP AND VUAMP HAVE BEEN CHANGED FOR V6.12. 'THE 
+             ARGUMENTS NPROPS AND PROPS HAVE BEEN ADDED. IF THE NUMBER OF 
+             ARGUMENTS ARE INCORRECT, THEN THE ANALYSIS WILL NOT RUN PROPERLY. 
+             PLEASE READ THE ABAQUS USER SUBROUTINES REFERENCE MANUAL FOR MORE 
+             DETAILS.
+
+ ***WARNING: in keyword *AMPLITUDE, file 
+             "FAST_PLANAR_20HZ_A14P343_FORWARD.inp", line 21776: THE AMPLITUDE 
+             CURVE SOCKET_MY. NOTE THAT THE NUMBER OF ARGUMENTS FOR USER 
+             SUBROUTINES UAMP AND VUAMP HAVE BEEN CHANGED FOR V6.12. 'THE 
+             ARGUMENTS NPROPS AND PROPS HAVE BEEN ADDED. IF THE NUMBER OF 
+             ARGUMENTS ARE INCORRECT, THEN THE ANALYSIS WILL NOT RUN PROPERLY. 
+             PLEASE READ THE ABAQUS USER SUBROUTINES REFERENCE MANUAL FOR MORE 
+             DETAILS.
+
+ ***WARNING: in keyword *AMPLITUDE, file 
+             "FAST_PLANAR_20HZ_A14P343_FORWARD.inp", line 21777: THE AMPLITUDE 
+             CURVE SOCKET_MZ. NOTE THAT THE NUMBER OF ARGUMENTS FOR USER 
+             SUBROUTINES UAMP AND VUAMP HAVE BEEN CHANGED FOR V6.12. 'THE 
+             ARGUMENTS NPROPS AND PROPS HAVE BEEN ADDED. IF THE NUMBER OF 
+             ARGUMENTS ARE INCORRECT, THEN THE ANALYSIS WILL NOT RUN PROPERLY. 
+             PLEASE READ THE ABAQUS USER SUBROUTINES REFERENCE MANUAL FOR MORE 
+             DETAILS.
+
+ ***WARNING: in keyword *AMPLITUDE, file 
+             "FAST_PLANAR_20HZ_A14P343_FORWARD.inp", line 21790: THE AMPLITUDE 
+             CURVE HYDRO_FX. NOTE THAT THE NUMBER OF ARGUMENTS FOR USER 
+             SUBROUTINES UAMP AND VUAMP HAVE BEEN CHANGED FOR V6.12. 'THE 
+             ARGUMENTS NPROPS AND PROPS HAVE BEEN ADDED. IF THE NUMBER OF 
+             ARGUMENTS ARE INCORRECT, THEN THE ANALYSIS WILL NOT RUN PROPERLY. 
+             PLEASE READ THE ABAQUS USER SUBROUTINES REFERENCE MANUAL FOR MORE 
+             DETAILS.
+
+ ***WARNING: in keyword *AMPLITUDE, file 
+             "FAST_PLANAR_20HZ_A14P343_FORWARD.inp", line 21791: THE AMPLITUDE 
+             CURVE HYDRO_FY. NOTE THAT THE NUMBER OF ARGUMENTS FOR USER 
+             SUBROUTINES UAMP AND VUAMP HAVE BEEN CHANGED FOR V6.12. 'THE 
+             ARGUMENTS NPROPS AND PROPS HAVE BEEN ADDED. IF THE NUMBER OF 
+             ARGUMENTS ARE INCORRECT, THEN THE ANALYSIS WILL NOT RUN PROPERLY. 
+             PLEASE READ THE ABAQUS USER SUBROUTINES REFERENCE MANUAL FOR MORE 
+             DETAILS.
+
+ ***WARNING: in keyword *AMPLITUDE, file 
+             "FAST_PLANAR_20HZ_A14P343_FORWARD.inp", line 21792: THE AMPLITUDE 
+             CURVE HYDRO_FZ. NOTE THAT THE NUMBER OF ARGUMENTS FOR USER 
+             SUBROUTINES UAMP AND VUAMP HAVE BEEN CHANGED FOR V6.12. 'THE 
+             ARGUMENTS NPROPS AND PROPS HAVE BEEN ADDED. IF THE NUMBER OF 
+             ARGUMENTS ARE INCORRECT, THEN THE ANALYSIS WILL NOT RUN PROPERLY. 
+             PLEASE READ THE ABAQUS USER SUBROUTINES REFERENCE MANUAL FOR MORE 
+             DETAILS.
+
+ ***WARNING: in keyword *AMPLITUDE, file 
+             "FAST_PLANAR_20HZ_A14P343_FORWARD.inp", line 21793: THE AMPLITUDE 
+             CURVE HYDRO_MX. NOTE THAT THE NUMBER OF ARGUMENTS FOR USER 
+             SUBROUTINES UAMP AND VUAMP HAVE BEEN CHANGED FOR V6.12. 'THE 
+             ARGUMENTS NPROPS AND PROPS HAVE BEEN ADDED. IF THE NUMBER OF 
+             ARGUMENTS ARE INCORRECT, THEN THE ANALYSIS WILL NOT RUN PROPERLY. 
+             PLEASE READ THE ABAQUS USER SUBROUTINES REFERENCE MANUAL FOR MORE 
+             DETAILS.
+
+ ***WARNING: in keyword *AMPLITUDE, file 
+             "FAST_PLANAR_20HZ_A14P343_FORWARD.inp", line 21794: THE AMPLITUDE 
+             CURVE HYDRO_MY. NOTE THAT THE NUMBER OF ARGUMENTS FOR USER 
+             SUBROUTINES UAMP AND VUAMP HAVE BEEN CHANGED FOR V6.12. 'THE 
+             ARGUMENTS NPROPS AND PROPS HAVE BEEN ADDED. IF THE NUMBER OF 
+             ARGUMENTS ARE INCORRECT, THEN THE ANALYSIS WILL NOT RUN PROPERLY. 
+             PLEASE READ THE ABAQUS USER SUBROUTINES REFERENCE MANUAL FOR MORE 
+             DETAILS.
+
+ ***WARNING: in keyword *AMPLITUDE, file 
+             "FAST_PLANAR_20HZ_A14P343_FORWARD.inp", line 21795: THE AMPLITUDE 
+             CURVE HYDRO_MZ. NOTE THAT THE NUMBER OF ARGUMENTS FOR USER 
+             SUBROUTINES UAMP AND VUAMP HAVE BEEN CHANGED FOR V6.12. 'THE 
+             ARGUMENTS NPROPS AND PROPS HAVE BEEN ADDED. IF THE NUMBER OF 
+             ARGUMENTS ARE INCORRECT, THEN THE ANALYSIS WILL NOT RUN PROPERLY. 
+             PLEASE READ THE ABAQUS USER SUBROUTINES REFERENCE MANUAL FOR MORE 
+             DETAILS.
+  *Element, type=R3D4
+  *Elset, elset=ASSEMBLY_PIPE_WALL_HELPER-1_PIPE_WALL_HELPER_ALL
+  *Element, type=R3D4
+  *Elset, elset=ASSEMBLY_PIPE_TERMINAL_STOP-1_PIPE_TERMINAL_STOP_ALL
+  *Element, type=R3D4
+  *Elset, elset=ASSEMBLY_PIPE_TERMINAL_STOP_HIGH-1_PIPE_TERMINAL_STOP_HIGH_ALL
+  *Element, type=C3D4
+  *Elset, elset=ASSEMBLY_PIPE_SOLID-1_PIPE_CEL_BODY
+  *Elset, elset=ASSEMBLY_PIPE_SOLID-1_PIPE_SOLID_ALL
+  *Element, type=C3D4
+  *Elset, elset=ASSEMBLY_ROBOT_SOLID-1_ROBOT_CEL_BODY
+  *Elset, elset=ASSEMBLY_ROBOT_SOLID-1_ROBOT_EXTERIOR_S1
+  *Elset, elset=ASSEMBLY_ROBOT_SOLID-1_ROBOT_EXTERIOR_S2
+  *Elset, elset=ASSEMBLY_ROBOT_SOLID-1_ROBOT_EXTERIOR_S3
+  *Elset, elset=ASSEMBLY_ROBOT_SOLID-1_ROBOT_EXTERIOR_S4
+  *Elset, elset=ASSEMBLY_ROBOT_SOLID-1_ROBOT_SOLID_ALL
+  *Elset, elset=ASSEMBLY_PIPE_RIGID_ALL
+  *Elset, elset=ASSEMBLY_PIPE_SOLID_CEL_ALL
+  *Elset, elset=ASSEMBLY_PIPE_TERMINAL_STOP_CEL_ALL
+  *Elset, elset=ASSEMBLY_PIPE_TERMINAL_STOP_HIGH_CEL_ALL
+  *Elset, elset=ASSEMBLY_PIPE_WALL_HELPER_CEL_ALL
+  *Elset, elset=ASSEMBLY_ROBOT_SOLID_CEL_ALL
+  *heading
+  *material, name=MAT_PIPE_RIGID
+  *density
+  *elastic
+  *material, name=MAT_ROBOT_RIGID
+  *density
+  *elastic
+  *solidsection, elset=ASSEMBLY_PIPE_SOLID-1_PIPE_CEL_BODY, material=MAT_PIPE_RIGID
+  *solidsection, elset=ASSEMBLY_ROBOT_SOLID-1_ROBOT_CEL_BODY, material=MAT_ROBOT_RIGID
+  *solidsection, elset=ASSEMBLY_PIPE_SOLID-1_PIPE_CEL_BODY, material=MAT_PIPE_RIGID
+  *solidsection, elset=ASSEMBLY_ROBOT_SOLID-1_ROBOT_CEL_BODY, material=MAT_ROBOT_RIGID
+  *rigidbody, refnode=ASSEMBLY_RP_PIPE, elset=ASSEMBLY_PIPE_RIGID_ALL
+  *rigidbody, refnode=ASSEMBLY_RP_ROBOT, elset=ASSEMBLY_ROBOT_SOLID_CEL_ALL
+  *rigidbody, refnode=ASSEMBLY_RP_PIPE, elset=ASSEMBLY_PIPE_RIGID_ALL
+  *rigidbody, refnode=ASSEMBLY_RP_ROBOT, elset=ASSEMBLY_ROBOT_SOLID_CEL_ALL
+  *rigidbody, refnode=ASSEMBLY_RP_PIPE, elset=ASSEMBLY_PIPE_RIGID_ALL
+  *rigidbody, refnode=ASSEMBLY_RP_ROBOT, elset=ASSEMBLY_ROBOT_SOLID_CEL_ALL
+  *rigidbody, refnode=ASSEMBLY_RP_PIPE, elset=ASSEMBLY_PIPE_RIGID_ALL
+  *rigidbody, refnode=ASSEMBLY_RP_ROBOT, elset=ASSEMBLY_ROBOT_SOLID_CEL_ALL
+  *surface, type=ELEMENT, name=ASSEMBLY_PIPE_WALL_HELPER-1_PIPE_WALL_HELPER_SURF
+  *surface, type=ELEMENT, name=ASSEMBLY_PIPE_TERMINAL_STOP-1_PIPE_TERMINAL_STOP_SURF
+  *surface, type=ELEMENT, name=ASSEMBLY_PIPE_TERMINAL_STOP_HIGH-1_PIPE_TERMINAL_STOP_HIGH_SURF
+  *surface, type=ELEMENT, name=ASSEMBLY_PIPE_SOLID-1_PIPE_SOLID_SURF
+  *surface, type=ELEMENT, name=ASSEMBLY_ROBOT_SOLID-1_ROBOT_SOLID_SURF
+  *surface, type=ELEMENT, name=ASSEMBLY_PIPE_WALL_HELPER-1_PIPE_WALL_HELPER_SURF
+  *surface, type=ELEMENT, name=ASSEMBLY_PIPE_TERMINAL_STOP-1_PIPE_TERMINAL_STOP_SURF
+  *surface, type=ELEMENT, name=ASSEMBLY_PIPE_TERMINAL_STOP_HIGH-1_PIPE_TERMINAL_STOP_HIGH_SURF
+  *surface, type=ELEMENT, name=ASSEMBLY_PIPE_SOLID-1_PIPE_SOLID_SURF
+  *surface, type=ELEMENT, name=ASSEMBLY_ROBOT_SOLID-1_ROBOT_SOLID_SURF
+  *rigidbody, refnode=ASSEMBLY_RP_PIPE, elset=ASSEMBLY_PIPE_RIGID_ALL
+  *rigidbody, refnode=ASSEMBLY_RP_ROBOT, elset=ASSEMBLY_ROBOT_SOLID_CEL_ALL
+  *surfaceinteraction, name=PROP_CEL_HARD
+  *friction
+  *rigidbody, refnode=ASSEMBLY_RP_PIPE, elset=ASSEMBLY_PIPE_RIGID_ALL
+  *rigidbody, refnode=ASSEMBLY_RP_ROBOT, elset=ASSEMBLY_ROBOT_SOLID_CEL_ALL
+  *rigidbody, refnode=ASSEMBLY_RP_PIPE, elset=ASSEMBLY_PIPE_RIGID_ALL
+  *rigidbody, refnode=ASSEMBLY_RP_ROBOT, elset=ASSEMBLY_ROBOT_SOLID_CEL_ALL
+  *boundary
+  *solidsection, elset=ASSEMBLY_PIPE_SOLID-1_PIPE_CEL_BODY, material=MAT_PIPE_RIGID
+  *solidsection, elset=ASSEMBLY_ROBOT_SOLID-1_ROBOT_CEL_BODY, material=MAT_ROBOT_RIGID
+  *rigidbody, refnode=ASSEMBLY_RP_PIPE, elset=ASSEMBLY_PIPE_RIGID_ALL
+  *rigidbody, refnode=ASSEMBLY_RP_ROBOT, elset=ASSEMBLY_ROBOT_SOLID_CEL_ALL
+  *friction
+  
+                               E L E M E N T   Q U A L I T Y  C H E C K S        
+  
+  
+ ***NOTES: DISTORTED ISOPARAMETRIC ELEMENTS: ANGLE BETWEEN ISOPARAMETRIC LINES 
+           IS LESS THAN 45 DEGREES OR GREATER THAN 135 DEGREES.
+  
+           TETRAHEDRAL QUALITY MEASURE: VOLUME OF TETRAHEDRON DIVIDED BY THE 
+           VOLUME OF EQUILATERAL TETRAHEDRON WITH SAME CIRCUMSPHERE RADIUS; 
+           0 FOR DEGENERATE TETRAHEDRON AND 1 FOR EQUILATERIAL TETRAHEDRON. IT 
+           IS RECOMMENDED THAT THE TETRAHEDRAL QUALITY MEASURE BE GREATER THAN 
+           0.02, THE MIN INTERIOR (DIHEDRAL) ANGLE BE GREATER THAN 10 DEGREES, 
+           AND THE MAX INTERIOR (DIHEDRAL) ANGLE BE LESS THAN 160 DEGREES. 
+  
+           MODIFIED TETRAHEDRAL QUALITY MEASURE: ANGLES BETWEEN THE TWO LINE 
+           SEGMENTS ON EACH EDGE; THE EDGES OF MODIFIED TETRAHEDRAL SHOULD BE 
+           AS STRAIGHT AS POSSIBLE. IT IS RECOMMENDED THAT THE ANGLE BETWEEN 
+           THE TWO LINE SEGMENTS ON EACH EDGE IS BETWEEN 160 AND 180 DEGREES. 
+  
+           TRIANGULAR QUALITY MEASURE: AREA OF TRIANGLE DIVIDED BY THE AREA OF 
+           EQUILATERAL TRIANGLE WITH SAME CIRCUMCIRCLE RADIUS; 0 FOR DEGENERATE 
+           TRIANGLE AND 1 FOR EQUILATERAL TRIANGLE. IT IS RECOMMENDED THAT THE
+           TRIANGULAR QUALITY MEASURE BE GREATER THAN 0.01, THE MIN INTERIOR 
+           ANGLE BE GREATER THAN 10 DEGREES, AND THE MAX INTERIOR ANGLE BE LESS 
+           THAN 160 DEGREES. 
+  
+           NODAL ADJUSTMENTS ARISING FROM CONTACT INTERACTIONS AND/OR TIE 
+           CONSTRAINTS CAN CAUSE SEVERE ELEMENT DISTORTION. IT MAY BE NECESSARY 
+           TO REMESH IN ORDER TO REDUCE THE AMOUNT OF ADJUSTMENT. 
+
+ ***WARNING: 4 elements are distorted. Either the isoparametric angles are out 
+             of the suggested limits or the triangular or tetrahedral quality 
+             measure is bad. The elements have been identified in element set 
+             WarnElemDistorted.
+  
+ --------------------------------------------------------------------------------
+ Distorted tetrahedral elements
+  
+        Element         Quality measure     Min angle        Max angle     Adjusted nodes 
+ ---------------------- ---------------- ---------------- ---------------- -------------- 
+      PIPE_SOLID-1.1842        0.0197873              15.          140.204       NO       
+      PIPE_SOLID-1.1851        0.0197872          27.4777             150.       NO       
+      PIPE_SOLID-1.3356        0.0197871          27.4776             150.       NO       
+      PIPE_SOLID-1.4413        0.0197873              15.          140.204       NO       
+  
+  
+  *output, field, timeinterval=0.0005, timemarks=NO
+  *output, history, frequency=1
+  *output, history, timeinterval=5e-05
+  *output, history, frequency=1, name=RP_U1, sensor
+  *output, history, frequency=1, name=RP_U2, sensor
+  *output, history, frequency=1, name=RP_U3, sensor
+  *output, history, frequency=1, name=RP_UR1, sensor
+  *output, history, frequency=1, name=RP_UR2, sensor
+  *output, history, frequency=1, name=RP_UR3, sensor
+  *output, history, frequency=1, name=RP_V1, sensor
+  *output, history, frequency=1, name=RP_V2, sensor
+  *output, history, frequency=1, name=RP_V3, sensor
+  *output, history, frequency=1, name=RP_VR1, sensor
+  *output, history, frequency=1, name=RP_VR2, sensor
+  *output, history, frequency=1, name=RP_VR3, sensor
+  *step, name=Step_Drive, nlgeom=YES
+  *step, name=Step_Drive, nlgeom=YES
+  *dynamic, explicit, directusercontrol
+  *output, field, timeinterval=0.0005, timemarks=NO
+  *nodeoutput
+  *nodeoutput, nset=ASSEMBLY_RP_ROBOT
+  *contactoutput, generalcontact
+  *contactoutput, surface=ASSEMBLY_ROBOT_SOLID-1_ROBOT_SOLID_SURF
+  *output, history, frequency=1
+  *nodeoutput, nset=ASSEMBLY_RP_ROBOT
+  *contactoutput, surface=ASSEMBLY_ROBOT_SOLID-1_ROBOT_SOLID_SURF
+  *contactoutput, surface=ASSEMBLY_PIPE_WALL_HELPER-1_PIPE_WALL_HELPER_SURF
+  *output, history, timeinterval=5e-05
+  *energyoutput, variable=ALL
+  *output, history, frequency=1, name=RP_U1, sensor
+  *nodeoutput, nset=ASSEMBLY_RP_ROBOT
+  *output, history, frequency=1, name=RP_U2, sensor
+  *nodeoutput, nset=ASSEMBLY_RP_ROBOT
+  *output, history, frequency=1, name=RP_U3, sensor
+  *nodeoutput, nset=ASSEMBLY_RP_ROBOT
+  *output, history, frequency=1, name=RP_UR1, sensor
+  *nodeoutput, nset=ASSEMBLY_RP_ROBOT
+  *output, history, frequency=1, name=RP_UR2, sensor
+  *nodeoutput, nset=ASSEMBLY_RP_ROBOT
+  *output, history, frequency=1, name=RP_UR3, sensor
+  *nodeoutput, nset=ASSEMBLY_RP_ROBOT
+  *output, history, frequency=1, name=RP_V1, sensor
+  *nodeoutput, nset=ASSEMBLY_RP_ROBOT
+  *output, history, frequency=1, name=RP_V2, sensor
+  *nodeoutput, nset=ASSEMBLY_RP_ROBOT
+  *output, history, frequency=1, name=RP_V3, sensor
+  *nodeoutput, nset=ASSEMBLY_RP_ROBOT
+  *output, history, frequency=1, name=RP_VR1, sensor
+  *nodeoutput, nset=ASSEMBLY_RP_ROBOT
+  *output, history, frequency=1, name=RP_VR2, sensor
+  *nodeoutput, nset=ASSEMBLY_RP_ROBOT
+  *output, history, frequency=1, name=RP_VR3, sensor
+  *nodeoutput, nset=ASSEMBLY_RP_ROBOT
+  *endstep
+  *surface, type=ELEMENT, name=ASSEMBLY_PIPE_WALL_HELPER-1_PIPE_WALL_HELPER_SURF
+  *surface, type=ELEMENT, name=ASSEMBLY_PIPE_TERMINAL_STOP-1_PIPE_TERMINAL_STOP_SURF
+  *surface, type=ELEMENT, name=ASSEMBLY_PIPE_TERMINAL_STOP_HIGH-1_PIPE_TERMINAL_STOP_HIGH_SURF
+  *surface, type=ELEMENT, name=ASSEMBLY_PIPE_SOLID-1_PIPE_SOLID_SURF
+  *surface, type=ELEMENT, name=ASSEMBLY_ROBOT_SOLID-1_ROBOT_SOLID_SURF
+  *surfaceinteraction, name=PROP_CEL_HARD
+  *friction
+  *surfacebehavior, pressure-overclosure=HARD
+  *contactdamping, definition=CRITICALDAMPINGFRACTION, tangentfraction=0
+  *boundary
+  *contact
+  *contactinclusions
+  *contactpropertyassignment
+  *step, name=Step_Drive, nlgeom=YES
+  *dynamic, explicit, directusercontrol
+  *cload, amplitude=SOCKET_FX
+  *cload, amplitude=SOCKET_FY
+  *cload, amplitude=SOCKET_FZ
+  *cload, amplitude=SOCKET_MX
+  *cload, amplitude=SOCKET_MY
+  *cload, amplitude=SOCKET_MZ
+  *cload, amplitude=HYDRO_FX
+  *cload, amplitude=HYDRO_FY
+  *cload, amplitude=HYDRO_FZ
+  *cload, amplitude=HYDRO_MX
+  *cload, amplitude=HYDRO_MY
+  *cload, amplitude=HYDRO_MZ
+  *endstep
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                 15483
+          NUMBER OF NODES IS                                     5971
+          NUMBER OF NODES DEFINED BY THE USER                    5971
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                17919
+          (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
+           VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =      1.4    
+       SYSTEM TIME (SEC)    =     0.20    
+       TOTAL CPU TIME (SEC) =      1.6    
+       WALLCLOCK TIME (SEC) =            1

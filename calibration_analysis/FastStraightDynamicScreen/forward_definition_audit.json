@@ -1,0 +1,26 @@
+{
+  "definition": "canonical increasing centerline arclength +s",
+  "gradient_mT": 6.0,
+  "gradient_length_mm": 45.0,
+  "time_s": 0.001,
+  "c_hat_aba": [
+    0.9762799602464296,
+    -0.0618320247446977,
+    0.2074951564186524
+  ],
+  "force_aba_N": [
+    8.127613378384031e-05,
+    -5.14756844338639e-06,
+    1.7274147559398756e-05
+  ],
+  "force_dot_canonical_plus_s_N": 8.325084718867393e-05,
+  "driver_arc_mm": 18.905960626,
+  "robot_arc_mm": 53.799881868759286,
+  "passed": true,
+  "elliptic_field_gate": {
+    "formula": "normalize(c-tan(alpha_main)*n_routeA-tan(alpha_cross)*b_routeA)",
+    "max_component_error_T": 8.998878031629687e-17,
+    "max_magnitude_error_T": 3.469446951953614e-18,
+    "passed": true
+  }
+}
