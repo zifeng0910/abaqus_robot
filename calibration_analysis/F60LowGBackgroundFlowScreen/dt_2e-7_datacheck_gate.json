@@ -1,0 +1,14 @@
+{
+    "gate_job":  "S4_HEADFORWARD_F60_G0P10_FLOW_DATACHECK",
+    "attempted_dt_s":  2E-07,
+    "exit_code":  0,
+    "log":  "calibration_analysis\\F60LowGBackgroundFlowScreen\\S4_HEADFORWARD_F60_G0P10_FLOW_DATACHECK.log",
+    "passed":  true,
+    "checks":  [
+                   "no initial penetration problem",
+                   "no contact instability",
+                   "no obvious energy explosion",
+                   "no negative volume/fatal error",
+                   "bounded rocking"
+               ]
+}

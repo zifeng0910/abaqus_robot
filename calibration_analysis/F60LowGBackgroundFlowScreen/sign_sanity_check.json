@@ -1,0 +1,28 @@
+{
+  "flow_axis": [
+    0.9762799602464296,
+    -0.0618320247446977,
+    0.2074951564186524
+  ],
+  "flow_velocity_mm_s": 10.0,
+  "hydro_force_s_N": {
+    "A_stationary": 3.999999999999999e-08,
+    "B_with_flow": 0.0,
+    "C_faster_than_flow": -1.999999999999999e-08
+  },
+  "gates": {
+    "A_stationary_pushes_plus_s": true,
+    "B_with_flow_is_zero": true,
+    "C_faster_drag_opposes_motion": true,
+    "F_gradient_dot_c_positive": true,
+    "all_passed": true
+  },
+  "gradient_gate": {
+    "driver_arc_mm": 18.899960626,
+    "robot_arc_mm": 53.799881868759286,
+    "delta_s_mm": 34.89992124275929,
+    "dB_ds_T_per_m": -0.0012758184911225235,
+    "F_gradient_dot_c_N": 1.3876092186445826e-06,
+    "passed": true
+  }
+}

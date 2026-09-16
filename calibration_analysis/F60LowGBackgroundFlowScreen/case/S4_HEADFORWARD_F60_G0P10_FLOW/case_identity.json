@@ -1,0 +1,113 @@
+{
+    "case_id":  "S4_HEADFORWARD_F60_G0P10_FLOW",
+    "status":  "SOLVED",
+    "classification":  "LOW_PRECISION_SCREENING",
+    "source_case":  "S4_HEADFORWARD_F40_G0P05_FLOW",
+    "source_commit":  "24aec94",
+    "field_frame_mode":  "ROBOT_LOCAL_ELLIPTIC_ROCKING",
+    "duration_s":  0.0375,
+    "direct_dt_s":  2E-07,
+    "frequency_Hz":  60.0,
+    "rocking_main_amplitude_deg":  14.343111711438091,
+    "rocking_cross_amplitude_deg":  2.5,
+    "B0_mT":  10.0,
+    "gradient_mT":  0.1,
+    "gradient_length_mm":  45.0,
+    "gradient_profile":  "legacy",
+    "forward_definition":  "canonical increasing centerline arclength +s",
+    "flow_model":  "prescribed background flow + ReducedHydro relative-velocity drag",
+    "flow_status":  "DIAGNOSTIC_SCREENING_FLOW_ONLY",
+    "U_flow_mm_s":  10.0,
+    "flow_axis_aba":  [
+                          0.9762799602464296,
+                          -0.0618320247446977,
+                          0.2074951564186524
+                      ],
+    "flow_source":  "No authoritative straight-tube flow value found in repository; prescribed by task.",
+    "mu":  0.03,
+    "zeta":  0.5,
+    "Cparallel_Ns_per_mm":  4E-09,
+    "Cperp_Ns_per_mm":  1.2E-08,
+    "Kspin_Nmm_s":  1E-09,
+    "Kwobble_Nmm_s":  3E-09,
+    "robot_length_mm":  2.4,
+    "robot_diameter_mm":  0.815,
+    "robot_moment_Am2":  0.0010876227522174417,
+    "robot_mass_mg":  9.207793514166587,
+    "initial_center_aba_mm":  [
+                                  -7.468174204284,
+                                  -3.676918015967,
+                                  -9.550745259298
+                              ],
+    "canonical_plus_s_axis_aba":  [
+                                      0.9762799602464296,
+                                      -0.0618320247446977,
+                                      0.2074951564186524
+                                  ],
+    "head_tail_axis_aba":  [
+                               0.9762799602464296,
+                               -0.0618320247446977,
+                               0.2074951564186524
+                           ],
+    "initial_magnetic_moment_axis_aba":  [
+                                             -0.9762799602464296,
+                                             0.0618320247446978,
+                                             -0.2074951564186524
+                                         ],
+    "reduced_hydro_body_axis_aba":  [
+                                        -0.9762799602464296,
+                                        0.0618320247446978,
+                                        -0.2074951564186524
+                                    ],
+    "n_routeA_aba":  [
+                         0.07770950949965555,
+                         0.9945677258930866,
+                         -0.06925511349479567
+                     ],
+    "b_routeA_aba":  [
+                         -0.20208580196182235,
+                         0.08373672627840886,
+                         0.9757814762115655
+                     ],
+    "routeA_gauge_for_flipped_body_deg":  61.37284757596327,
+    "dt_gate":  {
+                    "attempted_dt_s":  2E-07,
+                    "fallback_dt_s":  1E-07,
+                    "accepted":  true,
+                    "gate_status":  "PASSED_DYNAMIC_RUN"
+                },
+    "sign_sanity_check":  {
+                              "flow_axis":  [
+                                                0.9762799602464296,
+                                                -0.0618320247446977,
+                                                0.2074951564186524
+                                            ],
+                              "flow_velocity_mm_s":  10.0,
+                              "hydro_force_s_N":  {
+                                                      "A_stationary":  3.9999999999999988E-08,
+                                                      "B_with_flow":  0.0,
+                                                      "C_faster_than_flow":  -1.999999999999999E-08
+                                                  },
+                              "gates":  {
+                                            "A_stationary_pushes_plus_s":  true,
+                                            "B_with_flow_is_zero":  true,
+                                            "C_faster_drag_opposes_motion":  true,
+                                            "F_gradient_dot_c_positive":  true,
+                                            "all_passed":  true
+                                        },
+                              "gradient_gate":  {
+                                                    "driver_arc_mm":  18.899960626,
+                                                    "robot_arc_mm":  53.799881868759286,
+                                                    "delta_s_mm":  34.89992124275929,
+                                                    "dB_ds_T_per_m":  -0.0012758184911225235,
+                                                    "F_gradient_dot_c_N":  1.3876092186445826E-06,
+                                                    "passed":  true
+                                                }
+                          },
+    "source_input_sha256":  "e523654c6b8473a089d1e26b0bdcc4cb88a03173545fe7f3b5ad5a22dcdf2738",
+    "input_sha256":  "a4031079c67bab164950ddaf142e537edcf9908eea9c0ce260a84cc68088f2e7",
+    "fortran_sha256":  "db9b19bd1c5596af344b20467183fafebb23efd1c26233153f7834fcd92c3481",
+    "centerline_sha256":  "53e5271cc4c0cd318a6d8cdcd6ba2c4e968420fbec7d9591a0b4f5657227d2f5",
+    "fast_server_sha256":  "6d920cfe1889a38e1529610f1ab7a799aee4a73babadbbb6d646ed47bd2085c7",
+    "wallclock_s":  987.6259685
+}
