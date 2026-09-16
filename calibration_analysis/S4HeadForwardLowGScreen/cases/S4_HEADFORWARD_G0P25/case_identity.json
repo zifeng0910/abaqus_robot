@@ -1,0 +1,110 @@
+{
+    "case_id":  "S4_HEADFORWARD_G0P25",
+    "status":  "SOLVED",
+    "source_job":  "FAST_ELLIPTIC_20HZ_A14P343_X2P5_FORWARD",
+    "field_frame_mode":  "ROBOT_LOCAL_ELLIPTIC_ROCKING",
+    "duration_s":  0.075,
+    "direct_dt_s":  1E-07,
+    "B0_mT":  10.0,
+    "frequency_Hz":  20.0,
+    "rocking_main_amplitude_deg":  14.343111711438091,
+    "rocking_cross_amplitude_deg":  2.5,
+    "gradient_mT":  0.25,
+    "gradient_length_mm":  45.0,
+    "gradient_profile":  "legacy",
+    "forward_definition":  "canonical increasing centerline arclength +s",
+    "mu":  0.03,
+    "zeta":  0.5,
+    "robot_length_mm":  2.4,
+    "robot_diameter_mm":  0.815,
+    "robot_moment_Am2":  0.0010876227522174417,
+    "robot_mass_mg":  9.207793514166587,
+    "initial_center_aba_mm":  [
+                                  -7.468174204284,
+                                  -3.676918015967,
+                                  -9.550745259298
+                              ],
+    "canonical_plus_s_axis_aba":  [
+                                      0.9762799602464296,
+                                      -0.0618320247446977,
+                                      0.2074951564186524
+                                  ],
+    "head_tail_axis_aba":  [
+                               0.9762799602464296,
+                               -0.0618320247446977,
+                               0.2074951564186524
+                           ],
+    "initial_magnetic_moment_axis_aba":  [
+                                             -0.9762799602464296,
+                                             0.0618320247446978,
+                                             -0.2074951564186524
+                                         ],
+    "reduced_hydro_body_axis_aba":  [
+                                        -0.9762799602464296,
+                                        0.0618320247446978,
+                                        -0.2074951564186524
+                                    ],
+    "n_routeA_aba":  [
+                         0.07770950949965555,
+                         0.9945677258930866,
+                         -0.06925511349479567
+                     ],
+    "b_routeA_aba":  [
+                         -0.20208580196182235,
+                         0.08373672627840886,
+                         0.9757814762115655
+                     ],
+    "routeA_gauge_from_production_e1_deg":  -61.37284757596327,
+    "routeA_gauge_for_flipped_body_deg":  61.37284757596327,
+    "mesh_flip_axis_aba":  [
+                               0.07770950949965555,
+                               0.9945677258930866,
+                               -0.06925511349479567
+                           ],
+    "mesh_flip_rotation_matrix":  [
+                                      [
+                                          -0.9879224642666459,
+                                          0.15457474028667925,
+                                          -0.010763561800047094
+                                      ],
+                                      [
+                                          0.15457474028667925,
+                                          0.9783299227762918,
+                                          -0.1377578014699731
+                                      ],
+                                      [
+                                          -0.010763561800047094,
+                                          -0.1377578014699731,
+                                          -0.990407458509646
+                                      ]
+                                  ],
+    "source_head_centroid_aba_mm":  [
+                                        -8.547101975385656,
+                                        -3.6094443959931146,
+                                        -9.780978567978446
+                                    ],
+    "source_tail_centroid_aba_mm":  [
+                                        -6.453898759086744,
+                                        -3.7399473927161924,
+                                        -9.332540030378414
+                                    ],
+    "flipped_head_centroid_aba_mm":  [
+                                         -6.389369374161455,
+                                         -3.74596510012566,
+                                         -9.320402384986314
+                                     ],
+    "flipped_tail_centroid_aba_mm":  [
+                                         -8.482291116556429,
+                                         -3.6118596503393676,
+                                         -9.76909177357342
+                                     ],
+    "head_tail_dot_canonical_plus_s_mm":  2.1446704418221088,
+    "robot_node_count":  1588,
+    "old_s4_reference_gradient_mT":  6.0,
+    "source_input_sha256":  "954e3517180a7cfcc580af781cdf90f5847ffb674f776e9e9dac8984f482c263",
+    "input_sha256":  "3af6ae9005dfb5dad9ebb6d417ad395741f1ba6e4a1eb251bca08c78bdb2ea61",
+    "fortran_sha256":  "eb1da11aa0a74910e96367f64b5328cdc7dd5fafcf5acc6f78a93b2c7f49329b",
+    "centerline_sha256":  "53e5271cc4c0cd318a6d8cdcd6ba2c4e968420fbec7d9591a0b4f5657227d2f5",
+    "fast_server_sha256":  "6d920cfe1889a38e1529610f1ab7a799aee4a73babadbbb6d646ed47bd2085c7",
+    "wallclock_s":  5357.9810522
+}
