@@ -1,0 +1,53 @@
+{
+  "mode": "ROBOT_LOCAL_PRECESSING_ROCKING",
+  "duration_s": 0.2,
+  "B_target_T": 0.01,
+  "reused_LIGHTCONTACT_amplitude_deg": 14.343111711438091,
+  "rocking_frequency_Hz": 10.0,
+  "precession_frequency_Hz": 2.5,
+  "RouteA_gauge_deg": -61.37284757596327,
+  "psi0_deg": -83.87284757596326,
+  "first_positive_peak_alignment_error_deg": 0.0,
+  "B_magnitude_max_abs_error_T": 3.469446951953614e-18,
+  "alpha_min_deg": -14.343111711438091,
+  "alpha_max_deg": 14.343111711438091,
+  "precession_advance_deg": 180.0,
+  "field_max_adjacent_step_T": 1.572887693878714e-05,
+  "transport_frame_min_adjacent_dot": 0.9999999999999999,
+  "transverse_path_second_to_first_singular_ratio": 0.940525312247557,
+  "transverse_radius_min_T": 3.0665868333667484e-19,
+  "transverse_radius_max_T": 0.002477280701995765,
+  "peak_effective_directions": [
+    {
+      "time_ms": 25.0,
+      "alpha_deg": 14.343111711438091,
+      "plane_azimuth_from_e1_deg": -61.37284757596326,
+      "effective_signed_transverse_azimuth_from_e1_deg": -61.37284757596326,
+      "effective_signed_transverse_azimuth_from_RouteA_deg": 0.0
+    },
+    {
+      "time_ms": 75.0,
+      "alpha_deg": -14.343111711438091,
+      "plane_azimuth_from_e1_deg": -16.37284757596325,
+      "effective_signed_transverse_azimuth_from_e1_deg": 163.62715242403675,
+      "effective_signed_transverse_azimuth_from_RouteA_deg": -135.0
+    },
+    {
+      "time_ms": 125.0,
+      "alpha_deg": 14.343111711438091,
+      "plane_azimuth_from_e1_deg": 28.62715242403675,
+      "effective_signed_transverse_azimuth_from_e1_deg": 28.62715242403675,
+      "effective_signed_transverse_azimuth_from_RouteA_deg": 90.0
+    },
+    {
+      "time_ms": 175.0,
+      "alpha_deg": -14.343111711438091,
+      "plane_azimuth_from_e1_deg": 73.62715242403675,
+      "effective_signed_transverse_azimuth_from_e1_deg": -106.37284757596325,
+      "effective_signed_transverse_azimuth_from_RouteA_deg": -45.0
+    }
+  ],
+  "path_not_straight": true,
+  "path_not_constant_radius": true,
+  "pass": true
+}

@@ -33,7 +33,10 @@ import numpy as np
 HOST = '127.0.0.1'
 PORT = 65432
 MU0 = 4.0 * math.pi * 1e-7
-FIELD_FRAME_MODES = ('LEGACY_DRIVER_FRAME', 'ROBOT_LOCAL_TANGENT', 'ROBOT_LOCAL_ROCKING')
+FIELD_FRAME_MODES = ('LEGACY_DRIVER_FRAME', 'ROBOT_LOCAL_TANGENT', 'ROBOT_LOCAL_ROCKING',
+                     'ROBOT_LOCAL_PRECESSING_ROCKING')
+ROBOT_LOCAL_FRAME_MODES = ('ROBOT_LOCAL_TANGENT', 'ROBOT_LOCAL_ROCKING',
+                           'ROBOT_LOCAL_PRECESSING_ROCKING')
 
 
 class RigidFrameTransform(object):
@@ -117,6 +120,7 @@ class MagneticCouplingModel(object):
                  analytic_b_t=0.010, analytic_follow_robot=False,
                  field_frame_mode='LEGACY_DRIVER_FRAME', rocking_amplitude_deg=10.0,
                  rocking_frame_azimuth_deg=-61.37284757596327,
+                 precession_frequency_hz=2.5, precession_phase_deg=-83.87284757596327,
                  analytic_gradient_b_t=0.0, analytic_gradient_length_mm=25.0,
                  analytic_gradient_profile='legacy', analytic_gradient_switch_start_s=0.0,
                  analytic_gradient_transition_s=0.0005, analytic_gradient_local_b_t=None,
@@ -153,6 +157,10 @@ class MagneticCouplingModel(object):
         if not (0.0 <= self.rocking_amplitude_deg < 90.0):
             raise ValueError('rocking_amplitude_deg must satisfy 0 <= amplitude < 90 deg')
         self.rocking_frame_azimuth_deg = float(rocking_frame_azimuth_deg)
+        self.precession_frequency_hz = float(precession_frequency_hz)
+        self.precession_phase_deg = float(precession_phase_deg)
+        if self.precession_frequency_hz < 0.0:
+            raise ValueError('precession_frequency_hz must be non-negative')
         self.analytic_gradient_b_t = float(analytic_gradient_b_t)
         self.analytic_gradient_length_mm = float(analytic_gradient_length_mm)
         self.analytic_gradient_profile = str(analytic_gradient_profile)
@@ -273,7 +281,7 @@ class MagneticCouplingModel(object):
         self._local_segment_tangent = np.diff(self.curve_mm, axis=0)
         self._local_segment_tangent /= np.linalg.norm(self._local_segment_tangent, axis=1)[:, None]
         self._local_e1 = self._parallel_transport_normals(self._local_segment_tangent)
-        if self.field_frame_mode in ('ROBOT_LOCAL_TANGENT', 'ROBOT_LOCAL_ROCKING'):
+        if self.field_frame_mode in ROBOT_LOCAL_FRAME_MODES:
             if self.drive_type != 'analytic':
                 raise ValueError('{} is defined only for analytic drive_type'.format(self.field_frame_mode))
             if abs(self.cone_axis_bias_deg) > 1.0e-15:
@@ -491,10 +499,15 @@ class MagneticCouplingModel(object):
             integral += self.chirp_end_hz * (t - self.chirp_duration_s)
         return self.phase_offset_rad + 2.0 * math.pi * integral
 
+    def _precession_phase_rad(self, t_s):
+        """Plane azimuth in the raw parallel-transport (e1,e2) frame."""
+        return (math.radians(self.precession_phase_deg) +
+                2.0 * math.pi * self.precession_frequency_hz * max(0.0, float(t_s)))
+
     def _driver_pose(self, t_s, robot_position_mm=None):
         distance = self._distance_at_time(t_s)
         robot_arc_mm = None
-        if robot_position_mm is not None and self.field_frame_mode in ('ROBOT_LOCAL_TANGENT', 'ROBOT_LOCAL_ROCKING'):
+        if robot_position_mm is not None and self.field_frame_mode in ROBOT_LOCAL_FRAME_MODES:
             robot_arc_mm = self._project_robot_arc_mm(robot_position_mm)
         elif self.adaptive_lead_mm > 0.0 and robot_position_mm is not None:
             robot_arc_mm = self._project_arc_mm(robot_position_mm)
@@ -639,7 +652,7 @@ class MagneticCouplingModel(object):
             ramp = q * q * (3.0 - 2.0 * q)
         else:
             ramp = 1.0
-        if self.field_frame_mode in ('ROBOT_LOCAL_TANGENT', 'ROBOT_LOCAL_ROCKING'):
+        if self.field_frame_mode in ROBOT_LOCAL_FRAME_MODES:
             return ramp
         if self.endpoint_taper_mm <= 0.0:
             end_scale = 0.0 if distance_mm >= self.arc_mm[-1] else 1.0
@@ -754,10 +767,11 @@ class MagneticCouplingModel(object):
             field_arc_mm = robot_arc_mm if (self.analytic_follow_robot and
                                             robot_arc_mm is not None and
                                             np.isfinite(robot_arc_mm)) else driver_arc_mm
-            phase = (self._rocking_phase_rad(t_s) if self.field_frame_mode == 'ROBOT_LOCAL_ROCKING'
+            phase = (self._rocking_phase_rad(t_s) if self.field_frame_mode in
+                     ('ROBOT_LOCAL_ROCKING', 'ROBOT_LOCAL_PRECESSING_ROCKING')
                      else self._command_phase_rad(t_s))
             ca = math.radians(self.cone_half_angle_deg)
-            if self.field_frame_mode in ('ROBOT_LOCAL_TANGENT', 'ROBOT_LOCAL_ROCKING'):
+            if self.field_frame_mode in ROBOT_LOCAL_FRAME_MODES:
                 if robot_arc_mm is None or not np.isfinite(robot_arc_mm):
                     raise ValueError('{} requires a finite current robot COM position'.format(self.field_frame_mode))
                 if self.field_frame_mode == 'ROBOT_LOCAL_ROCKING':
@@ -795,6 +809,13 @@ class MagneticCouplingModel(object):
                 alpha = math.radians(self.rocking_amplitude_deg) * math.sin(phase)
                 magnetic_field_t = self.analytic_b_t * (
                     math.cos(alpha) * tangent + math.sin(alpha) * e1)
+            elif self.field_frame_mode == 'ROBOT_LOCAL_PRECESSING_ROCKING':
+                psi = self._precession_phase_rad(t_s)
+                n_precess = math.cos(psi) * e1 + math.sin(psi) * e2
+                n_precess /= max(np.linalg.norm(n_precess), 1.0e-15)
+                alpha = math.radians(self.rocking_amplitude_deg) * math.sin(phase)
+                magnetic_field_t = self.analytic_b_t * (
+                    math.cos(alpha) * tangent + math.sin(alpha) * n_precess)
             elif self.field_frame_mode == 'ROBOT_LOCAL_TANGENT':
                 transverse = (math.cos(phase) * e1 +
                               self.analytic_rotation_sense * math.sin(phase) * e2)
@@ -917,9 +938,17 @@ class MagneticCouplingModel(object):
             'drive_scale': float(drive_scale),
             'endpoint_reached': bool(raw_distance >= self.arc_mm[-1]),
             'commanded_frequency_Hz': self._command_frequency_hz(t_s),
-            'instantaneous_phase_rad': (self._rocking_phase_rad(t_s) if self.field_frame_mode == 'ROBOT_LOCAL_ROCKING'
+            'instantaneous_phase_rad': (self._rocking_phase_rad(t_s) if self.field_frame_mode in
+                                        ('ROBOT_LOCAL_ROCKING', 'ROBOT_LOCAL_PRECESSING_ROCKING')
                                         else self._command_phase_rad(t_s)),
-            'cone_angle_deg': (None if self.field_frame_mode == 'ROBOT_LOCAL_ROCKING'
+            'rocking_phase_rad': (self._rocking_phase_rad(t_s) if self.field_frame_mode in
+                                  ('ROBOT_LOCAL_ROCKING', 'ROBOT_LOCAL_PRECESSING_ROCKING') else None),
+            'precession_phase_rad': (self._precession_phase_rad(t_s) if
+                                     self.field_frame_mode == 'ROBOT_LOCAL_PRECESSING_ROCKING' else None),
+            'precession_frequency_Hz': (self.precession_frequency_hz if
+                                        self.field_frame_mode == 'ROBOT_LOCAL_PRECESSING_ROCKING' else None),
+            'cone_angle_deg': (None if self.field_frame_mode in
+                               ('ROBOT_LOCAL_ROCKING', 'ROBOT_LOCAL_PRECESSING_ROCKING')
                                else float(self.cone_half_angle_deg)),
             'B_mag_T': float(np.linalg.norm(magnetic_field_t)),
             'B_mag_vec_T': [float(value) for value in magnetic_field_t],
@@ -943,6 +972,10 @@ class FrameMappedMagneticModel(object):
         # of orthonormal basis: [R Q R.T]_vee = R * rotvec(Q).
         ur_mag_rad = self.frame_transform.vector_to_mag(ur_aba_rad)
         result = self.magnetic_model.evaluate(t_s, position_mag_mm, ur_mag_rad)
+        phase_diagnostics = {
+            key: result.pop(key, None) for key in
+            ('rocking_phase_rad', 'precession_phase_rad', 'precession_frequency_Hz')
+        }
         force_mag = np.asarray(result['force_N'], dtype=float)
         torque_mag = np.asarray(result['torque_Nmm'], dtype=float)
         force_aba = self.frame_transform.vector_to_aba(force_mag)
@@ -979,6 +1012,7 @@ class FrameMappedMagneticModel(object):
                              else self.magnetic_model._project_arc_mm(position_mag_mm)),
             'lubrication': result.get('lubrication'),
         }
+        self.last_diagnostics.update(phase_diagnostics)
         return result
 
 
@@ -1189,6 +1223,8 @@ def process_client(connection, address, model, telemetry_writer=None, telemetry_
                                 lub.get('power_W'), head.get('active'), tail.get('active'),
                                 head.get('wall_triangle'), tail.get('wall_triangle'),
                                 response.get('commanded_frequency_Hz'), response.get('instantaneous_phase_rad'),
+                                diagnostics.get('rocking_phase_rad'), diagnostics.get('precession_phase_rad'),
+                                diagnostics.get('precession_frequency_Hz'),
                                 response.get('cone_angle_deg'), response.get('B_aba_T'),
                                 *(response.get('B_aba_vec_T') or [None, None, None])
                             ])
@@ -1272,6 +1308,10 @@ def main():
                         help='peak signed field angle for ROBOT_LOCAL_ROCKING')
     parser.add_argument('--rocking-frame-azimuth-deg', type=float, default=-61.37284757596327,
                         help='RouteA n_rock gauge angle from production e1 toward e2')
+    parser.add_argument('--precession-frequency-hz', type=float, default=2.5,
+                        help='rocking-plane precession frequency for ROBOT_LOCAL_PRECESSING_ROCKING')
+    parser.add_argument('--precession-phase-deg', type=float, default=-83.87284757596327,
+                        help='initial rocking-plane azimuth from production e1 toward e2')
     parser.add_argument('--analytic-gradient-b-t', type=float, default=0.0,
                         help='weak localized axial-gradient field amplitude in tesla (0 disables)')
     parser.add_argument('--analytic-gradient-length-mm', type=float, default=25.0,
@@ -1419,6 +1459,8 @@ def main():
         field_frame_mode=args.field_frame_mode,
         rocking_amplitude_deg=args.rocking_amplitude_deg,
         rocking_frame_azimuth_deg=args.rocking_frame_azimuth_deg,
+        precession_frequency_hz=args.precession_frequency_hz,
+        precession_phase_deg=args.precession_phase_deg,
         analytic_gradient_b_t=args.analytic_gradient_b_t,
         analytic_gradient_length_mm=args.analytic_gradient_length_mm,
         analytic_gradient_profile=args.analytic_gradient_profile,
@@ -1461,8 +1503,12 @@ def main():
                model.analytic_gradient_b_t, model.analytic_gradient_length_mm,
                model.analytic_gradient_tilt_deg, model.analytic_gradient_azimuth_deg,
                model.analytic_rotation_sense, model.field_frame_mode,
-               ('ROBOT_ARC' if model.field_frame_mode in ('ROBOT_LOCAL_TANGENT', 'ROBOT_LOCAL_ROCKING')
-                else ('ROBOT_ARC' if model.analytic_follow_robot else 'DRIVER_ARC'))))
+               ('ROBOT_ARC' if model.field_frame_mode in ROBOT_LOCAL_FRAME_MODES
+                 else ('ROBOT_ARC' if model.analytic_follow_robot else 'DRIVER_ARC'))))
+        if model.field_frame_mode == 'ROBOT_LOCAL_PRECESSING_ROCKING':
+            print('PRECESSING_ROCKING: A=%.15g deg; f_rock=%.9g Hz; f_prec=%.9g Hz; psi0=%.15g deg' %
+                  (model.rocking_amplitude_deg, model.spin_hz,
+                   model.precession_frequency_hz, model.precession_phase_deg))
         print('ANALYTIC_GRADIENT_PROFILE: %s; switch_start=%.9g s; transition=%.9g s; local_B=%.9g T; local_L=%.9g mm' %
               (model.analytic_gradient_profile, model.analytic_gradient_switch_start_s,
                model.analytic_gradient_transition_s, model.analytic_gradient_local_b_t,
@@ -1513,7 +1559,8 @@ def main():
             'vn_head_close_mm_s','vn_tail_close_mm_s','Flub_head_mN','Flub_tail_mN',
             'Flub_x_N','Flub_y_N','Flub_z_N','Mlub_x_Nmm','Mlub_y_Nmm','Mlub_z_Nmm',
             'lub_power_W','active_head','active_tail','wall_tri_head','wall_tri_tail',
-            'commanded_frequency_Hz','instantaneous_phase_rad','cone_angle_deg','B_aba_T',
+            'commanded_frequency_Hz','instantaneous_phase_rad','rocking_phase_rad',
+            'precession_phase_rad','precession_frequency_Hz','cone_angle_deg','B_aba_T',
             'Bx_aba_T','By_aba_T','Bz_aba_T'])
         telemetry_stream.flush()
         print('Telemetry CSV: {}'.format(args.telemetry_csv))
