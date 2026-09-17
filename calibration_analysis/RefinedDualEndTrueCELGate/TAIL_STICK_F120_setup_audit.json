@@ -1,0 +1,25 @@
+{
+  "job": "TAIL_STICK_F120_ZETA100_8P333MS_TRUECEL",
+  "source_job": "TAIL_NO_REBOUND_ZETA080_8MS_TRUECEL",
+  "frequency_Hz": 120.0,
+  "period_ms": 8.333333333333334,
+  "duration_ms": 8.333333333,
+  "commanded_cycles": 1.0,
+  "zeta": 1.0,
+  "mu": 0.03,
+  "contact_model": "hard nonpenetration with critical normal damping; no adhesion/clamp",
+  "frozen": [
+    "geometry",
+    "CEL mesh/material",
+    "A_main",
+    "A_cross",
+    "B0",
+    "G",
+    "flow",
+    "mu",
+    "phase",
+    "RouteA gauge",
+    "HEAD/TAIL semantics"
+  ],
+  "input_sha256": "c439c4a76ed84f18bf7aad04350bc8572e2a3cacdc08b94db1503093d71728a1"
+}

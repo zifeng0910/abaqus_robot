@@ -1,0 +1,18 @@
+{
+  "case": "TAIL_STICK_F120_ZETA100_8P333MS_TRUECEL",
+  "status": "USER_STOPPED_PARTIAL_RESULT",
+  "requested_duration_ms": 8.333333332999999,
+  "available_field_time_ms": 4.500015638768673,
+  "available_commanded_cycles": 0.5400018766522408,
+  "frequency_Hz": 120.0,
+  "zeta": 1.0,
+  "delta_s_mm": -0.009976599811345554,
+  "rocking_min_deg": 3.2287147053305354e-15,
+  "rocking_max_deg": 13.234091621675127,
+  "TAIL_min_gap_mm": 0.014341262314184311,
+  "TAIL_contact_frame_count": 0,
+  "TAIL_total_general_contact_resultant_max_N": 7.215843478314992e-05,
+  "max_abs_energy_drift_Nmm": 0.01413486689898491,
+  "near_robot_fluid_velocity_max_mm_s": 68419.42628779159,
+  "interpretation_limit": "Only 0.54 commanded cycle is available; sustained periodic rocking cannot be established."
+}

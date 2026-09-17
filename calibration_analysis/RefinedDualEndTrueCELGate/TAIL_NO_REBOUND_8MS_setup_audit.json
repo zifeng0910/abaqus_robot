@@ -1,0 +1,35 @@
+{
+  "job": "TAIL_NO_REBOUND_ZETA080_8MS_TRUECEL",
+  "source_job": "REFINED_DUALEND_F60_A14P8_G0P15_TRUECEL_10MS",
+  "zeta_old": 0.5,
+  "zeta_new": 0.8,
+  "duration_old_ms": 10.0,
+  "duration_new_ms": 8.0,
+  "frozen": [
+    "geometry",
+    "CEL mesh",
+    "fluid",
+    "A_main",
+    "A_cross",
+    "frequency",
+    "B0",
+    "G",
+    "flow",
+    "mu",
+    "phase",
+    "RouteA gauge",
+    "HEAD/TAIL semantics"
+  ],
+  "existing_rebound_diagnosis": {
+    "case": "REFINED_DUALEND_F60_A14P8_G0P15_TRUECEL_10MS",
+    "gap_threshold_mm": 0.005,
+    "first_TAIL_touch_ms": 5.5000204592943005,
+    "first_TAIL_release_ms": 5.7500414550303995,
+    "second_TAIL_touch_ms": 6.5000019967556,
+    "N_tail_contacts_same_halfcycle": 2,
+    "V_impact_mm_s": -47.87440623134078,
+    "V_rebound_mm_s": 16.141152921751246,
+    "R_v": 0.3371562008258289,
+    "classification": "REBOUND_RECONTACT_FAILURE"
+  }
+}

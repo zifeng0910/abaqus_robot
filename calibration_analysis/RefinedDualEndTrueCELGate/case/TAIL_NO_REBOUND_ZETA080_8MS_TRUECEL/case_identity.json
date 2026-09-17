@@ -1,0 +1,94 @@
+{
+  "case_id": "TAIL_NO_REBOUND_ZETA080_8MS_TRUECEL",
+  "status": "SOLVED",
+  "classification": "STRICT_CEL_FLUID_PRESENT",
+  "flow_classification": "INITIALIZED_UNIFORM_FLOW_TRUE_CEL",
+  "source_case": "REFINED_DUALEND_F60_A14P8_G0P15_TRUECEL_10MS",
+  "source_commit": "a6dbd1422e898e708833bd427e4faa8860ee700e",
+  "frequency_Hz": 60.0,
+  "rocking_main_amplitude_deg": 14.8,
+  "rocking_cross_amplitude_deg": 2.5,
+  "B0_mT": 10.0,
+  "gradient_mT": 0.15,
+  "gradient_length_mm": 45.0,
+  "duration_s": 0.008,
+  "time_step_control": "Abaqus/Explicit automatic CEL stability",
+  "U_fluid_initial_mm_s": 10.0,
+  "flow_vector_aba_mm_s": [
+    9.762799602464296,
+    -0.618320247446977,
+    2.074951564186524
+  ],
+  "fluid_density_tonne_mm3": 1.0007E-09,
+  "fluid_viscosity_N_s_mm2": 7.1E-10,
+  "fluid_EOS_c0_mm_s": 1480000.0,
+  "fluid_filled_volume_mm3": 12.689999999999998,
+  "fluid_mass_mg": 12.698882999999997,
+  "fluid_element_count": 3760,
+  "Eulerian_element_count": 8000,
+  "field_frame_mode": "ROBOT_LOCAL_ELLIPTIC_ROCKING",
+  "initial_center_aba_mm": [
+    -7.467008561641505,
+    -3.6619995000786036,
+    -9.55178408600042
+  ],
+  "canonical_plus_s_axis_aba": [
+    0.9762799602464296,
+    -0.0618320247446977,
+    0.2074951564186524
+  ],
+  "n_routeA_aba": [
+    0.07770950949965555,
+    0.9945677258930866,
+    -0.06925511349479567
+  ],
+  "b_routeA_aba": [
+    -0.20208580196182235,
+    0.08373672627840886,
+    0.9757814762115655
+  ],
+  "head_tail_axis_aba": [
+    0.9762799602464296,
+    -0.0618320247446977,
+    0.2074951564186524
+  ],
+  "initial_magnetic_moment_axis_aba": [
+    -0.9762799602464296,
+    0.0618320247446978,
+    -0.2074951564186524
+  ],
+  "routeA_gauge_for_flipped_body_deg": 61.37284757596327,
+  "robot_moment_Am2": 0.0010876227522174417,
+  "robot_mass_mg": 9.207793514166587,
+  "robot_length_mm": 2.6,
+  "robot_diameter_mm": 0.815,
+  "mu": 0.03,
+  "zeta": 0.8,
+  "dynamics_run_count": 1,
+  "failed_technical_attempt_count": 1,
+  "failed_technical_attempt_reason": "attempt 1 terminated at 8.25 ms: centroid-only fluid mask overlapped free rigid robot and released nonphysical CEL offset energy",
+  "source_input_sha256": "a4031079c67bab164950ddaf142e537edcf9908eea9c0ce260a84cc68088f2e7",
+  "input_sha256": "ddd805f59f0db9b0092ad313748b38cbf9d3be36038a433595ac9399c12b38d8",
+  "fortran_sha256": "41156c957293297115f2a1530bc3c375f4f7c1b430c8f8e1378297689aa85517",
+  "failure": "Dynamics did not complete successfully",
+  "simulated_time_s": 0.025851400569081306,
+  "stop_reason": "USER_STOPPED_PARTIAL_RESULT",
+  "solver_end_state": "NO_FATAL_RECORDED_BUT_PHYSICAL_SCREEN_FAILED",
+  "radial_offset_n_mm": 0.015,
+  "head_side_correction_mm": 0.0425,
+  "head_correction_direction_n": -1,
+  "geometry_realization": "actual smooth one-sided HEAD mesh profile change over final 25% axial length",
+  "lumen_radius_mm": 0.667345,
+  "Eulerian_transverse_bounds_mm": [
+    -0.75,
+    0.75
+  ],
+  "contact_regions": {
+    "HEAD_REGION_nodes": 114,
+    "TAIL_REGION_nodes": 223,
+    "BODY_REGION_nodes": 1251
+  },
+  "contact_output": "direct general-contact CSTRESS/CFORCE/CDISP fields partitioned by actual node regions; pair-isolated wall history unavailable",
+  "only_physics_change": "General Contact critical damping fraction 0.50 -> 0.80",
+  "wallclock_s": 8144.9934308
+}

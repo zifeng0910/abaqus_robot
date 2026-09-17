@@ -1,0 +1,13 @@
+{
+  "strict_CEL": true,
+  "EVF_initial": 1.0,
+  "fluid_mass_mg": 12.698882999999997,
+  "filled_elements": 3760,
+  "total_elements": 8000,
+  "total_nodes": 9801,
+  "lumen_radius_mm": 0.667345,
+  "robot_exclusion_radius_mm": 0.5,
+  "ReducedHydro": "OFF",
+  "Magpylib_socket": "ON",
+  "U_flow_mm_s": 10.0
+}

@@ -1,0 +1,12 @@
+{
+  "case": "REFINED_DUALEND_F60_A14P8_G0P15_TRUECEL_10MS",
+  "gap_threshold_mm": 0.005,
+  "first_TAIL_touch_ms": 5.5000204592943005,
+  "first_TAIL_release_ms": 5.7500414550303995,
+  "second_TAIL_touch_ms": 6.5000019967556,
+  "N_tail_contacts_same_halfcycle": 2,
+  "V_impact_mm_s": -47.87440623134078,
+  "V_rebound_mm_s": 16.141152921751246,
+  "R_v": 0.3371562008258289,
+  "classification": "REBOUND_RECONTACT_FAILURE"
+}

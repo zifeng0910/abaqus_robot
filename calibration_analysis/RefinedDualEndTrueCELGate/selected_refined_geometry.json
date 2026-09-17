@@ -1,0 +1,28 @@
+{
+  "selection_status": "ACCEPTED_BY_USER_FOR_10MS_TRUECEL_GATE",
+  "formal_geometry_gate": "GEOMETRY_GATE_FORMALLY_MISSED",
+  "acceptance_reason": "The 14.3 degree HEAD cutoff was superseded; this bridge-free near-optimal geometry is accepted with A_main=14.8 deg.",
+  "best_near_candidate_not_selected": {
+    "length_mm": 2.6,
+    "diameter_mm": 0.815,
+    "L_over_D": 3.190184049079755,
+    "offset_n_mm": 0.015,
+    "head_radial_correction_mm": 0.042499999999999996,
+    "head_correction_direction_n": -1,
+    "head_contact_phase_sign": -1,
+    "tail_contact_phase_sign": 1,
+    "HEAD_touch_deg": 14.387837515678257,
+    "TAIL_touch_deg": 13.423312820959836,
+    "touch_difference_deg": 0.9645246947184205,
+    "initial_min_gap_mm": 0.24506734645848444,
+    "HEAD_phase_opposite_end_gap_mm": -0.047474806775590905,
+    "TAIL_phase_opposite_end_gap_mm": 0.006767560201690115,
+    "same_phase_STATIC_BOTH_bridge": false,
+    "score": 1.8067503135651208,
+    "passes_geometry_gate": false
+  },
+  "asymmetry_source": "shape-driven: centered pipe/COM; HEAD max radius 0.3891 mm vs TAIL 0.4075 mm",
+  "candidate_count": 216,
+  "abaqus_run_authorized": true,
+  "accepted_A_main_deg": 14.8
+}
