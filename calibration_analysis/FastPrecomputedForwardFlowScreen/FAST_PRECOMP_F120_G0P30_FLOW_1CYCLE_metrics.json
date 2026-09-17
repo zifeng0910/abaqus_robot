@@ -1,0 +1,27 @@
+{
+  "case": "FAST_PRECOMP_F120_G0P30_FLOW_1CYCLE",
+  "duration_ms": 8.333333767950535,
+  "frequency_Hz": 120.0,
+  "gradient_mT": 0.3,
+  "U_flow_mm_s": 10.0,
+  "fluid_mode": "FAST_SURROGATE_FLUID",
+  "delta_s_mm": -0.026415291563477303,
+  "fraction_v_s_positive": 0.2265767495440146,
+  "mean_v_s_mm_s": -3.169819109924011,
+  "final_v_s_mm_s": -5.013575060947483,
+  "rocking_min_deg": -12.35239547015835,
+  "rocking_max_deg": 13.327829009811676,
+  "tumble": false,
+  "HEAD_contact_episodes": 0,
+  "TAIL_contact_episodes": 3,
+  "HEAD_peak_normal_force_N": 0.0,
+  "TAIL_peak_normal_force_N": 0.033624345475426795,
+  "parent_G0p15_first_cycle": {
+    "delta_s_mm": -0.032405152822236674,
+    "fraction_v_s_positive": 0.10230872612076414
+  },
+  "delta_s_improvement_mm": 0.005989861258759371,
+  "forward_gate_passed": false,
+  "socket_calls": 0,
+  "wallclock_s": 72.7303501
+}

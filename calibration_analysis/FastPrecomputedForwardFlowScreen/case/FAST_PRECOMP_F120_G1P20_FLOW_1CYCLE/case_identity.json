@@ -1,0 +1,118 @@
+{
+  "case_id": "FAST_PRECOMP_F120_G1P20_FLOW_1CYCLE",
+  "status": "SOLVED",
+  "classification": "FAST_SURROGATE_FLUID",
+  "source_case": "FAST_PRECOMP_F120_G0P30_FLOW_1CYCLE",
+  "source_commit": "a6dbd1422e898e708833bd427e4faa8860ee700e",
+  "frequency_Hz": 120.0,
+  "rocking_main_amplitude_deg": 14.8,
+  "rocking_cross_amplitude_deg": 2.5,
+  "B0_mT": 10.0,
+  "gradient_mT": 1.2,
+  "gradient_length_mm": 45.0,
+  "duration_s": 0.008333333333,
+  "flow_vector_aba_mm_s": [
+    9.762799602464296,
+    -0.618320247446977,
+    2.074951564186524
+  ],
+  "field_frame_mode": "ROBOT_LOCAL_ELLIPTIC_ROCKING",
+  "initial_center_aba_mm": [
+    -7.467008561641505,
+    -3.6619995000786036,
+    -9.55178408600042
+  ],
+  "canonical_plus_s_axis_aba": [
+    0.9762799602464296,
+    -0.0618320247446977,
+    0.2074951564186524
+  ],
+  "n_routeA_aba": [
+    0.07770950949965555,
+    0.9945677258930866,
+    -0.06925511349479567
+  ],
+  "b_routeA_aba": [
+    -0.20208580196182235,
+    0.08373672627840886,
+    0.9757814762115655
+  ],
+  "head_tail_axis_aba": [
+    0.9762799602464296,
+    -0.0618320247446977,
+    0.2074951564186524
+  ],
+  "initial_magnetic_moment_axis_aba": [
+    -0.9762799602464296,
+    0.0618320247446978,
+    -0.2074951564186524
+  ],
+  "routeA_gauge_for_flipped_body_deg": 61.37284757596327,
+  "robot_moment_Am2": 0.0010876227522174417,
+  "robot_mass_mg": 9.207793514166587,
+  "robot_length_mm": 2.6,
+  "robot_diameter_mm": 0.815,
+  "mu": 0.03,
+  "zeta": 1.0,
+  "dynamics_run_count": 1,
+  "source_input_sha256": "C439C4A76ED84F18BF7AAD04350BC8572E2A3CACDC08B94DB1503093D71728A1",
+  "radial_offset_n_mm": 0.015,
+  "head_side_correction_mm": 0.0425,
+  "head_correction_direction_n": -1,
+  "geometry_realization": "actual smooth one-sided HEAD mesh profile change over final 25% axial length",
+  "lumen_radius_mm": 0.667345,
+  "contact_regions": {
+    "HEAD_REGION_nodes": 114,
+    "TAIL_REGION_nodes": 223,
+    "BODY_REGION_nodes": 1251
+  },
+  "contact_output": "direct robot-wall General Contact fields partitioned by actual HEAD/TAIL node regions",
+  "contact_force_intent": "very weak wall support; no adhesion or artificial velocity clamp",
+  "magnetic_backend": "PRECOMPUTED_TABLE",
+  "precomputed_magnetic_baseline_commit": "74b8205a39092943a76bb499b11387be8d78dff1",
+  "magnetic_table_sha256": "5C5CBF84F7705D2EDF68DCF9F236928B04996C80BABCADFFBFFDF24B8A546BFA",
+  "commanded_cycles": 1.0,
+  "direct_dt_s": 2E-07,
+  "U_flow_mm_s": 10.0,
+  "Cparallel_Ns_per_mm": 4E-09,
+  "Cperp_Ns_per_mm": 1.2E-08,
+  "Kspin_Nmm_s": 1E-09,
+  "Kwobble_Nmm_s": 3E-09,
+  "time_step_control": "Abaqus/Explicit DIRECT 2e-7 s",
+  "flow_model": "FAST_SURROGATE_FLUID relative-velocity drag; not CEL/FSI",
+  "contact_normal_behavior_old": "HARD penalty, zeta=1.0",
+  "contact_normal_behavior_new": "SCALE FACTOR r=5%, geometric scale=10, initial scale=0.01; zeta=1.0",
+  "contact_law_intent": "weak initial impact impulse with progressive nonpenetration; no adhesion/no-separation/clamp",
+  "socket_calls_expected": 0,
+  "field_output_interval_s": 5E-05,
+  "change_scope": [
+    "gradient G 0.15 -> 0.30 mT",
+    "duration 2 -> 1 cycle",
+    "field output 10 -> 50 us"
+  ],
+  "frozen_physics": [
+    "geometry",
+    "rigid robot",
+    "General Contact law",
+    "mu=0.03",
+    "zeta=1.0",
+    "B0=10mT",
+    "f=120Hz",
+    "A_main=14.8deg",
+    "A_cross=2.5deg",
+    "initial pose",
+    "FAST_SURROGATE_FLUID coefficients",
+    "U_flow=+10mm/s"
+  ],
+  "input_sha256": "8C890764503204ABCF20128A00DEF88E74D226B25017BAF10EA26E94011C4923",
+  "fortran_sha256": "F1FEF80C9DD8DA24DE7C50B2B03554730B70CB812544AC9B2123E481E5100A41",
+  "forward_sign_sanity": {
+    "basis": "same positive normalized gradient table and polarity as passed G0.30 case",
+    "F_dot_plus_s_at_1ms_N": 1.6650018876898242E-05,
+    "passed": true
+  },
+  "gradient_choice_basis": "Linear extrapolation of G0.15 and G0.30 first-cycle delta_s gives zero crossing near 0.96 mT; 1.20 mT selected for a clear positive-margin short screen.",
+  "wallclock_s": 156.7905915,
+  "cpus": 1,
+  "socket_calls": 0
+}
