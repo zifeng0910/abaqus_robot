@@ -1,0 +1,8 @@
+{
+  "fit_slope_mm_s_per_mT": 9.936196825879499,
+  "fit_intercept_mm_s": -6.760374738582281,
+  "predicted_G_mT_for_5mm_s": 1.184,
+  "target_v_mean_mm_s": 5.0,
+  "initial_candidate_count": 3,
+  "refinement_dynamics_remaining": 1
+}

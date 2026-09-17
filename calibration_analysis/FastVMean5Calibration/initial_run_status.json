@@ -1,0 +1,20 @@
+[
+  {
+    "job": "FAST_VMEAN5_G2_UFLOW0P5_2CYCLES",
+    "G_mT": 2.0,
+    "wallclock_s": 134.7421111,
+    "datacheck_passed": true
+  },
+  {
+    "job": "FAST_VMEAN5_G3_UFLOW0P5_2CYCLES",
+    "G_mT": 3.0,
+    "wallclock_s": 124.6125862,
+    "datacheck_passed": true
+  },
+  {
+    "job": "FAST_VMEAN5_G4_UFLOW0P5_2CYCLES",
+    "G_mT": 4.0,
+    "wallclock_s": 130.8565156,
+    "datacheck_passed": true
+  }
+]
