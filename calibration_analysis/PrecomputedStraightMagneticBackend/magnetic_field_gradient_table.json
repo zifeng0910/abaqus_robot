@@ -1,0 +1,39 @@
+{
+  "representation": "FIELD_GRADIENT_TABLE",
+  "factorization": "B_unit(phase) x grad_unit(s_eff); exact tensor-product equivalent",
+  "source": "J:\\abaqusfangzhen\\abaqus_robot\\calibration_analysis\\FastStraightDynamicScreen\\production\\magpylib_socket_server_fast.py",
+  "production_branch": "analytic ROBOT_LOCAL_ELLIPTIC_ROCKING point-dipole equivalent",
+  "normalization": {
+    "B_unit": "multiply by B0_T",
+    "grad_unit_per_m": "multiply by gradient_G_T"
+  },
+  "runtime_coordinates": {
+    "phase": "phase0 + 2*pi*f*t",
+    "s_eff_mm": "robot_s - driver_s(t)"
+  },
+  "dimensions": {
+    "phase_stations": 361,
+    "s_eff_stations": 561,
+    "logical_tensor_shape": [
+      561,
+      361
+    ]
+  },
+  "resolution": {
+    "dphase_deg": 1.0,
+    "ds_mm": 0.25
+  },
+  "ranges": {
+    "phase_deg": [
+      0.0,
+      360.0
+    ],
+    "s_eff_mm": [
+      -70.0,
+      70.0
+    ]
+  },
+  "table_bytes": 172996,
+  "precomputation_wallclock_s": 1.3247370000026422,
+  "config": "straight_tube_case_config.json"
+}

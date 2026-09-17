@@ -1,0 +1,48 @@
+{
+  "benchmark_case_duration_s": 0.0005,
+  "direct_dt_s": 2e-7,
+  "results": [
+    {
+      "cpus": 1,
+      "solver_main_wallclock_s": 5.0,
+      "complete_job_wallclock_s": 18.7615472,
+      "completed": true
+    },
+    {
+      "cpus": 4,
+      "solver_main_wallclock_s": 8.0,
+      "complete_job_wallclock_s": 19.7852075,
+      "completed": true
+    },
+    {
+      "cpus": 6,
+      "solver_main_wallclock_s": 22.0,
+      "complete_job_wallclock_s": 33.829252,
+      "completed": true
+    }
+  ],
+  "parallel_consistency": {
+    "cpu4_vs_cpu1_max_U_difference_mm": 0.0,
+    "cpu4_vs_cpu1_max_UR_difference_rad": 0.0,
+    "cpu6_vs_cpu1_max_U_difference_mm": 0.0,
+    "cpu6_vs_cpu1_max_UR_difference_rad": 0.0,
+    "passed": true
+  },
+  "selected_cpus": 1,
+  "selection_reason": "Small straight-screen model is overhead dominated; one MPI rank was fastest and stable.",
+  "live_socket_solver_main_wallclock_s": 19.0,
+  "measured_solver_speedup_vs_live_socket": 3.8,
+  "estimated_two_cycle_120Hz_FAST_SURROGATE": {
+    "physical_duration_s": 0.016666666666666666,
+    "solver_only_wallclock_s": 166.7,
+    "including_observed_fixed_job_overhead_s": 180.4,
+    "recommended_planning_estimate": "about 3 minutes on cpus=1",
+    "basis": "linear extrapolation of the 0.5 ms FLUID_MODE=NONE benchmark; FAST_SURROGATE adds only local vector operations"
+  },
+  "historical_TRUE_CEL_context": {
+    "10ms_wallclock_s": 5959.3868978,
+    "estimated_16p667ms_wallclock_s": 9932.3,
+    "estimated_speedup_of_precomputed_fast_screen": 59.6,
+    "note": "Context only; no new CEL run was launched."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "duration_s": 0.0005,
+  "max_axial_position_difference_mm": 2.460592494040807e-11,
+  "max_rotation_vector_difference_deg": 3.2949892053802936e-06,
+  "magnetic_force_max_relative_error_on_live_states": 8.977406268872457e-06,
+  "magnetic_torque_max_relative_error_on_live_states": 7.617615126520447e-05,
+  "thresholds": {
+    "axial_position_difference_mm": 0.01,
+    "rocking_difference_deg": 0.2
+  },
+  "passed": true
+}
