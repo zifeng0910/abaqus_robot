@@ -1,0 +1,89 @@
+{
+  "case": "FAST_PRECOMP_F120_DUALEND_NOREBOUND",
+  "classification": "FAST_MOTION_TOPOLOGY_FAILED",
+  "physical_simulated_time_ms": 16.66666753590107,
+  "commanded_cycles": 2.0000001043081284,
+  "delta_s_mm": -0.08340029772921743,
+  "fraction_v_s_positive": 0.05115497690046199,
+  "axial_reversals": 3,
+  "rocking_min_deg": -12.867796461099637,
+  "rocking_max_deg": 13.327836392306908,
+  "tumble": false,
+  "both_end_bridge_longest_ms": 0.0,
+  "HEAD": {
+    "minimum_wall_gap_mm": 0.005188349775209988,
+    "contact_episode_count": 0,
+    "contact_state_final": false,
+    "longest_contact_ms": 0.0,
+    "peak_normal_contact_force_N": 0.0,
+    "peak_tangential_contact_force_N": 0.0,
+    "peak_abs_axial_contact_force_N": 0.0,
+    "max_rebound_ratio_R_v": null,
+    "same_end_episodes_per_half_cycle": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "same_end_episode_gate_le_1": true,
+    "R_v_gate_lt_0p2": false
+  },
+  "TAIL": {
+    "minimum_wall_gap_mm": -0.007037297835994383,
+    "contact_episode_count": 13,
+    "contact_state_final": false,
+    "longest_contact_ms": 0.3999965265393257,
+    "peak_normal_contact_force_N": 0.11684489046189889,
+    "peak_tangential_contact_force_N": 0.002228490235579372,
+    "peak_abs_axial_contact_force_N": 0.0017661516167303912,
+    "max_rebound_ratio_R_v": 59.04272435528249,
+    "same_end_episodes_per_half_cycle": [
+      1,
+      3,
+      2,
+      7
+    ],
+    "same_end_episode_gate_le_1": false,
+    "R_v_gate_lt_0p2": false
+  },
+  "magnetic_continuity": {
+    "lookup_count": 83334,
+    "lookup_count_basis": "one unique VUAMP evaluation per completed Explicit increment",
+    "socket_calls": 0,
+    "increment_history_count": 83335,
+    "strictly_increasing_time": true,
+    "phase_rate_mean_rad_s": 753.9822368615459,
+    "phase_rate_target_rad_s": 753.9822368615503,
+    "max_phase_rate_relative_error": 1.5661028029967383e-11,
+    "continuous_through_contact": true,
+    "increment_csv_rows_recovered": 1,
+    "increment_csv_limitation": "lOp=3 close/reopen overwrote the diagnostic CSV; ODB increment history and deterministic phase law are authoritative for this completed run"
+  },
+  "max_abs_energy_drift_Nmm": 6.564337962089439e-09,
+  "contact_force_threshold_N": 1e-10,
+  "gates": {
+    "sustained_rocking": true,
+    "no_tumble": true,
+    "no_persistent_bridge": true,
+    "HEAD_single_episode_per_half_cycle": true,
+    "TAIL_single_episode_per_half_cycle": false,
+    "HEAD_R_v_below_0p2": false,
+    "TAIL_R_v_below_0p2": false,
+    "magnetic_drive_continuous": true,
+    "overall_plus_s_progression": false
+  },
+  "failure_reason": "CONTACT_STIFFNESS_TOO_HIGH",
+  "exactly_one_next_fast_screen_modification": "Change only the General Contact geometric stiffness scale from 10.0 to 2.0; keep initial scale 0.01 and all other settings fixed.",
+  "performance": {
+    "magnetic_precompute_wallclock_s": 1.3247370000026422,
+    "abaqus_wallclock_s": 1455.7746919,
+    "physical_simulated_time_ms": 16.66666753590107,
+    "wallclock_s_per_physical_ms": 87.34647695852624,
+    "cpu_count": 1,
+    "magnetic_table_lookups": 83334,
+    "socket_calls": 0,
+    "live_socket_0p5ms_solver_wallclock_s": 19.0,
+    "true_cel_10ms_wallclock_s": 5959.3868978,
+    "comparison_note": "This run includes 10 us contact-field ODB output; its I/O dominates and is not directly comparable to the sparse-output 0.5 ms backend benchmark."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "old": {
+    "pressure_overclosure": "HARD",
+    "enforcement": "General Contact penalty",
+    "mu": 0.03,
+    "normal_critical_damping_fraction": 1.0,
+    "tangent_fraction": 0.0
+  },
+  "new": {
+    "pressure_overclosure": "SCALE FACTOR",
+    "overclosure_factor_percent": 5.0,
+    "geometric_stiffness_scale": 10.0,
+    "initial_stiffness_scale": 0.01,
+    "mu": 0.03,
+    "normal_critical_damping_fraction": 1.0,
+    "tangent_fraction": 0.0
+  },
+  "minimum_robot_tet_edge_mm": 0.0449331796,
+  "first_stiffness_transition_overclosure_mm": 0.00224665898,
+  "rationale": "Low initial penalty stiffness weakens impact impulse; geometric progression restores nonpenetration as overclosure grows.",
+  "architecture": "General Contact only; robot-wall assignment only"
+}

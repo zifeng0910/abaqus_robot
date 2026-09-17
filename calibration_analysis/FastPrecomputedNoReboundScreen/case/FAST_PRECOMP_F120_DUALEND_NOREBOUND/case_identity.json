@@ -1,0 +1,96 @@
+{
+  "case_id": "FAST_PRECOMP_F120_DUALEND_NOREBOUND",
+  "status": "SOLVED",
+  "classification": "FAST_SURROGATE_FLUID",
+  "source_case": "TAIL_STICK_F120_ZETA100_8P333MS_TRUECEL",
+  "source_commit": "a6dbd1422e898e708833bd427e4faa8860ee700e",
+  "frequency_Hz": 120.0,
+  "rocking_main_amplitude_deg": 14.8,
+  "rocking_cross_amplitude_deg": 2.5,
+  "B0_mT": 10.0,
+  "gradient_mT": 0.15,
+  "gradient_length_mm": 45.0,
+  "duration_s": 0.016666666667,
+  "flow_vector_aba_mm_s": [
+    9.762799602464296,
+    -0.618320247446977,
+    2.074951564186524
+  ],
+  "field_frame_mode": "ROBOT_LOCAL_ELLIPTIC_ROCKING",
+  "initial_center_aba_mm": [
+    -7.467008561641505,
+    -3.6619995000786036,
+    -9.55178408600042
+  ],
+  "canonical_plus_s_axis_aba": [
+    0.9762799602464296,
+    -0.0618320247446977,
+    0.2074951564186524
+  ],
+  "n_routeA_aba": [
+    0.07770950949965555,
+    0.9945677258930866,
+    -0.06925511349479567
+  ],
+  "b_routeA_aba": [
+    -0.20208580196182235,
+    0.08373672627840886,
+    0.9757814762115655
+  ],
+  "head_tail_axis_aba": [
+    0.9762799602464296,
+    -0.0618320247446977,
+    0.2074951564186524
+  ],
+  "initial_magnetic_moment_axis_aba": [
+    -0.9762799602464296,
+    0.0618320247446978,
+    -0.2074951564186524
+  ],
+  "routeA_gauge_for_flipped_body_deg": 61.37284757596327,
+  "robot_moment_Am2": 0.0010876227522174417,
+  "robot_mass_mg": 9.207793514166587,
+  "robot_length_mm": 2.6,
+  "robot_diameter_mm": 0.815,
+  "mu": 0.03,
+  "zeta": 1.0,
+  "dynamics_run_count": 1,
+  "source_input_sha256": "C439C4A76ED84F18BF7AAD04350BC8572E2A3CACDC08B94DB1503093D71728A1",
+  "solved_input_sha256": "9297E56D1234628374DD30C5A7778634E9E5C79F6E3FC3B51B9D79D92B8D1D4D",
+  "artifact_input_sha256": "A0F97F5FBC95AE55EA01C7B8BA1F22A905D1D4B55F77C5F140ECAC440CBBBFD7",
+  "solved_fortran_sha256": "0B64D5DF7F247153771EE5B6D260C36A5EF02C399F65CD07BE14463D5C507C0F",
+  "maintained_fortran_sha256": "659484D2B6B6FA36D469958990B35EFDD2A8D03B92E9B1A4E9069C2BB8E72A97",
+  "post_run_nonphysics_changes": "Deck comments clarified; maintained Fortran fixes diagnostic CSV close timing only. Dynamics was not rerun.",
+  "radial_offset_n_mm": 0.015,
+  "head_side_correction_mm": 0.0425,
+  "head_correction_direction_n": -1,
+  "geometry_realization": "actual smooth one-sided HEAD mesh profile change over final 25% axial length",
+  "lumen_radius_mm": 0.667345,
+  "contact_regions": {
+    "HEAD_REGION_nodes": 114,
+    "TAIL_REGION_nodes": 223,
+    "BODY_REGION_nodes": 1251
+  },
+  "contact_output": "direct robot-wall General Contact fields partitioned by actual HEAD/TAIL node regions",
+  "contact_force_intent": "very weak wall support; no adhesion or artificial velocity clamp",
+  "magnetic_backend": "PRECOMPUTED_TABLE",
+  "precomputed_magnetic_baseline_commit": "74b8205a39092943a76bb499b11387be8d78dff1",
+  "magnetic_table_sha256": "5C5CBF84F7705D2EDF68DCF9F236928B04996C80BABCADFFBFFDF24B8A546BFA",
+  "commanded_cycles": 2.0,
+  "direct_dt_s": 2E-07,
+  "U_flow_mm_s": 10.0,
+  "Cparallel_Ns_per_mm": 4E-09,
+  "Cperp_Ns_per_mm": 1.2E-08,
+  "Kspin_Nmm_s": 1E-09,
+  "Kwobble_Nmm_s": 3E-09,
+  "time_step_control": "Abaqus/Explicit DIRECT 2e-7 s",
+  "flow_model": "FAST_SURROGATE_FLUID relative-velocity drag; not CEL/FSI",
+  "contact_normal_behavior_old": "HARD penalty, zeta=1.0",
+  "contact_normal_behavior_new": "SCALE FACTOR r=5%, geometric scale=10, initial scale=0.01; zeta=1.0",
+  "contact_law_intent": "weak initial impact impulse with progressive nonpenetration; no adhesion/no-separation/clamp",
+  "socket_calls_expected": 0,
+  "wallclock_s": 1455.7746919,
+  "cpus": 1,
+  "socket_calls": 0,
+  "lookup_log_line": ""
+}

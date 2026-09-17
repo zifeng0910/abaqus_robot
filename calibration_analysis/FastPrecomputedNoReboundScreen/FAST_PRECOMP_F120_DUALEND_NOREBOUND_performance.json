@@ -1,0 +1,12 @@
+{
+  "magnetic_precompute_wallclock_s": 1.3247370000026422,
+  "abaqus_wallclock_s": 1455.7746919,
+  "physical_simulated_time_ms": 16.66666753590107,
+  "wallclock_s_per_physical_ms": 87.34647695852624,
+  "cpu_count": 1,
+  "magnetic_table_lookups": 83334,
+  "socket_calls": 0,
+  "live_socket_0p5ms_solver_wallclock_s": 19.0,
+  "true_cel_10ms_wallclock_s": 5959.3868978,
+  "comparison_note": "This run includes 10 us contact-field ODB output; its I/O dominates and is not directly comparable to the sparse-output 0.5 ms backend benchmark."
+}
