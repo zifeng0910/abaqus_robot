@@ -1,0 +1,8 @@
+{
+  "job": "TRUECEL_A14P5_TAILGAP_REFINE_2CYCLES_DATACHECK",
+  "passed": true,
+  "exit_code": 0,
+  "dynamics_launched_by_gate": false,
+  "local_mesh_size_mm": 0.03848668631790692,
+  "target_corridor_refined_elements": 224
+}

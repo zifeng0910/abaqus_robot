@@ -1,0 +1,15 @@
+{
+  "case": "TRUECEL_A14P5_TAILGAP_REFINE_2CYCLES",
+  "initialization_gate_passed": true,
+  "audit_basis": "generated nonuniform input mesh; exact convex-hull/cell linear feasibility",
+  "fluid_containing_element_count": 8192,
+  "initial_water_volume_mm3": 12.219766679090657,
+  "initial_water_mass_mg": 12.228320515766022,
+  "intersecting_filled_elements": 0,
+  "intersecting_element_ids": [],
+  "max_EVF_geometrically_inside_robot": 0.0,
+  "estimated_water_overlap_volume_upper_bound_mm3": 0.0,
+  "robot_wall_initial_penetration_mm": 0.0,
+  "minimum_robot_wall_gap_mm": 0.24488284135467597,
+  "canonical_plus_s": "left_to_right"
+}

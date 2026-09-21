@@ -1,0 +1,363 @@
+{
+  "case_id": "TRUECEL_A14P5_TAILGAP_REFINE_2CYCLES",
+  "status": "FAILED",
+  "classification": "LONG_COARSE_TRUECEL_TRANSIT",
+  "source_case": "TRUECEL_STABILITY_0P5MS",
+  "source_commit": "a6dbd1422e898e708833bd427e4faa8860ee700e",
+  "frequency_Hz": 120.0,
+  "rocking_main_amplitude_deg": 14.5,
+  "rocking_cross_amplitude_deg": 2.5,
+  "B0_mT": 12.0,
+  "gradient_mT": 2.0,
+  "gradient_length_mm": 45.0,
+  "duration_s": 0.016666666666666666,
+  "flow_vector_aba_mm_s": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "field_frame_mode": "ROBOT_LOCAL_ELLIPTIC_ROCKING",
+  "initial_center_aba_mm": [
+    -10.591104434430079,
+    -3.464137020895571,
+    -10.215768586540108
+  ],
+  "canonical_plus_s_axis_aba": [
+    0.9762799602464296,
+    -0.0618320247446977,
+    0.2074951564186524
+  ],
+  "n_routeA_aba": [
+    0.07770950949965555,
+    0.9945677258930866,
+    -0.06925511349479567
+  ],
+  "b_routeA_aba": [
+    -0.20208580196182235,
+    0.08373672627840886,
+    0.9757814762115655
+  ],
+  "head_tail_axis_aba": [
+    0.9762799602464296,
+    -0.0618320247446977,
+    0.2074951564186524
+  ],
+  "initial_magnetic_moment_axis_aba": [
+    -0.9762799602464296,
+    0.0618320247446978,
+    -0.2074951564186524
+  ],
+  "routeA_gauge_for_flipped_body_deg": 61.37284757596327,
+  "robot_moment_Am2": 0.0010876227522174417,
+  "robot_mass_mg": 9.207793514166587,
+  "robot_length_mm": 2.6,
+  "robot_diameter_mm": 0.815,
+  "mu": 0.03,
+  "zeta": 1.0,
+  "dynamics_run_count": 1,
+  "source_input_sha256": "C439C4A76ED84F18BF7AAD04350BC8572E2A3CACDC08B94DB1503093D71728A1",
+  "radial_offset_n_mm": 0.015,
+  "head_side_correction_mm": 0.0425,
+  "head_correction_direction_n": -1,
+  "geometry_realization": "actual smooth one-sided HEAD mesh profile change over final 25% axial length",
+  "lumen_radius_mm": 0.667345,
+  "contact_regions": {
+    "HEAD_REGION_nodes": 114,
+    "TAIL_REGION_nodes": 223,
+    "BODY_REGION_nodes": 1251
+  },
+  "contact_output": "direct robot-wall General Contact fields partitioned by actual HEAD/TAIL node regions",
+  "contact_force_intent": "very weak wall support; no adhesion or artificial velocity clamp",
+  "magnetic_backend": "PRECOMPUTED_TABLE",
+  "precomputed_magnetic_baseline_commit": "74b8205a39092943a76bb499b11387be8d78dff1",
+  "magnetic_table_sha256": "3999F3A3826DD091C1ADB3B8EA26830739132F738E213A6D92E825EB12C0717C",
+  "commanded_cycles": 0.36,
+  "direct_dt_s": 2E-07,
+  "U_flow_mm_s": 0.5,
+  "time_step_control": "AUTOMATIC_STABLE SCALE FACTOR=0.4; no mass scaling",
+  "flow_model": "REAL_EULERIAN_WATER",
+  "contact_normal_behavior_old": "HARD penalty, zeta=1.0",
+  "contact_normal_behavior_new": "SCALE FACTOR r=5%, geometric scale=10, initial scale=0.01; zeta=1.0",
+  "contact_law_intent": "weak initial impact impulse with progressive nonpenetration; no adhesion/no-separation/clamp",
+  "socket_calls_expected": 0,
+  "field_output_interval_s": 2.5E-05,
+  "change_scope": [
+    "gradient G 0.15 -> 0.30 mT",
+    "duration 2 -> 1 cycle",
+    "field output 10 -> 50 us"
+  ],
+  "frozen_physics": [
+    "geometry",
+    "rigid robot",
+    "General Contact law",
+    "mu=0.03",
+    "zeta=1.0",
+    "B0=10mT",
+    "f=120Hz",
+    "A_main=14.8deg",
+    "A_cross=2.5deg",
+    "initial pose",
+    "FAST_SURROGATE_FLUID coefficients",
+    "U_flow=+10mm/s"
+  ],
+  "forward_sign_sanity": {
+    "passed": true,
+    "basis": "positive normalized gradient basis and canonical +s polarity"
+  },
+  "calibration_role": "LONG_TRANSIT_STAGE_A",
+  "gradient_choice_basis": "linear fit to contact-safe G=2,3,4 mT two-cycle results",
+  "frozen": [
+    "B0=10mT",
+    "f=120Hz",
+    "A_main=14.8deg",
+    "A_cross=2.5deg",
+    "geometry",
+    "contact law",
+    "initial pose",
+    "hydrodynamic coefficients"
+  ],
+  "selection_basis": "G=1.184 mT yielded 5.068059 mm/s over two cycles and passed the stated hard contact gate",
+  "history_output_interval_s": 5E-06,
+  "fluid_mode": "TRUE_CEL",
+  "FAST_SURROGATE_FLUID": "OFF",
+  "ReducedHydro": "OFF",
+  "U_fluid_initial_mm_s": 0.0,
+  "fluid_density_tonne_mm3": 1.0007E-09,
+  "fluid_viscosity_N_s_mm2": 7.1E-10,
+  "fluid_EOS_c0_mm_s": 100000.0,
+  "Eulerian_dimensions": [
+    44,
+    20,
+    20
+  ],
+  "Eulerian_element_count": 17600,
+  "Eulerian_node_count": 19845,
+  "Eulerian_spacing_mm": [
+    0.2727272727272725,
+    0.03848668631790692,
+    0.03848668631790692
+  ],
+  "fluid_containing_element_count": 8192,
+  "fluid_initialized_volume_mm3": 12.219766679090657,
+  "fluid_mass_mg": 12.228320515766022,
+  "initial_EVF_min_all": 0.0,
+  "initial_EVF_min_positive": 0.008,
+  "initial_EVF_max": 1.0,
+  "initialization_method": "full-domain exact convex-hull/cell exclusion; no local axial shortcut",
+  "initialization_resolution_bound_mm": 0.03278719262151,
+  "robot_tet_volume_mm3": 1.2829713941656093,
+  "robot_hull_volume_mm3": 1.2997698196413212,
+  "fluid_contact_property": "independent HARD pressure-overclosure; selected softened law remains robot-wall only",
+  "initial_EVF_min": 0.0,
+  "robot_fluid_initial_overlap_mm3": 0.0,
+  "minimum_conservative_separation_mm": 0.4008244457031278,
+  "robot_wall_contact": "HARD penalty General Contact; mu=0.03; zeta=1.0",
+  "robot_fluid_contact": "separate PROP_CEL_FLUID_HARD",
+  "wall_fluid_contact": "separate PROP_CEL_FLUID_HARD",
+  "magnetic_ramp_s": 0.001,
+  "reduced_sound_speed": true,
+  "initial_axial_shift_mm": -3.2,
+  "initial_center_s_relative_to_window_mm": -3.2,
+  "initialization_audit_status": "PASSED",
+  "magnetic_table_s_initial_mm": 31.699921242759284,
+  "magnetic_table_bounds_mm": [
+    -70.0,
+    70.0
+  ],
+  "magnetic_table_bounds_passed": true,
+  "robot_wall_contact_model": "progressive SCALE FACTOR 50.0, geometric 10.0, initial 0.10",
+  "input_sha256": "7E153AFEAAA2481157FF51A4F6201E482DDC25B38C768D8457E6D35B4E66C00D",
+  "fortran_sha256": "8FDA6D1EC538559081E015A6158B62487C4071794420BE5B637260FDAC470FB4",
+  "initial_EVF_max_geometrically_inside_robot": 0.0,
+  "axial_CEL_extent_s_mm": [
+    -6.0,
+    6.0
+  ],
+  "axial_boundary_treatment": "unconstrained Eulerian material-flow boundaries; extended buffers; no explicit pressure outlet",
+  "initial_rear_buffer_mm": 1.5,
+  "initial_forward_buffer_mm": 7.9,
+  "restart_write_intervals": 4,
+  "restart_period_s": 0.004166666666666667,
+  "explicit_stable_time_scale_factor": 0.4,
+  "quantitative_pressure_fidelity": "NOT_FINAL",
+  "initialization_audit_file": "TRUECEL_A14P5_TAILGAP_REFINE_2CYCLES_PreSolve_Initialization_Audit.json",
+  "physical_parent": "TRUECEL_A14P5_FORCE_FLUX_DIAG_2CYCLES",
+  "single_change": "TAIL-gap transverse CEL mesh resolution only",
+  "magnetic_table_file": "magnetic_field_gradient_table_A14P5.dat",
+  "frozen_for_candidate": [
+    "B0=12mT",
+    "G=2.0mT",
+    "A_cross=2.5deg",
+    "f=120Hz",
+    "TRUE-CEL 44x20x20 mesh/domain",
+    "c0=100000mm/s",
+    "water density/viscosity",
+    "PRECOMPUTED_TABLE; socket calls=0",
+    "one-wall General Contact; mu=0.03; zeta=1.0",
+    "Explicit scale factor=0.4; no mass scaling",
+    "geometry",
+    "initial pose",
+    "startup ramp"
+  ],
+  "diagnostic_branch": "FORCE_FLUX_CLOSURE",
+  "physics_changed_from_parent": false,
+  "solver_controls_changed_from_parent": false,
+  "parent_input_sha256_verified": "8173CD6FEC506A0B4EDD1993971662E40381A1499235EAF3D048553FFD0725F9",
+  "parent_fortran_sha256_verified": "6943B424D160EFAB19AB1EEF950C1ACE2BC1838DDE1F2B2CC8D84AC56099F391",
+  "capacity_check": {
+    "abaqus_version": "2025",
+    "estimated_odb_GB_from_parent_linear_scaling": 1.34,
+    "free_space_GB_before_run": 223.1
+  },
+  "pairwise_contact_output": {
+    "first_surface": "ROBOT_SOLID-1.ROBOT_SOLID_SURF",
+    "second_surface": "Pipe_WALL_HELPER-1.PIPE_WALL_HELPER_SURF",
+    "variables": [
+      "CFN",
+      "CFS",
+      "CFT",
+      "CMN",
+      "CMS",
+      "CMT"
+    ],
+    "cadence": "every increment",
+    "semantics": "direct robot-wall only; General Contact output, not Contact Pair physics"
+  },
+  "whole_robot_contact_output": {
+    "surface": "ROBOT_SOLID-1.ROBOT_SOLID_SURF",
+    "variables": [
+      "CFN",
+      "CFS",
+      "CFT",
+      "CMN",
+      "CMS",
+      "CMT"
+    ],
+    "cadence": "every increment"
+  },
+  "official_syntax_basis": "Abaqus/Explicit Writing Surface Output to the Output Database: CONTACT OUTPUT, SURFACE=first_surface_name, SECOND SURFACE=second_surface_name",
+  "Eulerian_spacing_ranges_mm": {
+    "s": [
+      0.2727272727272716,
+      0.2727272727272734
+    ],
+    "n": [
+      0.03848668631790692,
+      0.12433376118307878
+    ],
+    "b": [
+      0.03848668631790692,
+      0.12433376118307878
+    ]
+  },
+  "tail_swept_envelope": {
+    "raw_min_snb_mm": [
+      -4.536838045977882,
+      -0.6673838469216025,
+      -0.6480013674773204
+    ],
+    "raw_max_snb_mm": [
+      -3.8011345118269184,
+      0.6714411809369946,
+      0.5487562481791287
+    ],
+    "buffer_mm": 0.15,
+    "buffered_min_snb_mm": [
+      -4.686838045977883,
+      -0.75,
+      -0.75
+    ],
+    "buffered_max_snb_mm": [
+      -3.6511345118269185,
+      0.75,
+      0.6987562481791287
+    ],
+    "samples": 4685
+  },
+  "mesh_refinement_type": "LOCAL_RADIAL_R_REFINEMENT_WITH_FIXED_ELEMENT_COUNT",
+  "mesh_quality": {
+    "minimum_edge_length_mm": 0.03848668631790692,
+    "maximum_transverse_edge_length_mm": 0.12433376118307878,
+    "maximum_edge_aspect_ratio": 7.102499401288652,
+    "axial_node_refinement_weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.02410418918518326,
+      0.6372198498631341,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.901932381199356,
+      0.22392571454102717,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "core_s_range_mm": [
+      -4.686838045977883,
+      -3.6511345118269185
+    ],
+    "transition_width_each_side_mm": 0.545454545454545
+  },
+  "conforming_mesh_extension": "No hanging nodes or global h-refinement: existing 20x20 transverse nodes are smoothly redistributed toward the wall only over the TAIL swept s corridor and two transition layers.",
+  "target_corridor_refined_elements": 224,
+  "old_element_count": 17600,
+  "new_element_count": 17600,
+  "minimum_cell_size_mm": 0.03848668631790692,
+  "maximum_local_aspect_ratio": 7.102499401288652,
+  "parent_magnetic_table_sha256_verified": "3999F3A3826DD091C1ADB3B8EA26830739132F738E213A6D92E825EB12C0717C",
+  "frozen_for_tailgap_refine": [
+    "B0=12mT",
+    "G=2.0mT",
+    "f=120Hz",
+    "A_main=14.5deg",
+    "A_cross=2.5deg",
+    "PRECOMPUTED_TABLE magnetic values",
+    "robot geometry and pose",
+    "robot-wall contact law",
+    "mu and contact damping",
+    "EOS c0=100000mm/s",
+    "water density and viscosity",
+    "axial CEL boundaries",
+    "startup ramp",
+    "Explicit scale factor=0.4",
+    "two cycles"
+  ],
+  "failure": "Dynamics incomplete",
+  "wallclock_s": 81621.3372151,
+  "cpus": 1,
+  "socket_calls": 0
+}

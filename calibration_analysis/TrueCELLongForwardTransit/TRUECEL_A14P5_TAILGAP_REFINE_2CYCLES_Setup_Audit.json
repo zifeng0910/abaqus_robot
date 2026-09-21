@@ -1,0 +1,45 @@
+{
+  "case": "TRUECEL_A14P5_TAILGAP_REFINE_2CYCLES",
+  "single_change": "TAIL-gap transverse CEL mesh resolution only",
+  "tail_swept_envelope": {
+    "raw_min_snb_mm": [
+      -4.536838045977882,
+      -0.6673838469216025,
+      -0.6480013674773204
+    ],
+    "raw_max_snb_mm": [
+      -3.8011345118269184,
+      0.6714411809369946,
+      0.5487562481791287
+    ],
+    "buffer_mm": 0.15,
+    "buffered_min_snb_mm": [
+      -4.686838045977883,
+      -0.75,
+      -0.75
+    ],
+    "buffered_max_snb_mm": [
+      -3.6511345118269185,
+      0.75,
+      0.6987562481791287
+    ],
+    "samples": 4685
+  },
+  "mesh_dimensions": [
+    44,
+    20,
+    20
+  ],
+  "old_element_count": 17600,
+  "new_element_count": 17600,
+  "target_corridor_refined_elements": 224,
+  "minimum_cell_size_mm": 0.03848668631790692,
+  "maximum_local_aspect_ratio": 7.102499401288652,
+  "water_volume_mm3": 12.219766679074056,
+  "water_mass_mg": 12.228320515749408,
+  "conforming_mesh_extension": "No hanging nodes or global h-refinement: existing 20x20 transverse nodes are smoothly redistributed toward the wall only over the TAIL swept s corridor and two transition layers.",
+  "physics_frozen": true,
+  "dynamics_run_count": 0,
+  "input_sha256": "7E153AFEAAA2481157FF51A4F6201E482DDC25B38C768D8457E6D35B4E66C00D",
+  "fortran_sha256": "8FDA6D1EC538559081E015A6158B62487C4071794420BE5B637260FDAC470FB4"
+}

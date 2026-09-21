@@ -1,0 +1,215 @@
+{
+  "case": "TRUECEL_A14P5_TAILGAP_REFINE_2CYCLES",
+  "status": "TERMINATED_BY_USER; PARTIAL; NOT_TWO_CYCLE_CONVERGENCE",
+  "commanded_end_ms": 16.666666666666668,
+  "last_solver_time_ms": 12.72,
+  "last_field_time_ms": 12.700025923550129,
+  "last_history_time_ms": 12.700025923550129,
+  "available_delta_s_mm": -0.5427960257969313,
+  "common_impulse_window_ms": [
+    8,
+    12.5
+  ],
+  "coarse_J_fluid_s_Ns_inferred": -6.777448767817853e-07,
+  "refined_J_fluid_s_Ns_inferred": -0.00032697940459666273,
+  "impulse_ratio_refined_over_coarse": 482.4520491387512,
+  "refined_closure_error_fraction": 0.00021312902254259778,
+  "contact_to_partial_end": {
+    "TAIL": {
+      "episodes": 5,
+      "first_R_v": 0.33230414434105987,
+      "episode_windows_ms": [
+        [
+          1.8000546842813492,
+          2.075036522001028
+        ],
+        [
+          5.100057926028967,
+          5.30004408210516
+        ],
+        [
+          5.350018385797739,
+          5.700032692402601
+        ],
+        [
+          6.400052923709154,
+          6.525027099996805
+        ],
+        [
+          8.925006724894047,
+          12.700025923550129
+        ]
+      ],
+      "first_contact_ms": 1.8000546842813492,
+      "first_dwell_ms": 0.2749818377196789
+    },
+    "HEAD": {
+      "episodes": 3,
+      "first_R_v": 0.3952585916687634,
+      "episode_windows_ms": [
+        [
+          1.9250385230407119,
+          2.0000252407044172
+        ],
+        [
+          3.4500067122280598,
+          3.4500067122280598
+        ],
+        [
+          8.700044825673103,
+          12.700025923550129
+        ]
+      ],
+      "first_contact_ms": 1.9250385230407119,
+      "first_dwell_ms": 0.07498671766370535
+    },
+    "both_bridge_ms": 3.775019198656082,
+    "max_penetration_mm": 0.09289783015961317
+  },
+  "coarse_contact_full": {
+    "TAIL": {
+      "episodes": 13,
+      "first_R_v": 0.4391906599146884,
+      "episode_windows_ms": [
+        [
+          1.8000692361965775,
+          1.97512935847044
+        ],
+        [
+          5.025041755288839,
+          5.150109063833952
+        ],
+        [
+          5.250145215541124,
+          5.250145215541124
+        ],
+        [
+          5.300086922943592,
+          5.325096193701029
+        ],
+        [
+          5.4001035168766975,
+          6.150144152343273
+        ],
+        [
+          6.200131494551897,
+          6.35005347430706
+        ],
+        [
+          9.275130927562714,
+          9.675049223005772
+        ],
+        [
+          9.925179183483124,
+          9.975036606192589
+        ],
+        [
+          10.97517367452383,
+          11.300047859549522
+        ],
+        [
+          11.350170709192753,
+          11.350170709192753
+        ],
+        [
+          11.400123126804829,
+          11.400123126804829
+        ],
+        [
+          11.450138874351978,
+          11.875036172568798
+        ],
+        [
+          13.100145384669304,
+          15.550010837614536
+        ]
+      ],
+      "first_contact_ms": 1.8000692361965775,
+      "first_dwell_ms": 0.17506012227386236
+    },
+    "HEAD": {
+      "episodes": 10,
+      "first_R_v": 0.38453284352902634,
+      "episode_windows_ms": [
+        [
+          1.9001081818714738,
+          1.950086560100317
+        ],
+        [
+          6.000086665153503,
+          7.300058845430613
+        ],
+        [
+          7.350127678364515,
+          7.400083355605602
+        ],
+        [
+          7.450139615684748,
+          7.475105579942465
+        ],
+        [
+          7.550084963440895,
+          7.550084963440895
+        ],
+        [
+          11.225172318518162,
+          11.225172318518162
+        ],
+        [
+          11.325005441904068,
+          11.325005441904068
+        ],
+        [
+          11.400123126804829,
+          11.525148525834084
+        ],
+        [
+          14.07511904835701,
+          14.450020156800747
+        ],
+        [
+          15.350121073424816,
+          15.75000211596489
+        ]
+      ],
+      "first_contact_ms": 1.9001081818714738,
+      "first_dwell_ms": 0.04997837822884321
+    },
+    "both_bridge_ms": 0.37490110844373703,
+    "max_penetration_mm": 0.008949196187456487
+  },
+  "energy": {
+    "coarse_ETOTAL": {
+      "initial_Nmm": 0.0,
+      "final_Nmm": -0.06351543962955475,
+      "max_abs_drift_Nmm": 0.06351543962955475,
+      "cycle1_increment_Nmm": -0.0015050702474140633,
+      "cycle2_increment_Nmm": -0.06201036172858542
+    },
+    "refined_partial_ETOTAL": {
+      "initial_Nmm": 0.0,
+      "final_Nmm": -1322.5655517578125,
+      "max_abs_drift_Nmm": 1322.5655517578125,
+      "cycle1_increment_Nmm": -1.122616605012153,
+      "cycle2_increment_Nmm": -1321.4429351528004
+    }
+  },
+  "stable_dt_min_s": 1.07174e-08,
+  "general_contact_deep_penetration_warning": true,
+  "mesh_classification": "INDETERMINATE_INCOMPLETE_TWO_CYCLES",
+  "recoil": "INDETERMINATE_INCOMPLETE_TWO_CYCLES",
+  "contact": "WORSE_NUMERICAL_WARNING; episode comparison provisional",
+  "numerics": "WORSE",
+  "dynamics_run_count": 1,
+  "mesh_type": "LOCAL_RADIAL_R_REFINEMENT_WITH_FIXED_ELEMENT_COUNT",
+  "gifs": {
+    "fixed_side": "TRUECEL_A14P5_TAILGAP_REFINE_PARTIAL.gif",
+    "fluid": "TRUECEL_A14P5_TAILGAP_REFINE_PARTIAL_FLUID.gif",
+    "tail_zoom": "TRUECEL_A14P5_TAILGAP_REFINE_PARTIAL_TAIL_ZOOM.gif"
+  },
+  "gif_frame_counts": {
+    "fixed_side": 100,
+    "fluid": 100,
+    "tail_zoom": 100
+  }
+}
