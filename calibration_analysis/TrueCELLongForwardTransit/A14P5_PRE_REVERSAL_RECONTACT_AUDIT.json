@@ -1,0 +1,69 @@
+{
+  "mass_mg": 10.01880899007415,
+  "native_RP_dt_ms": 0.00018207356333732605,
+  "native_field_dt_ms": 0.02500321716070175,
+  "first_negative_acceleration_ms": [
+    8.49968008697033,
+    8.665781468153,
+    8.333333767950535
+  ],
+  "first_additional_deceleration_ms": [
+    8.574631996452808,
+    8.51891003549099
+  ],
+  "early_cycle2_baseline_acceleration_mm_s2": 5257.907650035561,
+  "maximum_negative_acceleration_ms": 9.72260907292366,
+  "maximum_negative_acceleration_mm_s2": -122744.53277695042,
+  "velocity_zero_ms": 10.682020978413481,
+  "axial_closure": {
+    "magnetic": 6.156182393110122e-08,
+    "wall": -1.1207447371174524e-08,
+    "fluid_inferred": -1.3111779294590944e-07,
+    "moving_RP_transport": 0.0,
+    "measured_momentum_change": -7.783079046074314e-08,
+    "residual": 2.9326259252395986e-09,
+    "relative_residual": 0.014383580125857357,
+    "unit": "N s"
+  },
+  "angular_release_to_recontact": {
+    "magnetic": -9.31172309109124e-08,
+    "wall": 0.0,
+    "fluid_inferred": 2.8286564133117713e-08,
+    "moving_RP_transport": -8.56310707153572e-13,
+    "measured_momentum_change": -6.445277700828587e-08,
+    "residual": 3.787460802159657e-10,
+    "relative_residual": 0.0031196999125617676,
+    "unit": "N mm s"
+  },
+  "events": [
+    {
+      "event": "TAIL release",
+      "time_ms": 11.550149880349636,
+      "actual_deg": 12.3928636924298,
+      "command_deg": 9.519257478858998,
+      "error_deg": 2.8736062135708025,
+      "omega_deg_s": -1687.608276563156,
+      "torque_Nmm": -0.0006539768932243042,
+      "gap_um": 3.609802514725202
+    },
+    {
+      "event": "TAIL recontact",
+      "time_ms": 11.675059795379639,
+      "actual_deg": 12.12778636307825,
+      "command_deg": 8.448480666096033,
+      "error_deg": 3.679305696982217,
+      "omega_deg_s": -2318.0805577674564,
+      "torque_Nmm": -0.000837055400910937,
+      "gap_um": 5.536998340603949
+    }
+  ],
+  "gap_min_between_release_recontact_um": 3.609802514725202,
+  "gap_max_between_release_recontact_um": 5.536998340603949,
+  "gap_at_release_um": 3.609802514725202,
+  "gap_at_recontact_um": 5.536998340603949,
+  "gap_rotation_change_um": 3.093000715446992,
+  "gap_translation_change_um": -1.165804889568245,
+  "field_contact_state_at_release": true,
+  "field_contact_state_at_recontact": true,
+  "max_direct_wall_pair_force_11p3_11p8_N": 0.0
+}
