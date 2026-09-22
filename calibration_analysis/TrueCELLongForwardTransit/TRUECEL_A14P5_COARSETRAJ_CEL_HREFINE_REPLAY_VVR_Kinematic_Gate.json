@@ -1,0 +1,96 @@
+{
+  "job": "TRUECEL_A14P5_COARSETRAJ_CEL_HREFINE_REPLAY_VVR",
+  "method": "rotation-matrix/geodesic comparison of target vs actual global V + spatial/global VR replay",
+  "passed": true,
+  "thresholds": {
+    "max_translation_error_mm": 0.001,
+    "max_orientation_error_deg": 0.02,
+    "critical_v_s_p99_mm_s": 0.05,
+    "critical_omega_rock_p99_rad_s": 0.5
+  },
+  "metrics": {
+    "translation_error_mm": {
+      "full": {
+        "rms": 1.4257236017518468e-08,
+        "p99": 5.520946174399373e-08,
+        "max": 1.009488694836912e-07,
+        "max_time_ms": 9.342617355287075
+      },
+      "critical": {
+        "rms": 2.5099924522076687e-08,
+        "p99": 7.000628496973686e-08,
+        "max": 1.009488694836912e-07,
+        "max_time_ms": 9.342617355287075
+      }
+    },
+    "orientation_geodesic_deg": {
+      "full": {
+        "rms": 2.223621630494367e-06,
+        "p99": 9.058688741390264e-06,
+        "max": 1.652841897767635e-05,
+        "max_time_ms": 9.184915572404861
+      },
+      "critical": {
+        "rms": 3.988496489912149e-06,
+        "p99": 1.2085896605099282e-05,
+        "max": 1.652841897767635e-05,
+        "max_time_ms": 9.184915572404861
+      }
+    },
+    "v_s_error_mm_s": {
+      "full": {
+        "rms": 5.184370713086056e-05,
+        "p99": 0.00015731412561146812,
+        "max": 0.0030277522481557003,
+        "max_time_ms": 9.106219746172428
+      },
+      "critical": {
+        "rms": 0.00010128997845729813,
+        "p99": 0.00036261241144263626,
+        "max": 0.0030277522481557003,
+        "max_time_ms": 9.106219746172428
+      }
+    },
+    "omega_rock_error_rad_s": {
+      "full": {
+        "rms": 0.0007934377373188125,
+        "p99": 0.0008388984390718255,
+        "max": 0.16487721231403343,
+        "max_time_ms": 5.071547813713551
+      },
+      "critical": {
+        "rms": 0.00037592723383042667,
+        "p99": 0.0013190715207416768,
+        "max": 0.024822170569520855,
+        "max_time_ms": 9.302622638642788
+      }
+    }
+  },
+  "initial_pose": {
+    "target_U": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "actual_U": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "target_UR": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "actual_UR": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "window_ms": [
+    8.333333,
+    10.682021
+  ],
+  "classification": "COARSE_VVR_REPLAY_VALID"
+}

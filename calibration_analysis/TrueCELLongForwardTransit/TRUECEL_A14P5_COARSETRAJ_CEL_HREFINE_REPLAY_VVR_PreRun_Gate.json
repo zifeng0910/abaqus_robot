@@ -1,0 +1,47 @@
+{
+  "job": "TRUECEL_A14P5_COARSETRAJ_CEL_HREFINE_REPLAY_VVR",
+  "case_label": "C",
+  "CEL_elements": 86640,
+  "CEL_dimensions": [
+    57,
+    40,
+    38
+  ],
+  "driver_sha256": "C9F0D578306E0D653502F6D3B0C55B10B93085A1D0175B7C38A88EC6742527BC",
+  "driver_validated": true,
+  "initial_pose_gate": {
+    "target_U": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "target_UR": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "replay_U": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "replay_UR": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "position_error_mm": 0.0,
+    "orientation_error_deg": 0.0
+  },
+  "robot_part_byte_identical_to_coarse_original": true,
+  "wall_parts_byte_identical_to_coarse_original": true,
+  "magnetic_table_sha256": "3999F3A3826DD091C1ADB3B8EA26830739132F738E213A6D92E825EB12C0717C",
+  "physics": {
+    "B0_mT": 12.0,
+    "G_mT": 2.0,
+    "frequency_Hz": 120.0,
+    "mu": 0.03,
+    "zeta": 1.0
+  },
+  "input_sha256": "D33E73B929F39309203B256138EA00238C72D3388E62D38159B63703F97F49C1"
+}
