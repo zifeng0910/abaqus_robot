@@ -1,0 +1,213 @@
+{
+  "failure_cause_classification": "UR_COMPONENT_FINITE_ROTATION_REPLAY_ERROR",
+  "replay_classification": "KINEMATIC_REPLAY_VALIDATED",
+  "validated_method": "prescribed global translational V(t) and global/spatial angular VR(t), unit BC references, STEP TIME amplitudes",
+  "initial_orientation_gate": {
+    "target_U": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "replay_U": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "position_error_mm": 0.0,
+    "target_UR": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "replay_UR": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "orientation_error_deg": 0.0
+  },
+  "metrics": {
+    "translation_vector_mm": {
+      "full": {
+        "rms": 1.4567116191125543e-08,
+        "p95": 3.470364848712539e-08,
+        "p99": 5.604556967450068e-08,
+        "max": 7.631342676065967e-08,
+        "max_time_ms": 9.371000342071056
+      },
+      "critical_8p333333_to_10p682021_ms": {
+        "rms": 2.5557004190589047e-08,
+        "p95": 5.365044459155729e-08,
+        "p99": 6.759481675265382e-08,
+        "max": 7.631342676065967e-08,
+        "max_time_ms": 9.371000342071056
+      }
+    },
+    "orientation_geodesic_deg": {
+      "full": {
+        "rms": 2.3515912312848086e-06,
+        "p95": 4.971119543369419e-06,
+        "p99": 9.63270391494992e-06,
+        "max": 1.5209011955989004e-05,
+        "max_time_ms": 8.92999954521656
+      },
+      "critical_8p333333_to_10p682021_ms": {
+        "rms": 4.26897047156563e-06,
+        "p95": 9.581093713024603e-06,
+        "p99": 1.3016094413089953e-05,
+        "max": 1.5209011955989004e-05,
+        "max_time_ms": 8.92999954521656
+      }
+    },
+    "axial_velocity_mm_s": {
+      "full": {
+        "rms": 0.0016877603551075458,
+        "p95": 0.002398821662189789,
+        "p99": 0.006449217276179526,
+        "max": 0.0294321687912659,
+        "max_time_ms": 9.166000410914421
+      },
+      "critical_8p333333_to_10p682021_ms": {
+        "rms": 0.0032283485044688532,
+        "p95": 0.0060215499558408546,
+        "p99": 0.012621390395576927,
+        "max": 0.0294321687912659,
+        "max_time_ms": 9.166000410914421
+      }
+    },
+    "rocking_angular_velocity_rad_s": {
+      "full": {
+        "rms": 0.0461562491404919,
+        "p95": 0.007934234913851842,
+        "p99": 0.03287306771075891,
+        "max": 1.990709215159248,
+        "max_time_ms": 1.8360000103712082
+      },
+      "critical_8p333333_to_10p682021_ms": {
+        "rms": 0.014796667648980903,
+        "p95": 0.012264608027860304,
+        "p99": 0.026967707916496844,
+        "max": 0.24521264817016453,
+        "max_time_ms": 9.305999614298344
+      }
+    }
+  },
+  "critical_force_event_errors": [
+    {
+      "time_ms": 9.305999614298344,
+      "event": "peak_negative_robot_CEL",
+      "position_error_mm": 3.3763259349847916e-08,
+      "orientation_error_deg": 2.194175049737399e-06,
+      "v_s_error_mm_s": 0.0017681605229629643,
+      "omega_rock_error_rad_s": -0.24521264817016453
+    },
+    {
+      "time_ms": 9.331000037491322,
+      "event": "major_force_change",
+      "position_error_mm": 2.4723174240625943e-09,
+      "orientation_error_deg": 2.1790272152928247e-06,
+      "v_s_error_mm_s": -0.0064077107615584565,
+      "omega_rock_error_rad_s": 0.025447168497958424
+    },
+    {
+      "time_ms": 9.320000186562538,
+      "event": "major_force_change",
+      "position_error_mm": 1.2289211906054413e-08,
+      "orientation_error_deg": 5.4778903772835034e-06,
+      "v_s_error_mm_s": -0.0064433760004915935,
+      "omega_rock_error_rad_s": 0.02632958643212601
+    },
+    {
+      "time_ms": 9.320000186562538,
+      "event": "major_force_change",
+      "position_error_mm": 1.2289211906054413e-08,
+      "orientation_error_deg": 5.4778903772835034e-06,
+      "v_s_error_mm_s": -0.0064433760004915935,
+      "omega_rock_error_rad_s": 0.02632958643212601
+    }
+  ],
+  "old_replay_orientation_max_deg": 3.211750503358926,
+  "rotvec_component_interpolation_vs_SLERP_max_deg": 6.196120365635723e-07,
+  "VR_frame_convention": {
+    "spatial_global": {
+      "rms_rad_s": 0.23356812254880918,
+      "p99_rad_s": 0.9579078315085312,
+      "max_rad_s": 1.747370905472966
+    },
+    "body_material": {
+      "rms_rad_s": 23.877012827908384,
+      "p99_rad_s": 63.65792515852893,
+      "max_rad_s": 64.50825438473866
+    },
+    "selected": "GLOBAL_SPATIAL"
+  },
+  "submitted_invalid_boundary_cards": [
+    {
+      "dof": 1,
+      "amplitude": "REPLAY_U1",
+      "reference_magnitude": 1.0,
+      "type": "DISPLACEMENT",
+      "op": "default MOD",
+      "time_basis": "STEP TIME",
+      "initial_pair": "0, 0",
+      "final_pair": "0.0108, 0.08350176976594059",
+      "abaqus_received_value": "1.0 x tabular amplitude"
+    },
+    {
+      "dof": 2,
+      "amplitude": "REPLAY_U2",
+      "reference_magnitude": 1.0,
+      "type": "DISPLACEMENT",
+      "op": "default MOD",
+      "time_basis": "STEP TIME",
+      "initial_pair": "0, 0",
+      "final_pair": "0.0108, -0.001711046501706276",
+      "abaqus_received_value": "1.0 x tabular amplitude"
+    },
+    {
+      "dof": 3,
+      "amplitude": "REPLAY_U3",
+      "reference_magnitude": 1.0,
+      "type": "DISPLACEMENT",
+      "op": "default MOD",
+      "time_basis": "STEP TIME",
+      "initial_pair": "0, 0",
+      "final_pair": "0.0108, 0.02515153150206258",
+      "abaqus_received_value": "1.0 x tabular amplitude"
+    },
+    {
+      "dof": 4,
+      "amplitude": "REPLAY_R1",
+      "reference_magnitude": 1.0,
+      "type": "DISPLACEMENT",
+      "op": "default MOD",
+      "time_basis": "STEP TIME",
+      "initial_pair": "0, 0",
+      "final_pair": "0.0108, 0.2385286729790948",
+      "abaqus_received_value": "1.0 x tabular amplitude"
+    },
+    {
+      "dof": 5,
+      "amplitude": "REPLAY_R2",
+      "reference_magnitude": 1.0,
+      "type": "DISPLACEMENT",
+      "op": "default MOD",
+      "time_basis": "STEP TIME",
+      "initial_pair": "0, 0",
+      "final_pair": "0.0108, 0.03016353932402351",
+      "abaqus_received_value": "1.0 x tabular amplitude"
+    },
+    {
+      "dof": 6,
+      "amplitude": "REPLAY_R3",
+      "reference_magnitude": 1.0,
+      "type": "DISPLACEMENT",
+      "op": "default MOD",
+      "time_basis": "STEP TIME",
+      "initial_pair": "0, 0",
+      "final_pair": "0.0108, 0.2705863811753013",
+      "abaqus_received_value": "1.0 x tabular amplitude"
+    }
+  ],
+  "formal_CEL_runs_launched": 0
+}

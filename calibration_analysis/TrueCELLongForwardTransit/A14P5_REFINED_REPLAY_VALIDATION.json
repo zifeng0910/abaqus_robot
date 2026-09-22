@@ -1,0 +1,47 @@
+{
+  "translation_max_error_mm": 1.2972350108416288e-05,
+  "orientation_max_error_deg": 3.211750503358926,
+  "v_s_error_mm_s": {
+    "rms": 0.02626038717514223,
+    "p99": 0.11476306835080742,
+    "max": 0.32004766101994725,
+    "max_time_ms": 9.115088731050491
+  },
+  "rocking_axis_VR_error_rad_s": {
+    "rms": 5.468144138739827,
+    "p99": 12.785839072029848,
+    "max": 20.920261613221715,
+    "max_time_ms": 9.305058047175407
+  },
+  "force_event_errors": [
+    {
+      "time_ms": 9.308106265962124,
+      "event": "peak_negative_robot_CEL",
+      "v_s_error_mm_s": 0.014232316911352906,
+      "rocking_axis_VR_error_rad_s": 2.078409338469517,
+      "F_robotCEL_axial_N": -0.0009533983986781539
+    },
+    {
+      "time_ms": 9.33085847645998,
+      "event": "major_force_change",
+      "v_s_error_mm_s": 0.06377156877438149,
+      "rocking_axis_VR_error_rad_s": 3.129567677808466,
+      "F_robotCEL_axial_N": 0.000810527954760361
+    },
+    {
+      "time_ms": 9.322453290224075,
+      "event": "major_force_change",
+      "v_s_error_mm_s": 0.004058906130181296,
+      "rocking_axis_VR_error_rad_s": 5.151398045211915,
+      "F_robotCEL_axial_N": -0.0009533983986781539
+    },
+    {
+      "time_ms": 9.32143535465002,
+      "event": "major_force_change",
+      "v_s_error_mm_s": 0.031189379060786063,
+      "rocking_axis_VR_error_rad_s": 0.300819936772736,
+      "F_robotCEL_axial_N": 0.0010520593014193363
+    }
+  ],
+  "passed": false
+}

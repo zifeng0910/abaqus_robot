@@ -1,0 +1,368 @@
+{
+  "invalid_classification": "FIXED_TRAJECTORY_REPLAY_INVALID",
+  "component_errors": {
+    "U": {
+      "1": {
+        "rms": 1.1538495062438614e-07,
+        "p95": 7.397217145314874e-08,
+        "p99": 4.151994117476685e-07,
+        "max": 2.3955152821317216e-06,
+        "max_time_ms": 9.307458996772766,
+        "first_meaningful_divergence_ms": 1.8361562397331,
+        "meaningful_threshold": 1e-06
+      },
+      "2": {
+        "rms": 9.067677725769796e-07,
+        "p95": 4.2054288932265717e-07,
+        "p99": 4.592583216627894e-06,
+        "max": 1.6445000827062075e-05,
+        "max_time_ms": 1.8425090238451958,
+        "first_meaningful_divergence_ms": 1.8351386534050107,
+        "meaningful_threshold": 1e-06
+      },
+      "3": {
+        "rms": 3.3844962223319094e-07,
+        "p95": 1.2547022441439196e-07,
+        "p99": 1.20269704838305e-06,
+        "max": 8.21822082873458e-06,
+        "max_time_ms": 9.307458996772766,
+        "first_meaningful_divergence_ms": 1.8356014043092728,
+        "meaningful_threshold": 1e-06
+      }
+    },
+    "UR": {
+      "1": {
+        "rms": 0.025459255425923477,
+        "p95": 0.03793420862552509,
+        "p99": 0.03795651167814251,
+        "max": 0.03795879808339206,
+        "max_time_ms": 10.33708918839693,
+        "first_meaningful_divergence_ms": 1.291265245527029,
+        "meaningful_threshold": 0.00017453292519943296
+      },
+      "2": {
+        "rms": 0.01600148278111816,
+        "p95": 0.03797676182831779,
+        "p99": 0.03982177159250384,
+        "max": 0.04014360905639108,
+        "max_time_ms": 9.787138551473618,
+        "first_meaningful_divergence_ms": 1.9508068216964602,
+        "meaningful_threshold": 0.00017453292519943296
+      },
+      "3": {
+        "rms": 0.006710315005678437,
+        "p95": 0.012130663226812301,
+        "p99": 0.013379397301466336,
+        "max": 0.0137079050092353,
+        "max_time_ms": 9.322638623416424,
+        "first_meaningful_divergence_ms": 1.6956194303929806,
+        "meaningful_threshold": 0.00017453292519943296
+      }
+    },
+    "V": {
+      "1": {
+        "rms": 0.07314872848407428,
+        "p95": 0.04493249359698296,
+        "p99": 0.22679472936701583,
+        "max": 2.140466434439433,
+        "max_time_ms": 9.305058047175407,
+        "first_meaningful_divergence_ms": 0.9900783188641071,
+        "meaningful_threshold": 0.02
+      },
+      "2": {
+        "rms": 0.5757340521304042,
+        "p95": 0.22784886780420552,
+        "p99": 2.685353206357608,
+        "max": 18.9226033152122,
+        "max_time_ms": 1.8500798614695668,
+        "first_meaningful_divergence_ms": 1.1251242831349373,
+        "meaningful_threshold": 0.02
+      },
+      "3": {
+        "rms": 0.21436211130103555,
+        "p95": 0.0744561682278691,
+        "p99": 0.7208704842355834,
+        "max": 7.310379175795724,
+        "max_time_ms": 9.305058047175407,
+        "first_meaningful_divergence_ms": 0.8750820998102427,
+        "meaningful_threshold": 0.02
+      }
+    },
+    "VR": {
+      "1": {
+        "rms": 5.7184470283379145,
+        "p95": 10.916987748252794,
+        "p99": 12.111712008248723,
+        "max": 14.765037536621094,
+        "max_time_ms": 5.0801164470613,
+        "first_meaningful_divergence_ms": 0.7100835791788995,
+        "meaningful_threshold": 0.2
+      },
+      "2": {
+        "rms": 9.849787554470796,
+        "p95": 27.059672716789397,
+        "p99": 30.840025925664172,
+        "max": 40.926649735999234,
+        "max_time_ms": 9.309956803917885,
+        "first_meaningful_divergence_ms": 0.5700853653252125,
+        "meaningful_threshold": 0.2
+      },
+      "3": {
+        "rms": 3.7274464454604503,
+        "p95": 7.630044630980795,
+        "p99": 8.601413680849456,
+        "max": 36.86176093279792,
+        "max_time_ms": 1.8500798614695668,
+        "first_meaningful_divergence_ms": 0.41006525862030685,
+        "meaningful_threshold": 0.2
+      }
+    }
+  },
+  "orientation_threshold_crossings": {
+    "0.01": {
+      "time_ms": 1.2876384425908327,
+      "target_UR": [
+        -0.015248874344664137,
+        0.031176714370063342,
+        0.08025158161697495
+      ],
+      "actual_UR": [
+        -0.015420403331518173,
+        0.031178714707493782,
+        0.08021874725818634
+      ],
+      "target_VR": [
+        -38.84767480275746,
+        59.73042409869381,
+        208.96302604316995
+      ],
+      "actual_VR": [
+        -39.6989860534668,
+        59.70315170288086,
+        208.76856994628906
+      ],
+      "amplitude_R": [
+        -0.015248874344664137,
+        0.031176714370063342,
+        0.08025158161697495
+      ],
+      "step_time_s": 0.0012876384425908327,
+      "total_time_s": 0.0012876384425908327
+    },
+    "0.05": {
+      "time_ms": 1.6805639024823904,
+      "target_UR": [
+        -0.033902908843908744,
+        0.054039959188693004,
+        0.17803152304891504
+      ],
+      "actual_UR": [
+        -0.03476111218333244,
+        0.05403919890522957,
+        0.1778656244277954
+      ],
+      "target_VR": [
+        -49.546170470560796,
+        50.77035604392131,
+        274.0219214623916
+      ],
+      "actual_VR": [
+        -52.39076614379883,
+        50.45842742919922,
+        273.598876953125
+      ],
+      "amplitude_R": [
+        -0.033902908843908744,
+        0.054039959188693004,
+        0.17803152304891504
+      ],
+      "step_time_s": 0.0016805639024823904,
+      "total_time_s": 0.0016805639024823904
+    },
+    "0.1": {
+      "time_ms": 1.99887715280056,
+      "target_UR": [
+        -0.03912532767444326,
+        0.0575826134728758,
+        0.2179242403883683
+      ],
+      "actual_UR": [
+        -0.04083473980426788,
+        0.057319093495607376,
+        0.21766258776187897
+      ],
+      "target_VR": [
+        32.93819728650545,
+        -35.110549792908785,
+        -74.06713184557464
+      ],
+      "actual_VR": [
+        31.273338317871094,
+        -37.12261199951172,
+        -73.8456039428711
+      ],
+      "amplitude_R": [
+        -0.03912532767444326,
+        0.0575826134728758,
+        0.2179242403883683
+      ],
+      "step_time_s": 0.00199887715280056,
+      "total_time_s": 0.00199887715280056
+    },
+    "0.5": {
+      "time_ms": 3.1411524396389723,
+      "target_UR": [
+        -0.01610706753188364,
+        -0.018300677150374582,
+        0.18466662535271566
+      ],
+      "actual_UR": [
+        -0.024601757526397705,
+        -0.020061401650309563,
+        0.18360532820224762
+      ],
+      "target_VR": [
+        24.358586174755796,
+        -75.69670233587499,
+        -35.05689414523551
+      ],
+      "actual_VR": [
+        16.984710693359375,
+        -77.43196105957031,
+        -35.88390350341797
+      ],
+      "amplitude_R": [
+        -0.01610706753188364,
+        -0.018300677150374582,
+        0.18466662535271566
+      ],
+      "step_time_s": 0.0031411524396389723,
+      "total_time_s": 0.0031411524396389723
+    },
+    "1.0": {
+      "time_ms": 4.288669675588608,
+      "target_UR": [
+        0.018630810299424955,
+        -0.08187626298460259,
+        0.08164394446435919
+      ],
+      "actual_UR": [
+        0.0016949059208855033,
+        -0.08520698547363281,
+        0.07898788899183273
+      ],
+      "target_VR": [
+        58.811116542912984,
+        -16.80121348230972,
+        -178.2639203531488
+      ],
+      "actual_VR": [
+        50.7023811340332,
+        -20.83563995361328,
+        -180.1544952392578
+      ],
+      "amplitude_R": [
+        0.018630810299424955,
+        -0.08187626298460259,
+        0.08164394446435919
+      ],
+      "step_time_s": 0.004288669675588608,
+      "total_time_s": 0.004288669675588608
+    }
+  },
+  "orientation_max_deg": 3.211750503358926,
+  "componentwise_rotvec_interpolation_vs_SLERP_max_deg": 6.196120365635723e-07,
+  "target_UR_VR_consistency": {
+    "spatial_global": {
+      "rms_rad_s": 0.23356812254880918,
+      "p99_rad_s": 0.9579078315085312,
+      "max_rad_s": 1.747370905472966
+    },
+    "body_material": {
+      "rms_rad_s": 23.877012827908384,
+      "p99_rad_s": 63.65792515852893,
+      "max_rad_s": 64.50825438473866
+    },
+    "selected": "GLOBAL_SPATIAL"
+  },
+  "submitted_boundary_cards": [
+    {
+      "dof": 1,
+      "amplitude": "REPLAY_U1",
+      "reference_magnitude": 1.0,
+      "type": "DISPLACEMENT",
+      "op": "default MOD",
+      "time_basis": "STEP TIME",
+      "initial_pair": "0, 0",
+      "final_pair": "0.0108, 0.08350176976594059",
+      "abaqus_received_value": "1.0 x tabular amplitude"
+    },
+    {
+      "dof": 2,
+      "amplitude": "REPLAY_U2",
+      "reference_magnitude": 1.0,
+      "type": "DISPLACEMENT",
+      "op": "default MOD",
+      "time_basis": "STEP TIME",
+      "initial_pair": "0, 0",
+      "final_pair": "0.0108, -0.001711046501706276",
+      "abaqus_received_value": "1.0 x tabular amplitude"
+    },
+    {
+      "dof": 3,
+      "amplitude": "REPLAY_U3",
+      "reference_magnitude": 1.0,
+      "type": "DISPLACEMENT",
+      "op": "default MOD",
+      "time_basis": "STEP TIME",
+      "initial_pair": "0, 0",
+      "final_pair": "0.0108, 0.02515153150206258",
+      "abaqus_received_value": "1.0 x tabular amplitude"
+    },
+    {
+      "dof": 4,
+      "amplitude": "REPLAY_R1",
+      "reference_magnitude": 1.0,
+      "type": "DISPLACEMENT",
+      "op": "default MOD",
+      "time_basis": "STEP TIME",
+      "initial_pair": "0, 0",
+      "final_pair": "0.0108, 0.2385286729790948",
+      "abaqus_received_value": "1.0 x tabular amplitude"
+    },
+    {
+      "dof": 5,
+      "amplitude": "REPLAY_R2",
+      "reference_magnitude": 1.0,
+      "type": "DISPLACEMENT",
+      "op": "default MOD",
+      "time_basis": "STEP TIME",
+      "initial_pair": "0, 0",
+      "final_pair": "0.0108, 0.03016353932402351",
+      "abaqus_received_value": "1.0 x tabular amplitude"
+    },
+    {
+      "dof": 6,
+      "amplitude": "REPLAY_R3",
+      "reference_magnitude": 1.0,
+      "type": "DISPLACEMENT",
+      "op": "default MOD",
+      "time_basis": "STEP TIME",
+      "initial_pair": "0, 0",
+      "final_pair": "0.0108, 0.2705863811753013",
+      "abaqus_received_value": "1.0 x tabular amplitude"
+    }
+  ],
+  "initial_target_U": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "initial_target_UR": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "harness_method": "global translational V plus global/spatial angular VR; no CEL, wall, contact, fluid, magnetic load or external load",
+  "harness_input_sha256": "4DB603E71CF0683BF238B89DDEEBC098EC23A87E9CC65F06031698555D216D03"
+}
