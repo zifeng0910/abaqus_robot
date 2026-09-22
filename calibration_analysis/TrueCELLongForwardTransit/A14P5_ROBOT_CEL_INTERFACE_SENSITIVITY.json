@@ -1,0 +1,108 @@
+{
+  "proxy_RP_U_UR_V_VR_max_absolute_differences": {
+    "U1": 0.0,
+    "U2": 0.0,
+    "U3": 0.0,
+    "UR1": 0.0,
+    "UR2": 0.0,
+    "UR3": 0.0,
+    "V1": 0.0,
+    "V2": 0.0,
+    "V3": 0.0,
+    "VR1": 0.0,
+    "VR2": 0.0,
+    "VR3": 0.0
+  },
+  "cases": [
+    {
+      "case": "TRUECEL_A14P5_FORCE_FLUX_DIAG_2CYCLES",
+      "impulse": {
+        "magnetic": 6.155116939243726e-08,
+        "wall": -1.5603752454973126e-08,
+        "fluid_inferred": -5.632844837488057e-08,
+        "moving_RP_transport": 0.0,
+        "measured_momentum_change": -7.381404751192535e-09,
+        "residual": 2.9996266862239005e-09,
+        "relative_residual": 0.022471913027282707,
+        "unit": "N s"
+      },
+      "areas_mm2": [
+        2.207271756844783,
+        3.0995309250136,
+        1.9058221234441426
+      ],
+      "facets": [
+        438,
+        572,
+        396
+      ],
+      "node_count": [
+        466,
+        697,
+        425
+      ],
+      "whole_GC_nodal_vs_native_max_relative": 1.5738689829021255e-07,
+      "trailing_50us_fluid_mean_below_minus_5e_minus_5N_ms": 8.452869020402431,
+      "native_contact_sample_half_width_ms": 9.150244295597076e-05,
+      "fluid_force_peak_negative_N": -0.0020434090344296687,
+      "fluid_force_peak_time_ms": 9.160994552075863,
+      "acceleration_below_minus_1000_mm_s2_onset_ms": 8.43797717243433,
+      "pressure_metric_departure_50pct_or_1e_minus_4_ms": 9.025055915117264,
+      "field_sample_half_width_ms": 0.01249881461262703,
+      "pressure_metric_at_9p5ms_N_mm2": 0.0005487355483342111,
+      "velocity_at_end_mm_s": 13.160573261179826,
+      "motion_at_end_mm": 0.023886753097913743
+    },
+    {
+      "case": "TRUECEL_A14P5_TAIL_CONTACT_REFINE",
+      "impulse": {
+        "magnetic": 6.156182393110122e-08,
+        "wall": -1.1207447371174524e-08,
+        "fluid_inferred": -1.3111779294590944e-07,
+        "moving_RP_transport": 0.0,
+        "measured_momentum_change": -7.783079046074314e-08,
+        "residual": 2.9326259252395986e-09,
+        "relative_residual": 0.014383580125857357,
+        "unit": "N s"
+      },
+      "areas_mm2": [
+        2.207271756844788,
+        3.0995309250136,
+        1.9058221234441426
+      ],
+      "facets": [
+        1134,
+        572,
+        396
+      ],
+      "node_count": [
+        814,
+        697,
+        425
+      ],
+      "whole_GC_nodal_vs_native_max_relative": 2.809321080644494e-07,
+      "trailing_50us_fluid_mean_below_minus_5e_minus_5N_ms": 8.397617377340794,
+      "native_contact_sample_half_width_ms": 9.103678166866302e-05,
+      "fluid_force_peak_negative_N": -0.002305630867868772,
+      "fluid_force_peak_time_ms": 9.723990224301815,
+      "acceleration_below_minus_1000_mm_s2_onset_ms": 9.360102005302906,
+      "pressure_metric_departure_50pct_or_1e_minus_4_ms": 8.95017758011818,
+      "field_sample_half_width_ms": 0.012501608580350876,
+      "pressure_metric_at_9p5ms_N_mm2": 0.0023063331583042493,
+      "velocity_at_end_mm_s": -1.0559695479139819e-14,
+      "motion_at_end_mm": 0.016748360281098024
+    }
+  ],
+  "state_match_count": 0,
+  "state_match_max_abs_fluid_force_delta_N": null,
+  "CEL_pressure_and_velocity_shared_color_limits": [
+    0.021157321706413976,
+    597.5544955373831
+  ],
+  "limitations": [
+    "Nodal force field is whole General Contact, not pair-isolated robot-CEL.",
+    "Available CPRESS CSV contains only whole-GC frame maxima and counts; no location, pair identity or patch area.",
+    "CEL pressure is cell-centered water-phase pressure; no validated interface mapping or surface shear traction.",
+    "Local CV boundary viscous stress, moving solid cut-cell momentum transfer and face flux are absent; a pressure-only CV is not an independent fluid reaction."
+  ]
+}
