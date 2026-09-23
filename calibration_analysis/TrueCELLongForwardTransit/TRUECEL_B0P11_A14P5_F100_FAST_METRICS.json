@@ -1,0 +1,64 @@
+{
+  "candidate": "TRUECEL_B0P11_A14P5_F100_FAST",
+  "classification": "F100_RECOIL_FAIL",
+  "frequency_Hz": 100,
+  "period_s": 0.01,
+  "complete_cycles": 2,
+  "total_time_s": 0.019999999552965164,
+  "fresh_start": true,
+  "only_physics_change": "frequency 120 -> 100 Hz",
+  "cycle_metrics": [
+    {
+      "cycle": 1,
+      "t_start_s": 0.0,
+      "t_end_s": 0.01,
+      "delta_s_mm": 0.0850081431056382,
+      "mean_v_s_mm_s": 8.50081431056382,
+      "end_v_s_mm_s": 11.16834560925602,
+      "minimum_v_s_mm_s": 0.0,
+      "maximum_backward_excursion_mm": 0.0,
+      "negative_velocity_duration_s": 0.0
+    },
+    {
+      "cycle": 2,
+      "t_start_s": 0.01,
+      "t_end_s": 0.02,
+      "delta_s_mm": 0.06143387991563776,
+      "mean_v_s_mm_s": 6.143387991563776,
+      "end_v_s_mm_s": -3.463073331070662,
+      "minimum_v_s_mm_s": -7.751371450698017,
+      "maximum_backward_excursion_mm": 0.016973250847166277,
+      "negative_velocity_duration_s": 0.003970345173352659
+    }
+  ],
+  "cycle2_over_cycle1_delta_s_ratio": 0.7226822945572978,
+  "cycle3_over_cycle1_delta_s_ratio": null,
+  "mean_speed_mm_s": 7.322101314725516,
+  "max_backtrack_mm": 0.016973250847166277,
+  "forward_step_behavior": "FORWARD_STEP_DECAYING",
+  "online_event": {
+    "reason": "NONE"
+  },
+  "stage1_gate_pass": false,
+  "solver_status": "SOLVED",
+  "torque_authority_check_F120": {
+    "classification": "ROCKING_CONTROL_REMAINS_COHERENT",
+    "rocking_amplitude_cycle1_deg": 12.984901915033914,
+    "rocking_amplitude_cycle2_deg": 13.121398139744127,
+    "phase_shift_cycle2_minus_cycle1_deg": -2.4191182435696006,
+    "rms_phase_matched_alpha_difference_deg": 2.2722889409534726,
+    "p95_abs_omega_rock_difference_rad_s": 220.4288459210195
+  },
+  "F120_reference": {
+    "frequency_Hz": 120,
+    "cycle1_delta_s_mm": 0.06094774095508182,
+    "cycle2_delta_s_mm": -0.027793991839170307,
+    "cycle3_delta_s_mm": null,
+    "mean_speed_mm_s": 1.9886538,
+    "max_backtrack_mm": 0.07236198,
+    "cycle2_end_v_s_mm_s": -28.5378,
+    "classification": "SUSTAINED_RECOIL_FAIL"
+  },
+  "gif": "TRUECEL_B0P11_A14P5_F100_FAST.gif",
+  "gif_zip": "TRUECEL_B0P11_A14P5_F100_FAST_GIF.zip"
+}
