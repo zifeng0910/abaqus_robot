@@ -1,0 +1,40 @@
+{
+  "classification": "FORWARD_PROGRESS_STALL",
+  "reached_finish": "NO",
+  "travel_distance_mm": 7.566533591944649,
+  "achieved_net_displacement_mm": 0.10225256806012473,
+  "maximum_s_mm": -3.094493792541659,
+  "s_start_mm": -3.2,
+  "s_finish_mm": 4.366533591944648,
+  "transit_time_ms": 13.471364043653011,
+  "termination_time_ms": 13.471186106,
+  "rolling_2ms_gain_at_termination_mm": 0.004839103548613277,
+  "mean_speed_mm_s": 7.590364845666886,
+  "minimum_v_s_mm_s": -10.406850470280625,
+  "final_v_s_mm_s": -10.303144826298375,
+  "max_backward_excursion_mm": 0.0032536393982165457,
+  "longest_negative_velocity_duration_ms": 1.009882427752018,
+  "full_rocking_cycles_completed": 1,
+  "online_event": {
+    "reason": "FORWARD_PROGRESS_STALL",
+    "time_s": 0.013471186106,
+    "s_abs_mm": -3.0977437608,
+    "displacement_mm": 0.10225623925,
+    "v_s_mm_s": -10.314181541,
+    "stable_dt_s": 1.7799845079e-07
+  },
+  "solver_completed_successfully": true,
+  "cycle_metrics": [
+    {
+      "cycle": 1,
+      "start_time_ms": 0.0,
+      "end_time_ms": 8.333333333333334,
+      "delta_s_mm": 0.06094774095508182,
+      "mean_v_s_mm_s": 7.313728914609818,
+      "end_v_s_mm_s": 13.04988505241784,
+      "minimum_v_s_mm_s": 0.0,
+      "maximum_backward_excursion_mm": 0.0
+    }
+  ],
+  "screen_label": "REDUCED_SOUND_SPEED_COARSE_CEL_FAST_SCREEN"
+}

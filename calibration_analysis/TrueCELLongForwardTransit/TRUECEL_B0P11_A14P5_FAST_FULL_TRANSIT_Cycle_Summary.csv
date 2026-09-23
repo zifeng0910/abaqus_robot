@@ -1,0 +1,2 @@
+cycle,start_time_ms,end_time_ms,delta_s_mm,mean_v_s_mm_s,end_v_s_mm_s,minimum_v_s_mm_s,maximum_backward_excursion_mm
+1,0.0,8.333333333333334,0.06094774095508182,7.313728914609818,13.04988505241784,0.0,0.0
