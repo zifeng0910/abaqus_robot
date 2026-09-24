@@ -4,6 +4,7 @@ from __future__ import annotations
 import csv
 import json
 import zipfile
+import argparse
 from pathlib import Path
 
 import matplotlib
@@ -19,10 +20,7 @@ from analyze_magnetic_only_damping_screen import wall_metrics
 
 
 ROOT = Path(__file__).resolve().parents[1]
-JOB = "TRUECEL_B0P11_G2P20_A14P5_F100_CROT3_FULLCEL50"
-CASE = ROOT / "case" / JOB
 BASE = ROOT / "case" / "TRUECEL_B0P11_G2P20_A14P5_F100_CLEAN50"
-PREFIX = "F100_G2P20_CROT3_FULLCEL50"
 
 
 def cycle_rows(m: dict) -> list[dict]:
@@ -56,7 +54,7 @@ def cycle_rows(m: dict) -> list[dict]:
     return rows
 
 
-def plot(m: dict, baseline: dict, rows: list[dict], output: Path) -> None:
+def plot(m: dict, baseline: dict, rows: list[dict], output: Path, factor: float) -> None:
     fig, axes = plt.subplots(3, 2, figsize=(12, 9), constrained_layout=True)
     t = m["t"] * 1000
     tb = baseline["t"] * 1000
@@ -65,7 +63,7 @@ def plot(m: dict, baseline: dict, rows: list[dict], output: Path) -> None:
                            (axes[1, 0], "rocking_angle", "theta (deg)"),
                            (axes[1, 1], "omega_rock", "omega (rad/s)")):
         ax.plot(tb, baseline[key], color="#999999", lw=.8, label="clean FULL CEL, 0x")
-        ax.plot(t, m[key], color="#176b60", lw=.9, label="FULL CEL, 3x")
+        ax.plot(t, m[key], color="#176b60", lw=.9, label=f"FULL CEL, {factor:g}x")
         ax.set(xlabel="time (ms)", ylabel=label, xlim=(0, 50))
         for boundary in (10, 20, 30, 40):
             ax.axvline(boundary, color="#cccccc", lw=.6, ls="--")
@@ -87,12 +85,13 @@ def plot(m: dict, baseline: dict, rows: list[dict], output: Path) -> None:
     plt.close(fig)
 
 
-def gif(m: dict, ident: dict, rows: list[dict], output: Path) -> None:
-    rp0, c, n, rel, colors, pipe = geometry(CASE, ident)
+def gif(m: dict, ident: dict, rows: list[dict], output: Path,
+        case: Path, factor: float) -> None:
+    rp0, c, n, rel, colors, pipe = geometry(case, ident)
     fig, (ax, trace) = plt.subplots(2, 1, figsize=(10, 6.5),
                                     gridspec_kw={"height_ratios": [2, 1]},
                                     constrained_layout=True)
-    setup_axis(ax, ident, "FULL CEL | 3x rotational damping")
+    setup_axis(ax, ident, f"FULL CEL | {factor:g}x rotational damping")
     p0 = pose(0, m["t"], m["u"], m["ur"], rp0, rel)
     robot = ax.scatter(ident["s_start_mm"] + (p0-rp0) @ c,
                        (p0-pipe) @ n, s=5, c=colors, linewidths=0)
@@ -126,12 +125,19 @@ def gif(m: dict, ident: dict, rows: list[dict], output: Path) -> None:
 
 
 def main() -> None:
-    ident = json.loads((CASE / "case_identity.json").read_text(encoding="utf-8-sig"))
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--factor", type=float, default=3.0, choices=(0.3, 1.0, 3.0))
+    factor = parser.parse_args().factor
+    suffix = {0.3: "0P3", 1.0: "1", 3.0: "3"}[factor]
+    job = f"TRUECEL_B0P11_G2P20_A14P5_F100_CROT{suffix}_FULLCEL50"
+    case = ROOT / "case" / job
+    prefix = f"F100_G2P20_CROT{suffix}_FULLCEL50"
+    ident = json.loads((case / "case_identity.json").read_text(encoding="utf-8-sig"))
     base_ident = json.loads((BASE / "case_identity.json").read_text(encoding="utf-8-sig"))
-    sta = (CASE / f"{JOB}.sta").read_text(encoding="latin1")
+    sta = (case / f"{job}.sta").read_text(encoding="latin1")
     if "THE ANALYSIS HAS COMPLETED SUCCESSFULLY" not in sta or "***ERROR" in sta:
         raise RuntimeError("FULL CEL solve did not pass completion gate")
-    m = motion(load_rp(CASE), ident)
+    m = motion(load_rp(case), ident)
     baseline = motion(load_rp(BASE), base_ident)
     if m["t"][0] > 1e-10 or m["t"][-1] < .05 - 1e-8:
         raise RuntimeError("Incomplete uninterrupted RP history")
@@ -139,8 +145,8 @@ def main() -> None:
                ("s", "v_s", "rocking_angle", "omega_rock")):
         raise RuntimeError("Nonfinite RP history")
     rows = cycle_rows(m)
-    wall = wall_metrics(CASE, ident, m)
-    with np.load(CASE / "private" / "contact_history_private.npz") as z:
+    wall = wall_metrics(case, ident, m)
+    with np.load(case / "private" / "contact_history_private.npz") as z:
         key = next(k for k in z.files if "ROBOT_SOLID" in k and "|CFNM " in k)
         contact = z[key].astype(float)
     contact_summary = {"whole_robot_general_contact_CFNM_peak_N": float(contact[:, 1].max()),
@@ -153,9 +159,11 @@ def main() -> None:
         raise RuntimeError(f"Unexpected restart write cadence: {writes}")
     nofluid = json.loads((ROOT / "TRUECEL_B0P11_G2P20_F100_NOFLUID_CONTROL_METRICS.json").read_text())
     screen = json.loads((ROOT / "TRUECEL_MAGNETIC_ONLY_DAMPING_METRICS.json").read_text())
-    nofluid_3x = next(x for x in screen["results"] if x["factor"] == 3.0)
+    nofluid_selected = next(x for x in screen["results"] if x["factor"] == factor)
     baseline_report = json.loads((ROOT / "F100_G2P20_CLEAN50_EARLY_STOP_METRICS.json").read_text())
-    result = {"classification": "CROT3_FULLCEL50_RECOIL_CONFIRMED",
+    with np.load(case / "private" / "energy_history_private.npz") as z:
+        energy = {k: z[k].astype(float) for k in ("ETOTAL", "ALLPW", "ALLFD", "ALLIE", "ALLKE")}
+    result = {"classification": f"CROT{suffix}_FULLCEL50_RECOIL_CONFIRMED",
               "solver_completed": True, "t_start_s": float(m["t"][0]),
               "t_end_s": float(m["t"][-1]), "single_step": True,
               "restart_read": False, "restart_writes_ms": writes,
@@ -167,22 +175,23 @@ def main() -> None:
                   r["delta_s_mm"] for r in baseline_report["cycles"][:4]],
               "no_fluid_baseline_cycles_delta_s_mm": [
                   r["delta_s_mm"] for r in nofluid["cycle_metrics"]],
-              "no_fluid_3x_rocking_cycles": nofluid_3x["cycles"],
+              "no_fluid_selected_rocking_cycles": nofluid_selected["cycles"],
+              "energy_end_N_mm": {k: float(v[-1, 1]) for k, v in energy.items()},
               "contact_limit": "geometry overlap is sampled at 0.05 ms; whole-robot CFNM includes fluid contact"}
-    metrics = ROOT / f"{PREFIX}_METRICS.json"
+    metrics = ROOT / f"{prefix}_METRICS.json"
     metrics.write_text(json.dumps(result, indent=2) + "\n")
-    cycles = ROOT / f"{PREFIX}_CYCLES.csv"
+    cycles = ROOT / f"{prefix}_CYCLES.csv"
     with cycles.open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
         writer.writeheader()
         writer.writerows(rows)
-    chart = ROOT / f"{PREFIX}_ROCKING_MOTION.png"
-    animation = ROOT / f"{PREFIX}.gif"
-    plot(m, baseline, rows, chart)
-    gif(m, ident, rows, animation)
-    report = ROOT / f"{PREFIX}_REPORT.md"
-    lines = ["# F100/G2P20 3x rotational damping, full CEL", "",
-             "**CROT3_FULLCEL50_RECOIL_CONFIRMED.** Completed one Explicit step from t=0 to 50 ms; restart snapshots were written at 5-ms intervals and never read.", "",
+    chart = ROOT / f"{prefix}_ROCKING_MOTION.png"
+    animation = ROOT / f"{prefix}.gif"
+    plot(m, baseline, rows, chart, factor)
+    gif(m, ident, rows, animation, case, factor)
+    report = ROOT / f"{prefix}_REPORT.md"
+    lines = [f"# F100/G2P20 {factor:g}x rotational damping, full CEL", "",
+             f"**{result['classification']}.** Completed one Explicit step from t=0 to 50 ms; restart snapshots were written at 5-ms intervals and never read.", "",
              "| Cycle | delta s (mm) | mean v (mm/s) | end v (mm/s) | minimum v (mm/s) | max backtrack (mm) | rocking amplitude (deg) | phase lag (deg) |",
              "|---:|---:|---:|---:|---:|---:|---:|---:|"]
     for r in rows:
@@ -190,16 +199,18 @@ def main() -> None:
     lines += ["", f"Final net displacement: {result['net_displacement_mm']:+.6f} mm; whole-run max backtrack: {result['whole_run_max_backtrack_mm']:.6f} mm.",
               f"Geometric wall overlap: {wall['virtual_wall_crossing_events']} sampled episodes, minimum signed gap {wall['signed_min_wall_gap_mm']:.6f} mm. This is a sampled geometry indicator, not an isolated contact-force count.",
               f"Whole-robot General Contact CFNM peak: {contact_summary['whole_robot_general_contact_CFNM_peak_N']:.6g} N; this signal includes fluid contact.",
-              "", "The clean FULL CEL baseline had C3 +0.013300 mm and C4 -0.564697 mm before user termination at 40.75 ms. Magnetic-only 3x had nearly constant 14.728-deg amplitude and 34.17-deg lag in C2-C5, but its passive-wall audit also found wall overlap. The coupled 3x case therefore does not establish a physical wall-free rocking attractor.",
-              "", "Next bounded test: reduce only rotational damping to 1x (3.5006005000754733e-6 N mm s), whose magnetic-only screen showed stable C2-C5 amplitude and phase; hold all other model terms fixed."]
+              f"End energies (N mm): ETOTAL={result['energy_end_N_mm']['ETOTAL']:+.6g}, ALLPW={result['energy_end_N_mm']['ALLPW']:.6g}, ALLFD={result['energy_end_N_mm']['ALLFD']:.6g}, ALLIE={result['energy_end_N_mm']['ALLIE']:+.6g}, ALLKE={result['energy_end_N_mm']['ALLKE']:.6g}. The large pressure-work and energy drift limit physical interpretation even though Abaqus completed.",
+              "", "The clean FULL CEL baseline had C3 +0.013300 mm and C4 -0.564697 mm before user termination at 40.75 ms. The magnetic-only damping screen showed more regular rocking without fluid, but passive-wall overlap was still present. This coupled case does not establish a physical wall-free rocking attractor."]
+    if factor == 3:
+        lines += ["", "Next bounded test: reduce only rotational damping to 1x (3.5006005000754733e-6 N mm s), whose magnetic-only screen showed stable C2-C5 amplitude and phase; hold all other model terms fixed."]
     report.write_text("\n".join(lines) + "\n")
-    archive = ROOT / f"{PREFIX}_GIFS.zip"
+    archive = ROOT / f"{prefix}_GIFS.zip"
     with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED) as z:
         for path in (animation, chart, report, metrics, cycles):
             z.write(path, path.name)
     ident.update({"classification": result["classification"],
                   "last_ODB_RP_time_ms": float(m["t"][-1] * 1000)})
-    (CASE / "case_identity.json").write_text(json.dumps(ident, indent=2) + "\n")
+    (case / "case_identity.json").write_text(json.dumps(ident, indent=2) + "\n")
     print(json.dumps({"classification": result["classification"],
                       "net_displacement_mm": result["net_displacement_mm"],
                       "wall": wall, "archive": str(archive)}, indent=2))

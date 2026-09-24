@@ -1,6 +1,7 @@
 param([switch]$CheckOnly, [switch]$RunOnly,
       [ValidateSet('TRUECEL_B0P11_G2P20_A14P5_F100_CROT3_FULLCEL50',
-                   'TRUECEL_B0P11_G2P20_A14P5_F100_CROT1_FULLCEL50')]
+                   'TRUECEL_B0P11_G2P20_A14P5_F100_CROT1_FULLCEL50',
+                   'TRUECEL_B0P11_G2P20_A14P5_F100_CROT0P3_FULLCEL50')]
       [string]$Name = 'TRUECEL_B0P11_G2P20_A14P5_F100_CROT3_FULLCEL50')
 $ErrorActionPreference = 'Stop'
 $root = Split-Path $PSScriptRoot -Parent

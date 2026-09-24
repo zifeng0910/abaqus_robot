@@ -25,9 +25,9 @@ def replace_once(text: str, old: str, new: str) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--factor", type=float, default=3.0, choices=(1.0, 3.0))
+    parser.add_argument("--factor", type=float, default=3.0, choices=(0.3, 1.0, 3.0))
     args = parser.parse_args()
-    suffix = "1" if args.factor == 1.0 else "3"
+    suffix = {0.3: "0P3", 1.0: "1", 3.0: "3"}[args.factor]
     job = f"TRUECEL_B0P11_G2P20_A14P5_F100_CROT{suffix}_FULLCEL50"
     dest = ROOT / "case" / job
     if dest.exists():

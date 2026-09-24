@@ -1,0 +1,180 @@
+{
+  "classification": "CROT1_FULLCEL50_RECOIL_CONFIRMED",
+  "solver_completed": true,
+  "t_start_s": 0.0,
+  "t_end_s": 0.05000000074505806,
+  "single_step": true,
+  "restart_read": false,
+  "restart_writes_ms": [
+    5.0,
+    10.0,
+    15.0,
+    20.0,
+    25.0,
+    30.0,
+    35.0,
+    40.0,
+    45.0,
+    50.0
+  ],
+  "c_rot_N_mm_s": 3.5006005000754733e-06,
+  "cycles": [
+    {
+      "cycle": 1,
+      "delta_s_mm": 0.10816673456233589,
+      "mean_v_s_mm_s": 10.816673456233588,
+      "end_v_s_mm_s": 25.039607067726422,
+      "minimum_v_s_mm_s": 0.0,
+      "max_backtrack_mm": 0.0,
+      "rocking_half_range_deg": 13.019186578802998,
+      "rocking_fundamental_amplitude_deg": 13.446493124044878,
+      "phase_lag_deg": 21.746939096832932,
+      "theta_offset_deg": -0.307333283598914,
+      "sinusoid_residual_rms_over_amplitude": 0.09956895868390793,
+      "omega_peak_abs_rad_s": 209.7311012358349
+    },
+    {
+      "cycle": 2,
+      "delta_s_mm": 0.12904559209719413,
+      "mean_v_s_mm_s": 12.904559209719412,
+      "end_v_s_mm_s": 0.5321020702718688,
+      "minimum_v_s_mm_s": -0.4236878929957111,
+      "max_backtrack_mm": 4.9083835975766155e-05,
+      "rocking_half_range_deg": 13.112859404493502,
+      "rocking_fundamental_amplitude_deg": 14.369489130361787,
+      "phase_lag_deg": 19.740690947241802,
+      "theta_offset_deg": 0.12551754709682061,
+      "sinusoid_residual_rms_over_amplitude": 0.10985534722665327,
+      "omega_peak_abs_rad_s": 222.45036961476922
+    },
+    {
+      "cycle": 3,
+      "delta_s_mm": -0.0495351920983097,
+      "mean_v_s_mm_s": -4.9535192098309695,
+      "end_v_s_mm_s": -4.745229185182612,
+      "minimum_v_s_mm_s": -13.889850069350175,
+      "max_backtrack_mm": 0.049705726920716786,
+      "rocking_half_range_deg": 12.77250188005676,
+      "rocking_fundamental_amplitude_deg": 14.280523889871672,
+      "phase_lag_deg": 20.15687630337399,
+      "theta_offset_deg": 0.19932883380836497,
+      "sinusoid_residual_rms_over_amplitude": 0.09894157498145774,
+      "omega_peak_abs_rad_s": 221.62649641277312
+    },
+    {
+      "cycle": 4,
+      "delta_s_mm": -0.02188314537485367,
+      "mean_v_s_mm_s": -2.188314537485367,
+      "end_v_s_mm_s": 2.2187567509465547,
+      "minimum_v_s_mm_s": -7.249347415161286,
+      "max_backtrack_mm": 0.022332448995981163,
+      "rocking_half_range_deg": 12.493687283078632,
+      "rocking_fundamental_amplitude_deg": 13.849577844724571,
+      "phase_lag_deg": 20.338576202279484,
+      "theta_offset_deg": -0.027058384658611878,
+      "sinusoid_residual_rms_over_amplitude": 0.0997462204288999,
+      "omega_peak_abs_rad_s": 218.26797716351086
+    },
+    {
+      "cycle": 5,
+      "delta_s_mm": -0.04091979787688847,
+      "mean_v_s_mm_s": -4.091979787688847,
+      "end_v_s_mm_s": -9.423625895137008,
+      "minimum_v_s_mm_s": -11.669722859438577,
+      "max_backtrack_mm": 0.04255576903628318,
+      "rocking_half_range_deg": 12.584426182170837,
+      "rocking_fundamental_amplitude_deg": 14.195973554849996,
+      "phase_lag_deg": 20.566480593490382,
+      "theta_offset_deg": 0.17445641426968894,
+      "sinusoid_residual_rms_over_amplitude": 0.12065600138638999,
+      "omega_peak_abs_rad_s": 240.81178448775287
+    }
+  ],
+  "net_displacement_mm": 0.12487418435987523,
+  "whole_run_max_backtrack_mm": 0.11250867712206188,
+  "wall_geometry": {
+    "signed_min_wall_gap_mm": -0.0066160809693134315,
+    "virtual_wall_crossing_events": 36,
+    "virtual_wall_penetration_duration_ms": 7.25,
+    "wall_gap_sample_interval_ms": 0.05,
+    "wall_gap_definition": "minimum signed gap of rigid robot convex hull to passive wall polygon; negative is geometric overlap, not contact force"
+  },
+  "general_contact": {
+    "whole_robot_general_contact_CFNM_peak_N": 0.03397327661514282,
+    "whole_robot_general_contact_nonzero_fraction": 0.9989119896585156,
+    "interpretation": "whole robot General Contact; not pair-isolated robot-wall force"
+  },
+  "clean_full_CEL_baseline_cycles_1_4_delta_s_mm": [
+    0.09233673047286903,
+    0.1399079414232934,
+    0.01330013166230612,
+    -0.5646974964973537
+  ],
+  "no_fluid_baseline_cycles_delta_s_mm": [
+    0.12760621634135189,
+    0.4093827236924587,
+    0.694075402400643,
+    0.9817841148458024,
+    1.2717418494752692
+  ],
+  "no_fluid_selected_rocking_cycles": [
+    {
+      "cycle": 1,
+      "rocking_half_range_deg": 18.133397844779807,
+      "rocking_fundamental_amplitude_deg": 17.012570994781324,
+      "phase_lag_deg": 16.72167889021651,
+      "theta_offset_deg": -0.5010724024529836,
+      "sinusoid_residual_rms_over_amplitude": 0.13061613190687502,
+      "omega_peak_abs_rad_s": 233.03093498832496,
+      "theta_peak_abs_deg": 19.71673277493902
+    },
+    {
+      "cycle": 2,
+      "rocking_half_range_deg": 17.423247971355078,
+      "rocking_fundamental_amplitude_deg": 17.38026768504166,
+      "phase_lag_deg": 12.860732579250339,
+      "theta_offset_deg": -0.01889419060839126,
+      "sinusoid_residual_rms_over_amplitude": 0.007251454885794711,
+      "omega_peak_abs_rad_s": 193.76439486718334,
+      "theta_peak_abs_deg": 17.50518253682278
+    },
+    {
+      "cycle": 3,
+      "rocking_half_range_deg": 17.34668938873409,
+      "rocking_fundamental_amplitude_deg": 17.35294470038742,
+      "phase_lag_deg": 12.704336063599726,
+      "theta_offset_deg": 0.000986130602035118,
+      "sinusoid_residual_rms_over_amplitude": 0.000351551085059902,
+      "omega_peak_abs_rad_s": 190.32248087090977,
+      "theta_peak_abs_deg": 17.35005352896112
+    },
+    {
+      "cycle": 4,
+      "rocking_half_range_deg": 17.34810918295107,
+      "rocking_fundamental_amplitude_deg": 17.352426824598496,
+      "phase_lag_deg": 12.71318223974103,
+      "theta_offset_deg": -0.00012811355286768134,
+      "sinusoid_residual_rms_over_amplitude": 0.00018545694996107564,
+      "omega_peak_abs_rad_s": 189.94207501671036,
+      "theta_peak_abs_deg": 17.34838262442959
+    },
+    {
+      "cycle": 5,
+      "rocking_half_range_deg": 17.34818985475072,
+      "rocking_fundamental_amplitude_deg": 17.352438492393677,
+      "phase_lag_deg": 12.713401126121568,
+      "theta_offset_deg": -0.00015454083576355027,
+      "sinusoid_residual_rms_over_amplitude": 0.000179676858069193,
+      "omega_peak_abs_rad_s": 189.93764892696805,
+      "theta_peak_abs_deg": 17.348357618107997
+    }
+  ],
+  "energy_end_N_mm": {
+    "ETOTAL": -5.1574273109436035,
+    "ALLPW": 5.995639801025391,
+    "ALLFD": 1.5981602668762207,
+    "ALLIE": -0.9823881387710571,
+    "ALLKE": 0.028571899980306625
+  },
+  "contact_limit": "geometry overlap is sampled at 0.05 ms; whole-robot CFNM includes fluid contact"
+}

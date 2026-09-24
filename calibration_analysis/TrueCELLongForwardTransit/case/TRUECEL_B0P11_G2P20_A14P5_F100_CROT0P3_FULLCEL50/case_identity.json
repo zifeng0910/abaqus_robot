@@ -1,7 +1,7 @@
 {
-  "case_id": "TRUECEL_B0P11_G2P20_A14P5_F100_CROT1_FULLCEL50",
-  "status": "SOLVED",
-  "classification": "CROT1_FULLCEL50_RECOIL_CONFIRMED",
+  "case_id": "TRUECEL_B0P11_G2P20_A14P5_F100_CROT0P3_FULLCEL50",
+  "status": "RUNNING",
+  "classification": "PENDING",
   "source_case": "TRUECEL_B0P11_G2P20_A14P5_F100_CLEAN50",
   "source_commit": "a6dbd1422e898e708833bd427e4faa8860ee700e",
   "frequency_Hz": 100.0,
@@ -72,7 +72,7 @@
   "precomputed_magnetic_baseline_commit": "74b8205a39092943a76bb499b11387be8d78dff1",
   "magnetic_table_sha256": "3999F3A3826DD091C1ADB3B8EA26830739132F738E213A6D92E825EB12C0717C",
   "commanded_cycles": 240.0,
-  "direct_dt_s": 2e-07,
+  "direct_dt_s": 2E-07,
   "U_flow_mm_s": 0.5,
   "time_step_control": "AUTOMATIC_STABLE SCALE FACTOR=0.4; no mass scaling",
   "flow_model": "REAL_EULERIAN_WATER",
@@ -117,13 +117,13 @@
     "hydrodynamic coefficients"
   ],
   "selection_basis": "OPEN_LOOP_FIRST_ORDER_G_ESTIMATE: 2.15 mT first predicted <0.005 mm; one 0.05-mT robustness increment",
-  "history_output_interval_s": 1e-05,
+  "history_output_interval_s": 1E-05,
   "fluid_mode": "TRUE_CEL",
   "FAST_SURROGATE_FLUID": "OFF",
   "ReducedHydro": "OFF",
   "U_fluid_initial_mm_s": 0.0,
-  "fluid_density_tonne_mm3": 1.0007e-09,
-  "fluid_viscosity_N_s_mm2": 7.1e-10,
+  "fluid_density_tonne_mm3": 1.0007E-09,
+  "fluid_viscosity_N_s_mm2": 7.1E-10,
   "fluid_EOS_c0_mm_s": 100000.0,
   "Eulerian_dimensions": [
     44,
@@ -166,8 +166,8 @@
   ],
   "magnetic_table_bounds_passed": true,
   "robot_wall_contact_model": "progressive SCALE FACTOR 50.0, geometric 10.0, initial 0.10",
-  "input_sha256": "4CC5ECCE80E1E172E7A44758E4E10B9F85B653F8D3E1D92AC7A04F25AF8D30F8",
-  "fortran_sha256": "1ADA5CFC8AE9F7162708B84270FDCC0A27B106A1167E64DF83C477CAED085D2F",
+  "input_sha256": "6B6C3593834A6EC776C56D8B0C8C5F3D71AB092A5AA96D1F4DAEDA28F6EDCE65",
+  "fortran_sha256": "A0E0FD2A4AB19BB92F5B081770B85F948E1FD31745502BCA689D3F1EA39735D1",
   "initial_EVF_max_geometrically_inside_robot": 0.0,
   "axial_CEL_extent_s_mm": [
     -6.0,
@@ -218,7 +218,7 @@
   },
   "field_output": {
     "inherited_sparse_interval_s": 0.008333333333333333,
-    "RP_history_interval_s": 1e-05
+    "RP_history_interval_s": 1E-05
   },
   "frequency_change_only": true,
   "stage1_duration_s": 0.02,
@@ -242,11 +242,9 @@
     50
   ],
   "physical_early_stop": "DISABLED; numerical timestep collapse retained",
-  "rotational_damping_c_N_mm_s": 3.5006005000754733e-06,
-  "rotational_damping_screen_factor": 1.0,
+  "rotational_damping_c_N_mm_s": 1.050180150022642E-06,
+  "rotational_damping_screen_factor": 0.3,
   "translational_damping_added": false,
   "fluid_and_contact_preserved": true,
-  "run_started_at": "2026-09-25T03:14:19.6086697+08:00",
-  "run_ended_at": "2026-09-25T06:47:41.3762026+08:00",
-  "last_ODB_RP_time_ms": 50.00000074505806
+  "run_started_at": "2026-09-25T07:13:57.7381919+08:00"
 }
