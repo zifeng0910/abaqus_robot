@@ -1,0 +1,104 @@
+{
+  "classification": "OPEN_LOOP_FIRST_ORDER_G_ESTIMATE",
+  "source_case": "TRUECEL_B0P11_A14P5_F100_FAST",
+  "exact_G_dependency": {
+    "fortran": "grad=G*grad_unit; F_i=ramp*sum_j(moment_j*grad_ji)",
+    "table_tensor": "grad_unit=d(s_eff)*(c outer c)",
+    "axial_expression": "F_mag,s=ramp*G*d(s_eff)*(moment dot c)",
+    "fixed_state_scaling": "F_mag,s(G)=G/G0*F_mag,s(G0), exact",
+    "G_definition": "Gaussian-profile amplitude parameter in tesla; not a uniform mT/mm gradient",
+    "B0_effect": "B0 scales magnetic torque only in this implementation; it is unchanged"
+  },
+  "backtrack_interval": {
+    "maximum_forward_position_time_s": 0.016029560938477516,
+    "maximum_forward_position_mm_relative": 0.16341527386844215,
+    "backtracking_begin_time_s": 0.016029560938477516,
+    "maximum_positional_deficit_time_s": 0.019999999552965164,
+    "maximum_positional_deficit_mm": 0.016973250847166194,
+    "forward_recovery_time_s": null,
+    "negative_velocity_intervals": [
+      {
+        "start_s": 0.01602974347770214,
+        "end_s": 0.019999999552965164,
+        "duration_s": 0.003970256075263023,
+        "minimum_v_s_mm_s": -7.751371450698017
+      }
+    ]
+  },
+  "baseline_metrics": {
+    "max_backtrack_mm": 0.016973250847166194,
+    "minimum_v_s_mm_s": -7.751371450698017,
+    "cycle2_end_v_s_mm_s": -3.463073331070662,
+    "cycle2_delta_s_mm": 0.06143387991563777
+  },
+  "force_window_14_20ms": {
+    "F_mag_s_min_N": 2.5912402648939136e-05,
+    "F_mag_s_max_N": 2.6598428941886495e-05,
+    "F_mag_s_impulse_Ns": 1.571075756684136e-07,
+    "whole_contact_available": true,
+    "direct_wall_force_available": false,
+    "wall_proxy_caveat": "The F100 ODB has whole-surface CFT only. Pipe-surface CFT also contains pipe-fluid contact, so its opposite sign is exported only as a non-pair-isolated wall-reaction proxy, not claimed as direct robot-wall force."
+  },
+  "screen": [
+    {
+      "G_mT": 2.05,
+      "max_backtrack_mm": 0.01207845212118644,
+      "minimum_v_s_mm_s": -6.472649526434342,
+      "cycle2_end_v_s_mm_s": -2.0784049748581452,
+      "cycle2_delta_s_mm": 0.07173295218707121
+    },
+    {
+      "G_mT": 2.1,
+      "max_backtrack_mm": 0.0075327525191376254,
+      "minimum_v_s_mm_s": -5.193927602170667,
+      "cycle2_end_v_s_mm_s": -0.6937366186456289,
+      "cycle2_delta_s_mm": 0.08203202445850463
+    },
+    {
+      "G_mT": 2.15,
+      "max_backtrack_mm": 0.003388868938666051,
+      "minimum_v_s_mm_s": -3.915205677906998,
+      "cycle2_end_v_s_mm_s": 0.690931737566836,
+      "cycle2_delta_s_mm": 0.09233109672993757
+    },
+    {
+      "G_mT": 2.2,
+      "max_backtrack_mm": 0.0008971085129355072,
+      "minimum_v_s_mm_s": -2.636483753643316,
+      "cycle2_end_v_s_mm_s": 2.0756000937794044,
+      "cycle2_delta_s_mm": 0.10263016900137148
+    },
+    {
+      "G_mT": 2.25,
+      "max_backtrack_mm": 0.0002063762325934526,
+      "minimum_v_s_mm_s": -1.357761829379604,
+      "cycle2_end_v_s_mm_s": 3.4602684499919123,
+      "cycle2_delta_s_mm": 0.11292924127280393
+    },
+    {
+      "G_mT": 2.3,
+      "max_backtrack_mm": 1.0991401590276784e-06,
+      "minimum_v_s_mm_s": -0.1017558569541066,
+      "cycle2_end_v_s_mm_s": 4.844936806204334,
+      "cycle2_delta_s_mm": 0.12322831354423737
+    },
+    {
+      "G_mT": 2.35,
+      "max_backtrack_mm": 0.0,
+      "minimum_v_s_mm_s": 0.0,
+      "cycle2_end_v_s_mm_s": 6.22960516241692,
+      "cycle2_delta_s_mm": 0.13352738581567097
+    },
+    {
+      "G_mT": 2.4,
+      "max_backtrack_mm": 0.0,
+      "minimum_v_s_mm_s": 0.0,
+      "cycle2_end_v_s_mm_s": 7.614273518629471,
+      "cycle2_delta_s_mm": 0.1438264580871052
+    }
+  ],
+  "threshold_G_mT": 2.15,
+  "selected_G_mT": 2.2,
+  "selection_rule": "lowest G with predicted MAX_BACKTRACK<0.005 mm plus one 0.05-mT robustness increment",
+  "model_limitations": "Open-loop replay freezes all non-magnetic loads and the baseline trajectory-dependent magnetic field state; it is a screening estimate, not dynamics."
+}

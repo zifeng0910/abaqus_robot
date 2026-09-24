@@ -1,0 +1,21 @@
+{
+  "case": "TRUECEL_B0P11_G2P20_A14P5_F80_FAST",
+  "parent": "TRUECEL_B0P11_G2P20_A14P5_F100_FAST",
+  "fresh_start": true,
+  "single_physics_change": "frequency 100 -> 80 Hz",
+  "B0_mT": 11,
+  "G_mT": 2.2,
+  "frequency_Hz": 80,
+  "A_main_deg": 14.5,
+  "A_cross_deg": 2.5,
+  "duration_s": 0.0375,
+  "mesh": [
+    44,
+    20,
+    20
+  ],
+  "c0_mm_s": 100000,
+  "input_sha256": "8049B26E2C20601378281EE6CFC456252F3395C24EC8A471519C29C029964CF4",
+  "fortran_sha256": "F1824668FAEFAD35CB06B7EDEE46F9F40BA636723023C285D30125438DC2FF3F",
+  "table_sha256": "3999F3A3826DD091C1ADB3B8EA26830739132F738E213A6D92E825EB12C0717C"
+}

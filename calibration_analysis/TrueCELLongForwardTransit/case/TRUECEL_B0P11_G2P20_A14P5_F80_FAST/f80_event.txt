@@ -1,0 +1,5 @@
+F80_RECOIL_FAIL_CYCLE
+time_s=  2.5000170490E-02
+displacement_mm=  6.4034243940E-02
+v_s_mm_s= -5.4263295287E+01
+max_backtrack_mm=  2.6380887973E-01

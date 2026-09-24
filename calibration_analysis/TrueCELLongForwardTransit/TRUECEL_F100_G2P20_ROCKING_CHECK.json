@@ -1,0 +1,53 @@
+{
+  "metrics": [
+    {
+      "cycle": 1,
+      "rocking_peak_to_peak_deg": 25.378449885733374,
+      "fundamental_amplitude_deg": 12.936944372840598,
+      "phase_lag_vs_C1_deg": 0.0,
+      "rms_phase_matched_alpha_error_deg": 0.0,
+      "p95_abs_omega_difference_rad_s": 0.0
+    },
+    {
+      "cycle": 2,
+      "rocking_peak_to_peak_deg": 25.187610205064708,
+      "fundamental_amplitude_deg": 13.855706974551868,
+      "phase_lag_vs_C1_deg": 3.028600140414544,
+      "rms_phase_matched_alpha_error_deg": 2.5631972822327653,
+      "p95_abs_omega_difference_rad_s": 259.06259598294247
+    },
+    {
+      "cycle": 3,
+      "rocking_peak_to_peak_deg": 26.40564793427542,
+      "fundamental_amplitude_deg": 14.476658423240588,
+      "phase_lag_vs_C1_deg": 3.8673328099165944,
+      "rms_phase_matched_alpha_error_deg": 2.3633099585451434,
+      "p95_abs_omega_difference_rad_s": 225.73097930336243
+    }
+  ],
+  "cycle3_negative_velocity_onset_ms": 21.175269968807697,
+  "max_backtrack_time_ms": 27.51078037545085,
+  "classification": "ROCKING_REMAINS_PHASE_COHERENT_THROUGH_CYCLE3",
+  "direct_robot_wall_resultant": {
+    "available": false,
+    "interpretation": "Pair-isolated history absent; whole General Contact includes robot-fluid and is not a wall resultant."
+  },
+  "wall_gap_events": [
+    {
+      "event": "negative_velocity_onset",
+      "time_ms": 21.175269968807697,
+      "signed_gap_mm": {
+        "TAIL": 0.0021781685963958575,
+        "HEAD": 0.044413126093617694
+      }
+    },
+    {
+      "event": "maximum_backtrack",
+      "time_ms": 27.51078037545085,
+      "signed_gap_mm": {
+        "TAIL": -8.183517275728303e-05,
+        "HEAD": 0.04475780258701145
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "candidate": "TRUECEL_B0P11_G2P20_A14P5_F100_FAST",
+  "classification": "TWO_CYCLE_IMPROVED_BUT_RESIDUAL_RECOIL",
+  "frequency_Hz": 100,
+  "B0_mT": 11.0,
+  "G_mT": 2.2,
+  "total_time_s": 0.029999999329447746,
+  "cycle_metrics": [
+    {
+      "cycle": 1,
+      "t_start_s": 0.0,
+      "t_end_s": 0.01,
+      "delta_s_mm": 0.09233673047286903,
+      "mean_v_s_mm_s": 9.233673047286903,
+      "end_v_s_mm_s": 15.338687144547515,
+      "minimum_v_s_mm_s": 0.0,
+      "maximum_backward_excursion_mm": 0.0,
+      "negative_velocity_duration_s": 0.0
+    },
+    {
+      "cycle": 2,
+      "t_start_s": 0.01,
+      "t_end_s": 0.02,
+      "delta_s_mm": 0.14315865410150266,
+      "mean_v_s_mm_s": 14.315865410150266,
+      "end_v_s_mm_s": 7.04836626954905,
+      "minimum_v_s_mm_s": 5.604364937289001,
+      "maximum_backward_excursion_mm": 0.0,
+      "negative_velocity_duration_s": 0.0
+    },
+    {
+      "cycle": 3,
+      "t_start_s": 0.02,
+      "t_end_s": 0.03,
+      "delta_s_mm": -0.02352687398858097,
+      "mean_v_s_mm_s": -2.352687398858097,
+      "end_v_s_mm_s": -2.2393128453171176,
+      "minimum_v_s_mm_s": -11.088053112456501,
+      "maximum_backward_excursion_mm": 0.032364253391975906,
+      "negative_velocity_duration_s": 0.004771438659895081
+    }
+  ],
+  "total_delta_s_mm": 0.21196851058579072,
+  "mean_speed_mm_s": 7.065617177455208,
+  "max_backtrack_mm": 0.032364253391975906,
+  "minimum_v_s_mm_s": -11.088053112456501,
+  "three_cycle_gate_pass": false,
+  "stage1_two_cycle_gate_pass": true,
+  "selection_basis": "G=2.15 first open-loop <0.005 mm plus one allowed +0.05 robustness increment",
+  "selected_gif": "TRUECEL_B0P11_G2P20_A14P5_F100_FAST.gif",
+  "comparison_gif": "F100_G2P0_VS_G2P20.gif",
+  "gif_zip": "TRUECEL_B0P11_G2P20_A14P5_F100_FAST_GIFS.zip"
+}

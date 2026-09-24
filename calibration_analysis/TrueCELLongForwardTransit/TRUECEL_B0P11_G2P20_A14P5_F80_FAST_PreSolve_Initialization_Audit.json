@@ -1,0 +1,16 @@
+{
+  "case": "TRUECEL_B0P11_G2P20_A14P5_F80_FAST",
+  "initialization_gate_passed": true,
+  "audit_basis": "generated input deck; full-domain exact convex-hull/cell linear feasibility",
+  "fluid_containing_element_count": 7944,
+  "initial_water_volume_mm3": 12.186818181818179,
+  "initial_water_mass_mg": 12.195348954545452,
+  "intersecting_filled_elements": 0,
+  "intersecting_element_ids": [],
+  "max_EVF_geometrically_inside_robot": 0.0,
+  "estimated_overlap_volume_upper_bound_mm3": 0.0,
+  "robot_fluid_structural_penetration_mm": 0.0,
+  "minimum_robot_wall_gap_mm": 0.2448828413546757,
+  "robot_wall_penetration_mm": 0.0,
+  "canonical_plus_s": "left_to_right"
+}

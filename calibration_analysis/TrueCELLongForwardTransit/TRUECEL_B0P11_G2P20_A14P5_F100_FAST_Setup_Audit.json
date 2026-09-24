@@ -1,0 +1,23 @@
+{
+  "case": "TRUECEL_B0P11_G2P20_A14P5_F100_FAST",
+  "parent": "TRUECEL_B0P11_A14P5_F100_FAST",
+  "fresh_start": true,
+  "single_physics_change": "G 2.0 -> 2.2 mT",
+  "B0_mT": 11.0,
+  "G_mT": 2.2,
+  "frequency_Hz": 100.0,
+  "A_main_deg": 14.5,
+  "A_cross_deg": 2.5,
+  "duration_s": 0.02,
+  "CEL_mesh": [
+    44,
+    20,
+    20
+  ],
+  "c0_mm_s": 100000.0,
+  "explicit_controls": "SCALE FACTOR=0.4; no mass scaling",
+  "input_sha256": "0278B0D26E124280EECEDAC72AB4AC1414F75B5206BC2023561E1006B95BF63B",
+  "fortran_sha256": "1F95A6572195205E9307854323E4B0ECAB030CC509D0A94C476D5DD0FA7F4D86",
+  "magnetic_table_sha256": "3999F3A3826DD091C1ADB3B8EA26830739132F738E213A6D92E825EB12C0717C",
+  "dynamics_candidates_authorized": 1
+}

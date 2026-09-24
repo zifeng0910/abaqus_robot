@@ -1,0 +1,45 @@
+{
+  "candidate": "TRUECEL_B0P11_G2P20_A14P5_F80_FAST",
+  "classification": "F80_RECOIL_FAIL",
+  "event": "F80_RECOIL_FAIL_CYCLE",
+  "full_cycles": 2,
+  "total_time_s": 0.025000350549817085,
+  "fresh_start": true,
+  "only_physics_change": "frequency 100 -> 80 Hz",
+  "cycle_metrics": [
+    {
+      "cycle": 1,
+      "t_start_s": 0.0,
+      "t_end_s": 0.0125,
+      "delta_s_mm": 0.16681307323439035,
+      "mean_v_s_mm_s": 13.345045858751227,
+      "end_v_s_mm_s": 26.411116045149942,
+      "minimum_v_s_mm_s": 0.0,
+      "maximum_backward_excursion_mm": 0.0,
+      "negative_velocity_duration_s": 0.0
+    },
+    {
+      "cycle": 2,
+      "t_start_s": 0.0125,
+      "t_end_s": 0.025,
+      "delta_s_mm": -0.10277931565356743,
+      "mean_v_s_mm_s": -8.222345252285393,
+      "end_v_s_mm_s": -54.26350145470576,
+      "minimum_v_s_mm_s": -54.26350145470576,
+      "maximum_backward_excursion_mm": 0.2638093646856335,
+      "negative_velocity_duration_s": 0.006150419649856103
+    }
+  ],
+  "max_backtrack_mm": 0.2638283471428363,
+  "mean_speed_mm_s": 2.5605551008599123,
+  "total_delta_s_mm": 0.06401477512362005,
+  "first_negative_cycle_index": 2,
+  "stage1_three_cycle_complete": false,
+  "five_cycle_continuation": false,
+  "solver_status": "successful controlled early halt",
+  "gif": "TRUECEL_B0P11_G2P20_A14P5_F80_FAST.gif",
+  "phase_sync_gif": "F100_G2P20_VS_F80_G2P20_PHASE_SYNC.gif",
+  "gif_zip": "TRUECEL_B0P11_G2P20_A14P5_F80_FAST_GIFS.zip",
+  "trend_plot": "F100_G2P20_VS_F80_G2P20_CYCLE_TREND.png",
+  "comparison_csv": "F100_G2P20_VS_F80_G2P20_COMPARISON.csv"
+}

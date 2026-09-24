@@ -1,0 +1,92 @@
+*HEADING
+TRUE-CEL G2P20 F100 third-cycle restart; same saved physical state.
+*RESTART, READ, STEP=1, INTERVAL=4, END STEP
+*Step, name=Step_Cycle3_Restart, nlgeom=YES
+*Dynamic, Explicit, SCALE FACTOR=0.4
+, 0.010000000000
+*Bulk Viscosity
+0.06, 1.2
+**
+** BOUNDARY CONDITIONS
+**
+** PRECOMPUTED_TABLE magnetic loads plus FAST_SURROGATE_FLUID.
+** No Python, TCP, Magpylib, CEL, prescribed motion, or velocity clamp during dynamics.
+*Cload, amplitude=SOCKET_FX
+RP_ROBOT, 1, 1.
+*Cload, amplitude=SOCKET_FY
+RP_ROBOT, 2, 1.
+*Cload, amplitude=SOCKET_FZ
+RP_ROBOT, 3, 1.
+*Cload, amplitude=SOCKET_MX
+RP_ROBOT, 4, 1.
+*Cload, amplitude=SOCKET_MY
+RP_ROBOT, 5, 1.
+*Cload, amplitude=SOCKET_MZ
+RP_ROBOT, 6, 1.
+** FAST_SURROGATE_FLUID = OFF; TRUE CEL supplies all fluid loads.
+** FAST_SURROGATE_FLUID uses V_rel=V_robot-10*c_hat mm/s.
+**
+** OUTPUT REQUESTS
+**
+*Restart, write, number interval=2, time marks=YES
+**
+** FIELD OUTPUT: F-Output-1
+**
+** IMPACT ENERGY DIAGNOSTIC: preserve all existing physics; save visualization/contact fields every 25 us; RP and contact-resultant history remains every increment.
+*Output, field, time interval=0.00833333333333, time marks=NO
+*Node Output, nset=Robot_SOLID-1.ROBOT_CEL_BODY
+U, V
+*Node Output, nset=RP_ROBOT
+U, UR, V, VR
+*Contact Output, surface=ROBOT_SOLID-1.ROBOT_SOLID_SURF
+CDISP
+*Node Output, nset=Fluid_EULERIAN-1.FLUID_CEL_NODES
+V
+*Element Output, elset=FLUID_CEL_ALL
+EVF, PRESS
+*Output, history, frequency=1
+*Node Output, nset=RP_ROBOT
+COORD, U, UR, V, VR, A, AR, CF, RF, RM
+*Contact Output, surface=ROBOT_SOLID-1.ROBOT_SOLID_SURF
+CFN, CFS, CFT
+*Contact Output, surface=Pipe_WALL_HELPER-1.PIPE_WALL_HELPER_SURF
+CFN, CFS, CFT
+*Output, history, time interval=1.0e-5
+*Energy Output, variable=ALL
+*Output, history, frequency=1, sensor, name=RP_U1
+*Node Output, nset=RP_ROBOT
+U1
+*Output, history, frequency=1, sensor, name=RP_U2
+*Node Output, nset=RP_ROBOT
+U2
+*Output, history, frequency=1, sensor, name=RP_U3
+*Node Output, nset=RP_ROBOT
+U3
+*Output, history, frequency=1, sensor, name=RP_UR1
+*Node Output, nset=RP_ROBOT
+UR1
+*Output, history, frequency=1, sensor, name=RP_UR2
+*Node Output, nset=RP_ROBOT
+UR2
+*Output, history, frequency=1, sensor, name=RP_UR3
+*Node Output, nset=RP_ROBOT
+UR3
+*Output, history, frequency=1, sensor, name=RP_V1
+*Node Output, nset=RP_ROBOT
+V1
+*Output, history, frequency=1, sensor, name=RP_V2
+*Node Output, nset=RP_ROBOT
+V2
+*Output, history, frequency=1, sensor, name=RP_V3
+*Node Output, nset=RP_ROBOT
+V3
+*Output, history, frequency=1, sensor, name=RP_VR1
+*Node Output, nset=RP_ROBOT
+VR1
+*Output, history, frequency=1, sensor, name=RP_VR2
+*Node Output, nset=RP_ROBOT
+VR2
+*Output, history, frequency=1, sensor, name=RP_VR3
+*Node Output, nset=RP_ROBOT
+VR3
+*End Step
