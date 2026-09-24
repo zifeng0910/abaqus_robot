@@ -1,0 +1,81 @@
+{
+  "case": "TRUECEL_B0P11_G2P20_F100_ASYMROCK_FAST",
+  "duration_ms": 18.385518342256546,
+  "cycle_metrics": [
+    {
+      "cycle": 1,
+      "delta_s_mm": 0.09687048225120048,
+      "mean_v_s_mm_s": 9.687048225120048,
+      "end_v_s_mm_s": 15.504884046853252,
+      "min_v_s_mm_s": 0.0,
+      "max_backtrack_mm": 0.0,
+      "longest_negative_v_ms": 0.0
+    }
+  ],
+  "partial_cycle_metrics": {
+    "cycle": 2,
+    "complete_cycle": false,
+    "start_ms": 10.0,
+    "end_ms": 18.385518342256546,
+    "duration_ms": 8.385518342256546,
+    "delta_s_mm": -0.23140451943491064,
+    "mean_v_s_mm_s": -27.59573230778237,
+    "end_v_s_mm_s": -96.41815317722931,
+    "min_v_s_mm_s": -96.41815317722931,
+    "max_backtrack_mm": 0.267090929233896,
+    "longest_negative_v_ms": 6.244462914764881
+  },
+  "classification": "ASYMROCK_RECOIL_FAIL",
+  "follow_on_assessment": "SCALAR_AND_SIMPLE_WAVEFORM_TUNING_INSUFFICIENT",
+  "max_backtrack_mm": 0.267090929233896,
+  "mean_speed_mm_s": -7.317391583924096,
+  "first_net_negative_cycle": null,
+  "first_negative_v_cycle": 2,
+  "wall_exposure": [
+    {
+      "cycle": 1,
+      "complete_cycle": true,
+      "side": "TAIL",
+      "min_signed_gap_mm": -0.002711018090002182,
+      "closest_time_ms": 5.940535105764866,
+      "rocking_at_closest_deg": -8.004689157759287,
+      "dwell_gap_negative_ms": 0.10549978701839166,
+      "dwell_within_5um_ms": 0.657111892739741,
+      "dwell_within_10um_ms": 1.2286646492131217
+    },
+    {
+      "cycle": 1,
+      "complete_cycle": true,
+      "side": "HEAD",
+      "min_signed_gap_mm": 0.0025525143519650184,
+      "closest_time_ms": 7.132760249078274,
+      "rocking_at_closest_deg": -12.431307028781792,
+      "dwell_gap_negative_ms": 0.0,
+      "dwell_within_5um_ms": 0.16830323866266136,
+      "dwell_within_10um_ms": 0.809743503781766
+    },
+    {
+      "cycle": 2,
+      "complete_cycle": false,
+      "side": "TAIL",
+      "min_signed_gap_mm": -0.004481278253527177,
+      "closest_time_ms": 16.51686802506447,
+      "rocking_at_closest_deg": -12.999081330886982,
+      "dwell_gap_negative_ms": 1.2939350609038205,
+      "dwell_within_5um_ms": 3.928137719327734,
+      "dwell_within_10um_ms": 4.667888336770055
+    },
+    {
+      "cycle": 2,
+      "complete_cycle": false,
+      "side": "HEAD",
+      "min_signed_gap_mm": 0.003983412301433953,
+      "closest_time_ms": 11.270254850387573,
+      "rocking_at_closest_deg": 12.83306477569694,
+      "dwell_gap_negative_ms": 0.0,
+      "dwell_within_5um_ms": 0.054067653454204244,
+      "dwell_within_10um_ms": 1.1828878224881454
+    }
+  ],
+  "three_cycle_preferred_gate": false
+}

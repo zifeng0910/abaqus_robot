@@ -1,0 +1,5 @@
+F100_RECOIL_FAIL_POSITION
+time_s=  1.8385337098E-02
+displacement_mm= -1.3449905771E-01
+v_s_mm_s= -9.6406990741E+01
+max_backtrack_mm=  2.6705594771E-01

@@ -1,0 +1,12 @@
+{
+  "source_table_sha256": "3999F3A3826DD091C1ADB3B8EA26830739132F738E213A6D92E825EB12C0717C",
+  "field_expression": "B_unit=normalize(-c-tan((center+amp*sin(2*pi*100*t))*deg)*n+tan(2.5*deg*cos(2*pi*100*t))*rock)",
+  "center_deg": -0.4822655,
+  "amplitude_deg": 14.0255795,
+  "cross_deg": 2.5,
+  "B0_mT": 11.0,
+  "gradient_mT": 2.2,
+  "frequency_Hz": 100.0,
+  "max_parent_formula_error": 9.17668718791731e-15,
+  "table_sha256": "451FC934489DF8BC57000BC88D0338EA82C81E483775FFB4D6193925644FC944"
+}
