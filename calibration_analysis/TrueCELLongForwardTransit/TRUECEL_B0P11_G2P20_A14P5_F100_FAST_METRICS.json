@@ -1,6 +1,7 @@
 {
   "candidate": "TRUECEL_B0P11_G2P20_A14P5_F100_FAST",
   "classification": "TWO_CYCLE_IMPROVED_BUT_RESIDUAL_RECOIL",
+  "cycle3_evidence_status": "RESTART_CONTAMINATED_C3_RESULT",
   "frequency_Hz": 100,
   "B0_mT": 11.0,
   "G_mT": 2.2,

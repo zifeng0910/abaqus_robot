@@ -1,0 +1,150 @@
+{
+  "job": "TRUECEL_B0P11_G2P20_A14P5_F100_CLEAN30",
+  "baseline": "TRUECEL_B0P11_G2P20_A14P5_F100_FAST",
+  "old_c3_evidence_status": "RESTART_CONTAMINATED_C3_RESULT",
+  "clean20_comparison": {
+    "s": {
+      "rms": 0.02740655080563384,
+      "p99": 0.09642961421719193,
+      "max": 0.10488202370591823
+    },
+    "v_s": {
+      "rms": 10.794792098556298,
+      "p99": 36.41423681039994,
+      "max": 49.50994909837449
+    },
+    "rocking_angle": {
+      "rms": 0.6907732936564326,
+      "p99": 3.3852877215178916,
+      "max": 3.7597894529679134
+    },
+    "omega_rock": {
+      "rms": 22.36366292931552,
+      "p99": 127.64409119323679,
+      "max": 156.71067411279142
+    },
+    "magnetic": {
+      "Fmag1": {
+        "rms": 6.208268315151785e-08,
+        "p99": 2.715270689282244e-07,
+        "max": 2.7601498719746946e-07
+      },
+      "Fmag2": {
+        "rms": 3.931964351671208e-09,
+        "p99": 1.7196981601883552e-08,
+        "max": 1.748122081015599e-08
+      },
+      "Fmag3": {
+        "rms": 1.3194838136489646e-08,
+        "p99": 5.77094214215095e-08,
+        "max": 5.866326801016706e-08
+      },
+      "Mmag1": {
+        "rms": 2.511987940746755e-05,
+        "p99": 8.489164558285811e-05,
+        "max": 8.57136023016844e-05
+      },
+      "Mmag2": {
+        "rms": 8.692149845939459e-05,
+        "p99": 0.000531533701187199,
+        "max": 0.000579453936533143
+      },
+      "Mmag3": {
+        "rms": 0.0001376630924939907,
+        "p99": 0.0006615177899105734,
+        "max": 0.0007322137234105691
+      },
+      "Fmag_s": {
+        "rms": 6.359106575929305e-08,
+        "p99": 2.781241856757043e-07,
+        "max": 2.827211439780643e-07
+      }
+    },
+    "whole_general_contact": {
+      "ElementSet  PIBATCH|CFN1 on surface ASSEMBLY_ROBOT_SOLID-1_ROBOT_SOLID_SURF": {
+        "rms": 0.0005260908911111442,
+        "p99": 0.0020786395155355584,
+        "max": 0.005697747754873996
+      },
+      "ElementSet  PIBATCH|CFN2 on surface ASSEMBLY_ROBOT_SOLID-1_ROBOT_SOLID_SURF": {
+        "rms": 0.0017675839825935244,
+        "p99": 0.008569750053468366,
+        "max": 0.04399242712259082
+      },
+      "ElementSet  PIBATCH|CFN3 on surface ASSEMBLY_ROBOT_SOLID-1_ROBOT_SOLID_SURF": {
+        "rms": 0.0009160419925284919,
+        "p99": 0.0027610060886637143,
+        "max": 0.019060396064659296
+      },
+      "ElementSet  PIBATCH|CFNM on surface ASSEMBLY_ROBOT_SOLID-1_ROBOT_SOLID_SURF": {
+        "rms": 0.0018568047172355855,
+        "p99": 0.008616775816512604,
+        "max": 0.044576477264662524
+      }
+    },
+    "energy": {
+      "ALLKE": {
+        "rms": 0.00017720402703324013,
+        "p99": 0.0006784321981321436,
+        "max": 0.0007610858507524514
+      },
+      "ALLPW": {
+        "rms": 0.008289670372457088,
+        "p99": 0.02519228597695303,
+        "max": 0.026478004203102992
+      },
+      "ETOTAL": {
+        "rms": 0.005458871670274989,
+        "p99": 0.016431987042100617,
+        "max": 0.017308206204446203
+      }
+    }
+  },
+  "clean20_gates": {
+    "s_max_mm": false,
+    "v_s_p99_mm_s": false,
+    "rocking_angle_max_deg": false,
+    "omega_rock_p99_rad_s": false,
+    "magnetic_force_max_N": false,
+    "magnetic_torque_max_Nmm": false,
+    "contact_p99_N": false
+  },
+  "clean20_first_divergence": {
+    "s": {
+      "time_ms": 5.184424109756947,
+      "difference": 1.0036733550725097e-06,
+      "threshold": 1e-06
+    },
+    "v_s": {
+      "time_ms": 5.11305732652545,
+      "difference": 0.010069596246459867,
+      "threshold": 0.01
+    },
+    "rocking_angle": {
+      "time_ms": 6.039985455572605,
+      "difference": 0.0010004828051393133,
+      "threshold": 0.001
+    },
+    "omega_rock": {
+      "time_ms": 5.210514180362225,
+      "difference": -0.05167976082987025,
+      "threshold": 0.05
+    }
+  },
+  "restart_write_times_ms": {
+    "original_clean20": [
+      5,
+      10,
+      15,
+      20
+    ],
+    "clean30": [
+      7.5,
+      15,
+      22.5,
+      30
+    ]
+  },
+  "clean20_reproducible": false,
+  "classification": "CLEAN_RERUN_NOT_REPRODUCIBLE"
+}

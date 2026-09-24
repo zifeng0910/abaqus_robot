@@ -1,0 +1,15 @@
+{
+  "job": "TRUECEL_B0P11_G2P20_A14P5_F100_CLEAN30",
+  "parent": "TRUECEL_B0P11_G2P20_A14P5_F100_FAST",
+  "fresh_start": true,
+  "single_step_duration_s": 0.03,
+  "restart_read": false,
+  "physics_change": "NONE",
+  "output_change": "same output keywords; number interval=4 restart writes shift from 5/10/15/20 ms to 7.5/15/22.5/30 ms with step duration",
+  "vuamp_change": "job paths and physical early-stop gate only",
+  "parent_input_sha256": "0278B0D26E124280EECEDAC72AB4AC1414F75B5206BC2023561E1006B95BF63B",
+  "parent_vuamp_sha256": "1F95A6572195205E9307854323E4B0ECAB030CC509D0A94C476D5DD0FA7F4D86",
+  "input_sha256": "9886C87AA004BF6B51542117870F0503619BE6F9B2A0CA48061B62C6CA3AFF9C",
+  "vuamp_sha256": "CC4762A3AB059A687B5F6172F1789E065406651A95045DDFAB78F2E21527A76B",
+  "magnetic_table_sha256": "3999F3A3826DD091C1ADB3B8EA26830739132F738E213A6D92E825EB12C0717C"
+}
