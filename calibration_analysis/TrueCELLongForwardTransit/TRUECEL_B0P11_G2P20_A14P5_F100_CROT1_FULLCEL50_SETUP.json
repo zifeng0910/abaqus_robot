@@ -1,0 +1,22 @@
+{
+  "case": "TRUECEL_B0P11_G2P20_A14P5_F100_CROT1_FULLCEL50",
+  "parent": "TRUECEL_B0P11_G2P20_A14P5_F100_CLEAN50",
+  "parent_input_sha256": "17BD69A859BBEA0F0A3784A0C962CD485B10C0080F0EEBB07EE959F0C5007904",
+  "candidate_input_sha256": "4CC5ECCE80E1E172E7A44758E4E10B9F85B653F8D3E1D92AC7A04F25AF8D30F8",
+  "parent_fortran_sha256": "77FDF29A47F3BA5E99AD2459572D04F4FB31900633F7599ABB9D2CB384F5D705",
+  "candidate_fortran_sha256": "1ADA5CFC8AE9F7162708B84270FDCC0A27B106A1167E64DF83C477CAED085D2F",
+  "magnetic_table_sha256": "3999F3A3826DD091C1ADB3B8EA26830739132F738E213A6D92E825EB12C0717C",
+  "c_rot_N_mm_s": 3.5006005000754733e-06,
+  "source_screen": {
+    "name": "TRUECEL_MAGNETIC_ONLY_DAMPING_1P0X",
+    "factor": 1.0,
+    "c_rot_N_mm_s": 3.5006005000754733e-06,
+    "ratio_to_bulk_water": 133.95959297489063
+  },
+  "full_CEL_start_s": 0.0,
+  "full_CEL_end_s": 0.05,
+  "single_explicit_step": true,
+  "restart_write_strategy": "number interval=10, time marks=YES; every 5 ms; never read",
+  "fluid_contact_mesh_EOS_c0_and_magnetic_parameters_unchanged": true,
+  "damping_scope": "RP rotational moment components 4-6 only"
+}
