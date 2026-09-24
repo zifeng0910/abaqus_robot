@@ -1,0 +1,34 @@
+{
+  "job": "TRUECEL_B0P11_G2P20_A14P5_F100_CLEAN50",
+  "baseline": "TRUECEL_B0P11_G2P20_A14P5_F100_FAST",
+  "fresh_start": true,
+  "single_explicit_step_s": 0.05,
+  "restart_read": false,
+  "restart_write_strategy": "number interval=10, time marks=YES; every 5 ms; never read",
+  "restart_write_times_ms": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50
+  ],
+  "input_differences": [
+    "job name in two comments",
+    "step period .020 -> .050 s",
+    "restart number interval 4 -> 10"
+  ],
+  "input_normalized_to_baseline_after_these_changes": true,
+  "vuamp_source": "TRUECEL_B0P11_G2P20_A14P5_F100_CLEAN30",
+  "vuamp_change": "job paths only",
+  "physical_early_stop": "disabled; numerical collapse stop retained",
+  "baseline_input_sha256": "0278B0D26E124280EECEDAC72AB4AC1414F75B5206BC2023561E1006B95BF63B",
+  "input_sha256": "17BD69A859BBEA0F0A3784A0C962CD485B10C0080F0EEBB07EE959F0C5007904",
+  "vuamp_source_sha256": "CC4762A3AB059A687B5F6172F1789E065406651A95045DDFAB78F2E21527A76B",
+  "vuamp_sha256": "77FDF29A47F3BA5E99AD2459572D04F4FB31900633F7599ABB9D2CB384F5D705",
+  "magnetic_table_sha256": "3999F3A3826DD091C1ADB3B8EA26830739132F738E213A6D92E825EB12C0717C"
+}

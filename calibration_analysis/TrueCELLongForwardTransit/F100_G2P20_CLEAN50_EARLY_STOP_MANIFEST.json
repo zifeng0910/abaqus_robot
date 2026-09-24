@@ -1,0 +1,81 @@
+{
+  "odb_included": false,
+  "odb_location": "J:\\abaqusfangzhen\\abaqus_robot\\calibration_analysis\\TrueCELLongForwardTransit\\case\\TRUECEL_B0P11_G2P20_A14P5_F100_CLEAN50\\TRUECEL_B0P11_G2P20_A14P5_F100_CLEAN50.odb",
+  "files": [
+    {
+      "name": "F100_G2P20_CLEAN50_EARLY_STOP_REPORT.md",
+      "bytes": 1704,
+      "sha256": "bfb93717edd80219e8d2ab94be90bda9001211cc6aa6d506e8df728d0b33580c"
+    },
+    {
+      "name": "F100_G2P20_CLEAN50_EARLY_STOP_METRICS.json",
+      "bytes": 3831,
+      "sha256": "127b7816f478443e6c63427caafdd4a80c657f0b66f4af2124c66ef08c0e25af"
+    },
+    {
+      "name": "F100_G2P20_CLEAN50_EARLY_STOP_CYCLES.csv",
+      "bytes": 687,
+      "sha256": "8c32fde7467dcc3fbed029f3ad3cf6a46460ff5b6b3e1421f18b64a7b389ac44"
+    },
+    {
+      "name": "F100_G2P20_CLEAN50_EARLY_STOP_MOTION.png",
+      "bytes": 103306,
+      "sha256": "921fe4fe4f1b83deec2e5c536410e47edf71aea20063e371fd6630fd83005eff"
+    },
+    {
+      "name": "F100_G2P20_CLEAN50_EARLY_STOP_MOTION.gif",
+      "bytes": 1592305,
+      "sha256": "1eab324765814f7e0e78548828c01eb69bc827211b8c7de073684b40d0990f1f"
+    },
+    {
+      "name": "F100_G2P20_CLEAN50_EARLY_STOP_C3_C4.gif",
+      "bytes": 464160,
+      "sha256": "e77268178ee716b5ef0a1a2edb1439ea2d9a4179192fbc53f0714863abb056a2"
+    },
+    {
+      "name": "case_identity.json",
+      "bytes": 8668,
+      "sha256": "36bfc550161a02c77205d2d4cc7444f2b51573a662aa7c2696efea834417d510"
+    },
+    {
+      "name": "online_motion.csv",
+      "bytes": 388286,
+      "sha256": "33222af3513dce7fdae7480470fe81e71cf189740eb19e3af5b4060462061613"
+    },
+    {
+      "name": "TRUECEL_B0P11_G2P20_A14P5_F100_CLEAN50.sta",
+      "bytes": 20990,
+      "sha256": "a2d0d1b1a34ea116a0e6ad1b5919562fdeb7cca6bbfc5426edc0fcc93e1aa31b"
+    },
+    {
+      "name": "TRUECEL_B0P11_G2P20_A14P5_F100_CLEAN50.inp",
+      "bytes": 3020238,
+      "sha256": "17bd69a859bbea0f0a3784a0c962cd485b10c0080f0eebb07ee959f0c5007904"
+    },
+    {
+      "name": "vuamp_precomputed_truecel.f90",
+      "bytes": 13080,
+      "sha256": "77fdf29a47f3ba5e99ad2459572d04f4fb31900633f7599abb9d2cb384f5d705"
+    },
+    {
+      "name": "magnetic_field_gradient_table_B0P11_A14P5.dat",
+      "bytes": 172995,
+      "sha256": "3999f3a3826dd091c1adb3b8ea26830739132f738e213a6d92e825eb12c0717c"
+    },
+    {
+      "name": "magnetic_field_gradient_table_B0P11_A14P5.dat.json",
+      "bytes": 1181,
+      "sha256": "2a10554c4ca407230c1b97be780b9a3e1c16742a6918e442c288b8359ebe0166"
+    },
+    {
+      "name": "TRUECEL_B0P11_G2P20_A14P5_F100_CLEAN50_SETUP.json",
+      "bytes": 1242,
+      "sha256": "2f6594f6b9d6a9ffc049b91747cb3c1653cb075f02059f4f5066b264abb2175f"
+    },
+    {
+      "name": "TRUECEL_B0P11_G2P20_A14P5_F100_CLEAN50_PreSolve_Initialization_Audit.json",
+      "bytes": 685,
+      "sha256": "002ae546d769a0960e1f497489bfeefc057c3e34440f21b277463a0ccb218796"
+    }
+  ]
+}
