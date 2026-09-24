@@ -1,0 +1,40 @@
+{
+  "case": "TRUECEL_B0P11_G2P20_F100_NOFLUID_CONTROL",
+  "source": "TRUECEL_B0P11_G2P20_A14P5_F100_CLEAN50",
+  "source_input_sha256": "17BD69A859BBEA0F0A3784A0C962CD485B10C0080F0EEBB07EE959F0C5007904",
+  "control_input_sha256": "DF7A1A4D19BE7C869440BD1E0DB31094B71A903A010668F568727A82885DBAD1",
+  "source_fortran_sha256": "77FDF29A47F3BA5E99AD2459572D04F4FB31900633F7599ABB9D2CB384F5D705",
+  "control_fortran_sha256": "92AD2088B803B0BF2757B356561A684D6507DE7007FEF535C8887CA5A70A1030",
+  "magnetic_table_sha256": "3999F3A3826DD091C1ADB3B8EA26830739132F738E213A6D92E825EB12C0717C",
+  "removed_blocks": {
+    "Eulerian_part": 1,
+    "Eulerian_instance": 1,
+    "fluid_material": 1,
+    "interaction_properties": 1,
+    "contact_definition": 1,
+    "Eulerian_elsets": 2,
+    "Eulerian_surface": 1,
+    "fluid_initial_conditions": 2,
+    "contact_output": 3,
+    "Eulerian_field_output": 2
+  },
+  "wall_geometry_present": true,
+  "wall_contact_present": false,
+  "fluid_domain_present": false,
+  "fluid_contact_present": false,
+  "single_explicit_step_s": 0.05,
+  "restart_read": false,
+  "time_step_change": "Automatic stable increment -> DIRECT 1.0e-7 s; all-rigid Explicit model requires it",
+  "restart_write_times_ms": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50
+  ]
+}
