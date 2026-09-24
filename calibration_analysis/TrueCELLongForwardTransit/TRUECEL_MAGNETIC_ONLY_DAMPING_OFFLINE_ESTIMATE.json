@@ -1,0 +1,61 @@
+{
+  "parent": "TRUECEL_B0P11_G2P20_F100_NOFLUID_CONTROL",
+  "robot_mass_N_s2_per_mm": 1.0018808990074136e-08,
+  "robot_mass_mg": 10.018808990074136,
+  "inertia_tensor_N_mm_s2": [
+    [
+      1.0371729557269982e-09,
+      3.0162383569083267e-10,
+      -9.648231506181152e-10
+    ],
+    [
+      3.0162383569083267e-10,
+      5.548275709286367e-09,
+      6.442817781595843e-11
+    ],
+    [
+      -9.648231506181152e-10,
+      6.442817781595843e-11,
+      5.366056347832466e-09
+    ]
+  ],
+  "rocking_inertia_N_mm_s2": 5.571378733769723e-09,
+  "magnetic_torque_rock_p95_abs_N_mm": 0.002429080686514152,
+  "magnetic_torque_rock_peak_abs_N_mm": 0.0025635529071299187,
+  "command_omega_peak_rad_s": 159.01029312866189,
+  "water_viscosity_N_s_per_mm2": 7.1e-10,
+  "bulk_water_slender_rod_c_N_mm_s": 2.6131764230812686e-08,
+  "screen_reference_c_I_2pif_N_mm_s": 3.5006005000754733e-06,
+  "bulk_water_to_reference_ratio": 0.007464937581494742,
+  "reference_definition": "I_rock * 2*pi*f; dynamic screening scale, not calibrated fluid drag",
+  "damping_model": "isotropic rotational torque -c_rot * global angular velocity at RP; no translational force",
+  "parent_input_sha256": "DF7A1A4D19BE7C869440BD1E0DB31094B71A903A010668F568727A82885DBAD1",
+  "parent_fortran_sha256": "92AD2088B803B0BF2757B356561A684D6507DE7007FEF535C8887CA5A70A1030",
+  "magnetic_table_sha256": "3999F3A3826DD091C1ADB3B8EA26830739132F738E213A6D92E825EB12C0717C",
+  "cases": [
+    {
+      "name": "TRUECEL_MAGNETIC_ONLY_DAMPING_0P1X",
+      "factor": 0.1,
+      "c_rot_N_mm_s": 3.5006005000754735e-07,
+      "ratio_to_bulk_water": 13.395959297489064
+    },
+    {
+      "name": "TRUECEL_MAGNETIC_ONLY_DAMPING_0P3X",
+      "factor": 0.3,
+      "c_rot_N_mm_s": 1.050180150022642e-06,
+      "ratio_to_bulk_water": 40.187877892467185
+    },
+    {
+      "name": "TRUECEL_MAGNETIC_ONLY_DAMPING_1P0X",
+      "factor": 1.0,
+      "c_rot_N_mm_s": 3.5006005000754733e-06,
+      "ratio_to_bulk_water": 133.95959297489063
+    },
+    {
+      "name": "TRUECEL_MAGNETIC_ONLY_DAMPING_3P0X",
+      "factor": 3.0,
+      "c_rot_N_mm_s": 1.050180150022642e-05,
+      "ratio_to_bulk_water": 401.87877892467185
+    }
+  ]
+}

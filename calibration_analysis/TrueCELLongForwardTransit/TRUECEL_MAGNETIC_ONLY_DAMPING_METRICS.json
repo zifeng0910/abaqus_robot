@@ -1,0 +1,464 @@
+{
+  "classification": "MAGNETIC_ROCKING_LIMIT_CYCLE_NOT_FOUND",
+  "selected_visualization_case": "TRUECEL_MAGNETIC_ONLY_DAMPING_3P0X",
+  "gate_basis": "C2-C5 after 1-ms start-up ramp: amplitude spread <10%, phase spread <10 deg, harmonic residual <20%; no geometric wall crossing; no >=0.5-ms transverse hover (|theta|>=70 deg and |omega|<=20 rad/s)",
+  "physical_plausibility_note": "Candidate c values are dynamic screening scales, 13-402 times the bulk-water slender-rod estimate. A passing dynamics gate alone does not calibrate the drag or prove hydrodynamic plausibility.",
+  "offline_estimate": {
+    "parent": "TRUECEL_B0P11_G2P20_F100_NOFLUID_CONTROL",
+    "robot_mass_N_s2_per_mm": 1.0018808990074136e-08,
+    "robot_mass_mg": 10.018808990074136,
+    "inertia_tensor_N_mm_s2": [
+      [
+        1.0371729557269982e-09,
+        3.0162383569083267e-10,
+        -9.648231506181152e-10
+      ],
+      [
+        3.0162383569083267e-10,
+        5.548275709286367e-09,
+        6.442817781595843e-11
+      ],
+      [
+        -9.648231506181152e-10,
+        6.442817781595843e-11,
+        5.366056347832466e-09
+      ]
+    ],
+    "rocking_inertia_N_mm_s2": 5.571378733769723e-09,
+    "magnetic_torque_rock_p95_abs_N_mm": 0.002429080686514152,
+    "magnetic_torque_rock_peak_abs_N_mm": 0.0025635529071299187,
+    "command_omega_peak_rad_s": 159.01029312866189,
+    "water_viscosity_N_s_per_mm2": 7.1e-10,
+    "bulk_water_slender_rod_c_N_mm_s": 2.6131764230812686e-08,
+    "screen_reference_c_I_2pif_N_mm_s": 3.5006005000754733e-06,
+    "bulk_water_to_reference_ratio": 0.007464937581494742,
+    "reference_definition": "I_rock * 2*pi*f; dynamic screening scale, not calibrated fluid drag",
+    "damping_model": "isotropic rotational torque -c_rot * global angular velocity at RP; no translational force",
+    "parent_input_sha256": "DF7A1A4D19BE7C869440BD1E0DB31094B71A903A010668F568727A82885DBAD1",
+    "parent_fortran_sha256": "92AD2088B803B0BF2757B356561A684D6507DE7007FEF535C8887CA5A70A1030",
+    "magnetic_table_sha256": "3999F3A3826DD091C1ADB3B8EA26830739132F738E213A6D92E825EB12C0717C",
+    "cases": [
+      {
+        "name": "TRUECEL_MAGNETIC_ONLY_DAMPING_0P1X",
+        "factor": 0.1,
+        "c_rot_N_mm_s": 3.5006005000754735e-07,
+        "ratio_to_bulk_water": 13.395959297489064
+      },
+      {
+        "name": "TRUECEL_MAGNETIC_ONLY_DAMPING_0P3X",
+        "factor": 0.3,
+        "c_rot_N_mm_s": 1.050180150022642e-06,
+        "ratio_to_bulk_water": 40.187877892467185
+      },
+      {
+        "name": "TRUECEL_MAGNETIC_ONLY_DAMPING_1P0X",
+        "factor": 1.0,
+        "c_rot_N_mm_s": 3.5006005000754733e-06,
+        "ratio_to_bulk_water": 133.95959297489063
+      },
+      {
+        "name": "TRUECEL_MAGNETIC_ONLY_DAMPING_3P0X",
+        "factor": 3.0,
+        "c_rot_N_mm_s": 1.050180150022642e-05,
+        "ratio_to_bulk_water": 401.87877892467185
+      }
+    ]
+  },
+  "baseline": {
+    "case": "TRUECEL_B0P11_G2P20_F100_NOFLUID_CONTROL",
+    "c_rot_N_mm_s": 0.0,
+    "factor": 0.0,
+    "ratio_to_bulk_water": 0.0,
+    "cycles": [
+      {
+        "cycle": 1,
+        "rocking_half_range_deg": 21.176997608568293,
+        "rocking_fundamental_amplitude_deg": 17.212057140411947,
+        "phase_lag_deg": 7.0794397186292315,
+        "theta_offset_deg": -0.8710848244912704,
+        "sinusoid_residual_rms_over_amplitude": 0.3687929537139961,
+        "omega_peak_abs_rad_s": 416.3536743837088,
+        "theta_peak_abs_deg": 25.341840572693467
+      },
+      {
+        "cycle": 2,
+        "rocking_half_range_deg": 25.671012458877257,
+        "rocking_fundamental_amplitude_deg": 18.929881538606217,
+        "phase_lag_deg": 1.6608253617976914,
+        "theta_offset_deg": -0.22363373999204794,
+        "sinusoid_residual_rms_over_amplitude": 0.333948048830515,
+        "omega_peak_abs_rad_s": 419.7719805171033,
+        "theta_peak_abs_deg": 26.198170663791345
+      },
+      {
+        "cycle": 3,
+        "rocking_half_range_deg": 21.931368528195833,
+        "rocking_fundamental_amplitude_deg": 17.69411266858199,
+        "phase_lag_deg": -8.297251902126789,
+        "theta_offset_deg": 1.0396458599512715,
+        "sinusoid_residual_rms_over_amplitude": 0.36055213744421094,
+        "omega_peak_abs_rad_s": 402.2409429193369,
+        "theta_peak_abs_deg": 26.303824390170394
+      },
+      {
+        "cycle": 4,
+        "rocking_half_range_deg": 21.358312736528607,
+        "rocking_fundamental_amplitude_deg": 17.04514711373698,
+        "phase_lag_deg": 5.855933784058351,
+        "theta_offset_deg": -0.7024123128091742,
+        "sinusoid_residual_rms_over_amplitude": 0.36650831882843976,
+        "omega_peak_abs_rad_s": 417.75653861059135,
+        "theta_peak_abs_deg": 24.754066572604795
+      },
+      {
+        "cycle": 5,
+        "rocking_half_range_deg": 25.20448323239833,
+        "rocking_fundamental_amplitude_deg": 18.844735073094583,
+        "phase_lag_deg": 2.9173582503900093,
+        "theta_offset_deg": -0.386801946849525,
+        "sinusoid_residual_rms_over_amplitude": 0.32317933411635075,
+        "omega_peak_abs_rad_s": 411.75432987048384,
+        "theta_peak_abs_deg": 26.219624913177284
+      }
+    ],
+    "amplitude_spread_C2_C5": 0.10396544874407905,
+    "phase_spread_C2_C5_deg": 14.15318568618514,
+    "transverse_time_ms": 0.0,
+    "transverse_hover_time_ms": 0.0,
+    "longest_transverse_hover_ms": 0.0,
+    "max_abs_omega_rad_s": 419.7719805171033,
+    "wall": {
+      "signed_min_wall_gap_mm": -0.26053019604554417,
+      "virtual_wall_crossing_events": 13,
+      "virtual_wall_penetration_duration_ms": 23.900000000000002,
+      "wall_gap_sample_interval_ms": 0.05,
+      "wall_gap_definition": "minimum signed gap of rigid robot convex hull to passive wall polygon; negative is geometric overlap, not contact force"
+    },
+    "gates": {
+      "amplitude_spread_C2_C5_below_10pct": false,
+      "phase_spread_C2_C5_below_10deg": false,
+      "sinusoid_residual_C2_C5_below_20pct": false,
+      "no_virtual_wall_crossings": false,
+      "no_transverse_hover_over_0p5ms": true
+    },
+    "all_dynamics_gates_pass": false
+  },
+  "results": [
+    {
+      "case": "TRUECEL_MAGNETIC_ONLY_DAMPING_0P1X",
+      "c_rot_N_mm_s": 3.5006005000754735e-07,
+      "factor": 0.1,
+      "ratio_to_bulk_water": 13.395959297489064,
+      "cycles": [
+        {
+          "cycle": 1,
+          "rocking_half_range_deg": 20.247902077070794,
+          "rocking_fundamental_amplitude_deg": 17.309947301450343,
+          "phase_lag_deg": 7.622052471709054,
+          "theta_offset_deg": -0.7825128224776514,
+          "sinusoid_residual_rms_over_amplitude": 0.31483700531642067,
+          "omega_peak_abs_rad_s": 386.72701833098347,
+          "theta_peak_abs_deg": 24.601557015218415
+        },
+        {
+          "cycle": 2,
+          "rocking_half_range_deg": 22.44547836642309,
+          "rocking_fundamental_amplitude_deg": 18.515744198829708,
+          "phase_lag_deg": 2.2138604559531814,
+          "theta_offset_deg": -0.1214582088755467,
+          "sinusoid_residual_rms_over_amplitude": 0.21762872999687452,
+          "omega_peak_abs_rad_s": 343.3780399630964,
+          "theta_peak_abs_deg": 23.373894406633603
+        },
+        {
+          "cycle": 3,
+          "rocking_half_range_deg": 18.100469826366062,
+          "rocking_fundamental_amplitude_deg": 17.6565025841844,
+          "phase_lag_deg": -2.582185657253177,
+          "theta_offset_deg": 0.4855475184732419,
+          "sinusoid_residual_rms_over_amplitude": 0.16927845410632295,
+          "omega_peak_abs_rad_s": 283.7561893642538,
+          "theta_peak_abs_deg": 21.207359147769857
+        },
+        {
+          "cycle": 4,
+          "rocking_half_range_deg": 17.55060408186509,
+          "rocking_fundamental_amplitude_deg": 17.521178705065388,
+          "phase_lag_deg": 3.366969590832241,
+          "theta_offset_deg": -0.25777390568339625,
+          "sinusoid_residual_rms_over_amplitude": 0.12149477658216513,
+          "omega_peak_abs_rad_s": 267.28761237763507,
+          "theta_peak_abs_deg": 19.668059845613126
+        },
+        {
+          "cycle": 5,
+          "rocking_half_range_deg": 19.260199458947778,
+          "rocking_fundamental_amplitude_deg": 18.05504118556017,
+          "phase_lag_deg": 1.950868706016081,
+          "theta_offset_deg": -0.08535455218923413,
+          "sinusoid_residual_rms_over_amplitude": 0.0863734635274658,
+          "omega_peak_abs_rad_s": 239.9098372651826,
+          "theta_peak_abs_deg": 19.879144335976843
+        }
+      ],
+      "amplitude_spread_C2_C5": 0.05544734486317448,
+      "phase_spread_C2_C5_deg": 5.949155248085418,
+      "transverse_time_ms": 0.0,
+      "transverse_hover_time_ms": 0.0,
+      "longest_transverse_hover_ms": 0.0,
+      "max_abs_omega_rad_s": 386.72701833098347,
+      "wall": {
+        "signed_min_wall_gap_mm": -0.20369704481724282,
+        "virtual_wall_crossing_events": 11,
+        "virtual_wall_penetration_duration_ms": 24.150000000000002,
+        "wall_gap_sample_interval_ms": 0.05,
+        "wall_gap_definition": "minimum signed gap of rigid robot convex hull to passive wall polygon; negative is geometric overlap, not contact force"
+      },
+      "gates": {
+        "amplitude_spread_C2_C5_below_10pct": true,
+        "phase_spread_C2_C5_below_10deg": true,
+        "sinusoid_residual_C2_C5_below_20pct": false,
+        "no_virtual_wall_crossings": false,
+        "no_transverse_hover_over_0p5ms": true
+      },
+      "all_dynamics_gates_pass": false
+    },
+    {
+      "case": "TRUECEL_MAGNETIC_ONLY_DAMPING_0P3X",
+      "c_rot_N_mm_s": 1.050180150022642e-06,
+      "factor": 0.3,
+      "ratio_to_bulk_water": 40.187877892467185,
+      "cycles": [
+        {
+          "cycle": 1,
+          "rocking_half_range_deg": 18.961453044929574,
+          "rocking_fundamental_amplitude_deg": 17.394053125194098,
+          "phase_lag_deg": 9.282768967906804,
+          "theta_offset_deg": -0.6730163520759895,
+          "sinusoid_residual_rms_over_amplitude": 0.24061527325184684,
+          "omega_peak_abs_rad_s": 336.92112957157275,
+          "theta_peak_abs_deg": 23.26337200131719
+        },
+        {
+          "cycle": 2,
+          "rocking_half_range_deg": 19.386457979156813,
+          "rocking_fundamental_amplitude_deg": 18.07318230058843,
+          "phase_lag_deg": 4.269917786320235,
+          "theta_offset_deg": -0.05203223452939143,
+          "sinusoid_residual_rms_over_amplitude": 0.09487569337287949,
+          "omega_peak_abs_rad_s": 265.800497423339,
+          "theta_peak_abs_deg": 20.16322738590574
+        },
+        {
+          "cycle": 3,
+          "rocking_half_range_deg": 17.475911023116673,
+          "rocking_fundamental_amplitude_deg": 17.70481087037884,
+          "phase_lag_deg": 2.940280370085702,
+          "theta_offset_deg": 0.11676587469565003,
+          "sinusoid_residual_rms_over_amplitude": 0.038495327069573315,
+          "omega_peak_abs_rad_s": 222.08671368949084,
+          "theta_peak_abs_deg": 18.300036107489515
+        },
+        {
+          "cycle": 4,
+          "rocking_half_range_deg": 17.664121726891757,
+          "rocking_fundamental_amplitude_deg": 17.711468464491357,
+          "phase_lag_deg": 4.120315550878246,
+          "theta_offset_deg": -0.031961200091919606,
+          "sinusoid_residual_rms_over_amplitude": 0.01432798173599449,
+          "omega_peak_abs_rad_s": 201.39433192691337,
+          "theta_peak_abs_deg": 17.84676755714433
+        },
+        {
+          "cycle": 5,
+          "rocking_half_range_deg": 17.814484295300225,
+          "rocking_fundamental_amplitude_deg": 17.764725947221436,
+          "phase_lag_deg": 3.9223985173637743,
+          "theta_offset_deg": -0.007174492009416833,
+          "sinusoid_residual_rms_over_amplitude": 0.005698986742068229,
+          "omega_peak_abs_rad_s": 195.82566944365118,
+          "theta_peak_abs_deg": 17.88045708560422
+        }
+      ],
+      "amplitude_spread_C2_C5": 0.02067928595955998,
+      "phase_spread_C2_C5_deg": 1.329637416234533,
+      "transverse_time_ms": 0.0,
+      "transverse_hover_time_ms": 0.0,
+      "longest_transverse_hover_ms": 0.0,
+      "max_abs_omega_rad_s": 336.92112957157275,
+      "wall": {
+        "signed_min_wall_gap_mm": -0.181105159763563,
+        "virtual_wall_crossing_events": 10,
+        "virtual_wall_penetration_duration_ms": 25.650000000000002,
+        "wall_gap_sample_interval_ms": 0.05,
+        "wall_gap_definition": "minimum signed gap of rigid robot convex hull to passive wall polygon; negative is geometric overlap, not contact force"
+      },
+      "gates": {
+        "amplitude_spread_C2_C5_below_10pct": true,
+        "phase_spread_C2_C5_below_10deg": true,
+        "sinusoid_residual_C2_C5_below_20pct": true,
+        "no_virtual_wall_crossings": false,
+        "no_transverse_hover_over_0p5ms": true
+      },
+      "all_dynamics_gates_pass": false
+    },
+    {
+      "case": "TRUECEL_MAGNETIC_ONLY_DAMPING_1P0X",
+      "c_rot_N_mm_s": 3.5006005000754733e-06,
+      "factor": 1.0,
+      "ratio_to_bulk_water": 133.95959297489063,
+      "cycles": [
+        {
+          "cycle": 1,
+          "rocking_half_range_deg": 18.133397844779807,
+          "rocking_fundamental_amplitude_deg": 17.012570994781324,
+          "phase_lag_deg": 16.72167889021651,
+          "theta_offset_deg": -0.5010724024529836,
+          "sinusoid_residual_rms_over_amplitude": 0.13061613190687502,
+          "omega_peak_abs_rad_s": 233.03093498832496,
+          "theta_peak_abs_deg": 19.71673277493902
+        },
+        {
+          "cycle": 2,
+          "rocking_half_range_deg": 17.423247971355078,
+          "rocking_fundamental_amplitude_deg": 17.38026768504166,
+          "phase_lag_deg": 12.860732579250339,
+          "theta_offset_deg": -0.01889419060839126,
+          "sinusoid_residual_rms_over_amplitude": 0.007251454885794711,
+          "omega_peak_abs_rad_s": 193.76439486718334,
+          "theta_peak_abs_deg": 17.50518253682278
+        },
+        {
+          "cycle": 3,
+          "rocking_half_range_deg": 17.34668938873409,
+          "rocking_fundamental_amplitude_deg": 17.35294470038742,
+          "phase_lag_deg": 12.704336063599726,
+          "theta_offset_deg": 0.000986130602035118,
+          "sinusoid_residual_rms_over_amplitude": 0.000351551085059902,
+          "omega_peak_abs_rad_s": 190.32248087090977,
+          "theta_peak_abs_deg": 17.35005352896112
+        },
+        {
+          "cycle": 4,
+          "rocking_half_range_deg": 17.34810918295107,
+          "rocking_fundamental_amplitude_deg": 17.352426824598496,
+          "phase_lag_deg": 12.71318223974103,
+          "theta_offset_deg": -0.00012811355286768134,
+          "sinusoid_residual_rms_over_amplitude": 0.00018545694996107564,
+          "omega_peak_abs_rad_s": 189.94207501671036,
+          "theta_peak_abs_deg": 17.34838262442959
+        },
+        {
+          "cycle": 5,
+          "rocking_half_range_deg": 17.34818985475072,
+          "rocking_fundamental_amplitude_deg": 17.352438492393677,
+          "phase_lag_deg": 12.713401126121568,
+          "theta_offset_deg": -0.00015454083576355027,
+          "sinusoid_residual_rms_over_amplitude": 0.000179676858069193,
+          "omega_peak_abs_rad_s": 189.93764892696805,
+          "theta_peak_abs_deg": 17.348357618107997
+        }
+      ],
+      "amplitude_spread_C2_C5": 0.001603780597871733,
+      "phase_spread_C2_C5_deg": 0.15639651565061286,
+      "transverse_time_ms": 0.0,
+      "transverse_hover_time_ms": 0.0,
+      "longest_transverse_hover_ms": 0.0,
+      "max_abs_omega_rad_s": 233.03093498832496,
+      "wall": {
+        "signed_min_wall_gap_mm": -0.1187108119021717,
+        "virtual_wall_crossing_events": 10,
+        "virtual_wall_penetration_duration_ms": 24.400000000000002,
+        "wall_gap_sample_interval_ms": 0.05,
+        "wall_gap_definition": "minimum signed gap of rigid robot convex hull to passive wall polygon; negative is geometric overlap, not contact force"
+      },
+      "gates": {
+        "amplitude_spread_C2_C5_below_10pct": true,
+        "phase_spread_C2_C5_below_10deg": true,
+        "sinusoid_residual_C2_C5_below_20pct": true,
+        "no_virtual_wall_crossings": false,
+        "no_transverse_hover_over_0p5ms": true
+      },
+      "all_dynamics_gates_pass": false
+    },
+    {
+      "case": "TRUECEL_MAGNETIC_ONLY_DAMPING_3P0X",
+      "c_rot_N_mm_s": 1.050180150022642e-05,
+      "factor": 3.0,
+      "ratio_to_bulk_water": 401.87877892467185,
+      "cycles": [
+        {
+          "cycle": 1,
+          "rocking_half_range_deg": 14.635965842585533,
+          "rocking_fundamental_amplitude_deg": 14.16824889616276,
+          "phase_lag_deg": 32.18240271896295,
+          "theta_offset_deg": 0.23632152702084053,
+          "sinusoid_residual_rms_over_amplitude": 0.10489645620715037,
+          "omega_peak_abs_rad_s": 162.1270762420778,
+          "theta_peak_abs_deg": 14.734079474527823
+        },
+        {
+          "cycle": 2,
+          "rocking_half_range_deg": 14.730200959000715,
+          "rocking_fundamental_amplitude_deg": 14.727685784248584,
+          "phase_lag_deg": 34.170963538886724,
+          "theta_offset_deg": -9.928618537546896e-05,
+          "sinusoid_residual_rms_over_amplitude": 0.00015850121120488466,
+          "omega_peak_abs_rad_s": 161.11291646457522,
+          "theta_peak_abs_deg": 14.730375851110848
+        },
+        {
+          "cycle": 3,
+          "rocking_half_range_deg": 14.730205252185542,
+          "rocking_fundamental_amplitude_deg": 14.727699103253277,
+          "phase_lag_deg": 34.17146661277508,
+          "theta_offset_deg": -0.0001621438701002731,
+          "sinusoid_residual_rms_over_amplitude": 0.00015958848948009595,
+          "omega_peak_abs_rad_s": 161.11279143278853,
+          "theta_peak_abs_deg": 14.730368799209126
+        },
+        {
+          "cycle": 4,
+          "rocking_half_range_deg": 14.730190053522259,
+          "rocking_fundamental_amplitude_deg": 14.72768370596227,
+          "phase_lag_deg": 34.17147352953478,
+          "theta_offset_deg": -0.00016381564962575368,
+          "sinusoid_residual_rms_over_amplitude": 0.0001595955042546871,
+          "omega_peak_abs_rad_s": 161.11262992451833,
+          "theta_peak_abs_deg": 14.730359789550997
+        },
+        {
+          "cycle": 5,
+          "rocking_half_range_deg": 14.730171665283539,
+          "rocking_fundamental_amplitude_deg": 14.727665111694638,
+          "phase_lag_deg": 34.17147155069517,
+          "theta_offset_deg": -0.0001658685613132871,
+          "sinusoid_residual_rms_over_amplitude": 0.00015960261259735718,
+          "omega_peak_abs_rad_s": 161.11243264539445,
+          "theta_peak_abs_deg": 14.730347813906336
+        }
+      ],
+      "amplitude_spread_C2_C5": 2.3080044332793947e-06,
+      "phase_spread_C2_C5_deg": 0.0005099906480552363,
+      "transverse_time_ms": 0.0,
+      "transverse_hover_time_ms": 0.0,
+      "longest_transverse_hover_ms": 0.0,
+      "max_abs_omega_rad_s": 162.1270762420778,
+      "wall": {
+        "signed_min_wall_gap_mm": -0.0555057632652205,
+        "virtual_wall_crossing_events": 10,
+        "virtual_wall_penetration_duration_ms": 17.05,
+        "wall_gap_sample_interval_ms": 0.05,
+        "wall_gap_definition": "minimum signed gap of rigid robot convex hull to passive wall polygon; negative is geometric overlap, not contact force"
+      },
+      "gates": {
+        "amplitude_spread_C2_C5_below_10pct": true,
+        "phase_spread_C2_C5_below_10deg": true,
+        "sinusoid_residual_C2_C5_below_20pct": true,
+        "no_virtual_wall_crossings": false,
+        "no_transverse_hover_over_0p5ms": true
+      },
+      "all_dynamics_gates_pass": false
+    }
+  ]
+}
