@@ -1,0 +1,99 @@
+{
+  "cases": [
+    "F100_G2P20_REALWALL_FIXEDVVR_FULLCEL40",
+    "F100_G2P20_REALWALL_FIXEDVVR_FULLCEL40_L24"
+  ],
+  "cycles": [
+    {
+      "cycle": 1,
+      "J_CEL_L12_Ns": -6.080052915432064e-08,
+      "J_CEL_L24_Ns": -3.6645568458784534e-08,
+      "D_CEL": 0.3972820801316923,
+      "J_wall_L12_Ns": -5.9565021117546405e-06,
+      "J_wall_L24_Ns": -6.656686877570229e-06,
+      "D_wall": 0.10518517374985266,
+      "fluid_force_correlation": -0.3785853322449296,
+      "fluid_force_normalized_rms_difference": 1.5457690149892598,
+      "fluid_force_p95_abs_L12_N": 0.0001815250586442739,
+      "fluid_force_p95_abs_L24_N": 0.0001343106000162333,
+      "fluid_force_peak_abs_L12_N": 0.0025572706966198715,
+      "fluid_force_peak_abs_L24_N": 0.0021933491717619534
+    },
+    {
+      "cycle": 2,
+      "J_CEL_L12_Ns": -6.533628671553533e-07,
+      "J_CEL_L24_Ns": -7.541940190813529e-06,
+      "D_CEL": 0.9133693916120971,
+      "J_wall_L12_Ns": -3.407712281015919e-06,
+      "J_wall_L24_Ns": -3.915713525259489e-06,
+      "D_wall": 0.12973401679324975,
+      "fluid_force_correlation": 0.022699416891012705,
+      "fluid_force_normalized_rms_difference": 1.0019917733380892,
+      "fluid_force_p95_abs_L12_N": 0.0007138436722285893,
+      "fluid_force_p95_abs_L24_N": 0.0055003131444312445,
+      "fluid_force_peak_abs_L12_N": 0.0031185642135610034,
+      "fluid_force_peak_abs_L24_N": 0.01659825231056311
+    },
+    {
+      "cycle": 3,
+      "J_CEL_L12_Ns": -1.645195302718127e-05,
+      "J_CEL_L24_Ns": 6.469464471885169e-07,
+      "D_CEL": 1.039323382829969,
+      "J_wall_L12_Ns": -8.814360138357926e-06,
+      "J_wall_L24_Ns": -1.1586571939647583e-05,
+      "D_wall": 0.23926074215303894,
+      "fluid_force_correlation": 0.22633869898972764,
+      "fluid_force_normalized_rms_difference": 0.9852218657235017,
+      "fluid_force_p95_abs_L12_N": 0.009029106651420184,
+      "fluid_force_p95_abs_L24_N": 0.0019053121578326516,
+      "fluid_force_peak_abs_L12_N": 0.018294031846358003,
+      "fluid_force_peak_abs_L24_N": 0.005923400663649018
+    },
+    {
+      "cycle": 4,
+      "J_CEL_L12_Ns": -1.3697521677422914e-06,
+      "J_CEL_L24_Ns": -1.4021221450983031e-06,
+      "D_CEL": 0.023086417591487527,
+      "J_wall_L12_Ns": -1.2950111047291511e-05,
+      "J_wall_L24_Ns": -1.5377145537779895e-05,
+      "D_wall": 0.15783387654915776,
+      "fluid_force_correlation": 0.04171875236467678,
+      "fluid_force_normalized_rms_difference": 1.1125594194544743,
+      "fluid_force_p95_abs_L12_N": 0.0011490712655952864,
+      "fluid_force_p95_abs_L24_N": 0.0007364871458844496,
+      "fluid_force_peak_abs_L12_N": 0.0028406918436096598,
+      "fluid_force_peak_abs_L24_N": 0.0014122010172621469
+    }
+  ],
+  "contact": {
+    "F100_G2P20_REALWALL_FIXEDVVR_FULLCEL40": {
+      "HEAD": {
+        "events": 5,
+        "same_end_recontacts": 0,
+        "minimum_signed_gap_mm": 0.0015593029196461217
+      },
+      "TAIL": {
+        "events": 27,
+        "same_end_recontacts": 22,
+        "minimum_signed_gap_mm": -0.004657614507192043
+      }
+    },
+    "F100_G2P20_REALWALL_FIXEDVVR_FULLCEL40_L24": {
+      "HEAD": {
+        "events": 6,
+        "same_end_recontacts": 0,
+        "minimum_signed_gap_mm": 0.001559283898868613
+      },
+      "TAIL": {
+        "events": 28,
+        "same_end_recontacts": 22,
+        "minimum_signed_gap_mm": -0.00465761676275378
+      }
+    }
+  },
+  "pressure_metric_source": "mean-normal-stress pressure proxy -trace(S_water)/3",
+  "fluid_field_sampling": "six native field times over 0-40 ms; not a resolved pressure waveform",
+  "flux_status": "NO_NATIVE_FACE_MASS_FLUX; EVF volume is a represented-volume proxy",
+  "force_label": "INFERRED ROBOT-CEL FORCE = whole robot General Contact minus direct robot-wall pair",
+  "decision": "PENDING_EVIDENCE_REVIEW"
+}
