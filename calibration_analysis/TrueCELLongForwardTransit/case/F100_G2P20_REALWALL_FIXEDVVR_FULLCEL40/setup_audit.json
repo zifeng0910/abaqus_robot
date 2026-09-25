@@ -1,0 +1,29 @@
+{
+  "job": "F100_G2P20_REALWALL_FIXEDVVR_FULLCEL40",
+  "source_trajectory": "F100_G2P20_NOFLUID_REALWALL50",
+  "parent_CEL": "TRUECEL_B0P11_G2P20_A14P5_F100_CLEAN50",
+  "source_RP_history_sha256": "22678EF8C4F7FFFE177F53C187084931D39AECF1DAAF7B03E8F5CBDAA560A7BF",
+  "parent_input_sha256": "17BD69A859BBEA0F0A3784A0C962CD485B10C0080F0EEBB07EE959F0C5007904",
+  "input_sha256": "59366187F923723816A55EC5370CA74FDA589220F1238EEE9DBCB629A2D4FF95",
+  "driver_sha256": "4EF12426EE062B576DB9AF02E12ECA750EEBC3AC8A8AE1C948C093EDAF66C8D8",
+  "driver_points_per_component": 400001,
+  "driver_method": "validated prescribed global V(t) plus global/spatial VR(t); unit velocity BC references",
+  "driver_time_s": [
+    0.0,
+    0.03999999910593033
+  ],
+  "single_step_duration_s": 0.04,
+  "magnetic_table_sha256": "3999F3A3826DD091C1ADB3B8EA26830739132F738E213A6D92E825EB12C0717C",
+  "fortran_sha256": "2179D0EF191C53E0C4760AA3EDB27BB6175DC8AADA0E11E697CB4D49254DC0E0",
+  "physics_parent_equivalent_except_prescribed_motion": true,
+  "contact_outputs": "whole robot, pair-specific robot-wall, RP reaction; robot-CEL inferred as whole minus wall",
+  "restart_read": false,
+  "rotational_damping_added": false,
+  "validated_thresholds": {
+    "max_position_mm": 0.001,
+    "max_orientation_deg": 0.02,
+    "p99_abs_delta_v_s_mm_s": 0.05,
+    "p99_abs_delta_omega_rock_rad_s": 0.5
+  },
+  "fluid_pair_output_gate": "datacheck rejected Eulerian SECOND SURFACE output; removed before dynamics"
+}
