@@ -1,0 +1,18 @@
+{
+  "representation": "FIELD_GRADIENT_TABLE",
+  "generator": "J:\\abaqusfangzhen\\abaqus_robot\\calibration_analysis\\PrecomputedStraightMagneticBackend\\scripts\\precompute_straight_magnetic_table.py",
+  "production_source": "J:\\abaqusfangzhen\\abaqus_robot\\calibration_analysis\\FastStraightDynamicScreen\\production\\magpylib_socket_server_fast.py",
+  "rocking_main_amplitude_deg": 14.5,
+  "rocking_cross_amplitude_deg": 2.5,
+  "frequency_Hz": 120.0,
+  "phase_stations": 361,
+  "spatial_stations": 561,
+  "table_sha256": "3999F3A3826DD091C1ADB3B8EA26830739132F738E213A6D92E825EB12C0717C",
+  "generation_wallclock_s": 0.02369390000239946,
+  "authoritative_A14P8_table_sha256": "5C5CBF84F7705D2EDF68DCF9F236928B04996C80BABCADFFBFFDF24B8A546BFA",
+  "authoritative_regeneration_max_abs_error": 0.0,
+  "spatial_table_max_abs_error": 0.0,
+  "only_table_change": "rocking_main_amplitude_deg 14.8 -> 14.5",
+  "reused_verified_source": "J:\\abaqusfangzhen\\abaqus_robot\\calibration_analysis\\TrueCELLongForwardTransit\\case\\TRUECEL_A14P5_STEADY_2CYCLES\\magnetic_field_gradient_table_A14P5.dat",
+  "only_physics_change": "rocking_main_amplitude_deg 14.8 -> 14.5"
+}

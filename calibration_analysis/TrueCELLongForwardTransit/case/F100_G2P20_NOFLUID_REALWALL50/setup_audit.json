@@ -1,0 +1,53 @@
+{
+  "case_id": "F100_G2P20_NOFLUID_REALWALL50",
+  "parent": "TRUECEL_B0P11_G2P20_A14P5_F100_CLEAN50",
+  "parent_input_sha256": "17BD69A859BBEA0F0A3784A0C962CD485B10C0080F0EEBB07EE959F0C5007904",
+  "input_sha256": "F4BDEF15244DC37879F3B5661F4FA64E9790ED728F23AE58006C7D0D603CE34F",
+  "fortran_sha256": "7499DCB2FB2F20445AEEC82F3AF4582ABC9B99FC5CE7471386BAA374F3813A85",
+  "magnetic_table_sha256": "3999F3A3826DD091C1ADB3B8EA26830739132F738E213A6D92E825EB12C0717C",
+  "robot_mesh_elements": 7302,
+  "robot_mesh_volume_mm3": 1.2829713941656096,
+  "robot_mass_mg": 10.018808990074149,
+  "robot_com_aba_mm": [
+    -10.588298265136732,
+    -3.46570484095648,
+    -10.215063664776173
+  ],
+  "robot_inertia_about_com_Nmm_s2": [
+    [
+      1.0371433504025431E-09,
+      3.0157975725426787E-10,
+      -9.648033321134078E-10
+    ],
+    [
+      3.0157975725426787E-10,
+      5.548191836818942E-09,
+      6.441710512361303E-11
+    ],
+    [
+      -9.648033321134078E-10,
+      6.441710512361303E-11,
+      5.365952827027361E-09
+    ]
+  ],
+  "I11_I22_I33_about_com_Nmm_s2": [
+    1.0371433504025431E-09,
+    5.548191836818942E-09,
+    5.365952827027361E-09
+  ],
+  "principal_inertia_Nmm_s2": [
+    8.11766468013928E-10,
+    5.568251244373571E-09,
+    5.571270301861346E-09
+  ],
+  "mass_source": "parent Robot_SOLID C3D4 tetrahedral integration * MAT_ROBOT_RIGID density; Abaqus rigid body inherits this mass/inertia",
+  "stale_parent_metadata_robot_mass_mg": 9.207793514166587,
+  "contact_law": "*Surface Interaction, name=PROP_CEL_HARD\n*Friction\n0.03,\n*Surface Behavior, pressure-overclosure=SCALE FACTOR\n50.0, , 10.0, 0.10\n*Contact Damping, definition=CRITICAL DAMPING FRACTION, tangent fraction=0.0\n1.0",
+  "contact_pair": "*Contact\n*Contact Inclusions\nROBOT_SOLID-1.ROBOT_SOLID_SURF, Pipe_WALL_HELPER-1.PIPE_WALL_HELPER_SURF\n*Contact Property Assignment\nROBOT_SOLID-1.ROBOT_SOLID_SURF, Pipe_WALL_HELPER-1.PIPE_WALL_HELPER_SURF, PROP_CEL_HARD",
+  "direct_dt_s": 1E-07,
+  "duration_s": 0.05,
+  "restart_read": false,
+  "restart_write": "inherited 10 intervals; never used for continuation",
+  "fluid": false,
+  "rotational_damping_added": false
+}
