@@ -114,9 +114,12 @@ def gif(m: dict, ident: dict, rows: list[dict], output: Path,
         displacement = float(np.interp(ti, m["t"], m["s"]))
         cycle = min(5, int(ti/.01)+1)
         point.set_data([ti*1000], [angle])
+        velocity = float(np.interp(ti, m["t"], m["v_s"]))
+        command = 14.5 * np.sin(2 * np.pi * 100 * ti)
         label.set_text(f"t={ti*1000:5.2f} ms  C{cycle}\n"
-                       f"theta={angle:+.1f} deg  lag={rows[cycle-1]['phase_lag_deg']:+.1f} deg\n"
-                       f"s={displacement:+.4f} mm")
+                       f"s={displacement:+.4f} mm  v_s={velocity:+.2f} mm/s\n"
+                       f"theta={angle:+.1f} deg  cmd={command:+.1f} deg\n"
+                       f"lag={rows[cycle-1]['phase_lag_deg']:+.1f} deg")
         return robot, point, label
 
     FuncAnimation(fig, update, frames=len(times), interval=67).save(
@@ -131,7 +134,8 @@ def main() -> None:
     suffix = {0.3: "0P3", 1.0: "1", 3.0: "3"}[factor]
     job = f"TRUECEL_B0P11_G2P20_A14P5_F100_CROT{suffix}_FULLCEL50"
     case = ROOT / "case" / job
-    prefix = f"F100_G2P20_CROT{suffix}_FULLCEL50"
+    output_suffix = "03" if factor == .3 else suffix
+    prefix = f"F100_G2P20_CROT{output_suffix}_FULLCEL50"
     ident = json.loads((case / "case_identity.json").read_text(encoding="utf-8-sig"))
     base_ident = json.loads((BASE / "case_identity.json").read_text(encoding="utf-8-sig"))
     sta = (case / f"{job}.sta").read_text(encoding="latin1")
@@ -163,7 +167,7 @@ def main() -> None:
     baseline_report = json.loads((ROOT / "F100_G2P20_CLEAN50_EARLY_STOP_METRICS.json").read_text())
     with np.load(case / "private" / "energy_history_private.npz") as z:
         energy = {k: z[k].astype(float) for k in ("ETOTAL", "ALLPW", "ALLFD", "ALLIE", "ALLKE")}
-    result = {"classification": f"CROT{suffix}_FULLCEL50_RECOIL_CONFIRMED",
+    result = {"classification": f"CROT{output_suffix}_FULLCEL50_RECOIL_CONFIRMED",
               "solver_completed": True, "t_start_s": float(m["t"][0]),
               "t_end_s": float(m["t"][-1]), "single_step": True,
               "restart_read": False, "restart_writes_ms": writes,
