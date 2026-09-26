@@ -1,0 +1,47 @@
+{
+  "job": "F100_G2P20_REALWALL_FIXEDVVR_FULLCEL40_L36",
+  "source": "F100_G2P20_NOFLUID_REALWALL50",
+  "time_ms": [
+    0.0,
+    39.99999910593033
+  ],
+  "method": "geodesic orientation error; native source global V and spatial/global VR",
+  "thresholds": {
+    "max_position_mm": 0.001,
+    "max_orientation_deg": 0.02,
+    "p99_abs_delta_v_s_mm_s": 0.05,
+    "p99_abs_delta_omega_rock_rad_s": 0.5
+  },
+  "results": {
+    "max_position_mm": 5.903392058977293e-07,
+    "max_orientation_deg": 5.6516894113441935e-05,
+    "p99_abs_delta_v_s_mm_s": 2.831359215853801e-05,
+    "p99_abs_delta_omega_rock_rad_s": 0.0030737038516559035,
+    "max_abs_delta_v_s_mm_s": 0.015438938944214293,
+    "max_abs_delta_omega_rock_rad_s": 4.850775367610781
+  },
+  "initial_pose": {
+    "source_U_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "replay_U_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "source_UR_rad": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "replay_UR_rad": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "passed": true,
+  "classification": "KINEMATIC_REPLAY_VALID"
+}
