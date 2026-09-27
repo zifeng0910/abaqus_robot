@@ -12,9 +12,9 @@ def elem_id(i, j, k, nx, ny):
     return 1 + i + nx * (j + ny * k)
 
 
-def write_case(out_dir: Path, name: str, nonreflecting: bool, nx: int = 44, ny: int = 20, nz: int = 20):
+def write_case(out_dir: Path, name: str, nonreflecting: bool, length_mm: float = 12.0, nx: int = 44, ny: int = 20, nz: int = 20):
     out_dir.mkdir(parents=True, exist_ok=True)
-    dx = 12.0 / nx
+    dx = length_mm / nx
     dy = dz = 0.075
     y0 = z0 = -0.75
     lines = []
@@ -32,7 +32,7 @@ def write_case(out_dir: Path, name: str, nonreflecting: bool, nx: int = 44, ny: 
     for k in range(nz + 1):
         for j in range(ny + 1):
             for i in range(nx + 1):
-                x = -6.0 + i * dx
+                x = -0.5 * length_mm + i * dx
                 y = y0 + j * dy
                 z = z0 + k * dz
                 a(f"{node_id(i,j,k,nx,ny)}, {x:.12g}, {y:.12g}, {z:.12g}")
@@ -51,7 +51,14 @@ def write_case(out_dir: Path, name: str, nonreflecting: bool, nx: int = 44, ny: 
                 a(f"{elem_id(i,j,k,nx,ny)}, {n000}, {n100}, {n110}, {n010}, {n001}, {n101}, {n111}, {n011}")
     a("*Elset, elset=FLUID_ALL, generate")
     a(f"1, {nx*ny*nz}, 1")
-    for label, lo, hi in [("PROBE_CENTER", 21, 23), ("PROBE_LOW_QUARTER", 10, 12), ("PROBE_HIGH_QUARTER", 32, 34), ("PROBE_LOW_END_NEAR", 2, 4), ("PROBE_HIGH_END_NEAR", 41, 43)]:
+    probe_ranges = [
+        ("PROBE_CENTER", nx // 2, nx // 2 + 2),
+        ("PROBE_LOW_QUARTER", nx // 4 - 1, nx // 4 + 2),
+        ("PROBE_HIGH_QUARTER", 3 * nx // 4 - 1, 3 * nx // 4 + 2),
+        ("PROBE_LOW_END_NEAR", 1, 4),
+        ("PROBE_HIGH_END_NEAR", nx - 3, nx),
+    ]
+    for label, lo, hi in probe_ranges:
         a(f"*Elset, elset={label}")
         for k in range(nz):
             for j in range(ny):
@@ -84,13 +91,13 @@ def write_case(out_dir: Path, name: str, nonreflecting: bool, nx: int = 44, ny: 
             row = []
             for i in range(nx + 1):
                 if side == 0:
-                    xyz = (-6.0 + i*dx, y0, z0 + q*dz)
+                    xyz = (-0.5*length_mm + i*dx, y0, z0 + q*dz)
                 elif side == 1:
-                    xyz = (-6.0 + i*dx, y0 + ny*dy, z0 + q*dz)
+                    xyz = (-0.5*length_mm + i*dx, y0 + ny*dy, z0 + q*dz)
                 elif side == 2:
-                    xyz = (-6.0 + i*dx, y0 + q*dy, z0)
+                    xyz = (-0.5*length_mm + i*dx, y0 + q*dy, z0)
                 else:
-                    xyz = (-6.0 + i*dx, y0 + q*dy, z0 + nz*dz)
+                    xyz = (-0.5*length_mm + i*dx, y0 + q*dy, z0 + nz*dz)
                 a(f"{label}, {xyz[0]:.12g}, {xyz[1]:.12g}, {xyz[2]:.12g}")
                 row.append(label)
                 label += 1
@@ -137,12 +144,12 @@ def write_case(out_dir: Path, name: str, nonreflecting: bool, nx: int = 44, ny: 
     a("*Nset, nset=SRC_PLUS, instance=Fluid_EULERIAN-1")
     for k in range(nz+1):
         for j in range(ny+1):
-            for i in range(21, 23):
+            for i in range(nx // 2 - 1, nx // 2 + 1):
                 a(str(node_id(i,j,k,nx,ny)))
     a("*Nset, nset=SRC_MINUS, instance=Fluid_EULERIAN-1")
     for k in range(nz+1):
         for j in range(ny+1):
-            for i in range(23, 25):
+            for i in range(nx // 2 + 1, nx // 2 + 3):
                 a(str(node_id(i,j,k,nx,ny)))
     a("*Initial Conditions, type=VELOCITY")
     a("SRC_PLUS, 1, 10.0")
@@ -191,10 +198,13 @@ def write_case(out_dir: Path, name: str, nonreflecting: bool, nx: int = 44, ny: 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", required=True)
+    ap.add_argument("--length-mm", type=float, default=12.0)
+    ap.add_argument("--nx", type=int, default=None)
     args = ap.parse_args()
     out = Path(args.out)
-    write_case(out, "HARNESS_DEFAULT_FREE", False)
-    write_case(out, "HARNESS_NONREFLECTING", True)
+    nx = args.nx if args.nx is not None else int(round(args.length_mm / (12.0 / 44.0)))
+    write_case(out, "HARNESS_DEFAULT_FREE", False, args.length_mm, nx)
+    write_case(out, "HARNESS_NONREFLECTING", True, args.length_mm, nx)
 
 
 if __name__ == "__main__":

@@ -60,3 +60,20 @@ Do not run L48/L72/L100 or another full robot solve. Do not tune damping, contac
 
 The prior force conclusion remains unchanged: `FLUID_FORCE_PARTITION_SEMANTICS_UNRESOLVED`. The harness addresses boundary-wave behavior only; it does not create an independent robot-fluid traction observable.
 
+## 24 mm repair harness
+
+To remove the short-domain timing ambiguity, the same H0/H1 comparison was repeated at 24 mm axial length, with all other mesh spacing, fluid properties, EOS, excitation, duration, and output cadence unchanged. The expected center-to-end travel time is 120 us and the expected round trip is 240 us. Both jobs completed successfully to 0.25 ms with no fatal solver error.
+
+The analyzer used incident windows of 30-85 us and return windows of 160-215 us. The 24 mm reflection metrics were:
+
+| Case | Probe | R_pressure | R_velocity | Pressure incident/return (us) | Velocity incident/return (us) |
+|---|---|---:|---:|---|---|
+| H0 free | low quarter | 0.344 | 0.463 | 75.0 / 162.5 | 72.5 / 215.0 |
+| H0 free | high quarter | 0.352 | 0.540 | 70.0 / 215.0 | 70.0 / 215.0 |
+| H1 nonreflecting | low quarter | 0.489 | 0.578 | 82.5 / 205.0 | 82.5 / 205.0 |
+| H1 nonreflecting | high quarter | 0.506 | 0.590 | 80.0 / 202.5 | 80.0 / 202.5 |
+
+The longer domain resolves the expected wave travel scale, but NONREFLECTING still does not suppress the returning disturbance. Its selected pressure and velocity ratios are higher than H0, not lower by approximately 50%. Therefore the controlled evidence remains insufficient to validate either boundary treatment for production use, and the final harness classification remains `CEL_BOUNDARY_TREATMENT_STILL_UNRESOLVED`.
+
+The 24 mm light outputs are in `boundary_harness_results_24mm/`. No H2 ZERO PRESSURE candidate was run because the prescribed branch condition (substantial H0 return together with clear H1 suppression) was not met.
+

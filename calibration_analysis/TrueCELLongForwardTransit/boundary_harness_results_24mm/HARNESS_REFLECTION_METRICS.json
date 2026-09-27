@@ -1,0 +1,78 @@
+{
+  "official_boundary_reference": "https://help-3dexperience.aesvietnam.com/English/SIMA3DXKEYRefMap/simakey-r-eulerianboundary.htm",
+  "length_mm": 24.0,
+  "c0_mm_s": 100000.0,
+  "expected_center_to_end_us": 120.0,
+  "expected_round_trip_us": 240.0,
+  "incident_window_us": [
+    30.0,
+    85.0
+  ],
+  "return_window_us": [
+    160.0,
+    215.0
+  ],
+  "pressure_metric": "MEAN_NORMAL_STRESS_PRESSURE_PROXY",
+  "cases": {
+    "HARNESS_DEFAULT_FREE": {
+      "low_quarter_pressure": {
+        "incident_time_us": 74.99999628635123,
+        "return_time_us": 162.50000044237822,
+        "incident_peak": -6.947270853061135e-05,
+        "return_peak": -2.3918501728961834e-05,
+        "R": 0.3442862993951469
+      },
+      "high_quarter_pressure": {
+        "incident_time_us": 69.99999459367245,
+        "return_time_us": 214.99999274965376,
+        "incident_peak": -7.15939631330305e-05,
+        "return_peak": 2.5206843025718707e-05,
+        "R": 0.3520805654923901
+      },
+      "low_quarter_velocity": {
+        "incident_time_us": 72.49999907799065,
+        "return_time_us": 214.99999274965376,
+        "incident_peak": 0.8070217837011463,
+        "return_peak": 0.3738584396435695,
+        "R": 0.46325693704200627
+      },
+      "high_quarter_velocity": {
+        "incident_time_us": 69.99999459367245,
+        "return_time_us": 214.99999274965376,
+        "incident_peak": -0.8303284138643823,
+        "return_peak": -0.44872468779119085,
+        "R": 0.5404183215925465
+      }
+    },
+    "HARNESS_NONREFLECTING": {
+      "low_quarter_pressure": {
+        "incident_time_us": 82.4999951873906,
+        "return_time_us": 204.9999893642962,
+        "incident_peak": 0.00011734963336569613,
+        "return_peak": 5.7362784412002127e-05,
+        "R": 0.4888194599913469
+      },
+      "high_quarter_pressure": {
+        "incident_time_us": 79.99999797903001,
+        "return_time_us": 202.49999943189323,
+        "incident_peak": 0.0001176403169415608,
+        "return_peak": 5.955128740273116e-05,
+        "R": 0.5062149520756047
+      },
+      "low_quarter_velocity": {
+        "incident_time_us": 82.4999951873906,
+        "return_time_us": 204.9999893642962,
+        "incident_peak": -1.1673237799863223,
+        "return_peak": 0.6742750180956998,
+        "R": 0.5776246741958776
+      },
+      "high_quarter_velocity": {
+        "incident_time_us": 79.99999797903001,
+        "return_time_us": 202.49999943189323,
+        "incident_peak": 1.167478213803906,
+        "return_peak": -0.6882586405390785,
+        "R": 0.5895258964161545
+      }
+    }
+  }
+}
