@@ -1,0 +1,357 @@
+{
+  "parent": "F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20",
+  "child": "F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_WF_FRIC0_20",
+  "common_timestamp_count": 111363,
+  "max_abs_displacement_difference_mm": 0.5999846900959931,
+  "rms_displacement_difference_mm": 0.22019021736327668,
+  "max_abs_velocity_difference_mm_s": 106.10004531664306,
+  "rms_velocity_difference_mm_s": 46.89894141245326,
+  "earliest_abs_displacement_gt_0p01mm_ms": 6.303658243268728,
+  "cycles": [
+    {
+      "case": "INITFIX20",
+      "cycle": 1,
+      "delta_s_mm": -0.05618161336105533,
+      "mean_v_s_mm_s": -5.6181613361055325,
+      "end_v_s_mm_s": -31.240604883419035,
+      "minimum_v_s_mm_s": -33.890754233280354,
+      "maximum_v_s_mm_s": 11.81444048303806,
+      "minimum_s_mm": -0.05618161336105533,
+      "maximum_s_mm": 0.020699774491591195,
+      "zero_crossing_ms": "5.713835",
+      "negative_v_duration_ms": 4.28616472441899,
+      "reverse_displacement_mm": 0.07688138785264632
+    },
+    {
+      "case": "INITFIX20",
+      "cycle": 2,
+      "delta_s_mm": -0.8574792125072888,
+      "mean_v_s_mm_s": -85.74792125072888,
+      "end_v_s_mm_s": -191.10449546067764,
+      "minimum_v_s_mm_s": -205.13499332770408,
+      "maximum_v_s_mm_s": -31.239160494306116,
+      "minimum_s_mm": -0.9136608258683441,
+      "maximum_s_mm": -0.05618161336105533,
+      "zero_crossing_ms": "",
+      "negative_v_duration_ms": 10.0,
+      "reverse_displacement_mm": 0.8574792125072888
+    },
+    {
+      "case": "WF_FRIC0",
+      "cycle": 1,
+      "delta_s_mm": -0.04439152185268436,
+      "mean_v_s_mm_s": -4.439152185268435,
+      "end_v_s_mm_s": -42.46063273648899,
+      "minimum_v_s_mm_s": -43.263257714317604,
+      "maximum_v_s_mm_s": 13.280651571914188,
+      "minimum_s_mm": -0.04439152185268436,
+      "maximum_s_mm": 0.027695186013247396,
+      "zero_crossing_ms": "2.545496|2.546533|6.489386|6.612026|6.739753|6.746758|6.747407",
+      "negative_v_duration_ms": 3.383274062838542,
+      "reverse_displacement_mm": 0.07216416415794523
+    },
+    {
+      "case": "WF_FRIC0",
+      "cycle": 2,
+      "delta_s_mm": -1.4692539941116527,
+      "mean_v_s_mm_s": -146.92539941116527,
+      "end_v_s_mm_s": -226.61333078923107,
+      "minimum_v_s_mm_s": -226.78873730360863,
+      "maximum_v_s_mm_s": -41.73189317850297,
+      "minimum_s_mm": -1.5136455159643372,
+      "maximum_s_mm": -0.04439152185268436,
+      "zero_crossing_ms": "",
+      "negative_v_duration_ms": 10.0,
+      "reverse_displacement_mm": 1.469253994111653
+    }
+  ],
+  "events": [
+    {
+      "case": "INITFIX20",
+      "cycle1_zero_crossing_ms": "5.713835",
+      "cycle2_zero_crossing_ms": "",
+      "min_v_time_ms": 19.886324182152748,
+      "min_v_mm_s": -205.13499332770408
+    },
+    {
+      "case": "WF_FRIC0",
+      "cycle1_zero_crossing_ms": "2.545496|2.546533|6.489386|6.612026|6.739753|6.746758|6.747407",
+      "cycle2_zero_crossing_ms": "",
+      "min_v_time_ms": 19.991137087345123,
+      "min_v_mm_s": -226.78873730360863
+    }
+  ],
+  "energy": [
+    {
+      "case": "INITFIX20",
+      "quantity": "ALLAE",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0,
+      "at_20ms": 0.0,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.0
+    },
+    {
+      "case": "INITFIX20",
+      "quantity": "ALLCD",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0,
+      "at_20ms": 0.0,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.0
+    },
+    {
+      "case": "INITFIX20",
+      "quantity": "ALLCW",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0,
+      "at_20ms": 0.0,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.0
+    },
+    {
+      "case": "INITFIX20",
+      "quantity": "ALLDC",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0,
+      "at_20ms": 0.0,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.0
+    },
+    {
+      "case": "INITFIX20",
+      "quantity": "ALLDMD",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0,
+      "at_20ms": 0.0,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.0
+    },
+    {
+      "case": "INITFIX20",
+      "quantity": "ALLFD",
+      "at_0ms": 0.0,
+      "at_10ms": 0.02296683555329686,
+      "at_20ms": 0.07624702155590057,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.07624702155590057
+    },
+    {
+      "case": "INITFIX20",
+      "quantity": "ALLIE",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0015214941022298016,
+      "at_20ms": -0.008200687356293201,
+      "min_0_20ms": -0.008523003198206425,
+      "max_0_20ms": 0.003748433431610465
+    },
+    {
+      "case": "INITFIX20",
+      "quantity": "ALLKE",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0007458849148596223,
+      "at_20ms": 0.008833508007228374,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.008833508007228374
+    },
+    {
+      "case": "INITFIX20",
+      "quantity": "ALLMW",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0,
+      "at_20ms": 0.0,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.0
+    },
+    {
+      "case": "INITFIX20",
+      "quantity": "ALLPD",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0,
+      "at_20ms": 0.0,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.0
+    },
+    {
+      "case": "INITFIX20",
+      "quantity": "ALLPW",
+      "at_0ms": 0.0,
+      "at_10ms": 0.07905491279010748,
+      "at_20ms": 0.27625012397766113,
+      "min_0_20ms": -5.306205778585205e-13,
+      "max_0_20ms": 0.27625012397766113
+    },
+    {
+      "case": "INITFIX20",
+      "quantity": "ALLSE",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0015214941022298016,
+      "at_20ms": -0.008200687356293201,
+      "min_0_20ms": -0.008523003198206425,
+      "max_0_20ms": 0.003748433431610465
+    },
+    {
+      "case": "INITFIX20",
+      "quantity": "ALLVD",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0016856979836345097,
+      "at_20ms": 0.010688845068216324,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.010688845068216324
+    },
+    {
+      "case": "INITFIX20",
+      "quantity": "ALLWK",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0006773966072662674,
+      "at_20ms": 0.0011615288676694036,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.0011615288676694036
+    },
+    {
+      "case": "INITFIX20",
+      "quantity": "ETOTAL",
+      "at_0ms": 0.0,
+      "at_10ms": -0.05281239693270225,
+      "at_20ms": -0.18984295427799225,
+      "min_0_20ms": -0.18984295427799225,
+      "max_0_20ms": 2.318137577782351e-14
+    },
+    {
+      "case": "WF_FRIC0",
+      "quantity": "ALLAE",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0,
+      "at_20ms": 0.0,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.0
+    },
+    {
+      "case": "WF_FRIC0",
+      "quantity": "ALLCD",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0,
+      "at_20ms": 0.0,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.0
+    },
+    {
+      "case": "WF_FRIC0",
+      "quantity": "ALLCW",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0,
+      "at_20ms": 0.0,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.0
+    },
+    {
+      "case": "WF_FRIC0",
+      "quantity": "ALLDC",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0,
+      "at_20ms": 0.0,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.0
+    },
+    {
+      "case": "WF_FRIC0",
+      "quantity": "ALLDMD",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0,
+      "at_20ms": 0.0,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.0
+    },
+    {
+      "case": "WF_FRIC0",
+      "quantity": "ALLFD",
+      "at_0ms": 0.0,
+      "at_10ms": 0.017667283735167214,
+      "at_20ms": 0.06364477425813675,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.06364477425813675
+    },
+    {
+      "case": "WF_FRIC0",
+      "quantity": "ALLIE",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0014567751452578713,
+      "at_20ms": 0.0042893546633422375,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.0042893546633422375
+    },
+    {
+      "case": "WF_FRIC0",
+      "quantity": "ALLKE",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0009350103085835663,
+      "at_20ms": 0.0020385526586323977,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.004238990135490894
+    },
+    {
+      "case": "WF_FRIC0",
+      "quantity": "ALLMW",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0,
+      "at_20ms": 0.0,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.0
+    },
+    {
+      "case": "WF_FRIC0",
+      "quantity": "ALLPD",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0,
+      "at_20ms": 0.0,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.0
+    },
+    {
+      "case": "WF_FRIC0",
+      "quantity": "ALLPW",
+      "at_0ms": 0.0,
+      "at_10ms": 0.06606985357179437,
+      "at_20ms": 0.23818089067935944,
+      "min_0_20ms": -5.043448839982256e-13,
+      "max_0_20ms": 0.23818089067935944
+    },
+    {
+      "case": "WF_FRIC0",
+      "quantity": "ALLSE",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0014567751452578713,
+      "at_20ms": 0.0042893546633422375,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.0042893546633422375
+    },
+    {
+      "case": "WF_FRIC0",
+      "quantity": "ALLVD",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0013389341058009255,
+      "at_20ms": 0.00542956218123436,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.00542956218123436
+    },
+    {
+      "case": "WF_FRIC0",
+      "quantity": "ALLWK",
+      "at_0ms": 0.0,
+      "at_10ms": 0.0006651720399169824,
+      "at_20ms": 0.00115749251563102,
+      "min_0_20ms": 0.0,
+      "max_0_20ms": 0.00115749251563102
+    },
+    {
+      "case": "WF_FRIC0",
+      "quantity": "ETOTAL",
+      "at_0ms": 0.0,
+      "at_10ms": -0.04533702116342249,
+      "at_20ms": -0.16393613815307617,
+      "min_0_20ms": -0.16393613815307617,
+      "max_0_20ms": 2.3188199475246592e-14
+    }
+  ],
+  "startup_0_8ms_max_abs_displacement_difference_mm": 0.017712415452976513
+}

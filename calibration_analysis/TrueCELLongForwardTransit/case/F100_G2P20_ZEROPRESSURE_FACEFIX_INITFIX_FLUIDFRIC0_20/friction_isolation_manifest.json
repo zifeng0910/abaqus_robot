@@ -1,0 +1,13 @@
+{
+  "job": "F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_FLUIDFRIC0_20",
+  "parent": "F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20",
+  "status": "SOLVED_SUCCESSFULLY",
+  "physical_change": "PROP_CEL_FLUID_HARD tangential behavior: mu=0.03 -> frictionless; normal pressure-overclosure=HARD unchanged",
+  "dynamics_runs": 1,
+  "dynamics_frames": 801,
+  "datacheck_status": "PASSED_WITH_EXPECTED_INITFIX_WARNINGS_AND_EMPTY_FRICTION_NOTICE",
+  "results_summary": "initialization_closure/fluidfric0_closure_summary.json",
+  "fortran_path_correction_only": true,
+  "initialization_source": "INITFIX20 unchanged",
+  "expected_duration_s": 0.02
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20",
+  "child": "F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_WF_FRIC0_20",
+  "unchanged_outside_wall_fluid_property_and_assignment": true,
+  "robot_fluid_property": "PROP_CEL_FLUID_HARD, mu=0.03, pressure-overclosure=HARD",
+  "wall_fluid_property": "PROP_CEL_FLUID_WF_FRIC0, frictionless, pressure-overclosure=HARD",
+  "robot_wall_property": "PROP_CEL_HARD, mu=0.03, unchanged",
+  "fortran_physics_equal_after_output_path_normalization": true,
+  "input_diff_scope": "one new fluid property, one wall-fluid assignment",
+  "normalized_fortran_sha256": "2cce9edfe76756984b31964c524734533a4e0a898c6fef481384ab1c01477061"
+}

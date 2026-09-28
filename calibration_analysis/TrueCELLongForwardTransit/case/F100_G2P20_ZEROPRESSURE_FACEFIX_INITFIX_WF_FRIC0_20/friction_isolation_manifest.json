@@ -1,0 +1,12 @@
+{
+  "job": "F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_WF_FRIC0_20",
+  "parent": "F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20",
+  "status": "SOLVED_SUCCESSFULLY",
+  "physical_change": "wall-fluid tangential friction: mu=0.03 -> frictionless; robot-fluid and robot-wall unchanged",
+  "normal_contact": "HARD unchanged",
+  "dynamics_runs": 1,
+  "datacheck": "PASS_WITH_INITFIX_WARNINGS_PLUS_EMPTY_FRICTION_NOTICE",
+  "dynamics_frames": 801,
+  "datacheck_status": "PASSED_WITH_EXPECTED_INITFIX_WARNINGS_AND_EMPTY_FRICTION_NOTICE",
+  "results_summary": "initialization_closure/wf_fric0_closure_summary.json"
+}

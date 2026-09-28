@@ -1,0 +1,23 @@
+{
+  "session_start_local": "2026-09-28 23:23:06 Asia/Shanghai",
+  "session_start_utc": "2026-09-28 15:23:06 UTC",
+  "last_updated_local": "2026-09-29T10:15:00+08:00",
+  "git_commit": "e31aca39bbff29bdf2c2bf80f1891c46871e4451",
+  "git_branch": "main",
+  "active_job": null,
+  "completed_jobs": [
+    "F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20",
+    "F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_FLUIDFRIC0_20",
+    "F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_RF_FRIC0_20",
+    "F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_WF_FRIC0_20"
+  ],
+  "dynamics_runs_completed_overnight": 3,
+  "dynamics_run_cap": 4,
+  "current_causal_classification": "combined/nonlinear tangential sensitivity",
+  "next_allowed_branch": "STOP: pair localization completed; recommend one normal contact/interface validation test tomorrow",
+  "active_run_started": "2026-09-29T04:06:54.4246952+08:00",
+  "active_run_input_sha256": "27ea7d599b69782c6033baa0485f2e1bce8af86015205e303fab4a6a41d9dc37",
+  "active_run_fortran_sha256": "9f330bee18e97d2ecf20aa75743ab36de20e9cd6a5c84f074f413e5c2e754ed2",
+  "active_run_status": "COMPLETED_SUCCESSFULLY",
+  "do_not_relaunch": true
+}

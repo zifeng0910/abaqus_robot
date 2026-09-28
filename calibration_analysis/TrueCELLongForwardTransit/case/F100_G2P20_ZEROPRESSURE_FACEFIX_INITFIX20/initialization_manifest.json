@@ -35,6 +35,10 @@
     "limitations": "Convex-hull robot exclusion is conservative for concave details; subcell EVF is an approximation, not exact CAD Boolean."
   },
   "dynamics_runs": 1,
+  "overnight_final_status": "SOLVED_SUCCESSFULLY",
+  "dynamics_frames": 801,
+  "datacheck_status": "PASSED",
+  "results_summary": "initialization_closure/initialization_closure_summary.json",
   "solver_status": "THE ANALYSIS HAS COMPLETED SUCCESSFULLY",
   "audit_file": "initialization_closure/initialization_volume_audit.json"
 }

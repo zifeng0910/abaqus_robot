@@ -1,0 +1,7 @@
+Excluded by design from CEL_OVERNIGHT_12H_RESULTS.zip:
+- all *.odb, *.sim, *.simdir, *.res, *.pac, *.prt, *.sel, *.stt, *.abq, *.mdl, *.msg, *.lck, *.env files
+- all restart files and private *.npz histories
+- unrelated cases and unrelated working-tree files
+
+Selected files: 96
+Missing expected root artifacts: none

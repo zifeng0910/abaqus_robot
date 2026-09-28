@@ -1,0 +1,489 @@
+{
+  "package": "CEL_OVERNIGHT_12H_RESULTS.zip",
+  "generated_from": "J:\\abaqusfangzhen\\abaqus_robot\\calibration_analysis\\TrueCELLongForwardTransit",
+  "root_cause_report": "CEL_OVERNIGHT_12H_ROOTCAUSE.md",
+  "selected_file_count": 96,
+  "excluded_artifact_policy": "ODB/SIM/RES/restart/NPZ and unrelated files excluded",
+  "files": [
+    {
+      "path": "analyze_fluidfric0_closure.py",
+      "bytes": 5422,
+      "sha256": "dc3b8902fe909be0f92878d3eabad0fedaceb0a5de4720f8ffbc416a32bb9318"
+    },
+    {
+      "path": "analyze_initialization_closure_results.py",
+      "bytes": 5675,
+      "sha256": "b570b3dc3a3b04dc1ccb01406e4301058824600a8053bc122b722b137598041d"
+    },
+    {
+      "path": "analyze_rf_fric0_closure.py",
+      "bytes": 5466,
+      "sha256": "4df995e925e22bab25b75f35a915244d1363cf25f927c050a27bbe4d679d2112"
+    },
+    {
+      "path": "analyze_wf_fric0_closure.py",
+      "bytes": 5466,
+      "sha256": "8f67d81e943c325f2f31a4029977ce4d443cad937180089231091b6cc46b96f9"
+    },
+    {
+      "path": "audit_initfix_final.py",
+      "bytes": 8256,
+      "sha256": "eb2a51fd88aea30d6e9d2650433824ac2fc2d7918d19c734839b5d098fb80645"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20/AUX_COLLISION_parent_path_magnetic_increment_g2p20_f100.csv",
+      "bytes": 19154345,
+      "sha256": "6967eb9c303d30918bc3ac0670a7f21f8cbbb5b1275e67d69e7648f94a7975ed"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20/AUX_COLLISION_parent_path_online_cycle_gate.csv",
+      "bytes": 324,
+      "sha256": "31342b2033ab034b61894ba026821acde89af1ff6370c615248c8bfe7795009b"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20/AUX_COLLISION_parent_path_online_motion.csv",
+      "bytes": 190526,
+      "sha256": "3594941f1221c2d36b66483ae6e55e232cdfa3d7dfe371288784db1106f750b9"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20.dat",
+      "bytes": 28234,
+      "sha256": "ba6009de2c7846d4a727ed10c0ad52f99155783339a53150596d7728e0a909bd"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20.inp",
+      "bytes": 3072377,
+      "sha256": "d78fb2bb968bfd45e2a455e09d0d7ca8b368d8e87d1a42a780482baa2c91ab04"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20.run.log",
+      "bytes": 202246,
+      "sha256": "744e2095145500d171a96f1505a132df94601a8a9105a025c90f2ab87a6ddbec"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20.sta",
+      "bytes": 197866,
+      "sha256": "23c2f5fd68595eb0863456ceb38749bf8d8f0ffc49ac6d2b3534c173e9016359"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20_DATACHECK.dat",
+      "bytes": 28234,
+      "sha256": "3f7ee1e1111fdac86ec1ff626de6a912060ae42056cbdf333c5a4e2e40779588"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20_DATACHECK.run.log",
+      "bytes": 7695,
+      "sha256": "1d5d68d9fe6a54e4105121b76adab3c79feccf1e08156662f0f0f1be885c7239"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20_DATACHECK.sta",
+      "bytes": 5853,
+      "sha256": "8b0cec259cc7f63796a09984d1a899fd059e456c31d65db2ef878d5ad2d5b140"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20/initialization_manifest.json",
+      "bytes": 2178,
+      "sha256": "b6349c1de9a108c724fa07c994d0f71c8e32d07f8b82a65d4e6a0d2b9ad277d2"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20/magnetic_field_gradient_table_B0P11_A14P5.dat",
+      "bytes": 172995,
+      "sha256": "3999f3a3826dd091c1adb3b8ea26830739132f738e213a6d92e825eb12c0717c"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20/vuamp_precomputed_truecel.f90",
+      "bytes": 13050,
+      "sha256": "ffe7936c2a2bdf1b94a78069028f17038bea0ab31fc21fbad2ce7ae9ba559790"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_FLUIDFRIC0_20/contact_identity_audit.json",
+      "bytes": 768,
+      "sha256": "d94c17e96ea993ea7d4eac0af70a62ad9e61c332ae89f252d1df1deca802c7b7"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_FLUIDFRIC0_20/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_FLUIDFRIC0_20.dat",
+      "bytes": 28306,
+      "sha256": "909edcf8995b4254c0b040341e7c336f4233d36961cd10678af0491f7bdd5d24"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_FLUIDFRIC0_20/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_FLUIDFRIC0_20.inp",
+      "bytes": 3072373,
+      "sha256": "27ea7d599b69782c6033baa0485f2e1bce8af86015205e303fab4a6a41d9dc37"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_FLUIDFRIC0_20/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_FLUIDFRIC0_20.sta",
+      "bytes": 197866,
+      "sha256": "780cfdf7f150b55798fe1c018fd6d32aa42de9d25f9159afbdbd3d3f402bffc4"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_FLUIDFRIC0_20/friction_isolation_manifest.json",
+      "bytes": 644,
+      "sha256": "d0661153d167c323b74d1fe3c406f52cee5767832528e0cfa2246d291483a87a"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_FLUIDFRIC0_20/magnetic_field_gradient_table_B0P11_A14P5.dat",
+      "bytes": 172995,
+      "sha256": "3999f3a3826dd091c1adb3b8ea26830739132f738e213a6d92e825eb12c0717c"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_FLUIDFRIC0_20/magnetic_increment_g2p20_f100.csv",
+      "bytes": 20512973,
+      "sha256": "fd25d2739eb55f8cb65bac50457e49af703af9878730508c7ddd2e79628fbdd7"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_FLUIDFRIC0_20/online_cycle_gate.csv",
+      "bytes": 162,
+      "sha256": "3e79dabbda72ee338c89ecc2e98f0d8b25f3cac391f44dc148d88e514abc3d84"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_FLUIDFRIC0_20/online_motion.csv",
+      "bytes": 190526,
+      "sha256": "cb92ac9841b0442260501d3a18164266a693c03e02c2015709d0b11dec3a56b0"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_FLUIDFRIC0_20/vuamp_precomputed_truecel.f90",
+      "bytes": 13170,
+      "sha256": "9f330bee18e97d2ecf20aa75743ab36de20e9cd6a5c84f074f413e5c2e754ed2"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_RF_FRIC0_20/contact_identity_audit.json",
+      "bytes": 680,
+      "sha256": "16283fe97336f5417d99df650add0dff3227257afb02274087fa71ed2d8cbf46"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_RF_FRIC0_20/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_RF_FRIC0_20.dat",
+      "bytes": 28617,
+      "sha256": "e1d114cdc732649537b6a9a2d45ba8d6c1fa0e5c96a1b55a2ebf93219abbcb75"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_RF_FRIC0_20/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_RF_FRIC0_20.inp",
+      "bytes": 3072542,
+      "sha256": "06893d28a9e2631725d08adf80caf71b3d268ca5377e18559b67c81aaeeabd37"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_RF_FRIC0_20/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_RF_FRIC0_20.sta",
+      "bytes": 197866,
+      "sha256": "8f7b9dc19f3d43afdbb5fac2228d751168d8e65db38828440c679a8c0809e8f5"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_RF_FRIC0_20/friction_isolation_manifest.json",
+      "bytes": 613,
+      "sha256": "13088b66aee332b1a5f65e49ef17b3f80a94f3d504156ac099ef4c1ad64b47c1"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_RF_FRIC0_20/magnetic_field_gradient_table_B0P11_A14P5.dat",
+      "bytes": 172995,
+      "sha256": "3999f3a3826dd091c1adb3b8ea26830739132f738e213a6d92e825eb12c0717c"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_RF_FRIC0_20/magnetic_increment_g2p20_f100.csv",
+      "bytes": 21848897,
+      "sha256": "458acdbee55e0f6c3abf105e0660fdbd258dff786057e2b4c2a2bf5a2bcfaf28"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_RF_FRIC0_20/online_cycle_gate.csv",
+      "bytes": 162,
+      "sha256": "0a4e61bead81b831f4b657bad3d108f5ce75b3268456a158e44c7c0ab88a9251"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_RF_FRIC0_20/online_motion.csv",
+      "bytes": 190622,
+      "sha256": "98fe76b93fe4ef027feb767f6b5ccfc87c978328728a014f31aec4845fe58f2a"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_RF_FRIC0_20/vuamp_precomputed_truecel.f90",
+      "bytes": 13158,
+      "sha256": "a75c0e8b8549262f53b7c970944e11e1f0e59697b0eee854e4cd8b00a7336bdc"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_WF_FRIC0_20/contact_identity_audit.json",
+      "bytes": 678,
+      "sha256": "2fb8f6df5b54d0f6b4c0068aaef184d1ddc56a718be916559e3b4332b0100308"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_WF_FRIC0_20/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_WF_FRIC0_20.dat",
+      "bytes": 28617,
+      "sha256": "6cb1ef24e210ec0bdb0841fe3b6d01b83f7f168c5244e99d5ff4e97e37b77304"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_WF_FRIC0_20/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_WF_FRIC0_20.inp",
+      "bytes": 3072541,
+      "sha256": "001d1547d84ccca53dc3c1ea00d0cfd410038694174fd6f36fdc7903ba160d1a"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_WF_FRIC0_20/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_WF_FRIC0_20.sta",
+      "bytes": 197866,
+      "sha256": "a0b06dcecd1bc9636b43072c1641e6add8bd468b342760d8a5b8644aca5610a1"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_WF_FRIC0_20/friction_isolation_manifest.json",
+      "bytes": 613,
+      "sha256": "1934d8939953cccc06e5d222dc956ff5c5dcf08f7c1d403afc07ee5fbf9972d8"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_WF_FRIC0_20/magnetic_field_gradient_table_B0P11_A14P5.dat",
+      "bytes": 172995,
+      "sha256": "3999f3a3826dd091c1adb3b8ea26830739132f738e213a6d92e825eb12c0717c"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_WF_FRIC0_20/magnetic_increment_g2p20_f100.csv",
+      "bytes": 19156065,
+      "sha256": "aa6a00c902dd31a35f3c5204ac6d0bdcea85d6873bf7afe5b856908699b86398"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_WF_FRIC0_20/online_cycle_gate.csv",
+      "bytes": 162,
+      "sha256": "2edbbef52aa8abf5e356ecbfb8848681148314fd090d1f229a0ceb2c1cc6396f"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_WF_FRIC0_20/online_motion.csv",
+      "bytes": 190430,
+      "sha256": "fdda49bd3d28b1c390be7236826a0859819cc3b2b3433ee6b941617ee0857d35"
+    },
+    {
+      "path": "case/F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_WF_FRIC0_20/vuamp_precomputed_truecel.f90",
+      "bytes": 13158,
+      "sha256": "c0fd287dc0d6beb7d62bdb8320182307d2298652b4d541d608f3d73643170a6a"
+    },
+    {
+      "path": "CEL_FLUID_CONTACT_FRICTION_comparison.gif",
+      "bytes": 513382,
+      "sha256": "8ab7a17a907e69c6048b7514b0c2dc3290df130f9e658190f4e5b3d5cbba00b5"
+    },
+    {
+      "path": "CEL_OVERNIGHT_12H_ROOTCAUSE.md",
+      "bytes": 4188,
+      "sha256": "3547083dacf9fec26cff8998961d13a5f9973000aa610a05ae0956aba8abb140"
+    },
+    {
+      "path": "extract_initfix_motion.py",
+      "bytes": 1445,
+      "sha256": "de85fd8e751791296bb6ec912447ce46eee17af603a022c8efd0aa7772749e8c"
+    },
+    {
+      "path": "F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20_robot_motion.gif",
+      "bytes": 1735578,
+      "sha256": "b5f44d13abb53ae4d1adfa6f5d20003f1f62839cb83ed7474be0a92dce548a5f"
+    },
+    {
+      "path": "F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_FLUIDFRIC0_20_robot_motion.gif",
+      "bytes": 512351,
+      "sha256": "d686e3b7ed821ac69118efea8663c200ef2909ee0a6db79431dd746a85162c85"
+    },
+    {
+      "path": "F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_RF_FRIC0_20_robot_motion.gif",
+      "bytes": 1190011,
+      "sha256": "7b6d7c210eee8cd42d6d3ec2e58e3d03cd55e5a43b193901a85d8be161d0a374"
+    },
+    {
+      "path": "F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX_WF_FRIC0_20_robot_motion.gif",
+      "bytes": 1463119,
+      "sha256": "bd90bb15b740e83e10f0ad9c1bd1ca9a33761c0298d29e2e8a85ea527447863e"
+    },
+    {
+      "path": "initialization_closure/analyze_child_summary.log",
+      "bytes": 10168,
+      "sha256": "c7039cbb9d3310799b601dde34b8e70cd196d4b69d4660de9c93f12599471a19"
+    },
+    {
+      "path": "initialization_closure/child/extraction_inventory.json",
+      "bytes": 405228,
+      "sha256": "f489d65f82476be5b81df0f2f37aded0c7e5364f09aa94d2298ba93f5de4d4fc"
+    },
+    {
+      "path": "initialization_closure/child/fluid_axial_profiles_native.csv",
+      "bytes": 4444990,
+      "sha256": "a976f393bece51d59ad07b3758c48d2210bfb0d790d81f619b4bd02eb3f10164"
+    },
+    {
+      "path": "initialization_closure/child/fluid_summary_native.csv",
+      "bytes": 289334,
+      "sha256": "df9752334c9f79c0ff808590a5cabbbfddae33c60da7002893ff83daa05e0e23"
+    },
+    {
+      "path": "initialization_closure/common_timestamp_FACEFIX20_vs_INITFIX20.csv",
+      "bytes": 13376468,
+      "sha256": "e07c6dadf8e9ca0df35e9daae73988529d5776b9ecde8d78e0980a8ebc73a4a7"
+    },
+    {
+      "path": "initialization_closure/common_timestamp_INITFIX20_vs_FLUIDFRIC0.csv",
+      "bytes": 22334899,
+      "sha256": "7287210197f692b78ebfbabe8ce2d9302b564907da655ecb627215adf2767759"
+    },
+    {
+      "path": "initialization_closure/common_timestamp_INITFIX20_vs_RF_FRIC0.csv",
+      "bytes": 22417741,
+      "sha256": "557b1768a29c6f3635e5ece0be1ddfc1aa52a53bd57cefb9104a5557cf78d34e"
+    },
+    {
+      "path": "initialization_closure/common_timestamp_INITFIX20_vs_WF_FRIC0.csv",
+      "bytes": 22727460,
+      "sha256": "f7d019baaa969c9c086bdcde8fc022161bbb968a320af445bbc0d14e0ca13acb"
+    },
+    {
+      "path": "initialization_closure/cycle_metrics_FACEFIX20_vs_INITFIX20.csv",
+      "bytes": 919,
+      "sha256": "fdfe946c1905f07ed227bd3d300d583b6b741ba7e476f9fd17a853ecde734e10"
+    },
+    {
+      "path": "initialization_closure/cycle_metrics_INITFIX20_vs_FLUIDFRIC0.csv",
+      "bytes": 911,
+      "sha256": "3a75ada7b0633cd2b04682018e87894e9d93f8b49c4559000cd1151e56549547"
+    },
+    {
+      "path": "initialization_closure/cycle_metrics_INITFIX20_vs_RF_FRIC0.csv",
+      "bytes": 11724,
+      "sha256": "d3749a71336b71769240d524ad160e6994e1a6c743b9aba292a6176035325106"
+    },
+    {
+      "path": "initialization_closure/cycle_metrics_INITFIX20_vs_WF_FRIC0.csv",
+      "bytes": 981,
+      "sha256": "4936ac47b3e06c594881fbf7e0a155277d27f9d9e23f46fa356bafb1a68de56b"
+    },
+    {
+      "path": "initialization_closure/energy_work_FACEFIX20_vs_INITFIX20.csv",
+      "bytes": 2127,
+      "sha256": "ea98e689fd7f988f315629068c1efb95884e7450cd3cb66fc80ef2395fec04d3"
+    },
+    {
+      "path": "initialization_closure/energy_work_INITFIX20_vs_FLUIDFRIC0.csv",
+      "bytes": 2106,
+      "sha256": "5b30b44909bc0cca74f2081848960e3486e7495e5dc4150c8edba00b7165d0ea"
+    },
+    {
+      "path": "initialization_closure/energy_work_INITFIX20_vs_RF_FRIC0.csv",
+      "bytes": 2109,
+      "sha256": "03477fe8b93a74dce20691b9b586a681e10bc193b9d41b97aa373e03eec6576b"
+    },
+    {
+      "path": "initialization_closure/energy_work_INITFIX20_vs_WF_FRIC0.csv",
+      "bytes": 2090,
+      "sha256": "6337ac7ea2c5e54656b5d0ca3aad099dfe207d685556e19682bb2a713e53d742"
+    },
+    {
+      "path": "initialization_closure/event_timings_FACEFIX20_vs_INITFIX20.csv",
+      "bytes": 350,
+      "sha256": "f879ec0a01c82eee9c2e109a2c14306060c3e0464db0e440a84a7696c0ff645b"
+    },
+    {
+      "path": "initialization_closure/event_timings_INITFIX20_vs_FLUIDFRIC0.csv",
+      "bytes": 197,
+      "sha256": "28e7a3a2f153e1e416203cbd9b6f3cce5970711c002ea66b729e2b7d105540df"
+    },
+    {
+      "path": "initialization_closure/event_timings_INITFIX20_vs_RF_FRIC0.csv",
+      "bytes": 10981,
+      "sha256": "428504f9eeb3fe399aa421d2e71a2e48de976c182c9abcca483340d9c09169ef"
+    },
+    {
+      "path": "initialization_closure/event_timings_INITFIX20_vs_WF_FRIC0.csv",
+      "bytes": 252,
+      "sha256": "aae9ce81f24d01a348100656908b68a15adec658289c9a8d25bc5f8848159f97"
+    },
+    {
+      "path": "initialization_closure/extract_child.log",
+      "bytes": 226,
+      "sha256": "a4ef6f935c299acefb4a12957bd7f5a07adc308e67492920348b63b8dc3d4354"
+    },
+    {
+      "path": "initialization_closure/fluid_volume_EVF_history_FACEFIX20_vs_INITFIX20.csv",
+      "bytes": 597251,
+      "sha256": "6fa7e676647824900435a43d6e5b194de7d4e144cdb67edc8d4b718e75c3e538"
+    },
+    {
+      "path": "initialization_closure/fluidfric0/extraction_inventory.json",
+      "bytes": 405253,
+      "sha256": "3fef99e37bf297b3819d9f34f7e2ab2abbc7b3d061cb7d5854d5c9ae6513abee"
+    },
+    {
+      "path": "initialization_closure/fluidfric0/fluid_axial_profiles_native.csv",
+      "bytes": 4463084,
+      "sha256": "c832a2f3850b8c12535da022c3e4ce9576d2224fee17c79c7fb8153ad1d3aff5"
+    },
+    {
+      "path": "initialization_closure/fluidfric0/fluid_summary_native.csv",
+      "bytes": 289006,
+      "sha256": "a0530372cc3c5a896217048a142053c79cfea90490695a453c5aa52c465acfb7"
+    },
+    {
+      "path": "initialization_closure/fluidfric0_closure_summary.json",
+      "bytes": 9680,
+      "sha256": "1973d1ea6fdc37ddf5ee9f900682d134f39e38bdd4b39676f7a5b127fcff2c54"
+    },
+    {
+      "path": "initialization_closure/initialization_closure_summary.json",
+      "bytes": 10168,
+      "sha256": "c7039cbb9d3310799b601dde34b8e70cd196d4b69d4660de9c93f12599471a19"
+    },
+    {
+      "path": "initialization_closure/initialization_volume_audit.json",
+      "bytes": 1807,
+      "sha256": "9ee41e5f8f4690596568a5edf8b56e9fba3f1e8e38264986130588a1045df642"
+    },
+    {
+      "path": "initialization_closure/input_identity_checks.json",
+      "bytes": 720,
+      "sha256": "8cfc13a2ea300c94b1c95d0b9f889ebe0f6d256783f5c914ce2c35f3d683157a"
+    },
+    {
+      "path": "initialization_closure/missing_fluid_cell_map.csv",
+      "bytes": 2121549,
+      "sha256": "c4c0db8e36551e1e4ac73283ae2a0ccf743eb4d5f7e27629b107e57bd80e518c"
+    },
+    {
+      "path": "initialization_closure/rf_fric0/extraction_inventory.json",
+      "bytes": 405255,
+      "sha256": "1ba61c842bdd978a3d92fa9d1ce03557ae2fda6241261fcadcf7e6bf6e56cffb"
+    },
+    {
+      "path": "initialization_closure/rf_fric0/fluid_axial_profiles_native.csv",
+      "bytes": 4368912,
+      "sha256": "253258b49deb3dd8b8a4bf7d400ce0a044878143b49d3b86a048a1a8fdd5ef4e"
+    },
+    {
+      "path": "initialization_closure/rf_fric0/fluid_summary_native.csv",
+      "bytes": 286037,
+      "sha256": "12a00ec3d825e14f20801c3231900d93d4430f0e077d5f67433f9a56c6366ac7"
+    },
+    {
+      "path": "initialization_closure/rf_fric0_closure_summary.json",
+      "bytes": 31281,
+      "sha256": "c5e5ccef2384e58bb74473bd575986404260f57ae71d6bfbdd66d58c7fd8861c"
+    },
+    {
+      "path": "initialization_closure/wf_fric0/extraction_inventory.json",
+      "bytes": 405255,
+      "sha256": "c8f5b19bd8268daa404f2b7c1f6c22099e9624a56c657b1d70d6252aee3eaa67"
+    },
+    {
+      "path": "initialization_closure/wf_fric0/fluid_axial_profiles_native.csv",
+      "bytes": 4448326,
+      "sha256": "b01407107c200f63b9087faad3dc4652cde0953e476318803227110563650318"
+    },
+    {
+      "path": "initialization_closure/wf_fric0/fluid_summary_native.csv",
+      "bytes": 289207,
+      "sha256": "0ce90f45da9014c487bd1171ca15d9ce4fbfaa9b2d3b53e4c1dd0cb43df95c3e"
+    },
+    {
+      "path": "initialization_closure/wf_fric0_closure_summary.json",
+      "bytes": 9792,
+      "sha256": "07ab45c466e8976c40b45c0109aa2795e75d8aff950567a76faa4ee825298352"
+    },
+    {
+      "path": "OVERNIGHT_CEL_STATE.json",
+      "bytes": 1158,
+      "sha256": "a9d020dbc750363d7d4033baa88a9b265467008a637cebb4b7c1481bf9ff4281"
+    },
+    {
+      "path": "prepare_initialization_fix.py",
+      "bytes": 7963,
+      "sha256": "d4bb1b0409ed0d850abca466a5491f3c4c99260ae490d136d2278f56e01fce55"
+    },
+    {
+      "path": "render_friction_comparison_gif.py",
+      "bytes": 1864,
+      "sha256": "6c5f3f4878efe3c58497f35d311104065f2f352e285b5b9cbbbb918e87c7f99a"
+    }
+  ]
+}
