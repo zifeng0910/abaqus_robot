@@ -1,0 +1,185 @@
+Analysis initiated from SIMULIA established products
+Abaqus JOB F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20_DATACHECK
+Abaqus 2025
+USING MEMORY DOUG-LEA ALLOCATOR
+Abaqus License Manager checked out the following licenses:
+Abaqus/Explicit checked out 5 tokens from Flexnet server Zifeng.
+<9994 out of 9999 licenses remain available>.
+Begin Compiling Double Precision Abaqus/Explicit User Subroutines
+9/28/2026 5:41:53 PM
+Intel(R) Fortran Compiler for applications running on Intel(R) 64, Version 2025.1.1 Build 20250418
+Copyright (C) 1985-2025 Intel Corporation. All rights reserved.
+
+ifx: command line warning #10148: option '/Qprec-sqrt' not supported
+ifx: command line warning #10148: option '/Qfp-stack-check' not supported
+End Compiling Double Precision Abaqus/Explicit User Subroutines
+Begin Linking Double Precision Abaqus/Explicit User Subroutines
+   正在建立程式庫 explicitU-D.lib 和物件 explicitU-D.exp
+vuamp_precomputed_truecel.obj : warning LNK4210: .CRT 區段存在，可能有未處理的靜態初始設定式或終止函式
+End Linking Double Precision Abaqus/Explicit User Subroutines
+9/28/2026 5:41:54 PM
+Begin Analysis Input File Processor
+9/28/2026 5:41:54 PM
+Run pre.exe
+9/28/2026 5:41:57 PM
+End Analysis Input File Processor
+Begin Abaqus/Explicit Packager
+9/28/2026 5:41:57 PM
+PAC_NUM_THREADS VALUE: 1
+Run package_dp.exe
+Abaqus/Explicit 2025                             DATE 28-Sep-2026  TIME 17:41:59
+-------------------------------------------------------------------------------
+ PREPROCESSOR WARNING MESSAGES
+-------------------------------------------------------------------------------
+
+
+***WARNING: There are 8 warning messages in the data (.dat) file.  Please
+            check the data file for possible errors in the input file.
+
+
+-------------------------------------------------------------------------------
+ NUMERICAL PRECISION USED FOR THIS Abaqus/Explicit ANALYSIS
+-------------------------------------------------------------------------------
+
+Double precision package and explicit executables will be used in this analysis.
+
+-------------------------------------------------------------------------------
+
+***WARNING: Surface (general) contact history output has been requested for
+            surface ASSEMBLY_ROBOT_SOLID-1_ROBOT_SOLID_SURF in step 1, but
+            only a portion of this surface intersects with the general contact
+            domain.
+
+
+***WARNING: A surface (general) contact field output has been requested for
+            surface ASSEMBLY_ROBOT_SOLID-1_ROBOT_SOLID_SURF in step 1, but
+            only a portion of this surface intersects with the general contact
+            domain.
+
+-------------------------------------------------------------------------------
+ MODEL INFORMATION (IN GLOBAL X-Y COORDINATES)
+-------------------------------------------------------------------------------
+
+   Total mass in model = 1.27051E-07
+   Center of mass of model = (-7.977544E+00,-6.524779E+00,-7.701794E+00)
+
+    Moments of Inertia :
+                 About Center of Mass              About Origin
+      I(XX)          2.608465E-06                  1.555375E-05
+      I(YY)          6.099104E-06                  2.172116E-05
+      I(ZZ)          7.524583E-06                  2.101918E-05
+      I(XY)         -2.142123E-06                 -8.755350E-06
+      I(YZ)          9.643200E-07                 -5.420315E-06
+      I(ZX)          4.969718E-07                 -7.309225E-06
+
+-------------------------------------------------------------------------------
+ STABLE TIME INCREMENT INFORMATION
+-------------------------------------------------------------------------------
+
+
+  The stable time increment estimate for each element is based on
+  linearization about the initial state.
+
+
+   Initial time increment = 4.90233E-07
+
+   Statistics over 11517 deformable elements:
+      Mean = 9.12172E-07
+      Standard deviation = 2.99869E-06
+
+   Most critical elements:
+    Element number   Rank    Time increment   Increment ratio
+    (Instance name)
+   ----------------------------------------------------------
+       15442          1       4.902334E-07      1.000000E+00
+    FLUID_EULERIAN-1
+        4873          2       4.902334E-07      1.000000E+00
+    FLUID_EULERIAN-1
+        2159          3       4.902334E-07      1.000000E+00
+    FLUID_EULERIAN-1
+        3168          4       4.902334E-07      1.000000E+00
+    FLUID_EULERIAN-1
+       14433          5       4.902334E-07      1.000000E+00
+    FLUID_EULERIAN-1
+        4874          6       4.902334E-07      1.000000E+00
+    FLUID_EULERIAN-1
+        8274          7       4.902334E-07      1.000000E+00
+    FLUID_EULERIAN-1
+        9327          8       4.902334E-07      1.000000E+00
+    FLUID_EULERIAN-1
+       15443          9       4.902334E-07      1.000000E+00
+    FLUID_EULERIAN-1
+       11027         10       4.902334E-07      1.000000E+00
+    FLUID_EULERIAN-1
+
+
+  Instance name for the most critical element will be printed if the critical
+  element changes or at the beginning of a new page.
+
+
+9/28/2026 5:42:00 PM
+End Abaqus/Explicit Packager
+Begin Abaqus/Explicit Analysis
+9/28/2026 5:42:00 PM
+Run explicit_dp.exe
+ PRECOMPUTED_TABLE_LOADED ns=         561  nphase=         361
+-------------------------------------------------------------------------------
+
+  INFORMATION REGARDING INITIAL CONTACT OVERCLOSURES FOR NEWLY DEFINED GENERAL
+  CONTACT INTERACTIONS IN STEP 1
+
+-------------------------------------------------------------------------------
+
+  No initial node-face or edge-edge overclosures found.
+
+
+  No nodal position adjustments have been made.
+
+
+  No node-face overclosures left unresolved.
+
+
+  No edge-edge overclosures left unresolved.
+
+
+  Initial CEL contact overclosures were found and will be stored as offsets.
+  To help identify the (Lagrangian) contact faces involved in the overclosures
+  element set InfoElemInitPenetCEL has been created.
+
+
+***NOTE: You can view the deformed configuration due to the resolution of
+         initial overclosures.  In increment 0, draw the deformed shape or
+         draw a symbol plot of vector displacements.
+
+------------------------------------------------------------------------------
+
+Abaqus/Explicit 2025                             DATE 28-Sep-2026  TIME 17:42:02
+The entire model is considered 1 domain.
+Only 1 MPI rank is used.
+
+-------------------------------------------------------------------------------
+ SOLUTION PROGRESS
+-------------------------------------------------------------------------------
+
+ STEP 1  ORIGIN 0.0000
+
+  Total memory used for step 1 is approximately 314.0 megabytes.
+  Element by element stable time estimation algorithm will be used.
+  Scaling factor:  0.40000
+              STEP     TOTAL      WALL        STABLE    CRITICAL    KINETIC      TOTAL
+INCREMENT     TIME      TIME      TIME     INCREMENT     ELEMENT     ENERGY     ENERGY
+        0  0.000E+00 0.000E+00  00:00:00 1.86968E-07       15442  0.000E+00  0.000E+00
+INSTANCE WITH CRITICAL ELEMENT: FLUID_EULERIAN-1
+Output Field Frame Number     0, with time interval 2.500E-05, at step time 0.000E+00 of 2.000E-02
+  EXPLICIT EXECUTABLE TIME SUMMARY
+       USER TIME (SEC)      =  0.10000
+       SYSTEM TIME (SEC)    =  0.10000
+       WALLCLOCK TIME (SEC) =            0
+              INIT (SEC) =          0
+              MAIN (SEC) =          0
+
+  THE ANALYSIS HAS COMPLETED SUCCESSFULLY
+
+9/28/2026 5:42:02 PM
+End Abaqus/Explicit Analysis
+Abaqus JOB F100_G2P20_ZEROPRESSURE_FACEFIX_INITFIX20_DATACHECK COMPLETED

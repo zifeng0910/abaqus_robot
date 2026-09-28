@@ -1,0 +1,11 @@
+{
+  "non_initialization_keyword_data_identical": true,
+  "all_parts_identical": true,
+  "fortran_identical": true,
+  "parent_sha256": "aa919e6c64ce7ae3ced531daca3aac611914c4074cb156703d8567e9d9ce8afc",
+  "child_sha256": "d78fb2bb968bfd45e2a455e09d0d7ca8b368d8e87d1a42a780482baa2c91ab04",
+  "dynamics_run_count": 1,
+  "fortran_log_collision": "Executed unchanged Fortran writes auxiliary logs into FACEFIX20. Parent ODB/NPZ remain authoritative. Child log copy is archived after solve.",
+  "datacheck": "PASSED (compiler environment corrected after initial compiler-not-found launch)",
+  "source_reference": "https://docs.software.vt.edu/abaqusv2025/English/SIMACAEKEYRefMap/simakey-r-initialconditions.htm"
+}

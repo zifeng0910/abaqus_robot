@@ -1,0 +1,35 @@
+{
+  "domain_volume_mm3": 27.0000000000556,
+  "solid_excluded_nominal_mm3": 11.493696476085969,
+  "robot_tetrahedral_volume_mm3": 1.2829713941656093,
+  "robot_hull_volume_mm3": 1.2997698196413208,
+  "nominal_accessible_liquid_volume_mm3": 15.506303523969631,
+  "hull_accessible_volume_mm3": 15.48950509849392,
+  "parent": {
+    "initialized_liquid_mm3": 12.186818181843277,
+    "initialized_void_mm3": 14.813181818212321,
+    "deficit_percent": 21.407328555094363,
+    "positive_cell_components": 1,
+    "largest_component_volume_fraction": 1.0,
+    "axially_connected": true
+  },
+  "child": {
+    "initialized_liquid_mm3": 15.49448597304327,
+    "initialized_void_mm3": 11.505514027012328,
+    "deficit_percent": 0.07621127052036547,
+    "positive_cell_components": 1,
+    "largest_component_volume_fraction": 1.0,
+    "axially_connected": true
+  },
+  "missing_volume_attribution_mm3": {
+    "tube_cut_cells": 2.210625000004552,
+    "robot_exclusion_in_full_lumen_cells": 1.097042791195441,
+    "axial_end_cells_subset_not_additive": 0.12502840909116655
+  },
+  "audit16_volume_mm3": 15.489258228680688,
+  "audit16_minus_executed8_volume_mm3": -0.005227744362581788,
+  "remaining_hull_overexclusion_mm3": 0.01679842547571142,
+  "subcell_location_limitation": "EVF specifies cell material amount, not exact subcell geometry. Abaqus reconstructs interfaces; no pointwise zero-solid-overlap guarantee is claimed.",
+  "void_topology_limitation": "Whole-cell empty accessible region is connected to ends/wall collar; mixed-cell subcell connectivity is not determined solely by EVF.",
+  "initialization_scope": "Conservative robot convex hull, nominal cylindrical lumen, 8^3 quadrature; 16^3 read-only verification. Actual tet geometry is used for independent nominal volume."
+}
