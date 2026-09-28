@@ -472,8 +472,8 @@
     },
     {
       "path": "OVERNIGHT_CEL_STATE.json",
-      "bytes": 1158,
-      "sha256": "a9d020dbc750363d7d4033baa88a9b265467008a637cebb4b7c1481bf9ff4281"
+      "bytes": 1125,
+      "sha256": "fc80fcb75e84f55b6eb32cdc54d7f74dc237c6456122b8523b7f058529b6c9f2"
     },
     {
       "path": "prepare_initialization_fix.py",
